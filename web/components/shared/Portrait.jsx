@@ -20,43 +20,28 @@ function GradientSilhouette({ seed, size, gid }) {
   );
 }
 
-// South Asian skin tones and dark hair colors (hex, no #) for the DiceBear
-// "personas" style, so generated avatars read as Indian rather than the
-// service's Western-skewed defaults.
-const SKIN_COLORS = ["8d5524", "c68642", "e0ac69", "a56b46"];
-const HAIR_COLORS = ["090806", "2c1b18", "3b2219"];
-const CLOTHING_COLORS = ["1e3a5f", "2c3e50", "5c3a21", "334155"];
-const MALE_HAIR = ["buzzcut", "fade", "shortCombover", "sideShave", "bald", "balding", "cap", "mohawk", "beanie"];
-const FEMALE_HAIR = ["long", "bobCut", "curly", "pigtails", "curlyBun", "bobBangs", "bunUndercut", "straightBun", "extraLong", "curlyHighTop"];
-const MALE_FACIAL_HAIR = ["beardMustache", "goatee", "shadow", "soulPatch"];
+// Real headshots of Indian men/women, self-hosted under /public/avatars so
+// they never 404 or depend on a third-party host. Picked by gender + seed.
+const MEN_COUNT = 6;
+const WOMEN_COUNT = 6;
 
-function personaUrl({ seed, gender, size }) {
-  const params = new URLSearchParams({ seed: String(seed), size: String(size) });
-  const hair = gender === "female" ? FEMALE_HAIR : MALE_HAIR;
-  hair.forEach((h) => params.append("hair", h));
-  if (gender !== "female") {
-    MALE_FACIAL_HAIR.forEach((f) => params.append("facialHair", f));
-    params.set("facialHairProbability", "45");
-  } else {
-    params.set("facialHairProbability", "0");
-  }
-  SKIN_COLORS.forEach((c) => params.append("skinColor", c));
-  HAIR_COLORS.forEach((c) => params.append("hairColor", c));
-  CLOTHING_COLORS.forEach((c) => params.append("clothingColor", c));
-  return `https://api.dicebear.com/9.x/personas/svg?${params.toString()}`;
+function photoUrl({ seed, gender }) {
+  const count = gender === "female" ? WOMEN_COUNT : MEN_COUNT;
+  const n = (Math.abs(Math.round(seed)) % count) + 1;
+  const folder = gender === "female" ? "women" : "men";
+  return `/avatars/${folder}/${n}.jpg`;
 }
 
-// Illustrated avatar keyed off a deterministic seed and the person's actual
-// gender, used on review/client cards. Styled to read as Indian (skin tone,
-// dark hair) since our clients and reviewers are. The gradient silhouette
-// renders immediately as a base layer, and the avatar is overlaid on top
-// once it loads — so a slow connection or blocked host never shows a gap
-// or broken-image icon, just the silhouette staying put.
+// Real photo avatar keyed off a deterministic seed and the person's actual
+// gender, used on review/client cards. The gradient silhouette renders
+// immediately as a base layer, and the photo is overlaid on top once it
+// loads — so a slow connection or blocked host never shows a gap or
+// broken-image icon, just the silhouette staying put.
 export function Portrait({ seed = 0, gender = "male", size = 40 }) {
   const [loaded, setLoaded] = useState(false);
   const [failed, setFailed] = useState(false);
   const gid = "pv" + useId().replace(/[^a-z0-9]/gi, "");
-  const src = personaUrl({ seed, gender, size: size * 2 });
+  const src = photoUrl({ seed, gender });
   return (
     <span style={{ position: "relative", display: "block", width: size, height: size }}>
       <GradientSilhouette seed={seed} size={size} gid={gid} />
