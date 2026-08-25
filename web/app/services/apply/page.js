@@ -70,6 +70,7 @@ export default function ServicesApplyPage() {
   const [sentSummary, setSentSummary] = useState(null);
   const [submitting, setSubmitting] = useState(false);
   const [submitPhase, setSubmitPhase] = useState(0);
+  const [submitError, setSubmitError] = useState(false);
 
   useEffect(() => {
     const id = requestAnimationFrame(() => setServiceNames(loadSelection()));
@@ -126,15 +127,38 @@ export default function ServicesApplyPage() {
 
   const submit = (e) => {
     e.preventDefault();
+    setSubmitError(false);
     setSentSummary({ names: serviceNames || [], name: f.name });
     setSubmitPhase(0);
     setSubmitting(true);
     [700, 1450, 2200].forEach((ms, i) => setTimeout(() => setSubmitPhase(i + 1), ms));
-    setTimeout(() => {
-      clearSelection();
-      setSent(true);
-      setSubmitting(false);
-      window.scrollTo({ top: 0, behavior: "smooth" });
+
+    const leadRequest = fetch("/api/leads", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: f.name,
+        phone: f.phone,
+        email: f.email,
+        property: (serviceNames || []).join(", "),
+        notes: f.notes,
+        source: "apply",
+      }),
+    }).then((res) => {
+      if (!res.ok) throw new Error("Lead submission failed");
+    });
+
+    setTimeout(async () => {
+      try {
+        await leadRequest;
+        clearSelection();
+        setSent(true);
+      } catch {
+        setSubmitError(true);
+      } finally {
+        setSubmitting(false);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
     }, 3050);
   };
 
@@ -582,6 +606,11 @@ export default function ServicesApplyPage() {
                         <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-2xl)", color: "var(--navy-900)" }}>Where should we reach you?</div>
                         <div style={{ fontFamily: "var(--font-body)", fontSize: 13.5, color: "var(--ink-500)", marginTop: 4 }}>No obligation — an advisor calls to confirm scope, no payment needed to submit.</div>
                       </div>
+                      {submitError && (
+                        <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "var(--status-negative,#c0392b)", background: "rgba(192,57,43,.08)", border: "1px solid rgba(192,57,43,.25)", borderRadius: "var(--radius-md)", padding: "10px 14px" }}>
+                          Something went wrong sending your request — please try again, or reach us on WhatsApp.
+                        </div>
+                      )}
                       <div style={{ display: "grid", gridTemplateColumns: bp.mobile ? "1fr" : "1fr 1fr", gap: 12 }}>
                         <div style={{ display: "flex", flexDirection: "column", gap: 7 }}>
                           <ApplyLabel>Full name</ApplyLabel>

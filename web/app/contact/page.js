@@ -26,6 +26,8 @@ export default function ContactPage() {
   const [f, setF] = useState({ name: "", email: "", phone: "", msg: "" });
   const [sent, setSent] = useState(false);
   const [rcs, setRcs] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState(false);
   const set = (k, v) => setF((o) => ({ ...o, [k]: v }));
   const iStyle = { width: "100%", boxSizing: "border-box", fontFamily: "var(--font-body)", fontSize: 14.5, padding: "13px 16px", borderRadius: "var(--radius-md)", border: "1.5px solid var(--ink-100)", background: "var(--navy-050)", color: "var(--navy-900)", outline: "none", transition: "border-color .15s,box-shadow .15s" };
   const foc = (e) => {
@@ -38,10 +40,24 @@ export default function ContactPage() {
     e.currentTarget.style.boxShadow = "none";
     e.currentTarget.style.background = "var(--navy-050)";
   };
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault();
-    if (!rcs) return;
-    setSent(true);
+    if (!rcs || submitting) return;
+    setError(false);
+    setSubmitting(true);
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: f.name, phone: f.phone, email: f.email, property: cat, notes: f.msg, source: "contact" }),
+      });
+      if (!res.ok) throw new Error("failed");
+      setSent(true);
+    } catch {
+      setError(true);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -180,6 +196,7 @@ export default function ContactPage() {
                 </label>
                 <button
                   type="submit"
+                  disabled={submitting}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = "translateY(-2px)";
                     e.currentTarget.style.boxShadow = "0 10px 26px rgba(212,167,71,.42)";
@@ -188,13 +205,20 @@ export default function ContactPage() {
                     e.currentTarget.style.transform = "none";
                     e.currentTarget.style.boxShadow = "0 4px 14px rgba(212,167,71,.32)";
                   }}
-                  style={{ marginTop: 4, display: "flex", alignItems: "center", justifyContent: "center", gap: 9, fontFamily: "var(--font-body)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-base)", padding: 15, borderRadius: "var(--radius-pill)", border: "none", background: "linear-gradient(135deg,var(--gold-400),var(--gold-500))", color: "var(--navy-950)", cursor: "pointer", boxShadow: "0 4px 14px rgba(212,167,71,.32)", transition: "transform .18s,box-shadow .18s" }}
+                  style={{ marginTop: 4, display: "flex", alignItems: "center", justifyContent: "center", gap: 9, fontFamily: "var(--font-body)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-base)", padding: 15, borderRadius: "var(--radius-pill)", border: "none", background: "linear-gradient(135deg,var(--gold-400),var(--gold-500))", color: "var(--navy-950)", cursor: submitting ? "default" : "pointer", opacity: submitting ? 0.7 : 1, boxShadow: "0 4px 14px rgba(212,167,71,.32)", transition: "transform .18s,box-shadow .18s" }}
                 >
-                  Book my free consultation
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M5 12h14M13 6l6 6-6 6" />
-                  </svg>
+                  {submitting ? "Sending…" : "Book my free consultation"}
+                  {!submitting && (
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                  )}
                 </button>
+                {error && (
+                  <div style={{ textAlign: "center", fontFamily: "var(--font-body)", fontSize: 13, color: "var(--status-negative,#c0392b)" }}>
+                    Something went wrong sending your request — please try again, or reach us on WhatsApp.
+                  </div>
+                )}
                 <div style={{ textAlign: "center", fontFamily: "var(--font-body)", fontSize: 12, color: "var(--ink-300)" }}>🔒 Your details stay private — used only to contact you back.</div>
               </form>
             )}
