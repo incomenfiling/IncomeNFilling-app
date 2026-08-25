@@ -20,7 +20,7 @@ function ClientFace({ c, i, back }) {
       <span style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 4, background: accent }} />
       <div style={{ position: "relative", flexShrink: 0 }}>
         <div style={{ width: av, height: av, borderRadius: "50%", overflow: "hidden", border: "2px solid " + accent }}>
-          <Portrait seed={c.av} size={av} />
+          <Portrait seed={c.av} gender={c.gender} size={av} />
         </div>
         <span style={{ position: "absolute", right: -2, bottom: -2, width: 16, height: 16, borderRadius: "50%", background: accent, color: "var(--white)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 9, fontWeight: 700, border: "2px solid var(--white)" }}>✓</span>
       </div>

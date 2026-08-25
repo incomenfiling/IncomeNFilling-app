@@ -17,7 +17,7 @@ function ReviewCard({ t }) {
     >
       <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
         <div style={{ width: 36, height: 36, flexShrink: 0, borderRadius: "50%", overflow: "hidden", border: "2px solid var(--paper-alt)" }}>
-          <Portrait seed={t.av} size={36} />
+          <Portrait seed={t.av} gender={t.gender} size={36} />
         </div>
         <div style={{ flex: 1, minWidth: 0 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
