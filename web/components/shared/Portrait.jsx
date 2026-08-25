@@ -21,13 +21,15 @@ function GradientSilhouette({ seed, size, gid }) {
 }
 
 // Real headshots of Indian men/women, self-hosted under /public/avatars so
-// they never 404 or depend on a third-party host. Picked by gender + seed.
-const MEN_COUNT = 6;
+// they never 404 or depend on a third-party host. `seed` is a 1-based index
+// assigned per-person in data/testimonials.js and data/clients.js — every
+// person on the site gets their own distinct photo, no repeats.
+const MEN_COUNT = 13;
 const WOMEN_COUNT = 6;
 
 function photoUrl({ seed, gender }) {
   const count = gender === "female" ? WOMEN_COUNT : MEN_COUNT;
-  const n = (Math.abs(Math.round(seed)) % count) + 1;
+  const n = (((Math.round(seed) - 1) % count) + count) % count + 1;
   const folder = gender === "female" ? "women" : "men";
   return `/avatars/${folder}/${n}.jpg`;
 }
