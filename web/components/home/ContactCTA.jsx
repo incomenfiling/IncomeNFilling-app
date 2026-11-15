@@ -29,7 +29,38 @@ function CField({ tag = "input", children, ...props }) {
 
 export function ContactCTA() {
   const [sent, setSent] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [err, setErr] = useState(false);
   const bp = useBP();
+
+  const submit = async (e) => {
+    e.preventDefault();
+    if (busy) return;
+    const fd = new FormData(e.currentTarget);
+    setBusy(true);
+    setErr(false);
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: fd.get("name"),
+          phone: fd.get("phone"),
+          email: fd.get("email"),
+          property: fd.get("service"),
+          notes: fd.get("msg"),
+          website: fd.get("website"),
+          source: "home",
+        }),
+      });
+      if (!res.ok) throw new Error("failed");
+      setSent(true);
+    } catch {
+      setErr(true);
+    } finally {
+      setBusy(false);
+    }
+  };
 
   return (
     <section id="contact" style={{ padding: bp.mobile ? "64px 20px" : "96px 32px", background: "var(--white)", position: "relative", overflow: "hidden" }}>
@@ -104,27 +135,22 @@ export function ContactCTA() {
               <>
                 <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-xl)", color: "var(--navy-900)", marginBottom: 4 }}>Send us a message</div>
                 <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "var(--ink-500)", marginBottom: 20 }}>We&apos;ll get back with a clear next step — no obligation.</div>
-                <form
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    setSent(true);
-                  }}
-                  style={{ display: "flex", flexDirection: "column", gap: 14 }}
-                >
+                <form onSubmit={submit} style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+                  <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }} />
                   <div style={{ display: "grid", gridTemplateColumns: bp.mobile ? "1fr" : "1fr 1fr", gap: 14 }}>
-                    <CField required placeholder="Your name" />
-                    <CField required placeholder="Phone" />
+                    <CField required name="name" placeholder="Your name" />
+                    <CField required name="phone" type="tel" placeholder="Phone" />
                   </div>
-                  <CField required type="email" placeholder="Email address" />
-                  <CField tag="select" defaultValue="">
+                  <CField required name="email" type="email" placeholder="Email address" />
+                  <CField tag="select" name="service" defaultValue="">
                     <option value="" disabled>What do you need help with?</option>
                     {HOME_CATEGORIES.map((c) => (
                       <option key={c.title}>{c.title}</option>
                     ))}
                   </CField>
-                  <CField tag="textarea" rows="4" placeholder="Tell us a little about your requirement…" />
+                  <CField tag="textarea" name="msg" rows="4" placeholder="Tell us a little about your requirement…" />
                   <div style={{ display: "flex", alignItems: "center", gap: 14, flexWrap: "wrap" }}>
-                    <HeroCTAButton variant="primary">Send Message</HeroCTAButton>
+                    <HeroCTAButton variant="primary">{busy ? "Sending…" : "Send Message"}</HeroCTAButton>
                     <span style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--ink-300)" }}>
                       or{" "}
                       <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" style={{ color: "var(--whatsapp-green)", fontWeight: "var(--weight-semibold)" }}>
@@ -132,6 +158,12 @@ export function ContactCTA() {
                       </a>
                     </span>
                   </div>
+                  {err && (
+                    <div role="alert" style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "#b42318" }}>
+                      Sorry, we couldn&apos;t send that. Please check your details or{" "}
+                      <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" style={{ color: "var(--whatsapp-green)", fontWeight: "var(--weight-semibold)" }}>message us on WhatsApp</a>.
+                    </div>
+                  )}
                 </form>
               </>
             )}

@@ -19,6 +19,7 @@ const QUICK_LINKS = [
 export function Footer() {
   const [email, setEmail] = useState("");
   const [ok, setOk] = useState(false);
+  const [subErr, setSubErr] = useState(false);
   const bp = useBP();
   const columns = [
     { title: "Quick Links", items: QUICK_LINKS },
@@ -80,9 +81,21 @@ export function Footer() {
               <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "var(--status-positive)" }}>✓ Subscribed — thank you!</div>
             ) : (
               <form
-                onSubmit={(e) => {
+                onSubmit={async (e) => {
                   e.preventDefault();
-                  if (email) setOk(true);
+                  if (!email) return;
+                  setSubErr(false);
+                  try {
+                    const res = await fetch("/api/leads", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({ name: "Newsletter subscriber", email, property: "Newsletter", source: "newsletter" }),
+                    });
+                    if (!res.ok) throw new Error("failed");
+                    setOk(true);
+                  } catch {
+                    setSubErr(true);
+                  }
                 }}
                 style={{ display: "flex", gap: 8 }}
               >
@@ -109,6 +122,7 @@ export function Footer() {
                 </button>
               </form>
             )}
+            {subErr && !ok && <div role="alert" style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "#ffb4a9", marginTop: 8 }}>Couldn&apos;t subscribe right now. Please try again.</div>}
             <div style={{ marginTop: 18, fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--navy-300)" }}>☎ {PHONE_DISPLAY}</div>
             <div style={{ marginTop: 6, fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--navy-300)" }}>✉ {EMAIL}</div>
           </div>

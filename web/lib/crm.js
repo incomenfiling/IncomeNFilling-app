@@ -1,44 +1,35 @@
-function formatCrmTimestamp(date) {
-  const pad = (n) => String(n).padStart(2, "0");
-  const yy = String(date.getFullYear()).slice(-2);
-  return `${pad(date.getDate())}-${pad(date.getMonth() + 1)}-${yy} ${pad(date.getHours())}:${pad(date.getMinutes())}:${pad(date.getSeconds())}`;
-}
-
+// Sends a website lead to the Google Apps Script web app, which appends a row to the
+// "Income N Filing - Website Leads" sheet and emails the sales inbox.
+// Env (set as Worker secrets): LEADS_WEBHOOK_URL, LEADS_WEBHOOK_SECRET.
+// To move to a CRM later, change only this file.
 export async function sendLeadToCRM({ name, phone, email, property, notes, source }) {
-  const webhookUrl = process.env.CRM_WEBHOOK_URL;
-  const apiKey = process.env.CRM_API_KEY;
-  if (!webhookUrl || !apiKey) {
-    throw new Error("CRM webhook is not configured");
+  const url = process.env.LEADS_WEBHOOK_URL;
+  const secret = process.env.LEADS_WEBHOOK_SECRET;
+  if (!url || !secret) {
+    throw new Error("Lead webhook is not configured");
   }
 
-  const res = await fetch(webhookUrl, {
+  const res = await fetch(url, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "X-API-Key": apiKey,
-    },
+    headers: { "Content-Type": "application/json" },
+    redirect: "follow",
     body: JSON.stringify({
-      leads: [
-        {
-          name,
-          phone: phone || "",
-          email: email || "",
-          property: property || "",
-          DateAndTime: formatCrmTimestamp(new Date()),
-          additionalProperties: {
-            notes: notes || "",
-            source: source || "website",
-          },
-          leadStatus: "New Lead",
-        },
-      ],
+      secret,
+      name,
+      phone: phone || "",
+      email: email || "",
+      service: property || "",
+      message: notes || "",
+      source: source || "website",
     }),
   });
 
   if (!res.ok) {
-    const body = await res.text().catch(() => "");
-    throw new Error(`CRM webhook responded ${res.status}: ${body.slice(0, 200)}`);
+    throw new Error(`Lead webhook responded ${res.status}`);
   }
-
-  return res.json().catch(() => ({}));
+  const data = await res.json().catch(() => null);
+  if (!data || data.ok !== true) {
+    throw new Error("Lead webhook rejected the lead");
+  }
+  return data;
 }
