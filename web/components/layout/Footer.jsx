@@ -5,7 +5,8 @@ import Image from "next/image";
 import { useBP } from "@/lib/useBP";
 import { SocialIcon } from "@/components/shared/SocialIcon";
 import { SOCIALS } from "@/components/shared/icons";
-import { HOME_CATEGORIES } from "@/data/categories";
+import { HUB_CATEGORIES } from "@/data/categories";
+import { MODULE_SLUGS } from "@/data/serviceSlugs";
 import { PHONE_DISPLAY, EMAIL } from "@/data/content";
 
 const QUICK_LINKS = [
@@ -23,7 +24,7 @@ export function Footer() {
   const bp = useBP();
   const columns = [
     { title: "Quick Links", items: QUICK_LINKS },
-    { title: "Services", items: HOME_CATEGORIES.map((c) => [c.title, "/services"]) },
+    { title: "Services", items: HUB_CATEGORIES.map((c) => [c.title, `/services/${MODULE_SLUGS[c.title]}`]) },
   ];
 
   return (

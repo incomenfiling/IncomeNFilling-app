@@ -1,5 +1,6 @@
 import { Space_Grotesk, IBM_Plex_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { siteGraph, jsonLd } from "@/lib/site";
 
 const display = Space_Grotesk({
   variable: "--font-display-face",
@@ -51,8 +52,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`}>
-      <body>{children}</body>
+    <html lang="en-IN" className={`${display.variable} ${body.variable} ${mono.variable}`}>
+      <body>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(siteGraph()) }} />
+        {children}
+      </body>
     </html>
   );
 }
