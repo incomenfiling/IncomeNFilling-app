@@ -19,10 +19,34 @@ const mono = JetBrains_Mono({
   weight: ["400", "500", "600", "700"],
 });
 
+const SITE = "https://incomenfiling.com";
+
 export const metadata = {
-  title: "Income N Filing — Business Tax & Compliance Advisory",
+  metadataBase: new URL(SITE),
+  title: {
+    default: "GST, Income Tax & Compliance Services in Kolkata | Income N Filing",
+    template: "%s | Income N Filing",
+  },
   description:
-    "Business compliance, made effortless. Taxation, GST, incorporation and corporate law, handled end-to-end. Trusted by 500+ businesses since 2017.",
+    "Income N Filing handles GST, income tax return filing, company incorporation and corporate compliance for businesses and individuals, end to end.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    siteName: "Income N Filing",
+    locale: "en_IN",
+    url: "/",
+    title: "GST, Income Tax & Compliance Services in Kolkata | Income N Filing",
+    description:
+      "GST, income tax return filing, company incorporation and corporate compliance, handled end to end.",
+    images: [{ url: "/logo.jpg", alt: "Income N Filing" }],
+  },
+  twitter: {
+    card: "summary",
+    title: "Income N Filing — GST, Income Tax & Compliance",
+    description:
+      "GST, income tax return filing, company incorporation and corporate compliance, handled end to end.",
+    images: ["/logo.jpg"],
+  },
 };
 
 export default function RootLayout({ children }) {
