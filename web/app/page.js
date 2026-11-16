@@ -66,7 +66,7 @@ export default function HomePage() {
       </section>
 
       <section style={{ padding: "90px 32px", maxWidth: "var(--container-max)", margin: "0 auto" }}>
-        <SectionHead eyebrow="Pan-India Compliance Services" title="Our Office Locations" sub="Two home offices in Kolkata & Bhagalpur, delivering to 20+ metros — click a pin to explore." />
+        <SectionHead eyebrow="Pan-India Compliance Services" title="Our Office" sub="Our Kolkata office serves clients across India, delivering to 20+ metros — click the pin to explore." />
         <OfficeMap />
       </section>
 

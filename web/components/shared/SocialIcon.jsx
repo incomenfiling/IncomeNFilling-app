@@ -1,11 +1,13 @@
 "use client";
 import { useState } from "react";
 
-export function SocialIcon({ d, label }) {
+export function SocialIcon({ d, label, href }) {
   const [h, setH] = useState(false);
   return (
     <a
-      href="#"
+      href={href || "#"}
+      target="_blank"
+      rel="noopener noreferrer me"
       aria-label={label}
       onMouseEnter={() => setH(true)}
       onMouseLeave={() => setH(false)}

@@ -27,8 +27,7 @@ export const ABOUT_STATS = [
 ];
 
 export const OFFICES = [
-  { city: "Kolkata", region: "West Bengal 700039", addr: "38M/1, New Ballygunge Rd, Kasba", phone: "+91 7890594600", lnglat: [88.3639, 22.5726] },
-  { city: "Bhagalpur", region: "Bihar 812001", addr: "Opp. Dr. R N Jha Clinic, Near Head Post Office", phone: "+91 7890594600", lnglat: [86.9842, 25.2445] },
+  { city: "Kolkata", region: "West Bengal 700039", addr: "Suite 1A, Kaberi Apartment, 38 M/1 New Ballygunge Palace, Ground Floor", phone: "+91 7890594600", lnglat: [88.3794836, 22.5234814] },
 ];
 
 export const METROS = [
@@ -47,3 +46,11 @@ export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 export const PHONE_DISPLAY = "+91 7890594600";
 export const PHONE_HREF = "tel:+917890594600";
 export const EMAIL = "support@incomenfiling.com";
+export const ADDRESS_LINE = "Suite 1A, Kaberi Apartment, 38 M/1 New Ballygunge Palace, Ground Floor, Kasba, Kolkata, West Bengal 700039";
+export const MAPS_URL = "https://www.google.com/maps?cid=14165944841428699660";
+export const SOCIAL_LINKS = {
+  Facebook: "https://www.facebook.com/INCOMENFILING",
+  Instagram: "https://www.instagram.com/incomenfiling/",
+  LinkedIn: "https://www.linkedin.com/company/incomenfiling/",
+  YouTube: "https://www.youtube.com/channel/UCEOCg1sR6gl1nGg5XkytcPg",
+};

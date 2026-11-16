@@ -161,7 +161,7 @@ export function OfficeMap({ contactChannels } = {}) {
             </span>
           </div>
           <div style={{ position: "relative", fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-2xl)", color: "var(--navy-950)", lineHeight: 1.1 }}>Visit or reach us</div>
-          <div style={{ position: "relative", fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(15,42,66,.7)", marginTop: 3 }}>2 home offices · delivery pan-India</div>
+          <div style={{ position: "relative", fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(15,42,66,.7)", marginTop: 3 }}>Kolkata office · delivery pan-India</div>
         </div>
         <div style={{ flex: 1, padding: "16px 18px", display: "flex", flexDirection: "column", gap: 10, overflowY: "auto" }}>
           {offices.map((o, i) => (
@@ -221,7 +221,7 @@ export function OfficeMap({ contactChannels } = {}) {
           </div>
         ) : (
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", borderTop: "1px solid var(--ink-100)" }}>
-            {[["2", "Offices"], ["20+", "Metros"], ["All", "States"]].map((s, si) => (
+            {[["1", "Office"], ["20+", "Metros"], ["All", "States"]].map((s, si) => (
               <div key={s[1]} style={{ textAlign: "center", padding: "14px 0", borderLeft: si ? "1px solid var(--ink-100)" : "none" }}>
                 <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "var(--text-xl)", color: "var(--navy-900)" }}>{s[0]}</div>
                 <div style={{ fontFamily: "var(--font-mono)", fontSize: 9, letterSpacing: ".06em", textTransform: "uppercase", color: "var(--ink-300)" }}>{s[1]}</div>

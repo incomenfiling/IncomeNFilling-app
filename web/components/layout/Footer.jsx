@@ -7,7 +7,7 @@ import { SocialIcon } from "@/components/shared/SocialIcon";
 import { SOCIALS } from "@/components/shared/icons";
 import { HUB_CATEGORIES } from "@/data/categories";
 import { MODULE_SLUGS } from "@/data/serviceSlugs";
-import { PHONE_DISPLAY, EMAIL } from "@/data/content";
+import { PHONE_DISPLAY, EMAIL, ADDRESS_LINE, SOCIAL_LINKS } from "@/data/content";
 
 const QUICK_LINKS = [
   ["Home", "/"],
@@ -46,8 +46,8 @@ export function Footer() {
               Simplifying compliance, empowering business — taxation, GST, incorporation and corporate law, handled end-to-end.
             </p>
             <div style={{ display: "flex", gap: 10 }}>
-              {SOCIALS.map((s) => (
-                <SocialIcon key={s.label} d={s.d} label={s.label} />
+              {SOCIALS.filter((s) => SOCIAL_LINKS[s.label]).map((s) => (
+                <SocialIcon key={s.label} d={s.d} label={s.label} href={SOCIAL_LINKS[s.label]} />
               ))}
             </div>
           </div>
@@ -126,6 +126,7 @@ export function Footer() {
             {subErr && !ok && <div role="alert" style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "#ffb4a9", marginTop: 8 }}>Couldn&apos;t subscribe right now. Please try again.</div>}
             <div style={{ marginTop: 18, fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--navy-300)" }}>☎ {PHONE_DISPLAY}</div>
             <div style={{ marginTop: 6, fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--navy-300)" }}>✉ {EMAIL}</div>
+            <address style={{ marginTop: 6, fontStyle: "normal", fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--navy-300)", lineHeight: 1.5, maxWidth: 260 }}>⌖ {ADDRESS_LINE}</address>
           </div>
         </div>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, flexWrap: "wrap", paddingTop: 22 }}>

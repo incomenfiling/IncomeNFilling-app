@@ -80,7 +80,7 @@ export default function ContactPage() {
             Let&apos;s start a <span style={{ color: "var(--gold-400)", whiteSpace: "nowrap" }}>conversation</span>
           </h1>
           <p style={{ color: "var(--navy-300)", margin: "0 auto 30px", maxWidth: 520, fontFamily: "var(--font-body)", fontSize: "var(--text-lg)", lineHeight: 1.5 }}>
-            Tell us what you&apos;re working on and the right advisor will take it from here — call, WhatsApp, email or drop by an office.
+            Tell us what you&apos;re working on and the right advisor will take it from here — call, WhatsApp, email or visit our Kolkata office.
           </p>
           <div style={{ display: "inline-flex", flexWrap: "wrap", gap: 0, justifyContent: "center", alignItems: "center", background: "rgba(255,255,255,.04)", border: "1px solid rgba(255,255,255,.1)", borderRadius: "var(--radius-pill)", padding: "6px 6px" }}>
             {[["Free first consultation"], ["Reply within working hours"], ["No obligation, ever"]].map((s, i, arr) => (
@@ -96,7 +96,7 @@ export default function ContactPage() {
             ))}
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 24, justifyContent: "center", marginTop: 30 }}>
-            {[["1000+", "businesses served"], ["2", "offices, Pan-India"], ["9+", "years of expertise"]].map((s, i, arr) => (
+            {[["1000+", "businesses served"], ["Pan-India", "service delivery"], ["9+", "years of expertise"]].map((s, i, arr) => (
               <Fragment key={s[1]}>
                 <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
                   <span style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 20, color: "var(--gold-400)" }}>{s[0]}</span>

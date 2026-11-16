@@ -3,35 +3,17 @@ export const SITE_NAME = "Income N Filing";
 export const PHONE_E164 = "+917890594600";
 export const EMAIL_ADDR = "support@incomenfiling.com";
 
-// Offices already published on the site (data/content.js OFFICES).
-const PLACES = [
-  {
-    "@type": "Place",
-    name: "Income N Filing — Kolkata (Kasba)",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "38M/1, New Ballygunge Rd, Kasba",
-      addressLocality: "Kolkata",
-      addressRegion: "West Bengal",
-      postalCode: "700039",
-      addressCountry: "IN",
-    },
-    geo: { "@type": "GeoCoordinates", latitude: 22.5726, longitude: 88.3639 },
-  },
-  {
-    "@type": "Place",
-    name: "Income N Filing — Bhagalpur",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Opp. Dr. R N Jha Clinic, Near Head Post Office",
-      addressLocality: "Bhagalpur",
-      addressRegion: "Bihar",
-      postalCode: "812001",
-      addressCountry: "IN",
-    },
-    geo: { "@type": "GeoCoordinates", latitude: 25.2445, longitude: 86.9842 },
-  },
-];
+// Address and coordinates come from the Google Business Profile (Kasba, Kolkata).
+const ADDRESS = {
+  "@type": "PostalAddress",
+  streetAddress: "Suite 1A, Kaberi Apartment, 38 M/1 New Ballygunge Palace, Ground Floor",
+  addressLocality: "Kolkata",
+  addressRegion: "West Bengal",
+  postalCode: "700039",
+  addressCountry: "IN",
+};
+const GEO = { "@type": "GeoCoordinates", latitude: 22.5234814, longitude: 88.3794836 };
+const MAPS_URL = "https://www.google.com/maps?cid=14165944841428699660";
 
 export const ORG_ID = `${SITE_URL}/#organization`;
 
@@ -51,9 +33,25 @@ export function siteGraph() {
         telephone: PHONE_E164,
         email: EMAIL_ADDR,
         foundingDate: "2017",
-        founder: { "@type": "Person", name: "Anish Jhunjhunwala", jobTitle: "Founder" },
+        founder: {
+          "@type": "Person",
+          name: "Anish Jhunjhunwala",
+          jobTitle: "Founder",
+          sameAs: [
+            "https://www.linkedin.com/in/anish-jhunjhunwala",
+            "https://www.youtube.com/@anisjhunjhunwala22",
+          ],
+        },
         areaServed: { "@type": "Country", name: "India" },
-        location: PLACES,
+        address: ADDRESS,
+        geo: GEO,
+        hasMap: MAPS_URL,
+        sameAs: [
+          "https://www.facebook.com/INCOMENFILING",
+          "https://www.instagram.com/incomenfiling/",
+          "https://www.linkedin.com/company/incomenfiling/",
+          "https://www.youtube.com/channel/UCEOCg1sR6gl1nGg5XkytcPg",
+        ],
         contactPoint: [
           {
             "@type": "ContactPoint",
