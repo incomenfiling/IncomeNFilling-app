@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useBP } from "@/lib/useBP";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { CountUp } from "@/components/ui/CountUp";
 import { HeroCTAButton } from "@/components/ui/HeroCTAButton";
@@ -10,21 +9,14 @@ import { ACCENTS } from "@/data/theme";
 
 export function Hero() {
   const router = useRouter();
-  const bp = useBP();
   const go = (path) => router.push(path === "contact" ? "/contact" : "/services");
 
   return (
     <section style={{ position: "relative", background: "var(--white)" }}>
-      <div
-        style={{
-          position: "relative", maxWidth: "var(--container-max)", margin: "0 auto", display: "grid",
-          gridTemplateColumns: bp.ltDesktop ? "1fr" : "1.05fr .95fr", gap: bp.mobile ? 32 : 60, alignItems: "center",
-          padding: bp.mobile ? "40px 20px 48px" : "72px 32px 80px",
-        }}
-      >
-        <div style={{ textAlign: bp.ltDesktop ? "center" : "left" }}>
+      <div className="hero-grid">
+        <div className="hero-text">
           <Eyebrow>All Systems Compliant · Since 2017</Eyebrow>
-          <h1 style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: bp.mobile ? "var(--text-4xl)" : "var(--text-6xl)", color: "var(--navy-900)", margin: "20px 0 20px", letterSpacing: "var(--tracking-tight)", lineHeight: 1.06 }}>
+          <h1 className="hero-h1" style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", color: "var(--navy-900)", margin: "20px 0 20px", letterSpacing: "var(--tracking-tight)", lineHeight: 1.06 }}>
             Business compliance,
             <br />
             made{" "}
@@ -36,14 +28,14 @@ export function Hero() {
             </span>
             .
           </h1>
-          <p style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-lg)", color: "var(--ink-500)", maxWidth: 460, lineHeight: "var(--leading-lg)", marginBottom: 32, marginLeft: bp.ltDesktop ? "auto" : 0, marginRight: bp.ltDesktop ? "auto" : 0 }}>
+          <p style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-lg)", color: "var(--ink-500)", maxWidth: 460, lineHeight: "var(--leading-lg)", marginBottom: 32 }} className="hero-p">
             A dedicated team handling taxation, GST, incorporation, and corporate law — so your business stays compliant without the busywork.
           </p>
-          <div style={{ display: "flex", gap: 14, marginBottom: 40, flexWrap: "wrap", justifyContent: bp.ltDesktop ? "center" : "flex-start" }}>
+          <div className="hero-cta" style={{ display: "flex", gap: 14, marginBottom: 40, flexWrap: "wrap" }}>
             <HeroCTAButton variant="primary" onClick={() => go("contact")}>Book Free Consultation</HeroCTAButton>
             <HeroCTAButton variant="ghost" onClick={() => go("services")}>Explore Services</HeroCTAButton>
           </div>
-          <div style={{ display: "flex", gap: bp.mobile ? 24 : 36, justifyContent: bp.ltDesktop ? "center" : "flex-start" }}>
+          <div className="hero-stats" style={{ display: "flex" }}>
             <div>
               <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-3xl)", color: "var(--navy-900)" }}>
                 <CountUp to={500} suffix="+" />
@@ -64,13 +56,13 @@ export function Hero() {
             </div>
           </div>
         </div>
-        <div style={{ position: "relative", height: bp.mobile ? "auto" : 560, width: "100%" }}>
-          {bp.ltDesktop ? (
-            <div style={{ position: "relative", height: bp.mobile ? 420 : 460, maxWidth: bp.mobile ? 380 : 440, margin: "0 auto" }}>
+        <div className="hero-vis">
+          <>
+            <div className="hero-m">
               <div style={{ position: "absolute", left: "50%", top: "50%", transform: "translate(-50%,-50%)", width: "92%", aspectRatio: "1", borderRadius: "50%", border: "2px dashed var(--gold-300,#f5cf82)", animation: "spin-slow 46s linear infinite", opacity: 0.65 }} />
               <div style={{ position: "absolute", left: "50%", top: "50%", transform: "translate(-50%,-50%)", width: "66%", aspectRatio: "1", borderRadius: "50%", border: "1.5px solid rgba(43,108,214,.2)", animation: "spin-slow 32s linear infinite reverse" }} />
               <div style={{ position: "absolute", left: "-8%", bottom: 0, width: "56%", height: "96%", zIndex: 2 }}>
-                <Image src="/images/hero-advisor.png" alt="Advisor" fill sizes="60vw" style={{ objectFit: "contain", objectPosition: "bottom center" }} priority />
+                <Image src="/images/hero-advisor.png" alt="Advisor" fill sizes="60vw" style={{ objectFit: "contain", objectPosition: "bottom center" }} />
               </div>
               <div style={{ position: "absolute", right: 0, top: "7%", zIndex: 4, width: "74%", minWidth: 248 }}>
                 <ServiceFinder onSelect={() => go("services")} />
@@ -101,12 +93,11 @@ export function Hero() {
                 );
               })}
             </div>
-          ) : (
-            <>
+            <div className="hero-d">
               <div style={{ position: "absolute", right: "-4%", top: "50%", transform: "translateY(-50%)", width: 500, height: 500, borderRadius: "50%", border: "2px dashed var(--gold-300,#f5cf82)", animation: "spin-slow 46s linear infinite", opacity: 0.7 }} />
               <div style={{ position: "absolute", right: "6%", top: "50%", transform: "translateY(-50%)", width: 360, height: 360, borderRadius: "50%", border: "1.5px solid rgba(43,108,214,.2)", animation: "spin-slow 32s linear infinite reverse" }} />
               <div style={{ position: "absolute", left: "-4%", bottom: 0, width: "52%", height: "98%", zIndex: 2 }}>
-                <Image src="/images/hero-advisor.png" alt="Advisor" fill sizes="400px" style={{ objectFit: "contain", objectPosition: "bottom center" }} priority />
+                <Image src="/images/hero-advisor.png" alt="Advisor" fill sizes="400px" style={{ objectFit: "contain", objectPosition: "bottom center" }} />
               </div>
               <div style={{ position: "absolute", right: 0, top: "8%", zIndex: 4, width: "64%", minWidth: 290 }}>
                 <ServiceFinder onSelect={() => go("services")} />
@@ -136,8 +127,8 @@ export function Hero() {
                   </div>
                 );
               })}
-            </>
-          )}
+            </div>
+          </>
         </div>
       </div>
     </section>

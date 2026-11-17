@@ -90,3 +90,16 @@ button { font: inherit; }
 @keyframes badgeFlash { 0%,64% { opacity: 0; } 72% { opacity: .95; } 82%,100% { opacity: 0; } }
 @keyframes boltGlow { 0%,60% { opacity: .15; } 72% { opacity: .6; } 88%,100% { opacity: .15; } }
 
+
+/* Hero layout is CSS-driven so the server HTML matches every screen (no layout shift after hydration). */
+.hero-grid{position:relative;max-width:var(--container-max);margin:0 auto;display:grid;grid-template-columns:1fr;gap:32px;align-items:center;padding:40px 20px 48px}
+.hero-text{text-align:center}
+.hero-h1{font-size:var(--text-4xl)}
+.hero-p{margin-left:auto;margin-right:auto}
+.hero-cta,.hero-stats{justify-content:center}
+.hero-stats{gap:24px}
+.hero-vis{position:relative;width:100%;height:auto}
+.hero-m{position:relative;height:420px;max-width:380px;margin:0 auto}
+.hero-d{display:none}
+@media(min-width:640px){.hero-grid{gap:60px;padding:72px 32px 80px}.hero-h1{font-size:var(--text-6xl)}.hero-stats{gap:36px}.hero-vis{height:560px}.hero-m{height:460px;max-width:440px}}
+@media(min-width:1024px){.hero-grid{grid-template-columns:1.05fr .95fr}.hero-text{text-align:left}.hero-p{margin-left:0;margin-right:0}.hero-cta,.hero-stats{justify-content:flex-start}.hero-m{display:none}.hero-d{display:block;position:absolute;inset:0}}
