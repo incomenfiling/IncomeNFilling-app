@@ -141,7 +141,7 @@ export function ContactCTA() {
                     <CField required name="phone" type="tel" placeholder="Phone" />
                   </div>
                   <CField required name="email" type="email" placeholder="Email address" />
-                  <CField tag="select" name="service" defaultValue="">
+                  <CField tag="select" name="service" aria-label="What do you need help with?" defaultValue="">
                     <option value="" disabled>What do you need help with?</option>
                     {HOME_CATEGORIES.map((c) => (
                       <option key={c.title}>{c.title}</option>

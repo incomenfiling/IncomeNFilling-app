@@ -56,7 +56,7 @@ export default function RootLayout({ children }) {
     <html lang="en-IN" className={`${display.variable} ${body.variable} ${mono.variable}`}>
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(siteGraph()) }} />
-        {children}
+        <main>{children}</main>
         <Analytics />
       </body>
     </html>

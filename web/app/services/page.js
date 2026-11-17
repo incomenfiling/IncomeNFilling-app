@@ -116,7 +116,7 @@ export default function ServicesPage() {
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 8, flexShrink: 0, ...(bp.mobile ? { width: "100%", justifyContent: "space-between", borderTop: "1px solid var(--ink-100)", paddingTop: 12 } : {}) }}>
             <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: ".06em", textTransform: "uppercase", color: "var(--ink-300)" }}>Sort</span>
-            <select value={sort} onChange={(e) => setSort(e.target.value)} style={{ fontFamily: "var(--font-body)", fontSize: 13, padding: "8px 12px", borderRadius: "var(--radius-md)", border: "1px solid var(--ink-100)", background: "var(--white)", color: "var(--navy-900)", cursor: "pointer", outline: "none", flex: bp.mobile ? 1 : "none" }}>
+            <select aria-label="Sort services" value={sort} onChange={(e) => setSort(e.target.value)} style={{ fontFamily: "var(--font-body)", fontSize: 13, padding: "8px 12px", borderRadius: "var(--radius-md)", border: "1px solid var(--ink-100)", background: "var(--white)", color: "var(--navy-900)", cursor: "pointer", outline: "none", flex: bp.mobile ? 1 : "none" }}>
               <option value="recommended">Recommended</option>
               <option value="most">Most services</option>
               <option value="az">A – Z</option>

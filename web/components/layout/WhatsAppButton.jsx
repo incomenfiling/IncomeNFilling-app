@@ -9,6 +9,7 @@ export function WhatsAppButton({ bottom }) {
   return (
     <a
       href={WHATSAPP_URL}
+      aria-label="Chat on WhatsApp"
       target="_blank"
       rel="noreferrer"
       style={{

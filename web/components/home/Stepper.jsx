@@ -108,7 +108,7 @@ export function Stepper() {
         </div>
         <div style={{ position: "relative", display: "flex", gap: 8, marginTop: 24 }}>
           {STEPS.map((_, i) => (
-            <button key={i} onClick={() => setActive(i)} style={{ width: active === i ? 30 : 10, height: 6, borderRadius: 999, border: "none", padding: 0, background: active === i ? "var(--gold-500)" : "var(--ink-100)", cursor: "pointer", transition: "all .3s" }} />
+            <button key={i} aria-label={`Go to step ${i + 1}`} onClick={() => setActive(i)} style={{ width: active === i ? 30 : 10, height: 6, borderRadius: 999, border: "none", padding: 0, background: active === i ? "var(--gold-500)" : "var(--ink-100)", cursor: "pointer", transition: "all .3s" }} />
           ))}
         </div>
       </div>
