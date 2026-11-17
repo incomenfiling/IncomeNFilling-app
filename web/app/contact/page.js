@@ -100,7 +100,7 @@ export default function ContactPage() {
           <div style={{ marginTop: 26 }}>
             <a href={BOOKING_URL} target="_blank" rel="noopener" onClick={() => track("booking_click", { source: "contact_hero" })}
               style={{ display: "inline-block", background: "var(--gold-500)", color: "var(--navy-900)", fontFamily: "var(--font-body)", fontWeight: 700, fontSize: 15, padding: "13px 26px", borderRadius: "var(--radius-pill)", textDecoration: "none" }}>
-              Book a 30-min consultation
+              Book a free 20-min call
             </a>
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 24, justifyContent: "center", marginTop: 30 }}>
