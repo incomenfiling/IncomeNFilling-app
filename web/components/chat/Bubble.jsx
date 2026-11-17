@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { TILES } from "@/components/chat/intentEngine";
+import { ChatLeadForm } from "@/components/chat/ChatLeadForm";
 import { WHATSAPP_URL, BOOKING_URL } from "@/data/content";
 
 export function Bubble({ m, onChip }) {
@@ -56,6 +57,7 @@ export function Bubble({ m, onChip }) {
           ))}
         </div>
       )}
+      {m.lead && <ChatLeadForm topic={m.service?.title} />}
       {m.chips && (
         <div style={{ display: "flex", flexWrap: "wrap", gap: 8, justifyContent: isUser ? "flex-end" : "flex-start", maxWidth: "92%", paddingLeft: isUser ? 0 : 39 }}>
           {m.chips.map((ch) => {

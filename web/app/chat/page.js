@@ -49,7 +49,7 @@ export default function LiveChatPage() {
           <div style={{ textAlign: "center", marginBottom: 26 }}>
             <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "6px 15px", borderRadius: "var(--radius-pill)", background: "var(--white)", border: "1px solid var(--ink-100)", fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".08em", textTransform: "uppercase", color: "var(--navy-700)", marginBottom: 14 }}>
               <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--status-positive)", animation: "pulse-dot 2s infinite" }} />
-              Advisors online · replies in minutes
+              Instant answers · advisor follows up in working hours
             </div>
             <h1 style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-4xl)", color: "var(--navy-900)", margin: "0 0 8px", letterSpacing: "var(--tracking-tight)" }}>Meet Ira, your compliance concierge</h1>
             <p style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-base)", color: "var(--ink-500)", margin: "0 auto", maxWidth: 460 }}>Ask anything about GST, tax, company setup or notices. Ira finds the right service in seconds — then a real advisor takes over.</p>

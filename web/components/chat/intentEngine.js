@@ -38,16 +38,16 @@ export function botReply(text) {
     return { text: "📄 Documents depend on the service (usually PAN, Aadhaar, address proof and bank details). Tell us what you need and our advisor will share the exact checklist.", chips: ["GST registration", "File my ITR", "Start a company", "Chat on WhatsApp"] };
   }
   if (/\b(price|prices|pricing|cost|fees?|charges?|quote|how much|rate|rates|kitna|kitne|paisa|paise)\b/.test(s)) {
-    return { text: "Great question! 😊 We don’t have fixed prices — every case is different, so we scope it on a free call and you only pay for what you need. Shall I set that up?", wa: true, chips: ["Yes, book a free call", "See all services"] };
+    return { text: "Great question! 😊 We don’t have fixed prices — every case is different, so we scope it on a free call and you only pay for what you need. Shall I set that up?", wa: true, lead: true, chips: ["Yes, book a free call", "See all services"] };
   }
   if (s.split(/\s+/).length <= 4 && /\b(thank|thanks|thx|ok|okay|cool|got it|nice|shukriya|dhanyavad)\b/.test(s)) {
     return { text: "You’re most welcome! 🙏 Whenever you’re ready, tap the green button and our advisor will continue with you on WhatsApp.", wa: true };
   }
   if (/\b(human|advisor|agent|person|talk to|call me|whatsapp|expert|baat|call)\b/.test(s)) {
-    return { text: "Of course! 👩‍💼 Our advisors usually reply within a few working hours. Let me connect you on WhatsApp.", wa: true, chips: ["Chat on WhatsApp"] };
+    return { text: "Of course! 👩‍💼 Our advisors usually reply within a few working hours. Let me connect you on WhatsApp.", wa: true, lead: true, chips: ["Chat on WhatsApp"] };
   }
   const kb = findKB(s);
-  if (kb) return { text: kb.reply, service: kb, wa: true, chips: ["Book a free call", "Ask about something else"] };
+  if (kb) return { text: kb.reply, service: kb, wa: true, lead: true, chips: ["Book a free call", "Ask about something else"] };
   return { text: "Got it 👍 We help with GST, income tax, starting a company, accounting, licenses and tax notices. Pick one below or tell me in your own words!", chips: ["GST registration", "File my ITR", "Start a company", "Accounting help", "Tax notice"] };
 }
 
