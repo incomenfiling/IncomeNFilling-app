@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { TILES } from "@/components/chat/intentEngine";
-import { WHATSAPP_URL } from "@/data/content";
+import { WHATSAPP_URL, BOOKING_URL } from "@/data/content";
 
 export function Bubble({ m, onChip }) {
   const isUser = m.who === "user";
@@ -60,9 +60,10 @@ export function Bubble({ m, onChip }) {
         <div style={{ display: "flex", flexWrap: "wrap", gap: 8, justifyContent: isUser ? "flex-end" : "flex-start", maxWidth: "92%", paddingLeft: isUser ? 0 : 39 }}>
           {m.chips.map((ch) => {
             const isWA = /whatsapp|book|call/i.test(ch);
+            const href = /book|call/i.test(ch) && !/whatsapp/i.test(ch) ? BOOKING_URL : WHATSAPP_URL;
             if (isWA) {
               return (
-                <a key={ch} href={WHATSAPP_URL} target="_blank" rel="noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontFamily: "var(--font-body)", fontSize: 13, fontWeight: "var(--weight-semibold)", padding: "9px 17px", borderRadius: "var(--radius-pill)", background: "var(--whatsapp-green)", color: "#fff", textDecoration: "none", boxShadow: "0 3px 10px rgba(37,211,102,.32)" }}>
+                <a key={ch} href={href} target="_blank" rel="noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontFamily: "var(--font-body)", fontSize: 13, fontWeight: "var(--weight-semibold)", padding: "9px 17px", borderRadius: "var(--radius-pill)", background: "var(--whatsapp-green)", color: "#fff", textDecoration: "none", boxShadow: "0 3px 10px rgba(37,211,102,.32)" }}>
                   {ch} ›
                 </a>
               );

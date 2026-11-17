@@ -9,7 +9,7 @@ const ITEMS = [
   { k: "about", label: "About", href: "/#about" },
   { k: "services", label: "Services", href: "/services" },
   { k: "testimonials", label: "Testimonials", href: "/#testimonials" },
-  { k: "chat", label: "Live Chat", href: "/chat" },
+  { k: "chat", label: "Ask Ira", href: "/chat" },
   { k: "contact", label: "Contact", href: "/contact" },
 ];
 

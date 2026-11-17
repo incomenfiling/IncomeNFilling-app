@@ -75,7 +75,7 @@ export default function LiveChatPage() {
                   ) : (
                     <>
                       <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--status-positive)", display: "inline-block" }} />
-                      Online · replies in minutes
+                      Instant answers · advisor on WhatsApp
                     </>
                   )}
                 </div>

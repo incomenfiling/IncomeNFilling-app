@@ -34,7 +34,7 @@ export function ChatWidget() {
             </div>
             <div>
               <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: 14, color: "var(--white)" }}>Filing Assistant</div>
-              <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--status-positive)" }}>● Online now</div>
+              <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--status-positive)" }}>Replies within working hours</div>
             </div>
             <button onClick={() => setOpen(false)} style={{ marginLeft: "auto", background: "none", border: "none", color: "var(--navy-300)", cursor: "pointer", fontSize: 18, lineHeight: 1 }}>
               ×
