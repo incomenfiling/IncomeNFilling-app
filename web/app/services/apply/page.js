@@ -8,6 +8,7 @@ import { ServiceIcon, WhatsAppIcon } from "@/components/shared/icons";
 import { HUB_CATEGORIES } from "@/data/categories";
 import { loadSelection, clearSelection, saveSelection } from "@/lib/selectionStorage";
 import { WHATSAPP_NUMBER } from "@/data/content";
+import { track } from "@/lib/track";
 
 const APPLY_ACCENTS = ["var(--gold-500)", "var(--navy-700)", "var(--status-positive)", "var(--navy-500)", "var(--gold-600)"];
 const APPLY_TINTS = ["var(--gold-050)", "var(--navy-050)", "var(--paper-alt)", "var(--navy-050)", "var(--gold-050)"];
@@ -151,6 +152,7 @@ export default function ServicesApplyPage() {
     setTimeout(async () => {
       try {
         await leadRequest;
+        track("generate_lead", { source: "apply" });
         clearSelection();
         setSent(true);
       } catch {

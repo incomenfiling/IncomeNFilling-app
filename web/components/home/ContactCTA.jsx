@@ -5,6 +5,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { HeroCTAButton } from "@/components/ui/HeroCTAButton";
 import { HOME_CATEGORIES } from "@/data/categories";
 import { WHATSAPP_URL } from "@/data/content";
+import { track } from "@/lib/track";
 
 function CField({ tag = "input", children, ...props }) {
   const [f, setF] = useState(false);
@@ -54,6 +55,7 @@ export function ContactCTA() {
         }),
       });
       if (!res.ok) throw new Error("failed");
+      track("generate_lead", { source: "home" });
       setSent(true);
     } catch {
       setErr(true);

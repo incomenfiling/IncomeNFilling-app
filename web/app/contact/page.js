@@ -7,6 +7,7 @@ import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { OfficeMap } from "@/components/shared/OfficeMap";
 import { CallIcon, WhatsAppIcon, EmailIcon, CheckCircleIcon } from "@/components/shared/icons";
 import { WHATSAPP_URL, PHONE_HREF } from "@/data/content";
+import { track } from "@/lib/track";
 
 const CAT = ["GST", "Income Tax", "Incorporation", "Corporate Compliance", "Accounting", "Licenses", "Tax Notice"];
 
@@ -52,6 +53,7 @@ export default function ContactPage() {
         body: JSON.stringify({ name: f.name, phone: f.phone, email: f.email, property: cat, notes: f.msg, source: "contact" }),
       });
       if (!res.ok) throw new Error("failed");
+      track("generate_lead", { source: "contact" });
       setSent(true);
     } catch {
       setError(true);

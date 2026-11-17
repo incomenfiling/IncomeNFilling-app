@@ -8,6 +8,7 @@ import { SOCIALS } from "@/components/shared/icons";
 import { HUB_CATEGORIES } from "@/data/categories";
 import { MODULE_SLUGS } from "@/data/serviceSlugs";
 import { PHONE_DISPLAY, EMAIL, ADDRESS_LINE, SOCIAL_LINKS } from "@/data/content";
+import { track } from "@/lib/track";
 
 const QUICK_LINKS = [
   ["Home", "/"],
@@ -93,6 +94,7 @@ export function Footer() {
                       body: JSON.stringify({ name: "Newsletter subscriber", email, property: "Newsletter", source: "newsletter" }),
                     });
                     if (!res.ok) throw new Error("failed");
+                    track("newsletter_signup", { source: "footer" });
                     setOk(true);
                   } catch {
                     setSubErr(true);
