@@ -104,7 +104,7 @@ export default function ContactPage() {
             </a>
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 24, justifyContent: "center", marginTop: 30 }}>
-            {[["1000+", "businesses served"], ["Pan-India", "service delivery"], ["9+", "years of expertise"]].map((s, i, arr) => (
+            {[["500+", "businesses served"], ["Pan-India", "service delivery"], ["9+", "years of expertise"]].map((s, i, arr) => (
               <Fragment key={s[1]}>
                 <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
                   <span style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 20, color: "var(--gold-400)" }}>{s[0]}</span>

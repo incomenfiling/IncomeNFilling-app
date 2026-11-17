@@ -17,7 +17,7 @@ export function ITRPromo() {
             <br />
             with <span style={{ color: "var(--navy-600,#2b6cd6)" }}>100% Accuracy</span>
           </h2>
-          <p style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-lg)", color: "var(--ink-500)", margin: 0 }}>Maximum Tax Refund, Guaranteed.</p>
+          <p style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-lg)", color: "var(--ink-500)", margin: 0 }}>Maximum Tax Refund, Legally Claimed.</p>
           <div>
             <HeroCTAButton variant="primary" onClick={() => router.push("/contact")}>Start Filing Now</HeroCTAButton>
           </div>

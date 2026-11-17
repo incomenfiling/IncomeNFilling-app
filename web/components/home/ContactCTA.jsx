@@ -115,7 +115,7 @@ export function ContactCTA() {
               ))}
             </div>
             <div style={{ position: "relative", marginTop: "auto", display: "grid", gridTemplateColumns: "repeat(3,1fr)", paddingTop: 18, borderTop: "1px solid rgba(15,42,66,.16)" }}>
-              {[["500+", "Clients"], ["4.9★", "Rating"], ["<2hr", "Avg reply"]].map((s, si) => (
+              {[["500+", "Clients"], ["4.9★", "Rating"], ["2017", "Since"]].map((s, si) => (
                 <div key={s[1]} style={{ textAlign: "center", borderLeft: si ? "1px solid rgba(15,42,66,.16)" : "none" }}>
                   <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "var(--text-xl)", color: "var(--navy-950)" }}>{s[0]}</div>
                   <div style={{ fontFamily: "var(--font-mono)", fontSize: 9, letterSpacing: ".05em", textTransform: "uppercase", color: "rgba(15,42,66,.6)", marginTop: 2 }}>{s[1]}</div>

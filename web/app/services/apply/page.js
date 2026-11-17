@@ -14,7 +14,7 @@ const APPLY_ACCENTS = ["var(--gold-500)", "var(--navy-700)", "var(--status-posit
 const APPLY_TINTS = ["var(--gold-050)", "var(--navy-050)", "var(--paper-alt)", "var(--navy-050)", "var(--gold-050)"];
 
 const NEXT_STEPS = [
-  { t: "Advisor calls you", d: "Usually within 2 working hours, to confirm scope and answer questions." },
+  { t: "Advisor calls you", d: "Usually within a few working hours, to confirm scope and answer questions." },
   { t: "Documents verified", d: "We check what you've shared against your checklist below." },
   { t: "Filed with authorities", d: "Prepared, submitted, and tracked until it's through." },
   { t: "Confirmation shared", d: "Certificate or acknowledgement sent to you — status: deployed." },

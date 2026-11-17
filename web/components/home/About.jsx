@@ -78,7 +78,7 @@ export function About() {
             </div>
             <div style={{ position: "absolute", left: 0, top: 24, display: "inline-flex", alignItems: "center", gap: 8, background: "var(--white)", borderRadius: "var(--radius-pill)", padding: "8px 15px", boxShadow: "var(--shadow-md)" }}>
               <span style={{ width: 8, height: 8, borderRadius: "50%", background: "var(--status-positive)", animation: "pulse-dot 2s infinite" }} />
-              <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".05em", color: "var(--navy-800)" }}>7+ years · pan-India</span>
+              <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".05em", color: "var(--navy-800)" }}>9+ years · pan-India</span>
             </div>
             <div style={{ position: "absolute", right: 0, bottom: 6, display: "flex", gap: 0, background: "var(--white)", borderRadius: "var(--radius-lg)", boxShadow: "0 18px 40px rgba(15,42,66,.2)", overflow: "hidden" }}>
               {ABOUT_STATS.map((s, i) => (

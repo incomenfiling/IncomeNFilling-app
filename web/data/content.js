@@ -8,7 +8,7 @@ export const WHY_CHOOSE_US = [
   { icon: "VER", title: "Verified Expertise", description: "Qualified professionals across taxation, compliance, and corporate law." },
   { icon: "SEC", title: "Complete Confidentiality", description: "Your data is protected on dedicated, secure infrastructure." },
   { icon: "CMP", title: "Compliance-First Approach", description: "Proactive guidance to keep your business fully up to date." },
-  { icon: "YRS", title: "7+ Years of Excellence", description: "A proven track record of serving businesses since 2017." },
+  { icon: "YRS", title: "9+ Years of Excellence", description: "A proven track record of serving businesses since 2017." },
   { icon: "PAN", title: "Pan-India Reach", description: "Serving clients across every state with consistent quality." },
   { icon: "500", title: "500+ Businesses Served", description: "Trusted by startups, SMEs, and established enterprises alike." },
 ];
