@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { postLead } from "@/lib/postLead";
 import { useBP } from "@/lib/useBP";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { HeroCTAButton } from "@/components/ui/HeroCTAButton";
@@ -41,18 +42,14 @@ export function ContactCTA() {
     setBusy(true);
     setErr(false);
     try {
-      const res = await fetch("/api/leads", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: fd.get("name"),
-          phone: fd.get("phone"),
-          email: fd.get("email"),
-          property: fd.get("service"),
-          notes: fd.get("msg"),
-          website: fd.get("website"),
-          source: "home",
-        }),
+      const res = await postLead({
+        name: fd.get("name"),
+        phone: fd.get("phone"),
+        email: fd.get("email"),
+        property: fd.get("service"),
+        notes: fd.get("msg"),
+        website: fd.get("website"),
+        source: "home",
       });
       if (!res.ok) throw new Error("failed");
       track("generate_lead", { source: "home" });

@@ -17,6 +17,34 @@ export async function POST(request) {
     return NextResponse.json({ ok: true });
   }
 
+  // Cloudflare Turnstile: enforced only when TURNSTILE_SECRET_KEY is set as a Worker secret.
+  const secretKey = process.env.TURNSTILE_SECRET_KEY;
+  if (secretKey) {
+    const token = clip(body?.turnstileToken, 2048);
+    let pass = false;
+    if (token) {
+      try {
+        const ip = request.headers.get("CF-Connecting-IP") || "";
+        const r = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams({ secret: secretKey, response: token, remoteip: ip }),
+        });
+        pass = (await r.json()).success === true;
+      } catch {
+        pass = false;
+      }
+    }
+    if (!pass) {
+      return NextResponse.json({ error: "Verification failed. Please retry." }, { status: 403 });
+    }
+  }
+
+  // Link spam: real enquiries rarely contain more than one link.
+  if ((String(body?.notes ?? "").match(/https?:\/\//gi) || []).length > 1) {
+    return NextResponse.json({ ok: true });
+  }
+
   const name = clip(body?.name, 120);
   const phone = clip(body?.phone, 30);
   const email = clip(body?.email, 120);

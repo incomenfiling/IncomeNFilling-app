@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { postLead } from "@/lib/postLead";
 import Link from "next/link";
 import Image from "next/image";
 import { useBP } from "@/lib/useBP";
@@ -88,11 +89,7 @@ export function Footer() {
                   if (!email) return;
                   setSubErr(false);
                   try {
-                    const res = await fetch("/api/leads", {
-                      method: "POST",
-                      headers: { "Content-Type": "application/json" },
-                      body: JSON.stringify({ name: "Newsletter subscriber", email, property: "Newsletter", source: "newsletter" }),
-                    });
+                    const res = await postLead({ name: "Newsletter subscriber", email, property: "Newsletter", source: "newsletter" });
                     if (!res.ok) throw new Error("failed");
                     track("newsletter_signup", { source: "footer" });
                     setOk(true);

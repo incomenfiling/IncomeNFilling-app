@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { postLead } from "@/lib/postLead";
 import { track } from "@/lib/track";
 
 // Small name + phone card shown under Ira's answers. Posts to /api/leads (Google Sheet + email).
@@ -10,11 +11,7 @@ export function ChatLeadForm({ topic }) {
     const fd = new FormData(e.currentTarget);
     setState("busy");
     try {
-      const res = await fetch("/api/leads", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: fd.get("name"), phone: fd.get("phone"), property: topic || "Ira chat", notes: "Lead from Ira chat", website: fd.get("website"), source: "ira_chat" }),
-      });
+      const res = await postLead({ name: fd.get("name"), phone: fd.get("phone"), property: topic || "Ira chat", notes: "Lead from Ira chat", website: fd.get("website"), source: "ira_chat" });
       if (!res.ok) throw new Error("failed");
       track("generate_lead", { source: "ira_chat" });
       setState("done");

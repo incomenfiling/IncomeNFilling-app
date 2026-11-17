@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
+import { postLead } from "@/lib/postLead";
 import { useRouter } from "next/navigation";
 import { useBP } from "@/lib/useBP";
 import { NavBar } from "@/components/layout/NavBar";
@@ -134,17 +135,13 @@ export default function ServicesApplyPage() {
     setSubmitting(true);
     [700, 1450, 2200].forEach((ms, i) => setTimeout(() => setSubmitPhase(i + 1), ms));
 
-    const leadRequest = fetch("/api/leads", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: f.name,
-        phone: f.phone,
-        email: f.email,
-        property: (serviceNames || []).join(", "),
-        notes: f.notes,
-        source: "apply",
-      }),
+    const leadRequest = postLead({
+      name: f.name,
+      phone: f.phone,
+      email: f.email,
+      property: (serviceNames || []).join(", "),
+      notes: f.notes,
+      source: "apply",
     }).then((res) => {
       if (!res.ok) throw new Error("Lead submission failed");
     });

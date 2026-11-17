@@ -1,5 +1,6 @@
 "use client";
 import { Fragment, useState } from "react";
+import { postLead } from "@/lib/postLead";
 import { useBP } from "@/lib/useBP";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
@@ -47,11 +48,7 @@ export default function ContactPage() {
     setError(false);
     setSubmitting(true);
     try {
-      const res = await fetch("/api/leads", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: f.name, phone: f.phone, email: f.email, property: cat, notes: f.msg, source: "contact" }),
-      });
+      const res = await postLead({ name: f.name, phone: f.phone, email: f.email, property: cat, notes: f.msg, source: "contact" });
       if (!res.ok) throw new Error("failed");
       track("generate_lead", { source: "contact" });
       setSent(true);
