@@ -1,8 +1,8 @@
 :root {
   /* Colors */
   --navy-950: #0A1826; --navy-900: #0F2338; --navy-800: #153048; --navy-700: #1D4162; --navy-600: #2A5478; --navy-500: #3E6E93; --navy-400: #5b6b82; --navy-300: #9CBED8; --navy-200: #b9c6da; --navy-100: #E3EDF5; --navy-050: #F4F8FB;
-  --gold-600: #C2891B; --gold-500: #EFA82E; --gold-400: #F5BF5C; --gold-300: #F8D48C; --gold-200: #f6e2b8; --gold-100: #FCEBC7; --gold-050: #FDF4E0;
-  --ink-900: #0F2030; --ink-700: #33475A; --ink-500: #5B6E80; --ink-400: #7c8b99; --ink-300: #97A6B3; --ink-100: #E4E9EE;
+  --gold-600: #8F6410; --gold-500: #EFA82E; --gold-400: #F5BF5C; --gold-300: #F8D48C; --gold-200: #f6e2b8; --gold-100: #FCEBC7; --gold-050: #FDF4E0;
+  --ink-900: #0F2030; --ink-700: #33475A; --ink-500: #5B6E80; --ink-400: #627386; --ink-300: #6B7C8C; --ink-100: #E4E9EE;
   --paper: #FAFBFC; --paper-alt: #F1F5F8; --white: #FFFFFF;
   --status-positive: #1E9A5A; --status-warning: var(--gold-600); --status-critical: #D8434B; --status-neutral: var(--ink-500);
   --whatsapp-green: #25D366;
