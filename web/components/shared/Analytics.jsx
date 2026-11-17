@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { track } from "@/lib/track";
 
 const GA_ID = "G-ME6GXBHFZ4";
+const CLARITY_ID = "zf44688vd9";
 
 export default function Analytics() {
   useEffect(() => {
@@ -29,6 +30,13 @@ export default function Analytics() {
         window.gtag = gtag;
         gtag('js', new Date());
         gtag('config', '${GA_ID}');
+      `}</Script>
+      <Script id="clarity-init" strategy="lazyOnload">{`
+        (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window,document,"clarity","script","${CLARITY_ID}");
       `}</Script>
     </>
   );
