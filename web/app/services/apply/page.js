@@ -467,10 +467,10 @@ export default function ServicesApplyPage() {
                             </div>
                             <div style={{ position: "relative", width: 112, flexShrink: 0, background: `linear-gradient(165deg,${ac},var(--navy-950))`, borderRadius: "0 var(--radius-lg) var(--radius-lg) 0", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "space-between", padding: "18px 0", overflow: "hidden" }}>
                               <div aria-hidden style={{ position: "absolute", inset: 0, backgroundImage: "radial-gradient(rgba(255,255,255,.14) 1px,transparent 1px)", backgroundSize: "12px 12px", opacity: 0.4 }} />
-                              <div style={{ position: "relative", fontFamily: "var(--font-mono)", fontSize: 8.5, letterSpacing: ".3em", textTransform: "uppercase", color: "rgba(255,255,255,.7)", writingMode: "vertical-rl", transform: "rotate(180deg)" }}>Module</div>
+                              <div style={{ position: "relative", fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".3em", textTransform: "uppercase", color: "rgba(255,255,255,.7)", writingMode: "vertical-rl", transform: "rotate(180deg)" }}>Module</div>
                               <div style={{ position: "relative", textAlign: "center", lineHeight: 1 }}>
                                 <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 38, color: "#fff", letterSpacing: "-.02em" }}>{services.length}</div>
-                                <div style={{ fontFamily: "var(--font-mono)", fontSize: 8, letterSpacing: ".14em", textTransform: "uppercase", color: "rgba(255,255,255,.65)", marginTop: 5 }}>picked</div>
+                                <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".14em", textTransform: "uppercase", color: "rgba(255,255,255,.65)", marginTop: 5 }}>picked</div>
                               </div>
                               <div aria-hidden style={{ position: "relative", width: 6, height: 6, borderRadius: "50%", background: "rgba(255,255,255,.45)" }} />
                             </div>
@@ -704,7 +704,7 @@ export default function ServicesApplyPage() {
                       </svg>
                       <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
                         <span style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 26, color: "#fff", lineHeight: 1 }}>{Math.round(docPct * 100)}%</span>
-                        <span style={{ fontFamily: "var(--font-mono)", fontSize: 8, letterSpacing: ".14em", color: "var(--gold-400)", textTransform: "uppercase", marginTop: 3 }}>docs</span>
+                        <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".14em", color: "var(--gold-400)", textTransform: "uppercase", marginTop: 3 }}>docs</span>
                       </div>
                     </div>
                   </div>

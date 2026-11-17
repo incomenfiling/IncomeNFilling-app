@@ -28,7 +28,7 @@ export function ITRPromo() {
                 🛡
                 <span aria-hidden style={{ position: "absolute", top: -4, bottom: -4, left: 0, width: 10, background: "linear-gradient(100deg,transparent,rgba(255,255,255,.9),transparent)", animation: "npShieldShine 3.6s var(--ease-standard) infinite", pointerEvents: "none" }} />
               </span>
-              <span style={{ fontFamily: "var(--font-mono)", fontSize: 8, letterSpacing: ".06em", textTransform: "uppercase", color: "var(--navy-700)", fontWeight: "var(--weight-semibold)", textAlign: "center" }}>
+              <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".06em", textTransform: "uppercase", color: "var(--navy-700)", fontWeight: "var(--weight-semibold)", textAlign: "center" }}>
                 Notice
                 <br />
                 Protect

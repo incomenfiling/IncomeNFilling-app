@@ -63,7 +63,7 @@ export function ServiceCard({ c, i, selCount, onClick }) {
         <div style={{ position: "relative", fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".3em", textTransform: "uppercase", color: "rgba(255,255,255,.7)", writingMode: "vertical-rl", transform: "rotate(180deg)" }}>Services</div>
         <div style={{ position: "relative", textAlign: "center", lineHeight: 1 }}>
           <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 40, color: "var(--white)", letterSpacing: "-.02em" }}>{selCount > 0 ? selCount : c.count}</div>
-          <div style={{ fontFamily: "var(--font-mono)", fontSize: 8.5, letterSpacing: ".1em", textTransform: "uppercase", color: selCount > 0 ? "#7fe6a6" : "rgba(255,255,255,.6)", marginTop: 4 }}>{selCount > 0 ? "picked" : "total"}</div>
+          <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".1em", textTransform: "uppercase", color: selCount > 0 ? "#7fe6a6" : "rgba(255,255,255,.6)", marginTop: 4 }}>{selCount > 0 ? "picked" : "total"}</div>
         </div>
         <div style={{ position: "relative", width: 36, height: 36, borderRadius: "50%", background: "var(--white)", color: "var(--navy-950)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 17, transition: "transform .3s", transform: h ? "scale(1.12)" : "none" }}>→</div>
       </div>
