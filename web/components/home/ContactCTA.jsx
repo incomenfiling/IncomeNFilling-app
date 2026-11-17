@@ -7,6 +7,7 @@ import { HeroCTAButton } from "@/components/ui/HeroCTAButton";
 import { HOME_CATEGORIES } from "@/data/categories";
 import { WHATSAPP_URL, BOOKING_URL } from "@/data/content";
 import { track } from "@/lib/track";
+import { ConsentNote } from "@/components/ui/ConsentNote";
 
 function CField({ tag = "input", children, ...props }) {
   const [f, setF] = useState(false);
@@ -167,6 +168,7 @@ export function ContactCTA() {
                       <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" style={{ color: "var(--whatsapp-green)", fontWeight: "var(--weight-semibold)" }}>message us on WhatsApp</a>.
                     </div>
                   )}
+                <ConsentNote />
                 </form>
               </>
             )}

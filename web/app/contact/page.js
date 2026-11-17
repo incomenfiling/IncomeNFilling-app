@@ -9,6 +9,7 @@ import { OfficeMap } from "@/components/shared/OfficeMapLazy";
 import { CallIcon, WhatsAppIcon, EmailIcon, CheckCircleIcon } from "@/components/shared/icons";
 import { WHATSAPP_URL, PHONE_HREF, BOOKING_URL } from "@/data/content";
 import { track } from "@/lib/track";
+import { ConsentNote } from "@/components/ui/ConsentNote";
 
 const CAT = ["GST", "Income Tax", "Incorporation", "Corporate Compliance", "Accounting", "Licenses", "Tax Notice"];
 
@@ -225,6 +226,7 @@ export default function ContactPage() {
                   </div>
                 )}
                 <div style={{ textAlign: "center", fontFamily: "var(--font-body)", fontSize: 12, color: "var(--ink-300)" }}>🔒 Your details stay private — used only to contact you back.</div>
+                <ConsentNote />
               </form>
             )}
           </div>

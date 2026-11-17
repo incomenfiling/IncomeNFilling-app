@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { postLead } from "@/lib/postLead";
 import { track } from "@/lib/track";
+import { ConsentNote } from "@/components/ui/ConsentNote";
 
 // Small name + phone card shown under Ira's answers. Posts to /api/leads (Google Sheet + email).
 export function ChatLeadForm({ topic }) {
@@ -30,7 +31,7 @@ export function ChatLeadForm({ topic }) {
       <input name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: "absolute", left: -9999, opacity: 0 }} />
       <button type="submit" disabled={state === "busy"} style={{ marginTop: 10, padding: "10px 18px", borderRadius: 999, border: "none", background: "var(--gold-500)", color: "var(--navy-950)", fontWeight: 600, fontSize: 14, cursor: "pointer" }}>{state === "busy" ? "Sending…" : "Request a call back"}</button>
       {state === "err" && <div style={{ marginTop: 8, fontSize: 12, color: "var(--status-negative, #b3261e)" }}>Couldn’t send. Please try WhatsApp instead.</div>}
-      <div style={{ marginTop: 8, fontSize: 11, color: "var(--ink-300)" }}>We use your details only to contact you about your enquiry.</div>
+      <ConsentNote style={{ textAlign: "left" }} />
     </form>
   );
 }

@@ -376,6 +376,81 @@ export const SERVICE_PAGES = [
       },
     ],
   },
+  {
+    slug: "belated-revised-itr-filing",
+    name: "Belated & Revised ITR Filing",
+    module: "Income Tax",
+    listed: "Belated ITR Filing",
+    metaTitle: "Belated & Revised ITR Filing Help (Missed the Due Date)",
+    metaDescription:
+      "Missed the ITR due date or need to correct a filed return? Income N Filing prepares and files belated and revised income tax returns, checking AIS and Form 26AS first.",
+    intro:
+      "If the original due date has passed, or you spotted an error after filing, the Income Tax Act generally still allows a belated or revised return within the time limits that apply to that year. Late filing can bring interest, a late fee and loss of some benefits, so it is better to file sooner. We check your records, work out which return applies and file it correctly.",
+    whoNeeds: [
+      "Taxpayers who missed the ITR due date for a year",
+      "Anyone who filed and later found a wrong income, deduction or bank detail",
+      "People who received an intimation and need to correct the return",
+      "Individuals with several years of unfiled returns",
+    ],
+    included: [
+      "Check which return applies and the time limit for that assessment year",
+      "Review of AIS, Form 26AS and your documents before filing",
+      "Preparation and e-filing of the belated or revised return, with e-verification support",
+      "Computation of any tax, interest or fee payable before you pay it",
+    ],
+    faqs: [
+      {
+        q: "Can I still file my ITR after the due date?",
+        a: "Usually yes, as a belated return within the time limit for that assessment year. Interest and a late fee can apply, and some carry-forward benefits may be affected. We confirm the position for your year before filing.",
+      },
+      {
+        q: "What is a revised return?",
+        a: "It replaces a return you already filed when you find a mistake or omission. It is allowed within the prescribed time limit.",
+      },
+      {
+        q: "What do you need from me to start?",
+        a: "Your PAN, income documents for the year and bank details. We pull AIS and Form 26AS to cross-check before filing.",
+      },
+    ],
+  },
+  {
+    slug: "late-gst-return-filing",
+    name: "Late GST Return Filing",
+    module: "GST Compliance",
+    listed: "Late GST Return Filing",
+    metaTitle: "Late GST Return Filing Help (GSTR-1, GSTR-3B Pending)",
+    metaDescription:
+      "GST returns pending or filed late? Income N Filing reconciles your data, files overdue GSTR-1 and GSTR-3B returns and explains late fee and interest before you pay.",
+    intro:
+      "When GST returns are not filed by the due date, late fees and interest accrue, and continued non-filing can lead to notices or cancellation of registration. We bring the filings up to date in the right order, reconcile your sales and input tax credit, and tell you what is payable before you pay it.",
+    whoNeeds: [
+      "Businesses with one or more months of GSTR-1 or GSTR-3B pending",
+      "Taxpayers who received a notice for non-filing of returns",
+      "Businesses whose GST registration is at risk of suspension for non-filing",
+      "Owners who want to start filing regularly again",
+    ],
+    included: [
+      "Status check of all pending returns and periods on the GST portal",
+      "Reconciliation of sales, purchases and input tax credit",
+      "Filing of overdue GSTR-1 and GSTR-3B in the correct sequence",
+      "Computation of late fee and interest before payment",
+      "Support with any related notice",
+    ],
+    faqs: [
+      {
+        q: "What happens if I do not file GST returns on time?",
+        a: "A late fee and interest apply, and continued non-filing can lead to notices and, eventually, cancellation of the registration. The exact amounts depend on the return, the period and your turnover.",
+      },
+      {
+        q: "Can I file several pending months together?",
+        a: "Returns generally have to be filed period by period. We clear them in the order the portal allows and tell you the total payable.",
+      },
+      {
+        q: "Will you tell me the late fee before I pay?",
+        a: "Yes. We share the computed late fee and interest first so there are no surprises.",
+      },
+    ],
+  },
 ];
 
 export const SERVICE_BY_SLUG = Object.fromEntries(SERVICE_PAGES.map((s) => [s.slug, s]));

@@ -10,6 +10,7 @@ import { HUB_CATEGORIES } from "@/data/categories";
 import { MODULE_SLUGS } from "@/data/serviceSlugs";
 import { PHONE_DISPLAY, EMAIL, ADDRESS_LINE, SOCIAL_LINKS } from "@/data/content";
 import { track } from "@/lib/track";
+import { ConsentNote } from "@/components/ui/ConsentNote";
 
 const QUICK_LINKS = [
   ["Home", "/"],
@@ -122,6 +123,7 @@ export function Footer() {
                 </button>
               </form>
             )}
+            {!ok && <ConsentNote dark style={{ textAlign: "left", marginTop: 8 }} />}
             {subErr && !ok && <div role="alert" style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "#ffb4a9", marginTop: 8 }}>Couldn&apos;t subscribe right now. Please try again.</div>}
             <div style={{ marginTop: 18, fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--navy-300)" }}>☎ {PHONE_DISPLAY}</div>
             <div style={{ marginTop: 6, fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--navy-300)" }}>✉ {EMAIL}</div>
