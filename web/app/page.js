@@ -9,7 +9,7 @@ import { CategoryExplorer } from "@/components/home/CategoryExplorer";
 import { Stepper } from "@/components/home/Stepper";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
 import { ClientFlipGrid } from "@/components/home/ClientFlipGrid";
-import { ReviewMarquee } from "@/components/home/ReviewMarquee";
+import { ReviewsSection } from "@/components/home/ReviewsSection";
 import { ITRPromo } from "@/components/home/ITRPromo";
 import { ContactCTA } from "@/components/home/ContactCTA";
 import { Eyebrow, SectionHead } from "@/components/ui/Eyebrow";
@@ -29,6 +29,7 @@ export default function HomePage() {
       <NavBar active="home" />
 
       <Hero />
+      <ReviewsSection />
       <About />
 
       <section style={{ padding: "90px 32px", maxWidth: "var(--container-max)", margin: "0 auto" }}>
@@ -56,13 +57,6 @@ export default function HomePage() {
           <SectionHead eyebrow="And Many More" title="Our Clients" sub="As a client, it matters who handles your compliance — here's who trusts us. Watch the cards flip, hover to hold." />
           <ClientFlipGrid />
         </div>
-      </section>
-
-      <section id="testimonials" style={{ background: "var(--navy-050)", padding: "90px 0" }}>
-        <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "0 32px" }}>
-          <SectionHead eyebrow="Client Stories" title="What Our Clients Say" sub="★★★★★ Rated 4.9/5 on Google Reviews — hover to pause and read." />
-        </div>
-        <ReviewMarquee />
       </section>
 
       <section style={{ padding: "90px 32px", maxWidth: "var(--container-max)", margin: "0 auto" }}>
