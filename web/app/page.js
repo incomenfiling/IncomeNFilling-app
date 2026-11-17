@@ -15,7 +15,7 @@ import { ContactCTA } from "@/components/home/ContactCTA";
 import { Eyebrow, SectionHead } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { Accordion } from "@/components/ui/Accordion";
-import { OfficeMap } from "@/components/shared/OfficeMap";
+import { OfficeMap } from "@/components/shared/OfficeMapLazy";
 import { HOME_CATEGORIES } from "@/data/categories";
 import { FAQ } from "@/data/faq";
 

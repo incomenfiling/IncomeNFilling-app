@@ -4,7 +4,7 @@ import { useBP } from "@/lib/useBP";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
-import { OfficeMap } from "@/components/shared/OfficeMap";
+import { OfficeMap } from "@/components/shared/OfficeMapLazy";
 import { CallIcon, WhatsAppIcon, EmailIcon, CheckCircleIcon } from "@/components/shared/icons";
 import { WHATSAPP_URL, PHONE_HREF } from "@/data/content";
 import { track } from "@/lib/track";
