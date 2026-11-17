@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
-import { ChatWidget } from "@/components/layout/ChatWidget";
+import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { Hero } from "@/components/home/Hero";
 import { About } from "@/components/home/About";
 import { CategoryExplorer } from "@/components/home/CategoryExplorer";
@@ -25,7 +25,7 @@ export default function HomePage() {
 
   return (
     <div style={{ background: "var(--paper)" }}>
-      <ChatWidget />
+      <WhatsAppButton />
       <NavBar active="home" />
 
       <Hero />

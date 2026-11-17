@@ -3,7 +3,7 @@ import { useBP } from "@/lib/useBP";
 import { WhatsAppIcon } from "@/components/shared/icons";
 import { WHATSAPP_URL } from "@/data/content";
 
-// Floating WhatsApp shortcut used on every page except Home (Home gets the richer ChatWidget).
+// Floating WhatsApp shortcut used on every page except Home.
 export function WhatsAppButton({ bottom }) {
   const bp = useBP();
   return (
