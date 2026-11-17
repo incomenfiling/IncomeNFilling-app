@@ -48,7 +48,7 @@ export default function LegalPage() {
       <section style={{ background: "linear-gradient(150deg,var(--navy-950) 0%,var(--navy-900) 55%,var(--navy-800) 100%)", padding: bp.mobile ? "44px 20px" : "64px 32px", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, backgroundImage: "radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px)", backgroundSize: "26px 26px", pointerEvents: "none" }} />
         <div style={{ position: "relative", maxWidth: 820, margin: "0 auto" }}>
-          <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--gold-400)", letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 14 }}>Legal</div>
+          <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--gold-400)", letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 14 }}>Legal</div>
           <h1 style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-bold)", fontSize: bp.mobile ? "var(--text-2xl)" : "var(--text-4xl)", color: "var(--white)", margin: 0 }}>
             {isTerms ? "Terms & Conditions" : "Privacy Policy"}
           </h1>

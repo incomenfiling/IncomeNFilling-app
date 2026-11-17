@@ -46,7 +46,7 @@ function findCategoryFor(name) {
 }
 
 function ApplyLabel({ children }) {
-  return <label style={{ fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 600, letterSpacing: ".05em", textTransform: "uppercase", color: "var(--ink-500)" }}>{children}</label>;
+  return <label style={{ fontFamily: "var(--font-mono)", fontSize: 12, fontWeight: 600, letterSpacing: ".05em", textTransform: "uppercase", color: "var(--ink-500)" }}>{children}</label>;
 }
 
 function CheckCircle({ size = 72, color = "var(--gold-600)" }) {
@@ -238,7 +238,7 @@ export default function ServicesApplyPage() {
                     </span>
                     <span>
                       <span style={{ display: "block", fontFamily: "var(--font-body)", fontSize: 13.5, fontWeight: 600, color: "var(--navy-900)" }}>{p.t}</span>
-                      <span style={{ display: "block", fontFamily: "var(--font-body)", fontSize: 11.5, color: "var(--ink-500)" }}>{p.d}</span>
+                      <span style={{ display: "block", fontFamily: "var(--font-body)", fontSize: 12, color: "var(--ink-500)" }}>{p.d}</span>
                     </span>
                   </div>
                 );
@@ -260,7 +260,7 @@ export default function ServicesApplyPage() {
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 120, background: "linear-gradient(to top,rgba(11,31,58,.4),transparent)", pointerEvents: "none" }} />
         <div style={{ position: "relative", maxWidth: 820, margin: "0 auto", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
           <div>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: 8, fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--gold-400)", letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 16, background: "rgba(212,167,71,.1)", border: "1px solid rgba(212,167,71,.25)", padding: "6px 14px", borderRadius: "var(--radius-pill)" }}>
+            <div style={{ display: "inline-flex", alignItems: "center", gap: 8, fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--gold-400)", letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 16, background: "rgba(212,167,71,.1)", border: "1px solid rgba(212,167,71,.25)", padding: "6px 14px", borderRadius: "var(--radius-pill)" }}>
               <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--status-positive)", animation: "pulse-dot 2s infinite" }} />
               Get started
             </div>
@@ -395,13 +395,13 @@ export default function ServicesApplyPage() {
                           )}
                           {done && <span aria-hidden style={{ position: "absolute", inset: -5, borderRadius: "50%", border: "2px solid rgba(52,168,110,.32)" }} />}
                           {cur && <span aria-hidden style={{ position: "absolute", inset: -6, borderRadius: "50%", border: "2px solid var(--gold-400)", animation: "pulse-ring 2s infinite" }} />}
-                          <span style={{ position: "absolute", top: -4, right: -4, minWidth: 20, height: 20, padding: "0 5px", borderRadius: 10, background: cur ? "var(--gold-500)" : done ? "var(--white)" : "var(--paper-alt)", color: cur ? "var(--navy-950)" : done ? "var(--status-positive)" : "var(--ink-300)", border: done ? "1.5px solid var(--status-positive)" : "none", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 11, display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 2px 6px rgba(11,31,58,.15)" }}>
+                          <span style={{ position: "absolute", top: -4, right: -4, minWidth: 20, height: 20, padding: "0 5px", borderRadius: 10, background: cur ? "var(--gold-500)" : done ? "var(--white)" : "var(--paper-alt)", color: cur ? "var(--navy-950)" : done ? "var(--status-positive)" : "var(--ink-300)", border: done ? "1.5px solid var(--status-positive)" : "none", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 12, display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 2px 6px rgba(11,31,58,.15)" }}>
                             {i + 1}
                           </span>
                         </span>
                         <span style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 2 }}>
                           <span style={{ fontFamily: "var(--font-display)", fontSize: 14.5, fontWeight: "var(--weight-semibold)", color: cur || done ? "var(--navy-900)" : "var(--ink-500)", whiteSpace: "nowrap", transition: "color .3s" }}>{label}</span>
-                          <span style={{ fontFamily: "var(--font-mono)", fontSize: 9.5, letterSpacing: ".08em", textTransform: "uppercase", color: cur ? "var(--gold-600)" : done ? "var(--status-positive)" : "var(--ink-300)", transition: "color .3s" }}>{caption}</span>
+                          <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase", color: cur ? "var(--gold-600)" : done ? "var(--status-positive)" : "var(--ink-300)", transition: "color .3s" }}>{caption}</span>
                         </span>
                       </button>
                     );
@@ -427,7 +427,7 @@ export default function ServicesApplyPage() {
                             <span aria-hidden style={{ ...notch, bottom: -10 }} />
                             <span aria-hidden style={{ position: "absolute", top: 12, bottom: 12, left: "calc(100% - 112px)", borderLeft: "2px dashed var(--ink-100)", zIndex: 5 }} />
                             <div style={{ position: "relative", flex: 1, minWidth: 0, background: "var(--white)", border: "1px solid var(--ink-100)", borderRight: "none", borderRadius: "var(--radius-lg) 0 0 var(--radius-lg)", padding: "16px 20px", display: "flex", flexDirection: "column", overflow: "hidden" }}>
-                              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", fontFamily: "var(--font-mono)", fontSize: 9.5, letterSpacing: ".12em", textTransform: "uppercase", color: "var(--ink-300)", marginBottom: 14 }}>
+                              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".12em", textTransform: "uppercase", color: "var(--ink-300)", marginBottom: 14 }}>
                                 <span>Module No. {String(gi + 1).padStart(2, "0")}</span>
                                 <span style={{ display: "inline-flex", alignItems: "center", gap: 5, color: ac, fontWeight: "var(--weight-semibold)" }}>
                                   <span style={{ width: 5, height: 5, borderRadius: "50%", background: ac }} />
@@ -534,7 +534,7 @@ export default function ServicesApplyPage() {
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, flexWrap: "wrap", marginBottom: 2 }}>
                       <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-2xl)", color: "var(--navy-900)" }}>Which of these do you have?</div>
                       {totalDocs > 0 && (
-                        <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 700, color: checkedCount === totalDocs ? "var(--status-positive)" : "var(--ink-500)", background: "var(--paper-alt)", padding: "5px 12px", borderRadius: "var(--radius-pill)" }}>
+                        <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, fontWeight: 700, color: checkedCount === totalDocs ? "var(--status-positive)" : "var(--ink-500)", background: "var(--paper-alt)", padding: "5px 12px", borderRadius: "var(--radius-pill)" }}>
                           {checkedCount} / {totalDocs} ready
                         </span>
                       )}
@@ -549,7 +549,7 @@ export default function ServicesApplyPage() {
                               <span style={{ flexShrink: 0, width: 26, height: 26, borderRadius: "var(--radius-sm)", background: done ? "var(--status-positive)" : "var(--gold-050)", color: done ? "#fff" : "var(--gold-600)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                                 {done ? <span style={{ fontSize: 14, fontWeight: 700 }}>✓</span> : <ServiceIcon code={cat.icon} size={15} />}
                               </span>
-                              <div style={{ fontFamily: "var(--font-mono)", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "var(--gold-600)" }}>{cat.title}</div>
+                              <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase", color: "var(--gold-600)" }}>{cat.title}</div>
                             </div>
                             <div style={{ display: "grid", gridTemplateColumns: bp.mobile ? "1fr" : "1fr 1fr", gap: 8 }}>
                               {(cat.docs || []).map((doc) => {
@@ -672,11 +672,11 @@ export default function ServicesApplyPage() {
                   <span aria-hidden style={{ position: "absolute", inset: 0, backgroundImage: "radial-gradient(rgba(11,31,58,.06) 1px,transparent 1px)", backgroundSize: "16px 16px", opacity: 0.7, pointerEvents: "none" }} />
                   <span aria-hidden style={{ position: "absolute", top: -70, right: -50, width: 200, height: 200, borderRadius: "50%", background: "radial-gradient(circle,rgba(255,255,255,.5),transparent 66%)", transform: headHover ? "scale(1.25) translate(-6px,4px)" : "scale(1)", transition: "transform 1s var(--ease-standard)", pointerEvents: "none" }} />
                   <div style={{ position: "relative", display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 16 }}>
-                    <div style={{ display: "inline-flex", alignItems: "center", gap: 8, fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: ".16em", textTransform: "uppercase", color: "var(--navy-950)" }}>
+                    <div style={{ display: "inline-flex", alignItems: "center", gap: 8, fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".16em", textTransform: "uppercase", color: "var(--navy-950)" }}>
                       <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M3 8a2 2 0 012-2h14a2 2 0 012 2v2a2 2 0 000 4v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2a2 2 0 000-4z" /><path d="M9 6v12" strokeDasharray="2 2" /></svg>
                       Request ticket
                     </div>
-                    <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".08em", color: "rgba(11,31,58,.6)" }}>{"#INF-" + String(1000 + (serviceNames.length * 137 + grouped.length * 29) % 9000).padStart(4, "0")}</span>
+                    <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".08em", color: "rgba(11,31,58,.6)" }}>{"#INF-" + String(1000 + (serviceNames.length * 137 + grouped.length * 29) % 9000).padStart(4, "0")}</span>
                   </div>
                   <div style={{ position: "relative", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 14 }}>
                     <div>
@@ -690,7 +690,7 @@ export default function ServicesApplyPage() {
                           <span aria-hidden style={{ position: "absolute", inset: -3, borderRadius: "50%", border: `1.5px solid ${reqStatus.c}`, opacity: 0.6, animation: "pulse-ring 2s infinite" }} />
                           <span style={{ width: 8, height: 8, borderRadius: "50%", background: reqStatus.c, boxShadow: `0 0 8px ${reqStatus.c}` }} />
                         </span>
-                        <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: ".06em", textTransform: "uppercase", fontWeight: 600, color: "#fff" }}>{reqStatus.t}</span>
+                        <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".06em", textTransform: "uppercase", fontWeight: 600, color: "#fff" }}>{reqStatus.t}</span>
                       </span>
                     </div>
                     <div style={{ position: "relative", width: 112, height: 112, flexShrink: 0, transform: headHover ? "scale(1.06)" : "scale(1)", transition: "transform .45s var(--ease-standard)" }}>
@@ -726,11 +726,11 @@ export default function ServicesApplyPage() {
                   ))}
                 </div>
                 <div style={{ padding: "18px 24px", borderTop: "1px dashed var(--ink-100)", background: "var(--paper-alt)" }}>
-                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "var(--navy-700)", marginBottom: 10 }}>What you&apos;ll receive</div>
+                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase", color: "var(--navy-700)", marginBottom: 10 }}>What you&apos;ll receive</div>
                   <div style={{ display: "flex", flexDirection: "column", gap: 9 }}>
                     {deliverables.slice(0, 4).map((d) => (
                       <div key={d} style={{ display: "flex", alignItems: "flex-start", gap: 9 }}>
-                        <span style={{ width: 18, height: 18, flexShrink: 0, marginTop: 1, borderRadius: "50%", background: "var(--gold-500)", color: "var(--navy-950)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 10, fontWeight: 700 }}>✓</span>
+                        <span style={{ width: 18, height: 18, flexShrink: 0, marginTop: 1, borderRadius: "50%", background: "var(--gold-500)", color: "var(--navy-950)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 12, fontWeight: 700 }}>✓</span>
                         <span style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "var(--navy-800)", lineHeight: 1.35 }}>{d}</span>
                       </div>
                     ))}

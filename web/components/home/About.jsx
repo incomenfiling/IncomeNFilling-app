@@ -56,7 +56,7 @@ export function About() {
             </p>
             <div style={{ position: "relative", display: "flex", alignItems: "center", gap: 8, marginTop: 16 }}>
               <span style={{ width: 22, height: 2, background: "var(--gold-500)" }} />
-              <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".06em", textTransform: "uppercase", color: "var(--navy-200)" }}>Anish · Founder</span>
+              <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".06em", textTransform: "uppercase", color: "var(--navy-200)" }}>Anish · Founder</span>
             </div>
           </div>
         </div>
@@ -78,13 +78,13 @@ export function About() {
             </div>
             <div style={{ position: "absolute", left: 0, top: 24, display: "inline-flex", alignItems: "center", gap: 8, background: "var(--white)", borderRadius: "var(--radius-pill)", padding: "8px 15px", boxShadow: "var(--shadow-md)" }}>
               <span style={{ width: 8, height: 8, borderRadius: "50%", background: "var(--status-positive)", animation: "pulse-dot 2s infinite" }} />
-              <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".05em", color: "var(--navy-800)" }}>9+ years · pan-India</span>
+              <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".05em", color: "var(--navy-800)" }}>9+ years · pan-India</span>
             </div>
             <div style={{ position: "absolute", right: 0, bottom: 6, display: "flex", gap: 0, background: "var(--white)", borderRadius: "var(--radius-lg)", boxShadow: "0 18px 40px rgba(15,42,66,.2)", overflow: "hidden" }}>
               {ABOUT_STATS.map((s, i) => (
                 <div key={s.l} style={{ padding: "14px 18px", textAlign: "center", borderLeft: i ? "1px solid var(--ink-100)" : "none" }}>
                   <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-2xl)", color: "var(--navy-900)", lineHeight: 1 }}>{s.n}</div>
-                  <div style={{ fontFamily: "var(--font-body)", fontSize: 10.5, color: "var(--ink-500)", marginTop: 4, whiteSpace: "nowrap" }}>{s.l}</div>
+                  <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--ink-500)", marginTop: 4, whiteSpace: "nowrap" }}>{s.l}</div>
                 </div>
               ))}
             </div>

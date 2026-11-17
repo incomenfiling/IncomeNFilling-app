@@ -30,11 +30,11 @@ export function CategoryExplorer({ categories, onSelect }) {
                 cursor: "pointer", textAlign: "left", fontFamily: "var(--font-body)", flexShrink: bp.ltDesktop ? 0 : 1, whiteSpace: bp.ltDesktop ? "nowrap" : "normal",
               }}
             >
-              <span style={{ width: 34, height: 34, flexShrink: 0, borderRadius: "var(--radius-md)", background: TINTS[i % 4], color: ACCENTS[i % 4], display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-mono)", fontSize: 10, fontWeight: "var(--weight-semibold)" }}>
+              <span style={{ width: 34, height: 34, flexShrink: 0, borderRadius: "var(--radius-md)", background: TINTS[i % 4], color: ACCENTS[i % 4], display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-mono)", fontSize: 12, fontWeight: "var(--weight-semibold)" }}>
                 {cat.icon}
               </span>
               <span style={{ fontSize: "var(--text-sm)", fontWeight: isActive ? "var(--weight-semibold)" : "var(--weight-medium)", color: isActive ? "var(--navy-900)" : "var(--ink-700)", flex: 1 }}>{cat.title}</span>
-              {!bp.ltDesktop && <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--ink-300)" }}>{cat.count}</span>}
+              {!bp.ltDesktop && <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--ink-300)" }}>{cat.count}</span>}
             </button>
           );
         })}
@@ -54,18 +54,18 @@ export function CategoryExplorer({ categories, onSelect }) {
           <div style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-base)", color: "var(--ink-500)", lineHeight: "var(--leading-base)", maxWidth: 440 }}>{c.description}</div>
           <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 8, background: "var(--paper-alt)", borderRadius: "var(--radius-md)", padding: "8px 14px" }}>
-              <span style={{ fontFamily: "var(--font-mono)", fontSize: 9, letterSpacing: "var(--tracking-wide)", textTransform: "uppercase", color: "var(--ink-300)" }}>Turnaround</span>
+              <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: "var(--tracking-wide)", textTransform: "uppercase", color: "var(--ink-300)" }}>Turnaround</span>
               <span style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: 13, color: "var(--navy-900)" }}>{c.turnaround}</span>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: 8, background: "var(--paper-alt)", borderRadius: "var(--radius-md)", padding: "8px 14px" }}>
-              <span style={{ fontFamily: "var(--font-mono)", fontSize: 9, letterSpacing: "var(--tracking-wide)", textTransform: "uppercase", color: "var(--ink-300)" }}>You&apos;ll need</span>
+              <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: "var(--tracking-wide)", textTransform: "uppercase", color: "var(--ink-300)" }}>You&apos;ll need</span>
               <span style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: 13, color: "var(--navy-900)" }}>{c.docs}</span>
             </div>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: bp.mobile ? "1fr" : "1fr 1fr", gap: 8 }}>
             {c.services.map((sv, si) => (
               <div key={sv} style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 12px", borderRadius: "var(--radius-md)", background: "var(--white)", border: "1px solid var(--ink-100)", animation: `fade-in-up .35s var(--ease-standard) ${si * 0.06}s both` }}>
-                <span style={{ width: 20, height: 20, flexShrink: 0, borderRadius: "50%", background: tint, color: accent, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 11, fontWeight: 700 }}>✓</span>
+                <span style={{ width: 20, height: 20, flexShrink: 0, borderRadius: "50%", background: tint, color: accent, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 12, fontWeight: 700 }}>✓</span>
                 <span style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "var(--ink-700)" }}>{sv}</span>
               </div>
             ))}

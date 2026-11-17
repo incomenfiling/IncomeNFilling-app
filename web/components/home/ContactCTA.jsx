@@ -82,7 +82,7 @@ export function ContactCTA() {
             <div style={{ position: "absolute", bottom: -80, left: -60, width: 190, height: 190, borderRadius: "50%", background: "rgba(255,255,255,.16)" }} />
             <div style={{ position: "relative", display: "inline-flex", alignSelf: "flex-start", alignItems: "center", gap: 7, background: "rgba(15,42,66,.14)", borderRadius: "var(--radius-pill)", padding: "6px 13px" }}>
               <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--navy-950)", animation: "pulse-dot 2s infinite" }} />
-              <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: ".05em", textTransform: "uppercase", color: "var(--navy-950)", fontWeight: "var(--weight-semibold)" }}>Replies within working hours</span>
+              <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".05em", textTransform: "uppercase", color: "var(--navy-950)", fontWeight: "var(--weight-semibold)" }}>Replies within working hours</span>
             </div>
             <div style={{ position: "relative" }}>
               <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-2xl)", color: "var(--navy-950)", lineHeight: 1.15 }}>
@@ -116,7 +116,7 @@ export function ContactCTA() {
               {[["500+", "Clients"], ["4.9★", "Rating"], ["2017", "Since"]].map((s, si) => (
                 <div key={s[1]} style={{ textAlign: "center", borderLeft: si ? "1px solid rgba(15,42,66,.16)" : "none" }}>
                   <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "var(--text-xl)", color: "var(--navy-950)" }}>{s[0]}</div>
-                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 9, letterSpacing: ".05em", textTransform: "uppercase", color: "rgba(15,42,66,.6)", marginTop: 2 }}>{s[1]}</div>
+                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".05em", textTransform: "uppercase", color: "rgba(15,42,66,.6)", marginTop: 2 }}>{s[1]}</div>
                 </div>
               ))}
             </div>

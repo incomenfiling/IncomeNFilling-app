@@ -51,7 +51,7 @@ export function NavBar({ active }) {
           <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-base)", color: "var(--navy-900)", lineHeight: 1.2, whiteSpace: "nowrap" }}>
             Income N <span style={{ color: "var(--gold-600)" }}>Filing</span>
           </div>
-          <div style={{ fontSize: 10, color: "var(--ink-500)", lineHeight: 1.2 }}>Established 2017</div>
+          <div style={{ fontSize: 12, color: "var(--ink-500)", lineHeight: 1.2 }}>Established 2017</div>
         </div>
       </Link>
       {!compact && (

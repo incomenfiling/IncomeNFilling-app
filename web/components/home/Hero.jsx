@@ -69,7 +69,7 @@ export function Hero() {
               </div>
               <div style={{ position: "absolute", top: "1%", right: "5%", zIndex: 5, display: "inline-flex", alignItems: "center", gap: 6, background: "var(--white)", borderRadius: "var(--radius-pill)", padding: "5px 12px", boxShadow: "var(--shadow-md)" }}>
                 <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--status-positive)", animation: "pulse-dot 2s infinite" }} />
-                <span style={{ fontFamily: "var(--font-mono)", fontSize: 9, color: "var(--navy-800)" }}>94 services live</span>
+                <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--navy-800)" }}>94 services live</span>
               </div>
               {[
                 { icon: "GST", left: "30%", top: "-2%" },
@@ -84,7 +84,7 @@ export function Hero() {
                     style={{
                       position: "absolute", left: b.left, right: b.right, top: b.top, bottom: b.bottom, zIndex: 5, width: 46, height: 46,
                       borderRadius: "50%", background: "var(--white)", boxShadow: "var(--shadow-md)", display: "flex", alignItems: "center", justifyContent: "center",
-                      fontFamily: "var(--font-mono)", fontSize: 10, fontWeight: "var(--weight-semibold)", letterSpacing: ".04em", color: ac, border: `2px solid ${ac}`,
+                      fontFamily: "var(--font-mono)", fontSize: 12, fontWeight: "var(--weight-semibold)", letterSpacing: ".04em", color: ac, border: `2px solid ${ac}`,
                       animation: "float-y 5s ease-in-out infinite", animationDelay: `${i * 0.35}s`,
                     }}
                   >
@@ -104,7 +104,7 @@ export function Hero() {
               </div>
               <div style={{ position: "absolute", top: "2%", right: "6%", zIndex: 5, display: "inline-flex", alignItems: "center", gap: 6, background: "var(--white)", borderRadius: "var(--radius-pill)", padding: "6px 14px", boxShadow: "var(--shadow-md)" }}>
                 <span style={{ width: 7, height: 7, borderRadius: "50%", background: "var(--status-positive)", animation: "pulse-dot 2s infinite" }} />
-                <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--navy-800)" }}>94 services live</span>
+                <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--navy-800)" }}>94 services live</span>
               </div>
               {[
                 { icon: "GST", left: "34%", top: "-1%" },

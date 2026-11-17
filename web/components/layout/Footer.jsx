@@ -42,7 +42,7 @@ export function Footer() {
                 <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-lg)", color: "var(--white)", lineHeight: 1.1 }}>
                   Income N <span style={{ color: "var(--gold-400)" }}>Filing</span>
                 </div>
-                <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--navy-300)" }}>Established 2017</div>
+                <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--navy-300)" }}>Established 2017</div>
               </div>
             </div>
             <p style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "var(--navy-300)", lineHeight: 1.6, maxWidth: 280, marginBottom: 18 }}>
@@ -56,7 +56,7 @@ export function Footer() {
           </div>
           {columns.map((col) => (
             <div key={col.title}>
-              <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "var(--tracking-widest)", textTransform: "uppercase", color: "var(--gold-400)", marginBottom: 16 }}>
+              <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: "var(--tracking-widest)", textTransform: "uppercase", color: "var(--gold-400)", marginBottom: 16 }}>
                 {col.title}
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
@@ -75,7 +75,7 @@ export function Footer() {
             </div>
           ))}
           <div>
-            <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "var(--tracking-widest)", textTransform: "uppercase", color: "var(--gold-400)", marginBottom: 16 }}>
+            <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: "var(--tracking-widest)", textTransform: "uppercase", color: "var(--gold-400)", marginBottom: 16 }}>
               Stay Updated
             </div>
             <p style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "var(--navy-300)", lineHeight: 1.5, marginBottom: 14 }}>

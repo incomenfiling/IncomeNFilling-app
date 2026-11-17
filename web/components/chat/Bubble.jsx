@@ -21,13 +21,13 @@ export function Bubble({ m, onChip }) {
             <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" style={{ display: "flex", alignItems: "center", gap: 12, textDecoration: "none", marginTop: 10, background: "linear-gradient(135deg,var(--navy-050),var(--white))", border: "1px solid var(--gold-200)", borderRadius: 12, padding: "11px 13px" }}>
               <span style={{ flexShrink: 0, width: 40, height: 40, borderRadius: 10, background: "linear-gradient(135deg,var(--navy-900),var(--navy-700))", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20 }}>{m.service.emoji}</span>
               <span style={{ flex: 1, minWidth: 0 }}>
-                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: 10, fontWeight: 700, letterSpacing: ".06em", textTransform: "uppercase", color: "var(--gold-600)" }}>Recommended for you</span>
+                <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: 12, fontWeight: 700, letterSpacing: ".06em", textTransform: "uppercase", color: "var(--gold-600)" }}>Recommended for you</span>
                 <span style={{ display: "block", fontFamily: "var(--font-body)", fontWeight: "var(--weight-semibold)", fontSize: 14, color: "var(--navy-900)" }}>{m.service.title}</span>
               </span>
               <span style={{ flexShrink: 0, color: "var(--gold-600)", fontSize: 20 }}>›</span>
             </a>
           )}
-          <div style={{ textAlign: "right", marginTop: 3, fontFamily: "var(--font-body)", fontSize: 10, color: isUser ? "rgba(255,255,255,.55)" : "var(--ink-300)" }}>{m.t}</div>
+          <div style={{ textAlign: "right", marginTop: 3, fontFamily: "var(--font-body)", fontSize: 12, color: isUser ? "rgba(255,255,255,.55)" : "var(--ink-300)" }}>{m.t}</div>
         </div>
       </div>
       {m.tiles && (
@@ -52,7 +52,7 @@ export function Bubble({ m, onChip }) {
             >
               <span style={{ width: 34, height: 34, borderRadius: 9, background: "linear-gradient(135deg,var(--navy-050),var(--gold-100))", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18 }}>{t.emoji}</span>
               <span style={{ fontFamily: "var(--font-body)", fontWeight: "var(--weight-semibold)", fontSize: 13, color: "var(--navy-900)", lineHeight: 1.25 }}>{t.title}</span>
-              <span style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "var(--ink-400)", lineHeight: 1.3 }}>{t.sub}</span>
+              <span style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--ink-400)", lineHeight: 1.3 }}>{t.sub}</span>
             </button>
           ))}
         </div>

@@ -94,7 +94,7 @@ export function ServicePageView({ data }) {
             )}
           </article>
           <aside style={{ position: bp.ltDesktop ? "static" : "sticky", top: 24, background: "var(--navy-900)", borderRadius: "var(--radius-xl)", padding: bp.mobile ? 24 : 32, color: "var(--white)" }}>
-            <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "var(--tracking-widest)", textTransform: "uppercase", color: "var(--gold-400)", marginBottom: 10 }}>Get started</div>
+            <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: "var(--tracking-widest)", textTransform: "uppercase", color: "var(--gold-400)", marginBottom: 10 }}>Get started</div>
             <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-xl)", marginBottom: 14 }}>Talk to an advisor about {data.name}</div>
             <p style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-sm)", color: "var(--navy-300)", lineHeight: "var(--leading-sm)", marginBottom: 24 }}>Free first consultation. Tell us what you need and we will scope it with you.</p>
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>

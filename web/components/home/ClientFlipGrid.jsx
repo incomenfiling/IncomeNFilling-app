@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { useBP } from "@/lib/useBP";
-import { Portrait } from "@/components/shared/Portrait";
 import { CLIENT_CARDS } from "@/data/clients";
 import { ACCENTS, TINTS } from "@/data/theme";
 
@@ -20,14 +19,14 @@ function ClientFace({ c, i, back }) {
       <span style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: 4, background: accent }} />
       <div style={{ position: "relative", flexShrink: 0 }}>
         <div style={{ width: av, height: av, borderRadius: "50%", overflow: "hidden", border: "2px solid " + accent }}>
-          <Portrait seed={c.av} gender={c.gender} size={av} />
+          <span aria-hidden="true" style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", background: tint, color: accent, fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: av * 0.34 }}>{c.ini}</span>
         </div>
-        <span style={{ position: "absolute", right: -2, bottom: -2, width: 16, height: 16, borderRadius: "50%", background: accent, color: "var(--white)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 9, fontWeight: 700, border: "2px solid var(--white)" }}>✓</span>
+        <span style={{ position: "absolute", right: -2, bottom: -2, width: 16, height: 16, borderRadius: "50%", background: accent, color: "var(--white)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 12, fontWeight: 700, border: "2px solid var(--white)" }}>✓</span>
       </div>
       <div style={{ minWidth: 0, flex: 1 }}>
         <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: 14, color: "var(--navy-900)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{c.name}</div>
-        <div style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--ink-300)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{c.domain}</div>
-        <div style={{ marginTop: 4, display: "inline-block", fontFamily: "var(--font-body)", fontSize: 10, fontWeight: "var(--weight-medium)", color: accent, background: tint, padding: "1px 8px", borderRadius: "var(--radius-pill)" }}>{c.sector}</div>
+        <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--ink-300)", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{c.domain}</div>
+        <div style={{ marginTop: 4, display: "inline-block", fontFamily: "var(--font-body)", fontSize: 12, fontWeight: "var(--weight-medium)", color: accent, background: tint, padding: "1px 8px", borderRadius: "var(--radius-pill)" }}>{c.sector}</div>
       </div>
     </div>
   );

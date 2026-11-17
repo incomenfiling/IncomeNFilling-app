@@ -20,7 +20,7 @@ const CHANNELS = [
 ];
 
 function Label({ children }) {
-  return <label style={{ fontFamily: "var(--font-mono)", fontSize: 11, fontWeight: 600, letterSpacing: ".05em", textTransform: "uppercase", color: "var(--ink-500)" }}>{children}</label>;
+  return <label style={{ fontFamily: "var(--font-mono)", fontSize: 12, fontWeight: 600, letterSpacing: ".05em", textTransform: "uppercase", color: "var(--ink-500)" }}>{children}</label>;
 }
 
 export default function ContactPage() {
@@ -69,7 +69,7 @@ export default function ContactPage() {
         <div style={{ position: "absolute", bottom: 20, right: "10%", width: 130, height: 130, border: "2px dashed rgba(212,167,71,.28)", borderRadius: "50%", transform: "rotate(18deg)", animation: "float-y 5.5s ease-in-out infinite", pointerEvents: "none" }} />
         <div style={{ position: "absolute", inset: 0, backgroundImage: "radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px)", backgroundSize: "26px 26px", pointerEvents: "none" }} />
         <div style={{ position: "relative", maxWidth: 780, margin: "0 auto" }}>
-          <div style={{ display: "inline-flex", alignItems: "center", gap: 9, fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--gold-400)", letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 18, background: "rgba(212,167,71,.1)", border: "1px solid rgba(212,167,71,.25)", padding: "6px 15px", borderRadius: "var(--radius-pill)" }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 9, fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--gold-400)", letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 18, background: "rgba(212,167,71,.1)", border: "1px solid rgba(212,167,71,.25)", padding: "6px 15px", borderRadius: "var(--radius-pill)" }}>
             <span style={{ position: "relative", width: 8, height: 8, display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
               <span aria-hidden style={{ position: "absolute", inset: -3, borderRadius: "50%", border: "1.5px solid var(--status-positive)", opacity: 0.5, animation: "pulse-ring 2s infinite" }} />
               <span style={{ width: 8, height: 8, borderRadius: "50%", background: "var(--status-positive)" }} />

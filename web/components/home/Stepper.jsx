@@ -46,9 +46,9 @@ function StepVisual({ step }) {
         <span style={{ position: "absolute", inset: 0, borderRadius: "50%", border: "2px solid var(--status-positive)", animation: "pulse-ring 2s infinite" }} />
       </div>
       <div style={{ background: "var(--white)", borderRadius: "var(--radius-md)", padding: "14px 20px", textAlign: "center", boxShadow: "var(--shadow-md)", animation: "fade-in-up .4s var(--ease-standard) .3s both" }}>
-        <div style={{ fontFamily: "var(--font-mono)", fontSize: 9, letterSpacing: "var(--tracking-widest)", textTransform: "uppercase", color: "var(--ink-300)" }}>Certificate Issued</div>
+        <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: "var(--tracking-widest)", textTransform: "uppercase", color: "var(--ink-300)" }}>Certificate Issued</div>
         <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 18, color: "var(--navy-900)", margin: "4px 0" }}>GSTIN 19ABCDE1234F1Z5</div>
-        <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "var(--status-positive)" }}>● Active · Reminders on</div>
+        <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--status-positive)" }}>● Active · Reminders on</div>
       </div>
     </div>
   );
@@ -85,7 +85,7 @@ export function Stepper() {
             </span>
             <span>
               <span style={{ display: "block", fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-base)", color: active === i ? "var(--navy-900)" : "var(--ink-700)" }}>{st.t}</span>
-              <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "var(--tracking-widest)", textTransform: "uppercase", color: active === i ? "var(--gold-600)" : "var(--ink-300)", marginTop: 4 }}>{icons[i]}</span>
+              <span style={{ display: "block", fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: "var(--tracking-widest)", textTransform: "uppercase", color: active === i ? "var(--gold-600)" : "var(--ink-300)", marginTop: 4 }}>{icons[i]}</span>
             </span>
           </button>
         ))}

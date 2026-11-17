@@ -61,7 +61,7 @@ export function ServicePicker({ startCat, selected, setSelected, onClose }) {
       >
         <div style={{ background: "var(--navy-950)", display: "flex", flexDirection: bp.mobile ? "row" : "column", overflow: "hidden", borderBottom: bp.mobile ? "1px solid rgba(255,255,255,.1)" : "none" }}>
           <div style={{ padding: "22px 22px 16px", borderBottom: "1px solid rgba(255,255,255,.08)", display: bp.mobile ? "none" : "block" }}>
-            <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: ".1em", textTransform: "uppercase", color: "var(--gold-400)", marginBottom: 6 }}>All Modules</div>
+            <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".1em", textTransform: "uppercase", color: "var(--gold-400)", marginBottom: 6 }}>All Modules</div>
             <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-lg)", color: "var(--white)" }}>Pick your services</div>
           </div>
           <div style={bp.mobile ? { display: "flex", flexDirection: "row", gap: 8, overflowX: "auto", overflowY: "hidden", padding: "10px 12px", WebkitOverflowScrolling: "touch" } : { flex: 1, overflowY: "auto", padding: "10px 12px" }}>
@@ -85,7 +85,7 @@ export function ServicePicker({ startCat, selected, setSelected, onClose }) {
                   </span>
                   <span style={{ flex: bp.mobile ? "none" : 1, minWidth: 0, fontSize: 13, fontWeight: on ? "var(--weight-semibold)" : "var(--weight-medium)", color: on ? "var(--white)" : "var(--navy-300)", lineHeight: 1.25 }}>{m.title}</span>
                   {sc > 0 && (
-                    <span style={{ flexShrink: 0, fontFamily: "var(--font-mono)", fontSize: 10, fontWeight: 700, padding: "2px 7px", borderRadius: "var(--radius-pill)", background: "var(--status-positive)", color: "var(--white)" }}>
+                    <span style={{ flexShrink: 0, fontFamily: "var(--font-mono)", fontSize: 12, fontWeight: 700, padding: "2px 7px", borderRadius: "var(--radius-pill)", background: "var(--status-positive)", color: "var(--white)" }}>
                       {sc}
                     </span>
                   )}

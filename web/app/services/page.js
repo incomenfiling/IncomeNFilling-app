@@ -56,7 +56,7 @@ export default function ServicesPage() {
         <div style={{ position: "absolute", top: -70, right: "6%", width: 280, height: 280, background: "var(--gold-500)", opacity: 0.16, borderRadius: 46, transform: "rotate(18deg)" }} />
         <div style={{ position: "absolute", bottom: -90, left: "-4%", width: 320, height: 320, borderRadius: "50%", border: "2px dashed rgba(255,255,255,.12)", animation: "spin-slow 50s linear infinite" }} />
         <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", position: "relative" }}>
-          <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "6px 16px", borderRadius: "var(--radius-pill)", background: "rgba(255,255,255,.08)", fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "var(--tracking-widest)", textTransform: "uppercase", color: "var(--gold-400)", marginBottom: 20 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "6px 16px", borderRadius: "var(--radius-pill)", background: "rgba(255,255,255,.08)", fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: "var(--tracking-widest)", textTransform: "uppercase", color: "var(--gold-400)", marginBottom: 20 }}>
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--status-positive)", animation: "pulse-dot 2s infinite" }} />
             Services Directory
           </div>
@@ -85,7 +85,7 @@ export default function ServicesPage() {
               <span style={{ flexShrink: 0, fontFamily: "var(--font-mono)", fontSize: 12, fontWeight: 700, color: "var(--navy-950)", background: "var(--gold-500)", borderRadius: "var(--radius-pill)", padding: "9px 16px" }}>{filtered.length} found</span>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 16, flexWrap: "wrap" }}>
-              <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".06em", textTransform: "uppercase", color: "var(--navy-300)" }}>Popular:</span>
+              <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".06em", textTransform: "uppercase", color: "var(--navy-300)" }}>Popular:</span>
               {suggestions.map((s) => (
                 <button key={s} onClick={() => setQ(s)} style={{ fontFamily: "var(--font-body)", fontSize: 12, fontWeight: "var(--weight-medium)", padding: "5px 13px", borderRadius: "var(--radius-pill)", border: "1px solid rgba(255,255,255,.22)", background: "rgba(255,255,255,.06)", color: "var(--white)", cursor: "pointer" }}>
                   {s}
@@ -109,13 +109,13 @@ export default function ServicesPage() {
                   style={{ display: "inline-flex", alignItems: "center", gap: 7, fontFamily: "var(--font-body)", fontSize: 13, fontWeight: "var(--weight-medium)", padding: "8px 14px", borderRadius: "var(--radius-pill)", border: "1px solid " + (on ? ac : "var(--ink-100)"), background: on ? ac : "var(--white)", color: on ? "var(--white)" : "var(--navy-800)", cursor: "pointer", transition: "all .2s" }}
                 >
                   {ch}
-                  <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, padding: "1px 6px", borderRadius: "var(--radius-pill)", background: on ? "rgba(255,255,255,.2)" : "var(--paper-alt)", color: on ? "var(--white)" : "var(--ink-500)" }}>{n}</span>
+                  <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, padding: "1px 6px", borderRadius: "var(--radius-pill)", background: on ? "rgba(255,255,255,.2)" : "var(--paper-alt)", color: on ? "var(--white)" : "var(--ink-500)" }}>{n}</span>
                 </button>
               );
             })}
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 8, flexShrink: 0, ...(bp.mobile ? { width: "100%", justifyContent: "space-between", borderTop: "1px solid var(--ink-100)", paddingTop: 12 } : {}) }}>
-            <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: ".06em", textTransform: "uppercase", color: "var(--ink-300)" }}>Sort</span>
+            <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".06em", textTransform: "uppercase", color: "var(--ink-300)" }}>Sort</span>
             <select aria-label="Sort services" value={sort} onChange={(e) => setSort(e.target.value)} style={{ fontFamily: "var(--font-body)", fontSize: 13, padding: "8px 12px", borderRadius: "var(--radius-md)", border: "1px solid var(--ink-100)", background: "var(--white)", color: "var(--navy-900)", cursor: "pointer", outline: "none", flex: bp.mobile ? 1 : "none" }}>
               <option value="recommended">Recommended</option>
               <option value="most">Most services</option>

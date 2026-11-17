@@ -4,7 +4,7 @@ export function Eyebrow({ children, light }) {
       style={{
         display: "inline-flex", alignItems: "center", gap: 8, padding: "6px 16px",
         borderRadius: "var(--radius-pill)", background: light ? "rgba(255,255,255,.1)" : "var(--navy-050)",
-        fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: "var(--tracking-widest)", textTransform: "uppercase",
+        fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: "var(--tracking-widest)", textTransform: "uppercase",
         color: light ? "var(--gold-400)" : "var(--navy-700)",
       }}
     >

@@ -19,7 +19,7 @@ export function ServiceFinder({ onSelect }) {
   return (
     <div style={{ position: "relative", borderRadius: "var(--radius-xl)", background: "var(--white)", boxShadow: "var(--shadow-lg)", padding: 26, display: "flex", flexDirection: "column", gap: 14 }}>
       <div>
-        <div style={{ fontFamily: "var(--font-mono)", fontSize: 10, letterSpacing: "var(--tracking-widest)", textTransform: "uppercase", color: "var(--gold-600)", marginBottom: 4 }}>
+        <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: "var(--tracking-widest)", textTransform: "uppercase", color: "var(--gold-600)", marginBottom: 4 }}>
           Quick Service Finder
         </div>
         <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-lg)", color: "var(--navy-900)" }}>
@@ -54,12 +54,12 @@ export function ServiceFinder({ onSelect }) {
                     style={{
                       width: 30, height: 30, borderRadius: "50%", background: active === i ? ACCENTS[ri % 4] : "var(--paper-alt)",
                       color: active === i ? "var(--white)" : "var(--ink-500)", display: "flex", alignItems: "center", justifyContent: "center",
-                      fontFamily: "var(--font-mono)", fontSize: 9, fontWeight: "var(--weight-semibold)", transition: "all .2s",
+                      fontFamily: "var(--font-mono)", fontSize: 12, fontWeight: "var(--weight-semibold)", transition: "all .2s",
                     }}
                   >
                     {cat.icon}
                   </span>
-                  <span style={{ fontFamily: "var(--font-body)", fontSize: 10, color: "var(--navy-800)", textAlign: "center", lineHeight: 1.2 }}>
+                  <span style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--navy-800)", textAlign: "center", lineHeight: 1.2 }}>
                     {cat.title.split(" ")[0]}
                   </span>
                 </button>
@@ -70,7 +70,7 @@ export function ServiceFinder({ onSelect }) {
             <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-base)", color: "var(--navy-900)" }}>{c.title}</div>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--ink-500)", lineHeight: 1.5 }}>{c.description}</div>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-              <span style={{ fontFamily: "var(--font-mono)", fontSize: 11, color: accent, fontWeight: "var(--weight-semibold)" }}>{c.count} services</span>
+              <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: accent, fontWeight: "var(--weight-semibold)" }}>{c.count} services</span>
               <span onClick={onSelect} style={{ fontFamily: "var(--font-body)", fontSize: 12, fontWeight: "var(--weight-semibold)", color: accent, cursor: "pointer" }}>
                 View →
               </span>
@@ -80,7 +80,7 @@ export function ServiceFinder({ onSelect }) {
       ) : (
         <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "var(--ink-500)", textAlign: "center", padding: "18px 0" }}>No matches — try a different term.</div>
       )}
-      <div onClick={onSelect} style={{ textAlign: "center", fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--ink-300)", cursor: "pointer" }}>
+      <div onClick={onSelect} style={{ textAlign: "center", fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--ink-300)", cursor: "pointer" }}>
         or explore all 94 services →
       </div>
     </div>

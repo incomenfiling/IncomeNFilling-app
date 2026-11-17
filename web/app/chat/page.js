@@ -47,7 +47,7 @@ export default function LiveChatPage() {
       <section style={{ flex: 1, padding: "44px 24px 64px" }}>
         <div style={{ maxWidth: 680, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 26 }}>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "6px 15px", borderRadius: "var(--radius-pill)", background: "var(--white)", border: "1px solid var(--ink-100)", fontFamily: "var(--font-mono)", fontSize: 11, letterSpacing: ".08em", textTransform: "uppercase", color: "var(--navy-700)", marginBottom: 14 }}>
+            <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "6px 15px", borderRadius: "var(--radius-pill)", background: "var(--white)", border: "1px solid var(--ink-100)", fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase", color: "var(--navy-700)", marginBottom: 14 }}>
               <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--status-positive)", animation: "pulse-dot 2s infinite" }} />
               Instant answers · advisor follows up in working hours
             </div>
@@ -67,7 +67,7 @@ export default function LiveChatPage() {
               <div style={{ flex: 1, minWidth: 0, position: "relative" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                   <span style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: 18, color: "var(--navy-950)", letterSpacing: ".01em" }}>Ira</span>
-                  <span style={{ fontFamily: "var(--font-mono)", fontSize: 9.5, fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase", color: "var(--navy-900)", background: "rgba(11,31,58,.13)", padding: "3px 9px", borderRadius: "var(--radius-pill)" }}>✦ Concierge</span>
+                  <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase", color: "var(--navy-900)", background: "rgba(11,31,58,.13)", padding: "3px 9px", borderRadius: "var(--radius-pill)" }}>✦ Concierge</span>
                 </div>
                 <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "var(--navy-800)", display: "flex", alignItems: "center", gap: 6, marginTop: 2 }}>
                   {typing ? (

@@ -106,7 +106,7 @@ export function OfficeMap({ contactChannels } = {}) {
           geo.metros.map((m, i) => (
             <div key={m.city} onMouseEnter={() => setHoverMetro(i)} onMouseLeave={() => setHoverMetro(null)} style={{ position: "absolute", left: m.x, top: m.y, transform: "translate(-50%,-50%)", zIndex: 3 }}>
               <span style={{ display: "block", width: 6, height: 6, borderRadius: "50%", background: "var(--navy-400)", cursor: "default" }} />
-              <span style={{ position: "absolute", left: "50%", top: 11, transform: "translateX(-50%)", fontFamily: "var(--font-mono)", fontSize: 9, color: hoverMetro === i ? "var(--navy-900)" : "var(--ink-300)", whiteSpace: "nowrap", transition: "color .2s" }}>
+              <span style={{ position: "absolute", left: "50%", top: 11, transform: "translateX(-50%)", fontFamily: "var(--font-mono)", fontSize: 12, color: hoverMetro === i ? "var(--navy-900)" : "var(--ink-300)", whiteSpace: "nowrap", transition: "color .2s" }}>
                 {m.city}
               </span>
             </div>
@@ -127,7 +127,7 @@ export function OfficeMap({ contactChannels } = {}) {
               style={{
                 position: "relative", display: "flex", alignItems: "center", justifyContent: "center",
                 width: sel === i ? 22 : 16, height: sel === i ? 22 : 16, borderRadius: "50%", background: "var(--gold-500)",
-                border: "2px solid var(--white)", boxShadow: "var(--shadow-md)", transition: "all .2s", fontSize: 9, fontWeight: 700, color: "var(--navy-950)",
+                border: "2px solid var(--white)", boxShadow: "var(--shadow-md)", transition: "all .2s", fontSize: 12, fontWeight: 700, color: "var(--navy-950)",
               }}
             >
               {sel === i ? "★" : ""}
@@ -145,7 +145,7 @@ export function OfficeMap({ contactChannels } = {}) {
         ))}
         <div style={{ position: "absolute", left: 16, top: 16, zIndex: 7, display: "inline-flex", alignItems: "center", gap: 7, background: "var(--white)", borderRadius: "var(--radius-pill)", padding: "6px 13px", boxShadow: "var(--shadow-sm)" }}>
           <span style={{ width: 7, height: 7, borderRadius: "50%", background: "var(--status-positive)", animation: "pulse-dot 2s infinite" }} />
-          <span style={{ fontFamily: "var(--font-mono)", fontSize: 10, color: "var(--navy-800)", letterSpacing: ".04em" }}>Serving pan-India · 20+ metros</span>
+          <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--navy-800)", letterSpacing: ".04em" }}>Serving pan-India · 20+ metros</span>
         </div>
       </div>
       <div style={{ height: bp.ltDesktop ? "auto" : "100%", boxSizing: "border-box", borderRadius: "var(--radius-xl)", background: "var(--white)", border: "1px solid var(--ink-100)", display: "flex", flexDirection: "column", boxShadow: "var(--shadow-md)", position: "relative", overflow: "hidden" }}>
@@ -155,7 +155,7 @@ export function OfficeMap({ contactChannels } = {}) {
             <PinIcon size={22} color="var(--navy-950)" />
           </span>
           <div style={{ position: "relative", display: "flex", alignItems: "center", gap: 8, marginBottom: 8 }}>
-            <span style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(15,42,66,.14)", borderRadius: "var(--radius-pill)", padding: "3px 10px", fontFamily: "var(--font-mono)", fontSize: 9, letterSpacing: ".08em", textTransform: "uppercase", color: "var(--navy-950)", fontWeight: "var(--weight-semibold)" }}>
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(15,42,66,.14)", borderRadius: "var(--radius-pill)", padding: "3px 10px", fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".08em", textTransform: "uppercase", color: "var(--navy-950)", fontWeight: "var(--weight-semibold)" }}>
               <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--navy-950)", animation: "pulse-dot 2s infinite" }} />
               Open now
             </span>
@@ -181,7 +181,7 @@ export function OfficeMap({ contactChannels } = {}) {
                 </span>
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-base)", color: "var(--navy-900)" }}>{o.city}</div>
-                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 10.5, color: "var(--ink-300)" }}>{o.region}</div>
+                  <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--ink-300)" }}>{o.region}</div>
                 </div>
                 <span style={{ fontFamily: "var(--font-mono)", fontSize: 16, color: sel === i ? "var(--gold-600)" : "var(--ink-300)", transform: sel === i ? "rotate(90deg)" : "none", transition: "transform .25s" }}>›</span>
               </div>
@@ -189,12 +189,12 @@ export function OfficeMap({ contactChannels } = {}) {
                 <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--ink-500)", lineHeight: 1.5, margin: "12px 0 10px" }}>{o.addr}</div>
                 <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                   {!contactChannels && (
-                    <span style={{ display: "inline-flex", alignItems: "center", gap: 6, fontFamily: "var(--font-mono)", fontSize: 11, color: "var(--navy-700)", background: "var(--paper-alt)", padding: "6px 11px", borderRadius: "var(--radius-pill)" }}>
+                    <span style={{ display: "inline-flex", alignItems: "center", gap: 6, fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--navy-700)", background: "var(--paper-alt)", padding: "6px 11px", borderRadius: "var(--radius-pill)" }}>
                       <span>☎</span>
                       {o.phone}
                     </span>
                   )}
-                  <a href={mapsHref} target="_blank" rel="noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontFamily: "var(--font-body)", fontWeight: "var(--weight-semibold)", fontSize: 11, color: "var(--white)", background: "var(--navy-900)", padding: "6px 12px", borderRadius: "var(--radius-pill)", textDecoration: "none" }}>
+                  <a href={mapsHref} target="_blank" rel="noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 6, fontFamily: "var(--font-body)", fontWeight: "var(--weight-semibold)", fontSize: 12, color: "var(--white)", background: "var(--navy-900)", padding: "6px 12px", borderRadius: "var(--radius-pill)", textDecoration: "none" }}>
                     Directions →
                   </a>
                 </div>
@@ -215,7 +215,7 @@ export function OfficeMap({ contactChannels } = {}) {
                 style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 7, padding: "15px 6px", textDecoration: "none", borderLeft: ci ? "1px solid var(--ink-100)" : "none", background: "var(--white)", transition: "background .15s" }}
               >
                 <span style={{ width: 36, height: 36, borderRadius: 11, background: c.accent, display: "flex", alignItems: "center", justifyContent: "center" }}>{c.icon}</span>
-                <span style={{ fontFamily: "var(--font-mono)", fontSize: 9.5, letterSpacing: ".06em", textTransform: "uppercase", color: "var(--navy-800)", fontWeight: 600 }}>{c.footLabel || c.label}</span>
+                <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".06em", textTransform: "uppercase", color: "var(--navy-800)", fontWeight: 600 }}>{c.footLabel || c.label}</span>
               </a>
             ))}
           </div>
@@ -224,7 +224,7 @@ export function OfficeMap({ contactChannels } = {}) {
             {[["1", "Office"], ["20+", "Metros"], ["All", "States"]].map((s, si) => (
               <div key={s[1]} style={{ textAlign: "center", padding: "14px 0", borderLeft: si ? "1px solid var(--ink-100)" : "none" }}>
                 <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "var(--text-xl)", color: "var(--navy-900)" }}>{s[0]}</div>
-                <div style={{ fontFamily: "var(--font-mono)", fontSize: 9, letterSpacing: ".06em", textTransform: "uppercase", color: "var(--ink-300)" }}>{s[1]}</div>
+                <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: ".06em", textTransform: "uppercase", color: "var(--ink-300)" }}>{s[1]}</div>
               </div>
             ))}
           </div>
