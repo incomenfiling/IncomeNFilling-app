@@ -6,7 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { OfficeMap } from "@/components/shared/OfficeMapLazy";
 import { CallIcon, WhatsAppIcon, EmailIcon, CheckCircleIcon } from "@/components/shared/icons";
-import { WHATSAPP_URL, PHONE_HREF } from "@/data/content";
+import { WHATSAPP_URL, PHONE_HREF, BOOKING_URL } from "@/data/content";
 import { track } from "@/lib/track";
 
 const CAT = ["GST", "Income Tax", "Incorporation", "Corporate Compliance", "Accounting", "Licenses", "Tax Notice"];
@@ -96,6 +96,12 @@ export default function ContactPage() {
                 {i < arr.length - 1 && <span aria-hidden style={{ width: 1, height: 18, background: "rgba(255,255,255,.14)" }} />}
               </Fragment>
             ))}
+          </div>
+          <div style={{ marginTop: 26 }}>
+            <a href={BOOKING_URL} target="_blank" rel="noopener" onClick={() => track("booking_click", { source: "contact_hero" })}
+              style={{ display: "inline-block", background: "var(--gold-500)", color: "var(--navy-900)", fontFamily: "var(--font-body)", fontWeight: 700, fontSize: 15, padding: "13px 26px", borderRadius: "var(--radius-pill)", textDecoration: "none" }}>
+              Book a 30-min consultation
+            </a>
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 24, justifyContent: "center", marginTop: 30 }}>
             {[["1000+", "businesses served"], ["Pan-India", "service delivery"], ["9+", "years of expertise"]].map((s, i, arr) => (

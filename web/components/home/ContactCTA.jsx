@@ -4,7 +4,7 @@ import { useBP } from "@/lib/useBP";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { HeroCTAButton } from "@/components/ui/HeroCTAButton";
 import { HOME_CATEGORIES } from "@/data/categories";
-import { WHATSAPP_URL } from "@/data/content";
+import { WHATSAPP_URL, BOOKING_URL } from "@/data/content";
 import { track } from "@/lib/track";
 
 function CField({ tag = "input", children, ...props }) {
@@ -157,6 +157,10 @@ export function ContactCTA() {
                       or{" "}
                       <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" style={{ color: "var(--whatsapp-green)", fontWeight: "var(--weight-semibold)" }}>
                         chat on WhatsApp
+                      </a>
+                      {" "}or{" "}
+                      <a href={BOOKING_URL} target="_blank" rel="noopener" onClick={() => track("booking_click", { source: "home" })} style={{ color: "var(--navy-600)", fontWeight: "var(--weight-semibold)" }}>
+                        book a call
                       </a>
                     </span>
                   </div>
