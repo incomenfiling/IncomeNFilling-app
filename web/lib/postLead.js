@@ -1,6 +1,6 @@
 // Posts a lead to /api/leads with a Cloudflare Turnstile token (invisible; a challenge
 // only appears for suspicious visitors). Until TURNSTILE_SITE_KEY is set it sends no token.
-export const TURNSTILE_SITE_KEY = "";
+export const TURNSTILE_SITE_KEY = "0x4AAAAAAGFlivQ27t0neXIO";
 
 let scriptPromise;
 function loadTurnstile() {
