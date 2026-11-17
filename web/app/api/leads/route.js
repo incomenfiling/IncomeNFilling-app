@@ -40,6 +40,12 @@ export async function POST(request) {
     }
   }
 
+  // Too-fast / no-timing submissions come from scripts posting straight to the API: pretend success.
+  const elapsed = Number(body?.elapsed);
+  if (!Number.isFinite(elapsed) || elapsed < 3000) {
+    return NextResponse.json({ ok: true });
+  }
+
   // Link spam: real enquiries rarely contain more than one link.
   if ((String(body?.notes ?? "").match(/https?:\/\//gi) || []).length > 1) {
     return NextResponse.json({ ok: true });

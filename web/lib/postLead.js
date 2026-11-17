@@ -52,6 +52,6 @@ export async function postLead(payload) {
   return fetch("/api/leads", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ ...payload, turnstileToken: token }),
+    body: JSON.stringify({ ...payload, turnstileToken: token, elapsed: Math.round(performance.now()) }),
   });
 }
