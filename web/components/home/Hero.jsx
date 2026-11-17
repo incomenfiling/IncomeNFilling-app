@@ -52,7 +52,7 @@ export function Hero() {
             </div>
             <div>
               <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-3xl)", color: "var(--navy-900)" }}>
-                <CountUp to={7} suffix="+" />
+                <CountUp to={9} suffix="+" />
               </div>
               <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--ink-500)" }}>Years of excellence</div>
             </div>
