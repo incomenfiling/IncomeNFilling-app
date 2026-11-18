@@ -1,16 +1,15 @@
 import { SITE_URL, ORG_ID, jsonLd } from "@/lib/site";
+import { ITR_FAQ, ITR_META_TITLE, ITR_META_DESC } from "@/data/itrPage";
 
 export const metadata = {
-  title: "ITR Filing — Income Tax Return Services",
-  description:
-    "File your income tax return with expert help. Income N Filing prepares and files ITRs for salaried individuals, professionals and businesses.",
+  title: { absolute: ITR_META_TITLE },
+  description: ITR_META_DESC,
   alternates: { canonical: "/services/itr-filing" },
   openGraph: {
     url: "/services/itr-filing",
     images: [{ url: "/og/default.png", width: 1200, height: 630 }],
-    title: "ITR Filing — Income Tax Return Services",
-    description:
-      "File your income tax return with expert help. Income N Filing prepares and files ITRs for salaried individuals, professionals and businesses.",
+    title: ITR_META_TITLE,
+    description: ITR_META_DESC,
   },
 };
 
@@ -20,11 +19,11 @@ const graph = {
     {
       "@type": "Service",
       "@id": `${SITE_URL}/services/itr-filing#service`,
-      name: "ITR Filing",
-      description: "Income tax return filing for individuals, professionals and businesses.",
+      name: "ITR Filing in Kolkata",
+      description: "Income tax return filing for individuals, professionals and businesses, prepared by one person and checked by another.",
       url: `${SITE_URL}/services/itr-filing`,
       provider: { "@id": ORG_ID },
-      areaServed: { "@type": "Country", name: "India" },
+      areaServed: [{ "@type": "City", name: "Kolkata" }, { "@type": "Country", name: "India" }],
     },
     {
       "@type": "BreadcrumbList",
@@ -36,18 +35,7 @@ const graph = {
     },
     {
       "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Who needs to file an ITR?",
-          acceptedAnswer: { "@type": "Answer", text: "Anyone above the exemption threshold, plus professionals, freelancers, and businesses regardless of income." },
-        },
-        {
-          "@type": "Question",
-          name: "Can you handle a delayed or notice case?",
-          acceptedAnswer: { "@type": "Answer", text: "Yes — we handle belated returns and respond to scrutiny notices as part of this service." },
-        },
-      ],
+      mainEntity: ITR_FAQ.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
     },
   ],
 };
