@@ -45,11 +45,22 @@ export function ServicePageView({ data }) {
         </nav>
         <div style={{ display: "grid", gridTemplateColumns: bp.ltDesktop ? "1fr" : "1.5fr 1fr", gap: 40, alignItems: "start" }}>
           <article>
-            <h1 style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-4xl)", color: "var(--navy-900)", margin: "0 0 16px" }}>{data.name}</h1>
+            <h1 style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-4xl)", color: "var(--navy-900)", margin: "0 0 16px" }}>{data.h1 || data.name}</h1>
             <p style={{ ...P, maxWidth: 640 }}>{data.intro}</p>
 
             {data.whoNeeds && (<><h2 style={H2}>Who needs this</h2><List items={data.whoNeeds} /></>)}
             {data.included && (<><h2 style={H2}>What we do</h2><List items={data.included} /></>)}
+
+            {data.sections && data.sections.map((sec) => (
+              <div key={sec.h}>
+                <h2 style={H2}>{sec.h}</h2>
+                {sec.text && <p style={{ ...P, marginBottom: sec.items ? 12 : 0 }}>{sec.text}</p>}
+                {sec.items && (sec.ordered
+                  ? <ol style={{ margin: 0, paddingLeft: 22 }}>{sec.items.map((t) => <li key={t} style={LI}>{t}</li>)}</ol>
+                  : <List items={sec.items} />)}
+                {sec.note && <p style={{ ...P, marginTop: 12 }}>{sec.note}</p>}
+              </div>
+            ))}
 
             {data.services && (
               <>

@@ -49,6 +49,8 @@ function build(slug) {
     kind: "service",
     path: `/services/${slug}`,
     name: svc.name,
+    h1: svc.h1,
+    sections: svc.sections,
     metaTitle: svc.metaTitle,
     metaDescription: svc.metaDescription,
     intro: svc.intro,
