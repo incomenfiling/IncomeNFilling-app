@@ -40,14 +40,14 @@ export const metadata = {
     title: "ITR and GST Filing in Kolkata | Income N Filing",
     description:
       "ITR and GST filing in Kolkata. Every file made by one, checked by another. If our mistake costs you a penalty, we pay it.",
-    images: [{ url: "/logo.jpg", alt: "Income N Filing" }],
+    images: [{ url: "/og/default.png", width: 1200, height: 630, alt: "Income N Filing: ITR and GST filing in Kolkata" }],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Income N Filing — GST, Income Tax & Compliance",
     description:
       "ITR and GST filing in Kolkata. Every file made by one, checked by another. If our mistake costs you a penalty, we pay it.",
-    images: ["/logo.jpg"],
+    images: ["/og/default.png"],
   },
 };
 

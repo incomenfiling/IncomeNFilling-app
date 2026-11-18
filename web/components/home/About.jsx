@@ -26,7 +26,7 @@ export function About() {
           <Eyebrow>Who We Are</Eyebrow>
           {bp.ltDesktop && (
             <div style={{ position: "relative", width: 96, height: 96, borderRadius: "50%", overflow: "hidden", border: "3px solid var(--gold-500)", margin: "18px 0 0" }}>
-              <Image src="/images/anish-jhunjhunwala.jpg" alt="Anish Jhunjhunwala, founder of Income N Filing" fill sizes="96px" style={{ objectFit: "cover", objectPosition: "center top" }} />
+              <Image src="/images/anish-jhunjhunwala.webp" alt="Anish Jhunjhunwala, founder of Income N Filing" fill sizes="96px" style={{ objectFit: "cover", objectPosition: "center top" }} />
             </div>
           )}
           <h2 style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-4xl)", color: "var(--navy-900)", margin: "18px 0 22px", letterSpacing: "var(--tracking-tight)", lineHeight: 1.08 }}>
@@ -78,7 +78,7 @@ export function About() {
                 transform: hovImg ? "rotate(0deg) scale(1.01)" : "rotate(-2.4deg)", transition: "transform .4s var(--ease-standard),box-shadow .4s", border: "6px solid var(--white)",
               }}
             >
-              <Image src="/images/anish-jhunjhunwala.jpg" alt="Anish Jhunjhunwala, founder of Income N Filing" fill sizes="440px" style={{ objectFit: "cover", objectPosition: "center top" }} />
+              <Image src="/images/anish-jhunjhunwala.webp" alt="Anish Jhunjhunwala, founder of Income N Filing" fill sizes="440px" style={{ objectFit: "cover", objectPosition: "center top" }} />
               <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: 90, background: "linear-gradient(transparent,rgba(15,42,66,.55))", pointerEvents: "none" }} />
             </div>
             <div style={{ position: "absolute", left: 0, top: 24, display: "inline-flex", alignItems: "center", gap: 8, background: "var(--white)", borderRadius: "var(--radius-pill)", padding: "8px 15px", boxShadow: "var(--shadow-md)" }}>

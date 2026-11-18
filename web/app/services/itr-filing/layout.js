@@ -7,6 +7,7 @@ export const metadata = {
   alternates: { canonical: "/services/itr-filing" },
   openGraph: {
     url: "/services/itr-filing",
+    images: [{ url: "/og/default.png", width: 1200, height: 630 }],
     title: "ITR Filing — Income Tax Return Services",
     description:
       "File your income tax return with expert help. Income N Filing prepares and files ITRs for salaried individuals, professionals and businesses.",

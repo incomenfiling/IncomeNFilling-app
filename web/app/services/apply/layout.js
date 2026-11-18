@@ -3,7 +3,7 @@ export const metadata = {
   description:
     'Submit your service request to Income N Filing.',
   alternates: { canonical: '/services/apply' },
-  openGraph: { url: '/services/apply', title: 'Apply for a Service', description: 'Submit your service request to Income N Filing.' },
+  openGraph: { images: [{ url: '/og/default.png', width: 1200, height: 630 }], url: '/services/apply', title: 'Apply for a Service', description: 'Submit your service request to Income N Filing.' },
   robots: { index: false, follow: false },
 };
 
