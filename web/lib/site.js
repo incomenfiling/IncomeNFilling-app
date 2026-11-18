@@ -42,7 +42,19 @@ export function siteGraph() {
             "https://www.youtube.com/@anisjhunjhunwala22",
           ],
         },
-        areaServed: { "@type": "Country", name: "India" },
+        areaServed: [
+          { "@type": "City", name: "Kolkata" },
+          { "@type": "AdministrativeArea", name: "West Bengal" },
+          { "@type": "Country", name: "India" },
+        ],
+        openingHoursSpecification: [
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            opens: "10:00",
+            closes: "19:00",
+          },
+        ],
         address: ADDRESS,
         geo: GEO,
         hasMap: MAPS_URL,
