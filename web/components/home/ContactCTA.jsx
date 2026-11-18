@@ -73,7 +73,7 @@ export function ContactCTA() {
             Let&apos;s start a conversation
           </h2>
           <p style={{ fontFamily: "var(--font-body)", color: "var(--ink-500)", margin: "10px auto 0", maxWidth: 480 }}>
-            Tell us what you need — a real advisor replies, usually within a couple of hours.
+            Tell us what you need — a real advisor replies within working hours (Mon–Sat, 10:00–19:00).
           </p>
         </div>
         <div style={{ display: "grid", gridTemplateColumns: bp.ltDesktop ? "1fr" : "0.92fr 1.08fr", background: "var(--white)", borderRadius: "var(--radius-xl)", overflow: "hidden", border: "1px solid var(--ink-100)", boxShadow: "0 30px 60px rgba(15,42,66,.16)" }}>
@@ -126,7 +126,7 @@ export function ContactCTA() {
               <div style={{ height: "100%", minHeight: 300, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", gap: 14 }}>
                 <div style={{ width: 66, height: 66, borderRadius: "50%", background: "var(--status-positive)", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--white)", fontSize: 32, fontWeight: 700, animation: "pop-in .5s var(--ease-emphasized) both" }}>✓</div>
                 <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-xl)", color: "var(--navy-900)" }}>Thanks — we&apos;ll be in touch!</div>
-                <div style={{ fontFamily: "var(--font-body)", fontSize: 14, color: "var(--ink-500)", maxWidth: 340 }}>Our team typically responds within a few working hours. For anything urgent, message us on WhatsApp.</div>
+                <div style={{ fontFamily: "var(--font-body)", fontSize: 14, color: "var(--ink-500)", maxWidth: 340 }}>Our team replies within working hours (Mon–Sat, 10:00–19:00). For anything urgent, message us on WhatsApp.</div>
                 <button onClick={() => setSent(false)} style={{ fontFamily: "var(--font-body)", fontWeight: "var(--weight-semibold)", fontSize: 13, padding: "10px 20px", borderRadius: "var(--radius-pill)", border: "1px solid var(--ink-100)", background: "var(--white)", color: "var(--navy-800)", cursor: "pointer" }}>
                   Send another →
                 </button>

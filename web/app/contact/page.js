@@ -83,7 +83,7 @@ export default function ContactPage() {
             Tell us what you&apos;re working on and the right advisor will take it from here — call, WhatsApp, email or visit our Kolkata office.
           </p>
           <div style={{ display: "inline-flex", flexWrap: "wrap", gap: 0, justifyContent: "center", alignItems: "center", background: "rgba(255,255,255,.04)", border: "1px solid rgba(255,255,255,.1)", borderRadius: "var(--radius-pill)", padding: "6px 6px" }}>
-            {[["First consultation"], ["Reply within working hours"], ["No obligation, ever"]].map((s, i, arr) => (
+            {[["First consultation"], ["Replies Mon–Sat, 10:00–19:00"], ["No obligation, ever"]].map((s, i, arr) => (
               <Fragment key={s[0]}>
                 <span style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 16px", fontFamily: "var(--font-body)", fontSize: 13.5, color: "var(--white)" }}>
                   <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="var(--gold-400)" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">

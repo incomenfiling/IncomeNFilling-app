@@ -16,7 +16,7 @@ const APPLY_ACCENTS = ["var(--gold-500)", "var(--navy-700)", "var(--status-posit
 const APPLY_TINTS = ["var(--gold-050)", "var(--navy-050)", "var(--paper-alt)", "var(--navy-050)", "var(--gold-050)"];
 
 const NEXT_STEPS = [
-  { t: "Advisor calls you", d: "Usually within a few working hours, to confirm scope and answer questions." },
+  { t: "Advisor calls you", d: "Within working hours (Mon–Sat, 10:00–19:00), to confirm scope and answer questions." },
   { t: "Documents verified", d: "We check what you've shared against your checklist below." },
   { t: "Filed with authorities", d: "Prepared, submitted, and tracked until it's through." },
   { t: "Confirmation shared", d: "Certificate or acknowledgement sent to you — status: deployed." },
@@ -748,7 +748,7 @@ export default function ServicesApplyPage() {
                   </svg>
                 </span>
                 <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "var(--ink-500)", lineHeight: 1.4 }}>
-                  Advisor calls back within <b style={{ color: "var(--navy-900)" }}>2 working hours</b> of submitting.
+                  Advisor calls back within working hours (<b style={{ color: "var(--navy-900)" }}>Mon–Sat, 10:00–19:00</b>).
                 </div>
               </div>
             </aside>

@@ -128,6 +128,7 @@ export function Footer() {
             <div style={{ marginTop: 18, fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--navy-300)" }}>☎ {PHONE_DISPLAY}</div>
             <div style={{ marginTop: 6, fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--navy-300)" }}>✉ {EMAIL}</div>
             <address style={{ marginTop: 6, fontStyle: "normal", fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--navy-300)", lineHeight: 1.5, maxWidth: 260 }}>⌖ {ADDRESS_LINE}</address>
+            <p style={{ margin: "6px 0 0", fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--navy-300)", maxWidth: 260 }}>Mon–Sat, 10:00–19:00 IST</p>
           </div>
         </div>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, flexWrap: "wrap", paddingTop: 22 }}>
