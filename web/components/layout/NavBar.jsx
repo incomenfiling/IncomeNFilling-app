@@ -84,7 +84,7 @@ export function NavBar({ active }) {
             transform: bookHover ? "translateY(-2px)" : "none", boxShadow: bookHover ? "var(--shadow-md)" : "none", transition: "all .15s",
           }}
         >
-          Book Free Consultation
+          Book a 20-min call
         </Link>
       )}
       {compact && (
@@ -127,7 +127,7 @@ export function NavBar({ active }) {
               textDecoration: "none", textAlign: "center", cursor: "pointer",
             }}
           >
-            Book Free Consultation
+            Book a 20-min call
           </Link>
         </div>
       )}

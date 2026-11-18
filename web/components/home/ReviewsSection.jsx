@@ -41,8 +41,9 @@ export function ReviewsSection() {
         </div>
         <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap", marginTop: 24 }}>
           <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={() => track("whatsapp_click", { source: "reviews" })} style={{ ...pill, background: "#25D366", color: "#fff" }}>Chat on WhatsApp</a>
-          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" onClick={() => track("booking_click", { source: "reviews" })} style={{ ...pill, background: "var(--gold-500)", color: "var(--navy-950)" }}>Book a free 20-min call</a>
+          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" onClick={() => track("booking_click", { source: "reviews" })} style={{ ...pill, background: "var(--gold-500)", color: "var(--navy-950)" }}>Book a 20-min call</a>
         </div>
+        <p style={{ textAlign: "center", fontSize: 14, marginTop: 12, opacity: 0.85 }}>Tell us your service and we will explain the process, documents and fees.</p>
       </div>
     </section>
   );

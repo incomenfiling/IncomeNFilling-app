@@ -68,7 +68,7 @@ export default function ITRFilingPage() {
             <div style={{ position: "absolute", top: -40, right: -40, width: 150, height: 150, background: "var(--gold-500)", opacity: 0.15, borderRadius: "50%" }} />
             <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: "var(--tracking-widest)", textTransform: "uppercase", color: "var(--gold-400)", marginBottom: 10, position: "relative" }}>Get started</div>
             <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-xl)", marginBottom: 14, position: "relative" }}>Book your ITR filing</div>
-            <p style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-sm)", color: "var(--navy-300)", lineHeight: "var(--leading-sm)", marginBottom: 24, position: "relative" }}>Free consultation, no obligation. An advisor responds within the day.</p>
+            <p style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-sm)", color: "var(--navy-300)", lineHeight: "var(--leading-sm)", marginBottom: 24, position: "relative" }}>Consultation, no obligation. An advisor responds within the day.</p>
             <Button variant="primary" fullWidth onClick={() => router.push("/chat")}>Chat With an Advisor</Button>
           </div>
         </div>

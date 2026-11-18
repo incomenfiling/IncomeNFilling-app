@@ -83,7 +83,7 @@ export default function ContactPage() {
             Tell us what you&apos;re working on and the right advisor will take it from here — call, WhatsApp, email or visit our Kolkata office.
           </p>
           <div style={{ display: "inline-flex", flexWrap: "wrap", gap: 0, justifyContent: "center", alignItems: "center", background: "rgba(255,255,255,.04)", border: "1px solid rgba(255,255,255,.1)", borderRadius: "var(--radius-pill)", padding: "6px 6px" }}>
-            {[["Free first consultation"], ["Reply within working hours"], ["No obligation, ever"]].map((s, i, arr) => (
+            {[["First consultation"], ["Reply within working hours"], ["No obligation, ever"]].map((s, i, arr) => (
               <Fragment key={s[0]}>
                 <span style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "8px 16px", fontFamily: "var(--font-body)", fontSize: 13.5, color: "var(--white)" }}>
                   <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="var(--gold-400)" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
@@ -98,8 +98,9 @@ export default function ContactPage() {
           <div style={{ marginTop: 26 }}>
             <a href={BOOKING_URL} target="_blank" rel="noopener" onClick={() => track("booking_click", { source: "contact_hero" })}
               style={{ display: "inline-block", background: "var(--gold-500)", color: "var(--navy-900)", fontFamily: "var(--font-body)", fontWeight: 700, fontSize: 15, padding: "13px 26px", borderRadius: "var(--radius-pill)", textDecoration: "none" }}>
-              Book a free 20-min call
+              Book a 20-min call
             </a>
+            <p style={{ fontSize: 14, marginTop: 12, opacity: 0.85 }}>Tell us your service and we will explain the process, documents and fees.</p>
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 24, justifyContent: "center", marginTop: 30 }}>
             {[["500+", "businesses served"], ["Pan-India", "service delivery"], ["9+", "years of expertise"]].map((s, i, arr) => (
@@ -156,7 +157,7 @@ export default function ContactPage() {
             ) : (
               <form onSubmit={submit} style={{ display: "flex", flexDirection: "column", gap: 16 }}>
                 <div>
-                  <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-xl)", color: "var(--navy-900)" }}>Request a free consultation</div>
+                  <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-xl)", color: "var(--navy-900)" }}>Request a consultation</div>
                   <div style={{ fontFamily: "var(--font-body)", fontSize: 13.5, color: "var(--ink-500)", marginTop: 4 }}>No obligation — we&apos;ll scope it on a quick call.</div>
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 7 }}>
@@ -213,7 +214,7 @@ export default function ContactPage() {
                   }}
                   style={{ marginTop: 4, display: "flex", alignItems: "center", justifyContent: "center", gap: 9, fontFamily: "var(--font-body)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-base)", padding: 15, borderRadius: "var(--radius-pill)", border: "none", background: "linear-gradient(135deg,var(--gold-400),var(--gold-500))", color: "var(--navy-950)", cursor: submitting ? "default" : "pointer", opacity: submitting ? 0.7 : 1, boxShadow: "0 4px 14px rgba(212,167,71,.32)", transition: "transform .18s,box-shadow .18s" }}
                 >
-                  {submitting ? "Sending…" : "Book my free consultation"}
+                  {submitting ? "Sending…" : "Book my consultation"}
                   {!submitting && (
                     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M5 12h14M13 6l6 6-6 6" />
