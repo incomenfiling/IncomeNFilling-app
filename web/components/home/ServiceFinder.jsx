@@ -37,7 +37,7 @@ export function ServiceFinder({ onSelect }) {
       </div>
       {filtered.length > 0 ? (
         <>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 8 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2,minmax(0,1fr))", gap: 8 }}>
             {filtered.map((cat, i) => {
               const ri = HOME_CATEGORIES.indexOf(cat);
               return (
@@ -45,7 +45,7 @@ export function ServiceFinder({ onSelect }) {
                   key={cat.icon}
                   onClick={() => setActive(i)}
                   style={{
-                    display: "flex", flexDirection: "column", alignItems: "center", gap: 6, padding: "12px 4px",
+                    display: "flex", flexDirection: "column", alignItems: "center", gap: 6, padding: "10px 4px", minWidth: 0,
                     borderRadius: "var(--radius-md)", border: active === i ? `2px solid ${ACCENTS[ri % 4]}` : "1px solid var(--ink-100)",
                     background: active === i ? TINTS[ri % 4] : "var(--white)", cursor: "pointer", transition: "all .2s",
                   }}

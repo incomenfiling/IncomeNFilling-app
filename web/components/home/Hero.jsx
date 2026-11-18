@@ -24,12 +24,11 @@ export function Hero() {
             <br />
             made by one,{" "}
             <span style={{ position: "relative", display: "inline-block" }}>
-              checked by another
+              checked by another.
               <svg viewBox="0 0 220 18" style={{ position: "absolute", left: 0, bottom: -10, width: "100%", height: 18 }}>
                 <path d="M2 13 C60 2, 160 2, 218 12" stroke="var(--gold-500)" strokeWidth="6" fill="none" strokeLinecap="round" />
               </svg>
             </span>
-            .
           </h1>
           <p style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-lg)", color: "var(--ink-500)", maxWidth: 460, lineHeight: "var(--leading-lg)", marginBottom: 32 }} className="hero-p">
             TDS, company registration and more. Every file is prepared by one person and verified by another, before and after filing. You see progress as it happens, and if our mistake costs you a penalty, we pay it.</p>
