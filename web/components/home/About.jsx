@@ -24,17 +24,22 @@ export function About() {
       <div style={{ position: "relative", maxWidth: "var(--container-max)", margin: "0 auto", display: "grid", gridTemplateColumns: bp.ltDesktop ? "1fr" : "1.02fr .98fr", gap: bp.mobile ? 36 : 64, alignItems: "center" }}>
         <div>
           <Eyebrow>Who We Are</Eyebrow>
+          {bp.ltDesktop && (
+            <div style={{ position: "relative", width: 96, height: 96, borderRadius: "50%", overflow: "hidden", border: "3px solid var(--gold-500)", margin: "18px 0 0" }}>
+              <Image src="/images/anish-jhunjhunwala.jpg" alt="Anish Jhunjhunwala, founder of Income N Filing" fill sizes="96px" style={{ objectFit: "cover", objectPosition: "center top" }} />
+            </div>
+          )}
           <h2 style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-4xl)", color: "var(--navy-900)", margin: "18px 0 22px", letterSpacing: "var(--tracking-tight)", lineHeight: 1.08 }}>
-            About Income N Filing
+            Why I started Income N Filing
           </h2>
           <p style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-base)", color: "var(--ink-500)", lineHeight: "var(--leading-lg)", margin: "0 0 16px", maxWidth: 520 }}>
-            <HL>Income N Filing</HL> is your trusted partner for business compliance and tax advisory. Since <HL c="g">2017</HL>, we have helped businesses confidently navigate the complexities of regulatory compliance.
+            When I started my career, I saw how things usually worked in the firms I first worked with. The owner rarely looked at the work and nobody checked it independently. Client data was scattered, and clients never knew where their work stood.
           </p>
           <p style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-base)", color: "var(--ink-500)", lineHeight: "var(--leading-lg)", margin: "0 0 16px", maxWidth: 520 }}>
-            Our mission is to provide a <HL c="g">single, seamless solution</HL> for all your compliance, taxation, registrations, accounting, and legal needs — handled with precision and professionalism, so you can stay focused on growing your business.
+            I built <HL>Income N Filing</HL> differently. Every file has a <HL c="g">maker and a separate checker</HL>, reviewed before filing and again after. The owner spot-checks files at random. Each client’s data sits in one place, and you can see progress as it happens.
           </p>
           <p style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-base)", color: "var(--ink-500)", lineHeight: "var(--leading-lg)", margin: "0 0 28px", maxWidth: 520 }}>
-            From <HL>new startups</HL> to <HL>established enterprises</HL>, we deliver tailored services across incorporation, statutory registrations, income tax filing, GST compliance, and corporate audits.
+            And when something still slips through, we own it. We have paid a <HL c="g">₹20,000 penalty</HL> ourselves when a client’s filing was missed. Since 2017, <HL>500+ clients</HL> have trusted us with their tax and compliance.
           </p>
           <div style={{ display: "grid", gridTemplateColumns: bp.mobile ? "1fr" : "1fr 1fr", gap: 12, marginBottom: 30 }}>
             {ABOUT_CHECKS.map((c) => (
@@ -52,7 +57,7 @@ export function About() {
             <div style={{ position: "absolute", top: -24, left: 18, fontFamily: "Georgia,serif", fontSize: 120, lineHeight: 1, color: "var(--gold-500)", opacity: 0.18 }}>&ldquo;</div>
             <div style={{ position: "absolute", top: 0, right: 0, width: 150, height: 150, background: "radial-gradient(circle at 80% 20%,rgba(239,168,46,.22),transparent 62%)" }} />
             <p style={{ position: "relative", fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-xl)", color: "var(--gold-400)", margin: 0, lineHeight: 1.35 }}>
-              When you get your business started with us, there is no looking back.
+              If our mistake costs you a penalty, we pay it.
             </p>
             <div style={{ position: "relative", display: "flex", alignItems: "center", gap: 8, marginTop: 16 }}>
               <span style={{ width: 22, height: 2, background: "var(--gold-500)" }} />
@@ -73,7 +78,7 @@ export function About() {
                 transform: hovImg ? "rotate(0deg) scale(1.01)" : "rotate(-2.4deg)", transition: "transform .4s var(--ease-standard),box-shadow .4s", border: "6px solid var(--white)",
               }}
             >
-              <Image src="/images/about-office.jpg" alt="Our office" fill sizes="440px" style={{ objectFit: "cover", objectPosition: "center" }} />
+              <Image src="/images/anish-jhunjhunwala.jpg" alt="Anish Jhunjhunwala, founder of Income N Filing" fill sizes="440px" style={{ objectFit: "cover", objectPosition: "center top" }} />
               <div style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: 90, background: "linear-gradient(transparent,rgba(15,42,66,.55))", pointerEvents: "none" }} />
             </div>
             <div style={{ position: "absolute", left: 0, top: 24, display: "inline-flex", alignItems: "center", gap: 8, background: "var(--white)", borderRadius: "var(--radius-pill)", padding: "8px 15px", boxShadow: "var(--shadow-md)" }}>

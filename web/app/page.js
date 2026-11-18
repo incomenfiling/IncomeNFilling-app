@@ -64,7 +64,7 @@ export default function HomePage() {
         <OfficeMap />
       </section>
 
-      <section style={{ background: "var(--white)", padding: "90px 32px" }}>
+      <section id="faq" style={{ background: "var(--white)", padding: "90px 32px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <SectionHead eyebrow="Quick Answers" title="Frequently Asked Questions" />
           <Accordion defaultOpenIndex={0} items={FAQ} />

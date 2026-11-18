@@ -26,27 +26,27 @@ const SITE = "https://incomenfiling.com";
 export const metadata = {
   metadataBase: new URL(SITE),
   title: {
-    default: "GST, Income Tax & Compliance Services in Kolkata | Income N Filing",
+    default: "ITR and GST Filing in Kolkata | Income N Filing",
     template: "%s | Income N Filing",
   },
   description:
-    "Income N Filing handles GST, income tax return filing, company incorporation and corporate compliance for businesses and individuals, end to end.",
+    "Tax and compliance in Kasba, Kolkata since 2017. 500+ clients. Every file made by one, checked by another, before and after filing. Get a fixed quote.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     siteName: "Income N Filing",
     locale: "en_IN",
     url: "/",
-    title: "GST, Income Tax & Compliance Services in Kolkata | Income N Filing",
+    title: "ITR and GST Filing in Kolkata | Income N Filing",
     description:
-      "GST, income tax return filing, company incorporation and corporate compliance, handled end to end.",
+      "ITR and GST filing in Kolkata. Every file made by one, checked by another. If our mistake costs you a penalty, we pay it.",
     images: [{ url: "/logo.jpg", alt: "Income N Filing" }],
   },
   twitter: {
     card: "summary",
     title: "Income N Filing — GST, Income Tax & Compliance",
     description:
-      "GST, income tax return filing, company incorporation and corporate compliance, handled end to end.",
+      "ITR and GST filing in Kolkata. Every file made by one, checked by another. If our mistake costs you a penalty, we pay it.",
     images: ["/logo.jpg"],
   },
 };

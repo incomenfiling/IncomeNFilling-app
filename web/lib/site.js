@@ -29,7 +29,7 @@ export function siteGraph() {
         logo: `${SITE_URL}/logo.jpg`,
         image: `${SITE_URL}/logo.jpg`,
         description:
-          "GST, income tax return filing, company incorporation, corporate compliance and accounting services for businesses and individuals across India.",
+          "Income N Filing is a tax and compliance firm in Kasba, Kolkata, founded in 2017 by Anish Jhunjhunwala. Every client file has a maker and a separate checker, reviewed before and after filing. Services: ITR and GST filing, TDS, company registration and accounting for individuals and businesses across India.",
         telephone: PHONE_E164,
         email: EMAIL_ADDR,
         foundingDate: "2017",

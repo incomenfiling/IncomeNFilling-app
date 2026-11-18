@@ -6,22 +6,25 @@ import { CountUp } from "@/components/ui/CountUp";
 import { HeroCTAButton } from "@/components/ui/HeroCTAButton";
 import { ServiceFinder } from "@/components/home/ServiceFinder";
 import { ACCENTS } from "@/data/theme";
+import { WHATSAPP_URL } from "@/data/content";
+import { track } from "@/lib/track";
 
 export function Hero() {
   const router = useRouter();
+  const wa = () => { track("whatsapp_click", { source: "hero" }); window.open(WHATSAPP_URL, "_blank", "noopener"); };
   const go = (path) => router.push(path === "contact" ? "/contact" : "/services");
 
   return (
     <section style={{ position: "relative", background: "var(--white)" }}>
       <div className="hero-grid">
         <div className="hero-text">
-          <Eyebrow>All Systems Compliant · Since 2017</Eyebrow>
+          <Eyebrow>Tax and compliance · Kasba, Kolkata · Since 2017 · 500+ clients</Eyebrow>
           <h1 className="hero-h1" style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", color: "var(--navy-900)", margin: "20px 0 20px", letterSpacing: "var(--tracking-tight)", lineHeight: 1.06 }}>
-            Business compliance,
+            ITR and GST filing in Kolkata:
             <br />
-            made{" "}
+            made by one,{" "}
             <span style={{ position: "relative", display: "inline-block" }}>
-              effortless
+              checked by another
               <svg viewBox="0 0 220 18" style={{ position: "absolute", left: 0, bottom: -10, width: "100%", height: 18 }}>
                 <path d="M2 13 C60 2, 160 2, 218 12" stroke="var(--gold-500)" strokeWidth="6" fill="none" strokeLinecap="round" />
               </svg>
@@ -29,18 +32,19 @@ export function Hero() {
             .
           </h1>
           <p style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-lg)", color: "var(--ink-500)", maxWidth: 460, lineHeight: "var(--leading-lg)", marginBottom: 32 }} className="hero-p">
-            A dedicated team handling taxation, GST, incorporation, and corporate law — so your business stays compliant without the busywork.
-          </p>
+            TDS, company registration and more. Every file is prepared by one person and verified by another, before and after filing. You see progress as it happens, and if our mistake costs you a penalty, we pay it.</p>
+          <p style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-xl)", color: "var(--navy-900)", margin: "-14px 0 8px" }}>Owned by us.</p>
+          <p style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--ink-500)", margin: "0 0 24px" }}>Terms apply, see <a href="#faq" style={{ color: "var(--navy-700)" }}>FAQ</a>.</p>
           <div className="hero-cta" style={{ display: "flex", gap: 14, marginBottom: 40, flexWrap: "wrap" }}>
-            <HeroCTAButton variant="primary" onClick={() => go("contact")}>Book Free Consultation</HeroCTAButton>
-            <HeroCTAButton variant="ghost" onClick={() => go("services")}>Explore Services</HeroCTAButton>
+            <HeroCTAButton variant="primary" onClick={wa}>Talk on WhatsApp</HeroCTAButton>
+            <HeroCTAButton variant="ghost" onClick={() => go("contact")}>Get a fixed quote</HeroCTAButton>
           </div>
           <div className="hero-stats" style={{ display: "flex" }}>
             <div>
               <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-3xl)", color: "var(--navy-900)" }}>
                 <CountUp to={500} suffix="+" />
               </div>
-              <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--ink-500)" }}>Businesses served</div>
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--ink-500)" }}>Clients served</div>
             </div>
             <div>
               <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-3xl)", color: "var(--navy-900)" }}>

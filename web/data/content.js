@@ -5,12 +5,12 @@ export const STEPS = [
 ];
 
 export const WHY_CHOOSE_US = [
-  { icon: "VER", title: "Verified Expertise", description: "Qualified professionals across taxation, compliance, and corporate law." },
-  { icon: "SEC", title: "Complete Confidentiality", description: "Your data is protected on dedicated, secure infrastructure." },
-  { icon: "CMP", title: "Compliance-First Approach", description: "Proactive guidance to keep your business fully up to date." },
+  { icon: "VER", title: "Made by one, checked by another", description: "Every file has a maker and a separate checker, reviewed before and after filing. The owner spot-checks files at random." },
+  { icon: "CMP", title: "Always in the loop", description: "Your documents in one place, progress you can see, and proof sent once your work is filed." },
+  { icon: "SEC", title: "Our mistake, our cost", description: "If a penalty arises from our error, we bear it. Applies when accurate documents and details are shared on time." },
   { icon: "YRS", title: "9+ Years of Excellence", description: "A proven track record of serving businesses since 2017." },
   { icon: "PAN", title: "Pan-India Reach", description: "Serving clients across every state with consistent quality." },
-  { icon: "500", title: "500+ Businesses Served", description: "Trusted by startups, SMEs, and established enterprises alike." },
+  { icon: "500", title: "500+ Clients", description: "Trusted by individuals, startups, SMEs, and established businesses." },
 ];
 
 export const ABOUT_CHECKS = [
@@ -22,7 +22,7 @@ export const ABOUT_CHECKS = [
 
 export const ABOUT_STATS = [
   { n: "2017", l: "Established" },
-  { n: "500+", l: "Businesses served" },
+  { n: "500+", l: "Clients served" },
   { n: "4.9★", l: "Google rating" },
 ];
 
