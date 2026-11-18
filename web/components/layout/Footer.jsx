@@ -14,7 +14,7 @@ import { ConsentNote } from "@/components/ui/ConsentNote";
 
 const QUICK_LINKS = [
   ["Home", "/"],
-  ["About", "/#about"],
+  ["About", "/about"],
   ["Services", "/services"],
   ["Ask Ira", "/chat"],
   ["Contact", "/contact"],
@@ -137,7 +137,7 @@ export function Footer() {
           </div>
           <div style={{ display: "flex", gap: 22 }}>
             {[["Privacy Policy", "privacy"], ["Terms & Conditions", "terms"]].map(([label, hash]) => (
-              <Link key={label} href={`/legal#${hash}`} style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--navy-300)", textDecoration: "none" }}>
+              <Link key={label} href={`/${hash}`} style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--navy-300)", textDecoration: "none" }}>
                 {label}
               </Link>
             ))}

@@ -2,6 +2,7 @@
 const nextConfig = {
   async redirects() {
     return [
+      { source: "/legal", destination: "/privacy", permanent: true },
       {
         source: "/:path*",
         has: [{ type: "host", value: "www.incomenfiling.com" }],

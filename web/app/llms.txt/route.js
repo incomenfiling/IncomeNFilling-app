@@ -27,7 +27,9 @@ ${posts || "- Coming soon"}
 
 ## About and policies
 - [Contact](${SITE}/contact)
-- [Privacy Policy and Terms](${SITE}/legal)
+- [About Income N Filing](${SITE}/about)
+- [Privacy Policy](${SITE}/privacy)
+- [Terms and Conditions](${SITE}/terms)
 `;
   return new Response(body, { headers: { "content-type": "text/plain; charset=utf-8", "cache-control": "public, max-age=3600" } });
 }

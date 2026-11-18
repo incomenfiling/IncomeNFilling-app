@@ -6,7 +6,7 @@ import { useBP } from "@/lib/useBP";
 
 const ITEMS = [
   { k: "home", label: "Home", href: "/" },
-  { k: "about", label: "About", href: "/#about" },
+  { k: "about", label: "About", href: "/about" },
   { k: "services", label: "Services", href: "/services" },
   { k: "testimonials", label: "Testimonials", href: "/#testimonials" },
   { k: "chat", label: "Ask Ira", href: "/chat" },
