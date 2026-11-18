@@ -42,7 +42,7 @@ export function ITRPromo() {
           </div>
         </div>
         <div style={{ position: "relative", minHeight: bp.mobile ? 260 : 340, order: bp.ltDesktop ? -1 : 0, display: "block", background: "#f2e3ce" }}>
-          <Image src="/images/itr-refund.webp" alt="ITR refund" fill sizes="(max-width: 900px) 50vw, 600px" style={{ objectFit: "cover", objectPosition: bp.mobile ? "center 32%" : "center" }} />
+          <Image src="/images/itr-refund.webp" alt="Income tax return and refund" fill sizes="(max-width: 900px) 50vw, 600px" style={{ objectFit: "cover", objectPosition: bp.mobile ? "center 32%" : "center" }} />
         </div>
       </div>
     </section>
