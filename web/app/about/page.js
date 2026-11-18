@@ -6,7 +6,7 @@ import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { WHATSAPP_URL, BOOKING_URL } from "@/data/content";
 
 export const metadata = {
-  title: "About Income N Filing | Tax and Compliance, Kolkata",
+  title: "About Us: Tax and Compliance in Kolkata",
   description: "Income N Filing is a tax and compliance firm in Kasba, Kolkata, founded in 2017. Every file is made by one person and checked by another, before and after filing.",
   alternates: { canonical: "/about" },
   openGraph: { images: [{ url: "/og/default.png", width: 1200, height: 630 }], url: "/about", title: "About Income N Filing", description: "Tax and compliance in Kolkata since 2017. Every file is made by one person and checked by another." },
