@@ -157,7 +157,7 @@ export default function ContactPage() {
             ) : (
               <form onSubmit={submit} style={{ display: "flex", flexDirection: "column", gap: 16 }}>
                 <div>
-                  <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-xl)", color: "var(--navy-900)" }}>Request a consultation</div>
+                  <h2 style={{ margin: 0, fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-xl)", color: "var(--navy-900)" }}>Request a consultation</h2>
                   <div style={{ fontFamily: "var(--font-body)", fontSize: 13.5, color: "var(--ink-500)", marginTop: 4 }}>No obligation — we&apos;ll scope it on a quick call.</div>
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 7 }}>

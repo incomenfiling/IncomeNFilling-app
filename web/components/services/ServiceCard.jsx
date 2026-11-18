@@ -38,7 +38,7 @@ export function ServiceCard({ c, i, selCount, onClick }) {
           <div style={{ width: 50, height: 50, borderRadius: 13, background: h ? ac : tint, color: h ? "var(--white)" : ac, display: "flex", alignItems: "center", justifyContent: "center", transition: "background .35s,color .35s", marginBottom: 12 }}>
             <ServiceIcon code={c.icon} size={24} />
           </div>
-          <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-lg)", color: "var(--navy-900)", lineHeight: 1.2, overflowWrap: "break-word", textWrap: "balance" }}>{c.title}</div>
+          <h2 style={{ margin: 0, fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-lg)", color: "var(--navy-900)", lineHeight: 1.2, overflowWrap: "break-word", textWrap: "balance" }}>{c.title}</h2>
         </div>
         <div style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-sm)", color: "var(--ink-500)", lineHeight: "var(--leading-sm)" }}>{c.description}</div>
         <div style={{ overflow: "hidden", maxHeight: h ? 70 : 0, opacity: h ? 1 : 0, transition: "max-height .45s var(--ease-standard),opacity .3s", marginTop: h ? 12 : 0 }}>

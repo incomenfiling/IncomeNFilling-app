@@ -47,7 +47,7 @@ export function CategoryExplorer({ categories, onSelect }) {
               {c.icon}
             </div>
             <div>
-              <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-2xl)", color: "var(--navy-900)" }}>{c.title}</div>
+              <h3 style={{ margin: 0, fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-2xl)", color: "var(--navy-900)" }}>{c.title}</h3>
               <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: accent, fontWeight: "var(--weight-semibold)" }}>{c.count} services in this module</div>
             </div>
           </div>

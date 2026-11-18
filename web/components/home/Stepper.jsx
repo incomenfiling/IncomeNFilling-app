@@ -98,7 +98,7 @@ export function Stepper() {
               {s.n}
             </span>
             <div>
-              <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-2xl)", color: "var(--navy-900)", letterSpacing: "var(--tracking-tight)" }}>{s.t}</div>
+              <h3 style={{ margin: 0, fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-2xl)", color: "var(--navy-900)", letterSpacing: "var(--tracking-tight)" }}>{s.t}</h3>
               <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "var(--ink-500)", marginTop: 2, maxWidth: 420 }}>{s.d}</div>
             </div>
           </div>

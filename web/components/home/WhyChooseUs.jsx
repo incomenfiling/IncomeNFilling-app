@@ -33,7 +33,7 @@ function WhyCard({ f, i }) {
         <WhyIcon code={f.icon} />
         {h && <span style={{ position: "absolute", inset: -5, borderRadius: "50%", border: "2px solid var(--gold-400)", animation: "pulse-ring 1.8s infinite" }} />}
       </div>
-      <div style={{ position: "relative", fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-lg)", color: "var(--navy-900)", marginBottom: 8 }}>{f.title}</div>
+      <h3 style={{ margin: 0, position: "relative", fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-lg)", color: "var(--navy-900)", marginBottom: 8 }}>{f.title}</h3>
       <div style={{ position: "relative", fontFamily: "var(--font-body)", fontSize: "var(--text-sm)", color: "var(--ink-500)", lineHeight: "var(--leading-sm)", maxWidth: 260, margin: "0 auto" }}>{f.description}</div>
     </div>
   );

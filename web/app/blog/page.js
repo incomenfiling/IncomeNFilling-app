@@ -20,7 +20,7 @@ export default function BlogIndex() {
         {POSTS.length === 0 && <p style={{ fontFamily: "var(--font-body)", color: "var(--ink-500)" }}>Our first guides are coming soon.</p>}
         {POSTS.map((p) => (
           <article key={p.slug} style={{ padding: "20px 0", borderTop: "1px solid var(--ink-100)" }}>
-            <Link href={`/blog/${p.slug}`} style={{ fontFamily: "var(--font-display)", fontSize: "var(--text-xl)", color: "var(--navy-900)", textDecoration: "none", fontWeight: 600 }}>{p.title}</Link>
+            <h2 style={{ margin: 0 }}><Link href={`/blog/${p.slug}`} style={{ fontFamily: "var(--font-display)", fontSize: "var(--text-xl)", color: "var(--navy-900)", textDecoration: "none", fontWeight: 600 }}>{p.title}</Link></h2>
             <p style={{ fontFamily: "var(--font-body)", color: "var(--ink-500)", margin: "8px 0 0" }}>{p.description}</p>
             <time dateTime={p.date} style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--ink-400)" }}>{p.date}</time>
           </article>
