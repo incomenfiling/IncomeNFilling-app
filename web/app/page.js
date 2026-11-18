@@ -45,7 +45,7 @@ export default function HomePage() {
 
       <section style={{ position: "relative", background: "var(--paper-alt)", padding: "90px 32px" }}>
         <div style={{ maxWidth: "var(--container-max)", margin: "0 auto" }}>
-          <SectionHead eyebrow="Simple Process" title="How It Works" sub="Three steps between not compliant and fully covered — hover or tap to explore." />
+          <SectionHead eyebrow="Simple Process" title="How It Works" sub="Three steps between not compliant and fully covered. Select a step to see what happens." />
           <Stepper />
         </div>
       </section>
@@ -54,7 +54,7 @@ export default function HomePage() {
 
       <section style={{ padding: "80px 32px 90px" }}>
         <div style={{ maxWidth: "var(--container-max)", margin: "0 auto" }}>
-          <SectionHead eyebrow="And Many More" title="Our Clients" sub="As a client, it matters who handles your compliance — here's who trusts us. Watch the cards flip, hover to hold." />
+          <SectionHead eyebrow="And Many More" title="Our Clients" sub="As a client, it matters who handles your compliance. Here is who trusts us." />
           <ClientFlipGrid />
         </div>
       </section>
