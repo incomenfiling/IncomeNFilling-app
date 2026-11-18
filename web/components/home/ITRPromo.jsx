@@ -13,9 +13,9 @@ export function ITRPromo() {
         <div style={{ position: "absolute", right: "22%", top: "50%", transform: "translateY(-50%)", width: 520, height: 520, borderRadius: "50%", border: "60px solid rgba(43,108,214,.06)", pointerEvents: "none" }} />
         <div style={{ position: "relative", zIndex: 2, padding: bp.mobile ? "40px 24px" : "52px 20px 52px 56px", display: "flex", flexDirection: "column", justifyContent: "center", gap: 18 }}>
           <h2 style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: bp.mobile ? "var(--text-3xl)" : "var(--text-4xl)", color: "var(--navy-900)", margin: 0, lineHeight: 1.12, letterSpacing: "var(--tracking-tight)" }}>
-            File ITR in Minutes
+            Your ITR, filed
             <br />
-            with <span style={{ color: "var(--navy-600,#2b6cd6)" }}>100% Accuracy</span>
+            <span style={{ color: "var(--navy-600,#2b6cd6)" }}>once and checked twice</span>
           </h2>
           <p style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-lg)", color: "var(--ink-500)", margin: 0 }}>Maximum Tax Refund, Legally Claimed.</p>
           <div>
@@ -35,9 +35,9 @@ export function ITRPromo() {
               </span>
             </div>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--ink-500)", lineHeight: 1.5 }}>
-              Received a notice? <strong style={{ color: "var(--navy-900)" }}>We Handle It Free.</strong>
+              Received a notice? <strong style={{ color: "var(--navy-900)" }}>We help you reply.</strong>
               <br />
-              Computation Error? <strong style={{ color: "var(--navy-900)" }}>100% Refund.</strong>
+              Error from our side? <strong style={{ color: "var(--navy-900)" }}>We cover the penalty.</strong> <a href="#faq" style={{ color: "var(--navy-700)" }}>Terms apply, see FAQ.</a>
             </div>
           </div>
         </div>
