@@ -8,7 +8,7 @@ export const SERVICE_PAGES = [
     name: "GST Registration",
     module: "GST Compliance",
     listed: "GST Registration",
-    metaTitle: "GST Registration Assistance",
+    metaTitle: "GST Registration in Kolkata | Income N Filing",
     metaDescription:
       "Get GST registration filed correctly the first time. Income N Filing prepares the application, checks documents and tracks it until your GSTIN is issued.",
     intro:
@@ -42,7 +42,7 @@ export const SERVICE_PAGES = [
     name: "GST Return Filing (GSTR-1 & GSTR-3B)",
     module: "GST Compliance",
     listed: "GSTR-3B Filing",
-    metaTitle: "GST Return Filing — GSTR-1 & GSTR-3B",
+    metaTitle: "GST Return Filing, GSTR-1 & 3B | Income N Filing",
     metaDescription:
       "Monthly or quarterly GSTR-1 and GSTR-3B filing handled for you, with input tax credit checks so your returns match your books.",
     intro:
@@ -75,7 +75,7 @@ export const SERVICE_PAGES = [
     name: "GST Notice Reply",
     module: "GST Compliance",
     listed: "GST Notice Reply",
-    metaTitle: "GST Notice Reply & Scrutiny Support",
+    metaTitle: "GST Notice Reply Help in Kolkata | Income N Filing",
     metaDescription:
       "Received a GST notice? We read it, identify the issue and prepare a reply with supporting documents within the time stated in the notice.",
     intro:
@@ -108,7 +108,7 @@ export const SERVICE_PAGES = [
     name: "Private Limited Company Registration",
     module: "Incorporation & Registrations",
     listed: "Private Limited Company",
-    metaTitle: "Private Limited Company Registration",
+    metaTitle: "Pvt Ltd Company Registration in Kolkata | Income N Filing",
     metaDescription:
       "Register a private limited company with name approval, incorporation filing, PAN and TAN, handled end to end by Income N Filing.",
     intro:
@@ -141,7 +141,7 @@ export const SERVICE_PAGES = [
     name: "LLP Registration",
     module: "Incorporation & Registrations",
     listed: "LLP Registration",
-    metaTitle: "LLP Registration",
+    metaTitle: "LLP Registration in Kolkata | Income N Filing",
     metaDescription:
       "Register a Limited Liability Partnership with name approval, LLP agreement drafting and incorporation filing from Income N Filing.",
     intro:
@@ -174,7 +174,7 @@ export const SERVICE_PAGES = [
     name: "MSME / Udyam Registration",
     module: "Licenses & Registrations",
     listed: "MSME / Udyam",
-    metaTitle: "MSME / Udyam Registration",
+    metaTitle: "MSME Udyam Registration | Income N Filing",
     metaDescription:
       "Udyam registration for micro, small and medium businesses, filed correctly with your PAN and business details by Income N Filing.",
     intro:
@@ -202,7 +202,7 @@ export const SERVICE_PAGES = [
     name: "TDS Return Filing",
     module: "Income Tax",
     listed: "TDS Return Filing",
-    metaTitle: "TDS Return Filing",
+    metaTitle: "TDS Return Filing in Kolkata | Income N Filing",
     metaDescription:
       "Quarterly TDS return filing for employers and businesses, with challan matching and correction support from Income N Filing.",
     intro:
@@ -235,7 +235,7 @@ export const SERVICE_PAGES = [
     name: "Income Tax Notice Handling",
     module: "Advisory & Notices",
     listed: "Income Tax Notice Handling",
-    metaTitle: "Income Tax Notice Reply & Handling",
+    metaTitle: "Income Tax Notice Reply Help | Income N Filing",
     metaDescription:
       "Income tax notice or intimation received? Income N Filing reviews it, prepares the reply and files it on the portal within the stated time.",
     intro:
@@ -267,7 +267,7 @@ export const SERVICE_PAGES = [
     name: "Monthly Bookkeeping",
     module: "Accounting & Bookkeeping",
     listed: "Monthly Bookkeeping",
-    metaTitle: "Monthly Bookkeeping & Accounting",
+    metaTitle: "Monthly Bookkeeping in Kolkata | Income N Filing",
     metaDescription:
       "Monthly bookkeeping with bank reconciliation and reports, so your GST, TDS and income tax filings start from clean, up-to-date books.",
     intro:
@@ -296,7 +296,7 @@ export const SERVICE_PAGES = [
     name: "Annual ROC Filing for Companies",
     module: "Corporate Compliance",
     listed: "Annual Return (MGT-7)",
-    metaTitle: "Annual ROC Filing — AOC-4 & MGT-7",
+    metaTitle: "Annual ROC Filing, AOC-4 & MGT-7 | Income N Filing",
     metaDescription:
       "Annual ROC compliance for companies: financial statements (AOC-4), annual return (MGT-7) and board and AGM paperwork, filed on time.",
     intro:
@@ -325,7 +325,7 @@ export const SERVICE_PAGES = [
     name: "Import Export Code (IEC)",
     module: "Licenses & Registrations",
     listed: "Import Export Code (IEC)",
-    metaTitle: "Import Export Code (IEC) Registration",
+    metaTitle: "Import Export Code (IEC) Registration | Income N Filing",
     metaDescription:
       "Apply for your Import Export Code with Income N Filing. We prepare and file the DGFT application so you can start importing or exporting.",
     intro:
@@ -353,7 +353,7 @@ export const SERVICE_PAGES = [
     name: "FSSAI Food License & Registration",
     module: "Licenses & Registrations",
     listed: "FSSAI License",
-    metaTitle: "FSSAI Food License & Registration",
+    metaTitle: "FSSAI License Registration | Income N Filing",
     metaDescription:
       "FSSAI registration or license for food businesses, with the right category chosen for your scale, filed by Income N Filing.",
     intro:
@@ -381,7 +381,7 @@ export const SERVICE_PAGES = [
     name: "Belated & Revised ITR Filing",
     module: "Income Tax",
     listed: "Belated ITR Filing",
-    metaTitle: "Belated & Revised ITR Filing Help (Missed the Due Date)",
+    metaTitle: "Belated & Revised ITR Filing Help | Income N Filing",
     metaDescription:
       "Missed the ITR due date or need to correct a filed return? Income N Filing prepares and files belated and revised income tax returns, checking AIS and Form 26AS first.",
     intro:
@@ -418,7 +418,7 @@ export const SERVICE_PAGES = [
     name: "Late GST Return Filing",
     module: "GST Compliance",
     listed: "Late GST Return Filing",
-    metaTitle: "Late GST Return Filing Help (GSTR-1, GSTR-3B Pending)",
+    metaTitle: "Late GST Return Filing Help | Income N Filing",
     metaDescription:
       "GST returns pending or filed late? Income N Filing reconciles your data, files overdue GSTR-1 and GSTR-3B returns and explains late fee and interest before you pay.",
     intro:

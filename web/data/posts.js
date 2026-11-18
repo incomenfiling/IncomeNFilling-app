@@ -5,7 +5,7 @@
 export const POSTS = [
 {
   slug: "missed-itr-deadline-belated-return-31-december-2026",
-  title: "Missed the ITR Deadline? File a Belated Return Before 31 December 2026",
+  title: "Missed the ITR Deadline? File a Belated Return by 31 Dec 2026",
   description: "Missed the due date for AY 2026-27? You can still file a belated return until 31 December 2026. What it costs, what you lose, and how to file in Kolkata.",
   date: "2026-11-18",
   updated: "2026-11-18",

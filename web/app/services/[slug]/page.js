@@ -25,7 +25,7 @@ function build(slug) {
       kind: "module",
       path: `/services/${slug}`,
       name: mod.title,
-      metaTitle: `${mod.title} Services`,
+      metaTitle: `${mod.title} Services | Income N Filing`,
       metaDescription: `${mod.description} Income N Filing handles ${mod.title.toLowerCase()} for businesses and individuals across India.`,
       intro: `${mod.description} Income N Filing handles this end to end, from collecting your documents to filing and follow-up.`,
       services: mod.services.map((n) => ({
@@ -65,7 +65,7 @@ export async function generateMetadata({ params }) {
   const d = build(slug);
   if (!d) return {};
   return {
-    title: d.metaTitle,
+    title: { absolute: d.metaTitle },
     description: d.metaDescription,
     alternates: { canonical: d.path },
     openGraph: { url: d.path, title: d.metaTitle, description: d.metaDescription, images: [{ url: `/og/${slug}.png`, width: 1200, height: 630, alt: d.name }] },
