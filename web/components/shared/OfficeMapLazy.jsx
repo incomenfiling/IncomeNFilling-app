@@ -37,7 +37,7 @@ export function OfficeMap(props) {
 
   return (
     <div ref={ref} style={{ minHeight: bp.ltDesktop ? 620 : 470 }}>
-      {show ? <OfficeMapInner {...props} /> : null}
+      {show ? <OfficeMapInner {...props} /> : <div role="status" style={{ minHeight: "inherit", display: "flex", alignItems: "center", justifyContent: "center", borderRadius: "var(--radius-xl)", border: "1px dashed var(--ink-100)", fontFamily: "var(--font-body)", fontSize: 14, color: "var(--ink-500)" }}>Loading office map… Kolkata office, Kasba · Mon–Sat 10:00–19:00 IST</div>}
     </div>
   );
 }

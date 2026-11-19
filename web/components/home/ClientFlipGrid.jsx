@@ -36,7 +36,7 @@ function ClientFlipCard({ card, i }) {
   const [hover, setHover] = useState(false);
   const bp = useBP();
   return (
-    <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} style={{ width: "100%", maxWidth: bp.mobile ? "none" : 250, height: 92, perspective: 1000, cursor: "default" }}>
+    <div role="group" aria-label={`${card.front.name}, ${card.front.sector}; and ${card.back.name}, ${card.back.sector}`} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} style={{ width: "100%", maxWidth: bp.mobile ? "none" : 250, height: 92, perspective: 1000, cursor: "default" }}>
       <div
         style={{
           position: "relative", width: "100%", height: "100%", transformStyle: "preserve-3d", animation: `flip-card 9s ${i * 0.7}s infinite`,

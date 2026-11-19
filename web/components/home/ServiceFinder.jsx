@@ -26,7 +26,7 @@ export function ServiceFinder({ onSelect }) {
           Not sure where to start?
         </div>
       </div>
-      <div style={{ display: "flex", alignItems: "center", gap: 8, background: "var(--paper-alt)", borderRadius: "var(--radius-pill)", padding: "11px 14px" }} className="finder-search">
+      <div style={{ display: "flex", alignItems: "center", gap: 8, background: "var(--paper-alt)", borderRadius: "var(--radius-pill)", padding: "12px 14px", minHeight: 44 }} className="finder-search">
         <span aria-hidden="true" style={{ fontSize: 13, color: "var(--ink-300)" }}>⌕</span>
         <input
           aria-label="Search a service category"

@@ -64,7 +64,7 @@ export function NavBar({ active }) {
                 fontSize: "var(--text-sm)", fontWeight: "var(--weight-medium)",
                 color: active === it.k ? "var(--gold-600)" : "var(--navy-800)",
                 textDecoration: "none", borderBottom: active === it.k ? "2px solid var(--gold-600)" : "2px solid transparent",
-                paddingBottom: 4, lineHeight: 1.2,
+                padding: "12px 2px", lineHeight: 1.2,
               }}
             >
               {it.label}

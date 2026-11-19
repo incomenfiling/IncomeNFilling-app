@@ -5,7 +5,7 @@ import { SectionHead } from "@/components/ui/Eyebrow";
 import { WhyIcon } from "@/components/shared/icons";
 import { WHY_CHOOSE_US } from "@/data/content";
 
-function WhyCard({ f, i }) {
+function WhyCard({ f, i, big }) {
   const [h, setH] = useState(false);
   const [pos, setPos] = useState({ x: 50, y: 0 });
   const onMove = (e) => {
@@ -18,8 +18,8 @@ function WhyCard({ f, i }) {
       onMouseLeave={() => setH(false)}
       onMouseMove={onMove}
       style={{
-        position: "relative", background: "var(--white)", borderRadius: "var(--radius-xl)", padding: "34px 26px 30px",
-        border: "1px solid " + (h ? "var(--gold-300,#f5cf82)" : "var(--ink-100)"), overflow: "hidden", textAlign: "center", cursor: "default",
+        position: "relative", background: big ? "var(--navy-950)" : "var(--white)", borderRadius: "var(--radius-xl)", padding: big ? "44px 32px 40px" : "34px 26px 30px", flex: 1,
+        border: "1px solid " + (h ? "var(--gold-300,#f5cf82)" : "var(--ink-100)"), overflow: "hidden", textAlign: "center", cursor: "default", ...(big ? { borderColor: "var(--gold-500)" } : {}),
         transform: h ? "translateY(-6px)" : "none", boxShadow: h ? "0 24px 46px rgba(15,42,66,.14)" : "var(--shadow-sm)",
         transition: "transform .35s var(--ease-standard),box-shadow .35s,border-color .35s",
       }}
@@ -33,8 +33,8 @@ function WhyCard({ f, i }) {
         <WhyIcon code={f.icon} />
         {h && <span style={{ position: "absolute", inset: -5, borderRadius: "50%", border: "2px solid var(--gold-400)", animation: "pulse-ring 1.8s infinite" }} />}
       </div>
-      <h3 style={{ margin: 0, position: "relative", fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-lg)", color: "var(--navy-900)", marginBottom: 8 }}>{f.title}</h3>
-      <div style={{ position: "relative", fontFamily: "var(--font-body)", fontSize: "var(--text-sm)", color: "var(--ink-500)", lineHeight: "var(--leading-sm)", maxWidth: 260, margin: "0 auto" }}>{f.description}</div>
+      <h3 style={{ margin: 0, position: "relative", fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: big ? "var(--text-2xl)" : "var(--text-lg)", color: big ? "var(--white)" : "var(--navy-900)", marginBottom: 8 }}>{f.title}</h3>
+      <div style={{ position: "relative", fontFamily: "var(--font-body)", fontSize: big ? "var(--text-base)" : "var(--text-sm)", color: big ? "rgba(255,255,255,.82)" : "var(--ink-500)", lineHeight: "var(--leading-sm)", maxWidth: big ? 380 : 260, margin: "0 auto" }}>{f.description}</div>
     </div>
   );
 }
@@ -51,9 +51,9 @@ export function WhyChooseUs() {
       />
       <div style={{ position: "relative", maxWidth: "var(--container-max)", margin: "0 auto" }}>
         <SectionHead eyebrow="Why Us" title="Why Businesses Choose Us" sub="Professional, secure, and dependable compliance services." />
-        <div style={{ display: "grid", gridTemplateColumns: bp.mobile ? "1fr" : bp.tablet ? "repeat(2,1fr)" : "repeat(3,1fr)", gap: 20 }}>
+        <div style={{ display: "grid", gridTemplateColumns: bp.mobile ? "1fr" : bp.tablet ? "repeat(2,1fr)" : "repeat(6,1fr)", gap: 20 }}>
           {WHY_CHOOSE_US.map((f, i) => (
-            <WhyCard key={f.title} f={f} i={i} />
+            <div key={f.title} style={bp.mobile || bp.tablet ? undefined : { gridColumn: i < 2 ? "span 3" : "span 2", display: "flex" }}><WhyCard f={f} i={i} big={i < 2 && !bp.mobile} /></div>
           ))}
         </div>
       </div>

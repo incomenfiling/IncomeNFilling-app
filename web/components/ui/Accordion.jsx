@@ -9,6 +9,7 @@ export function Accordion({ items = [], defaultOpenIndex = -1 }) {
         const isOpen = open === i;
         return (
           <div key={i} style={{ border: "1px solid var(--ink-100)", borderRadius: "var(--radius-md)", background: "var(--white)", overflow: "hidden" }}>
+            <h3 style={{ margin: 0, font: "inherit" }}>
             <button
               id={`acc-btn-${i}`} aria-expanded={isOpen} aria-controls={`acc-panel-${i}`}
               onClick={() => setOpen(isOpen ? -1 : i)}
@@ -21,6 +22,7 @@ export function Accordion({ items = [], defaultOpenIndex = -1 }) {
               {it.question}
               <span aria-hidden="true" style={{ fontFamily: "var(--font-mono)", color: "var(--gold-600)", transform: isOpen ? "rotate(45deg)" : "none", transition: "transform var(--duration-fast) var(--ease-standard)" }}>+</span>
             </button>
+            </h3>
             {isOpen && (
               <div id={`acc-panel-${i}`} role="region" aria-labelledby={`acc-btn-${i}`} style={{ padding: "0 20px 18px", fontFamily: "var(--font-body)", fontSize: "var(--text-sm)", color: "var(--ink-500)", lineHeight: "var(--leading-sm)" }}>
                 {it.answer}

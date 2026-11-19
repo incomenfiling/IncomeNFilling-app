@@ -104,22 +104,23 @@ export function Footer() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   type="email"
+                  aria-label="Email address for updates"
                   required
                   placeholder="Email address"
                   style={{
                     flex: 1, minWidth: 0, fontFamily: "var(--font-body)", fontSize: 13, padding: "10px 12px",
-                    borderRadius: "var(--radius-md)", border: "1px solid rgba(255,255,255,.16)", background: "rgba(255,255,255,.05)",
+                    borderRadius: "var(--radius-md)", border: "1px solid rgba(255,255,255,.45)", background: "rgba(255,255,255,.06)",
                     color: "var(--white)", outline: "none",
                   }}
                 />
                 <button
-                  type="submit"
+                  type="submit" aria-label="Subscribe"
                   style={{
-                    flexShrink: 0, fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 16, width: 42,
+                    flexShrink: 0, minHeight: 44, fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 16, width: 42,
                     borderRadius: "var(--radius-md)", border: "none", background: "var(--gold-500)", color: "var(--navy-950)", cursor: "pointer",
                   }}
                 >
-                  →
+                  <span aria-hidden="true">→</span>
                 </button>
               </form>
             )}
