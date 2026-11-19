@@ -57,7 +57,7 @@ export function About() {
             <div style={{ position: "absolute", top: -24, left: 18, fontFamily: "Georgia,serif", fontSize: 120, lineHeight: 1, color: "var(--gold-500)", opacity: 0.18 }}>&ldquo;</div>
             <div style={{ position: "absolute", top: 0, right: 0, width: 150, height: 150, background: "radial-gradient(circle at 80% 20%,rgba(239,168,46,.22),transparent 62%)" }} />
             <p style={{ position: "relative", fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-xl)", color: "var(--gold-400)", margin: 0, lineHeight: 1.35 }}>
-              If our mistake costs you a penalty, we pay it.
+              Made by one. Checked by another.
             </p>
             <div style={{ position: "relative", display: "flex", alignItems: "center", gap: 8, marginTop: 16 }}>
               <span style={{ width: 22, height: 2, background: "var(--gold-500)" }} />

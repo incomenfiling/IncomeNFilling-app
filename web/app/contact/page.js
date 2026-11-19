@@ -19,8 +19,8 @@ const CHANNELS = [
   { key: "email", label: "Email", footLabel: "Email", href: `mailto:support@incomenfiling.com`, accent: "var(--navy-600)", icon: <EmailIcon size={19} color="#fff" /> },
 ];
 
-function Label({ children }) {
-  return <label style={{ fontFamily: "var(--font-mono)", fontSize: 12, fontWeight: 600, letterSpacing: ".05em", textTransform: "uppercase", color: "var(--ink-500)" }}>{children}</label>;
+function Label({ children, htmlFor }) {
+  return <label htmlFor={htmlFor} style={{ fontFamily: "var(--font-mono)", fontSize: 12, fontWeight: 600, letterSpacing: ".05em", textTransform: "uppercase", color: "var(--ink-500)" }}>{children}</label>;
 }
 
 export default function ContactPage() {
@@ -178,21 +178,21 @@ export default function ContactPage() {
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: bp.mobile ? "1fr" : "1fr 1fr", gap: 12 }}>
                   <div style={{ display: "flex", flexDirection: "column", gap: 7 }}>
-                    <Label>Full name</Label>
-                    <input required value={f.name} onChange={(e) => set("name", e.target.value)} onFocus={foc} onBlur={blur} placeholder="Jane Doe" style={iStyle} />
+                    <Label htmlFor="c-name">Full name</Label>
+                    <input id="c-name" required value={f.name} onChange={(e) => set("name", e.target.value)} onFocus={foc} onBlur={blur} placeholder="Jane Doe" style={iStyle} />
                   </div>
                   <div style={{ display: "flex", flexDirection: "column", gap: 7 }}>
-                    <Label>Phone</Label>
-                    <input value={f.phone} onChange={(e) => set("phone", e.target.value)} onFocus={foc} onBlur={blur} placeholder="+91 …" style={iStyle} />
+                    <Label htmlFor="c-phone">Phone</Label>
+                    <input id="c-phone" value={f.phone} onChange={(e) => set("phone", e.target.value)} onFocus={foc} onBlur={blur} placeholder="+91 …" style={iStyle} />
                   </div>
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 7 }}>
-                  <Label>Email address</Label>
-                  <input required type="email" value={f.email} onChange={(e) => set("email", e.target.value)} onFocus={foc} onBlur={blur} placeholder="jane@company.com" style={iStyle} />
+                  <Label htmlFor="c-email">Email address</Label>
+                  <input id="c-email" required type="email" value={f.email} onChange={(e) => set("email", e.target.value)} onFocus={foc} onBlur={blur} placeholder="jane@company.com" style={iStyle} />
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 7 }}>
-                  <Label>Briefly describe your requirement</Label>
-                  <textarea value={f.msg} onChange={(e) => set("msg", e.target.value)} onFocus={foc} onBlur={blur} rows={3} placeholder="e.g. need GST registration for a new LLP" style={{ ...iStyle, resize: "vertical", minHeight: 88 }} />
+                  <Label htmlFor="c-msg">Briefly describe your requirement</Label>
+                  <textarea id="c-msg" value={f.msg} onChange={(e) => set("msg", e.target.value)} onFocus={foc} onBlur={blur} rows={3} placeholder="e.g. need GST registration for a new LLP" style={{ ...iStyle, resize: "vertical", minHeight: 88 }} />
                 </div>
                 <label style={{ display: "flex", alignItems: "flex-start", gap: 10, cursor: "pointer", fontFamily: "var(--font-body)", fontSize: 13.5, lineHeight: 1.5, color: "var(--navy-800)" }}>
                   <input type="checkbox" required checked={rcs} onChange={(e) => setRcs(e.target.checked)} style={{ marginTop: 2, width: 17, height: 17, flexShrink: 0, accentColor: "var(--gold-600)", cursor: "pointer" }} />

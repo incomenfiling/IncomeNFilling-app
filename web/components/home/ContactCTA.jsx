@@ -30,6 +30,15 @@ function CField({ tag = "input", children, ...props }) {
   );
 }
 
+function Field({ id, label, children }) {
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+      <label htmlFor={id} style={{ fontFamily: "var(--font-body)", fontSize: 13, fontWeight: 600, color: "var(--navy-900)" }}>{label}</label>
+      {children}
+    </div>
+  );
+}
+
 export function ContactCTA() {
   const [sent, setSent] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -138,17 +147,17 @@ export function ContactCTA() {
                 <form onSubmit={submit} style={{ display: "flex", flexDirection: "column", gap: 14 }}>
                   <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }} />
                   <div style={{ display: "grid", gridTemplateColumns: bp.mobile ? "1fr" : "1fr 1fr", gap: 14 }}>
-                    <CField required name="name" placeholder="Your name" />
-                    <CField required name="phone" type="tel" placeholder="Phone" />
+                    <Field id="cta-name" label="Your name"><CField id="cta-name" required name="name" autoComplete="name" placeholder="e.g. Rahul Sen" /></Field>
+                    <Field id="cta-phone" label="Phone"><CField id="cta-phone" required name="phone" type="tel" autoComplete="tel" placeholder="e.g. 98300 12345" /></Field>
                   </div>
-                  <CField required name="email" type="email" placeholder="Email address" />
-                  <CField tag="select" name="service" aria-label="What do you need help with?" defaultValue="">
+                  <Field id="cta-email" label="Email address"><CField id="cta-email" required name="email" type="email" autoComplete="email" placeholder="you@example.com" /></Field>
+                  <CField tag="select" id="cta-service" name="service" aria-label="What do you need help with?" defaultValue="">
                     <option value="" disabled>What do you need help with?</option>
                     {HOME_CATEGORIES.map((c) => (
                       <option key={c.title}>{c.title}</option>
                     ))}
                   </CField>
-                  <CField tag="textarea" name="msg" rows="4" placeholder="Tell us a little about your requirement…" />
+                  <Field id="cta-msg" label="Your requirement"><CField id="cta-msg" tag="textarea" name="msg" rows="4" placeholder="Tell us a little about what you need" /></Field>
                   <div style={{ display: "flex", alignItems: "center", gap: 14, flexWrap: "wrap" }}>
                     <HeroCTAButton variant="primary">{busy ? "Sending…" : "Send Message"}</HeroCTAButton>
                     <span style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--ink-300)" }}>

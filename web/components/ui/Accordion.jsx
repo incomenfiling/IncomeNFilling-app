@@ -10,6 +10,7 @@ export function Accordion({ items = [], defaultOpenIndex = -1 }) {
         return (
           <div key={i} style={{ border: "1px solid var(--ink-100)", borderRadius: "var(--radius-md)", background: "var(--white)", overflow: "hidden" }}>
             <button
+              id={`acc-btn-${i}`} aria-expanded={isOpen} aria-controls={`acc-panel-${i}`}
               onClick={() => setOpen(isOpen ? -1 : i)}
               style={{
                 width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12,
@@ -18,10 +19,10 @@ export function Accordion({ items = [], defaultOpenIndex = -1 }) {
               }}
             >
               {it.question}
-              <span style={{ fontFamily: "var(--font-mono)", color: "var(--gold-600)", transform: isOpen ? "rotate(45deg)" : "none", transition: "transform var(--duration-fast) var(--ease-standard)" }}>+</span>
+              <span aria-hidden="true" style={{ fontFamily: "var(--font-mono)", color: "var(--gold-600)", transform: isOpen ? "rotate(45deg)" : "none", transition: "transform var(--duration-fast) var(--ease-standard)" }}>+</span>
             </button>
             {isOpen && (
-              <div style={{ padding: "0 20px 18px", fontFamily: "var(--font-body)", fontSize: "var(--text-sm)", color: "var(--ink-500)", lineHeight: "var(--leading-sm)" }}>
+              <div id={`acc-panel-${i}`} role="region" aria-labelledby={`acc-btn-${i}`} style={{ padding: "0 20px 18px", fontFamily: "var(--font-body)", fontSize: "var(--text-sm)", color: "var(--ink-500)", lineHeight: "var(--leading-sm)" }}>
                 {it.answer}
               </div>
             )}

@@ -23,6 +23,7 @@ export function CategoryExplorer({ categories, onSelect }) {
           return (
             <button
               key={cat.title}
+              aria-pressed={isActive}
               onClick={() => setActive(i)}
               style={{
                 display: "flex", alignItems: "center", gap: 12, padding: "13px 14px", borderRadius: "var(--radius-md)", border: "none",
@@ -48,7 +49,6 @@ export function CategoryExplorer({ categories, onSelect }) {
             </div>
             <div>
               <h3 style={{ margin: 0, fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-2xl)", color: "var(--navy-900)" }}>{c.title}</h3>
-              <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: accent, fontWeight: "var(--weight-semibold)" }}>{c.count} services in this module</div>
             </div>
           </div>
           <div style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-base)", color: "var(--ink-500)", lineHeight: "var(--leading-base)", maxWidth: 440 }}>{c.description}</div>
@@ -71,7 +71,7 @@ export function CategoryExplorer({ categories, onSelect }) {
             ))}
           </div>
           <div>
-            <button onClick={onSelect} style={{ fontFamily: "var(--font-body)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-sm)", padding: "12px 22px", borderRadius: "var(--radius-pill)", border: "none", background: accent, color: "var(--white)", cursor: "pointer" }}>
+            <button onClick={onSelect} style={{ fontFamily: "var(--font-body)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-sm)", padding: "12px 22px", borderRadius: "var(--radius-pill)", border: "none", background: accent, color: active === 0 || active % 4 === 2 ? "var(--navy-900)" : "var(--white)", cursor: "pointer" }}>
               View all {c.title} services →
             </button>
           </div>

@@ -31,12 +31,12 @@ export function Hero() {
             </span>
           </h1>
           <p style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-lg)", color: "var(--ink-500)", maxWidth: 460, lineHeight: "var(--leading-lg)", marginBottom: 32 }} className="hero-p">
-            TDS, company registration and more. Every file is prepared by one person and verified by another, before and after filing. You see progress as it happens, and if our mistake costs you a penalty, we pay it.</p>
+            TDS, company registration and more. Every file is prepared by one person and verified by another, before and after filing. You see progress as it happens.</p>
           <p style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-xl)", color: "var(--navy-900)", margin: "-14px 0 8px" }}>Owned by us.</p>
           <p style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--ink-500)", margin: "0 0 24px" }}>Terms apply, see <a href="#faq" style={{ color: "var(--navy-700)" }}>FAQ</a>.</p>
           <div className="hero-cta" style={{ display: "flex", gap: 14, marginBottom: 40, flexWrap: "wrap" }}>
             <HeroCTAButton variant="primary" onClick={wa}>Talk on WhatsApp</HeroCTAButton>
-            <HeroCTAButton variant="ghost" onClick={() => go("contact")}>Get a fixed quote</HeroCTAButton>
+            <HeroCTAButton variant="ghost" onClick={() => go("contact")}>Book a 20-min call</HeroCTAButton>
           </div>
           <div className="hero-stats" style={{ display: "flex" }}>
             <div>
