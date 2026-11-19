@@ -26,9 +26,10 @@ export function ServiceFinder({ onSelect }) {
           Not sure where to start?
         </div>
       </div>
-      <div style={{ display: "flex", alignItems: "center", gap: 8, background: "var(--paper-alt)", borderRadius: "var(--radius-pill)", padding: "9px 14px" }}>
-        <span style={{ fontSize: 13, color: "var(--ink-300)" }}>⌕</span>
+      <div style={{ display: "flex", alignItems: "center", gap: 8, background: "var(--paper-alt)", borderRadius: "var(--radius-pill)", padding: "11px 14px" }} className="finder-search">
+        <span aria-hidden="true" style={{ fontSize: 13, color: "var(--ink-300)" }}>⌕</span>
         <input
+          aria-label="Search a service category"
           value={q}
           onChange={(e) => setQ(e.target.value)}
           placeholder="Search a service category…"
@@ -43,9 +44,10 @@ export function ServiceFinder({ onSelect }) {
               return (
                 <button
                   key={cat.icon}
+                  aria-pressed={active === i}
                   onClick={() => setActive(i)}
                   style={{
-                    display: "flex", flexDirection: "column", alignItems: "center", gap: 6, padding: "10px 4px", minWidth: 0,
+                    display: "flex", flexDirection: "column", alignItems: "center", gap: 6, padding: "12px 4px", minHeight: 76, minWidth: 0,
                     borderRadius: "var(--radius-md)", border: active === i ? `2px solid ${ACCENTS[ri % 4]}` : "1px solid var(--ink-100)",
                     background: active === i ? TINTS[ri % 4] : "var(--white)", cursor: "pointer", transition: "all .2s",
                   }}

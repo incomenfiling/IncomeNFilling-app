@@ -31,7 +31,7 @@ export function Footer() {
   ];
 
   return (
-    <footer style={{ background: "var(--navy-950)", color: "var(--white)", padding: bp.mobile ? "48px 20px 24px" : "64px 32px 26px", position: "relative", overflow: "hidden" }}>
+    <footer style={{ background: "var(--navy-950)", color: "var(--white)", padding: bp.mobile ? "48px 20px 88px" : "64px 32px 26px", position: "relative", overflow: "hidden" }}>
       <div style={{ position: "absolute", top: -80, left: -40, width: 260, height: 260, borderRadius: "50%", background: "var(--gold-500)", opacity: 0.06 }} />
       <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", position: "relative" }}>
         <div style={{ display: "grid", gridTemplateColumns: bp.mobile ? "1fr" : bp.tablet ? "1fr 1fr" : "1.4fr 1fr 1fr 1.2fr", gap: bp.mobile ? 32 : 40, paddingBottom: 40, borderBottom: "1px solid rgba(255,255,255,.1)" }}>

@@ -79,6 +79,7 @@ export function OfficeMap({ contactChannels } = {}) {
   return (
     <div style={{ display: "grid", gridTemplateColumns: bp.ltDesktop ? "1fr" : "1.2fr 1fr", gap: 16, alignItems: "stretch", height: bp.ltDesktop ? "auto" : 470 }}>
       <div
+        role="group" aria-label="Map of India showing our Kolkata head office and cities we serve. Office details are listed beside the map."
         ref={wrap}
         style={{
           position: "relative", height: bp.ltDesktop ? 340 : "100%", boxSizing: "border-box", borderRadius: "var(--radius-xl)", overflow: "hidden",
@@ -86,9 +87,9 @@ export function OfficeMap({ contactChannels } = {}) {
           backgroundImage: "radial-gradient(var(--navy-050) 1.2px,transparent 1.2px)", backgroundSize: "24px 24px", boxShadow: "var(--shadow-md)",
         }}
       >
-        <div ref={mapRef} style={{ position: "absolute", inset: 0 }} />
+        <div ref={mapRef} aria-hidden="true" style={{ position: "absolute", inset: 0 }} />
         {geo && (
-          <svg style={{ position: "absolute", inset: 0, pointerEvents: "none", zIndex: 2 }} width="100%" height="100%">
+          <svg aria-hidden="true" style={{ position: "absolute", inset: 0, pointerEvents: "none", zIndex: 2 }} width="100%" height="100%">
             {geo.arcs.map((d, i) => (
               <g key={i}>
                 <path d={d} fill="none" stroke="var(--navy-300)" strokeWidth="1" strokeDasharray="3 6" opacity="0.5" />
@@ -104,7 +105,7 @@ export function OfficeMap({ contactChannels } = {}) {
         )}
         {geo &&
           geo.metros.map((m, i) => (
-            <div key={m.city} onMouseEnter={() => setHoverMetro(i)} onMouseLeave={() => setHoverMetro(null)} style={{ position: "absolute", left: m.x, top: m.y, transform: "translate(-50%,-50%)", zIndex: 3 }}>
+            <div key={m.city} aria-hidden="true" onMouseEnter={() => setHoverMetro(i)} onMouseLeave={() => setHoverMetro(null)} style={{ position: "absolute", left: m.x, top: m.y, transform: "translate(-50%,-50%)", zIndex: 3 }}>
               <span style={{ display: "block", width: 6, height: 6, borderRadius: "50%", background: "var(--navy-400)", cursor: "default" }} />
               <span style={{ position: "absolute", left: "50%", top: 11, transform: "translateX(-50%)", fontFamily: "var(--font-mono)", fontSize: 12, color: hoverMetro === i ? "var(--navy-900)" : "var(--ink-300)", whiteSpace: "nowrap", transition: "color .2s" }}>
                 {m.city}
@@ -112,7 +113,7 @@ export function OfficeMap({ contactChannels } = {}) {
             </div>
           ))}
         {offices.map((o, i) => (
-          <div key={o.city} onClick={() => setSel(i)} style={{ position: "absolute", left: o.x, top: o.y, transform: "translate(-50%,-50%)", zIndex: sel === i ? 6 : 5, cursor: "pointer" }}>
+          <div key={o.city} aria-hidden="true" onClick={() => setSel(i)} style={{ position: "absolute", left: o.x, top: o.y, transform: "translate(-50%,-50%)", zIndex: sel === i ? 6 : 5, cursor: "pointer" }}>
             <span style={{ position: "absolute", left: "50%", top: "50%", transform: "translate(-50%,-50%)", width: 18, height: 18, borderRadius: "50%", border: "2px solid var(--gold-500)", animation: "pulse-ring 2s infinite" }} />
             {sel === i && (
               <span
@@ -167,6 +168,7 @@ export function OfficeMap({ contactChannels } = {}) {
           {offices.map((o, i) => (
             <button
               key={o.city}
+              aria-expanded={sel === i}
               onClick={() => setSel(i)}
               style={{
                 textAlign: "left", position: "relative", overflow: "hidden", borderRadius: "var(--radius-lg)",
