@@ -16,6 +16,7 @@ const QUICK_LINKS = [
   ["Home", "/"],
   ["About", "/about"],
   ["Services", "/services"],
+  ["Blog", "/blog"],
   ["Ask Ira", "/chat"],
   ["Contact", "/contact"],
 ];
