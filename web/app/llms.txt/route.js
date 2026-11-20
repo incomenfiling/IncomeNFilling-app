@@ -27,7 +27,10 @@ ${services}
 ${posts || "- Coming soon"}
 
 ## About and policies
-- [GST service prices](${SITE}/pricing)
+- [Prices overview](${SITE}/pricing)
+- [GST service prices](${SITE}/pricing/gst)
+- [DSC prices](${SITE}/pricing/dsc)
+- [Accounting prices](${SITE}/pricing/accounting)
 - [Kolkata office and services](${SITE}/kolkata)
 - [Contact](${SITE}/contact)
 - [About Income N Filing](${SITE}/about)
