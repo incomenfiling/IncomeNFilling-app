@@ -6,6 +6,105 @@
 // Keep facts general (no fixed prices/deadlines that change by year) and add `updated` when revising.
 export const POSTS = [
 {
+  slug: "west-bengal-professional-tax-new-slabs-october-2026",
+  title: "West Bengal Professional Tax: New Slabs From 1 October 2026",
+  metaTitle: "West Bengal Professional Tax New Slabs 2026 | Income N Filing",
+  description: "West Bengal now exempts salaries up to ₹20,000 a month from professional tax. New slabs, flat ₹2,500 categories, due dates and employer checks.",
+  date: "2026-11-20",
+  updated: "2026-11-20",
+  body: [
+    { takeaways: [
+      "From 1 October 2026, employees earning up to ₹20,000 a month pay no professional tax in West Bengal. The old limit was ₹10,000.",
+      "Above that, the monthly tax is ₹100, ₹140, ₹170 or ₹208, depending on the salary band. The most anyone pays on salary is ₹2,496 a year.",
+      "A flat ₹2,500 a year applies to a listed set of businesses and professions, including companies, directors and several consulting and digital professions.",
+      "Self-employed people and traders move to income and turnover bands from the financial year starting 1 April 2027.",
+      "Registered employers pay by the 21st of the following month. Late payment carries interest of 1% for each month or part of a month."
+    ] },
+    { p: "If you run payroll in Kolkata, your October salary was the first one under a new professional tax table. West Bengal replaced its schedule from 1 October 2026, the first full rewrite since 2014. Many pages that still rank on Google show the old ₹110 to ₹200 slabs, so check the date on whatever you are reading." },
+    { p: "This guide covers what changed, who it affects, and what an employer should look at this month." },
+    { h2: "What are the new professional tax slabs for salaried employees?" },
+    { p: "From 1 October 2026, an employee earning up to ₹20,000 a month pays no professional tax in West Bengal. Above that, the tax is ₹100, ₹140, ₹170 or ₹208 a month, depending on the band. Before this, the exemption stopped at ₹10,000." },
+    { table: { caption: "Professional tax on monthly salary, West Bengal", head: ["Monthly salary", "Until September 2026", "From October 2026"], rows: [
+      ["Up to ₹10,000", "Nil", "Nil"],
+      ["₹10,001 to ₹15,000", "₹110", "Nil"],
+      ["₹15,001 to ₹20,000", "₹130", "Nil"],
+      ["₹20,001 to ₹25,000", "₹130", "₹100"],
+      ["₹25,001 to ₹30,000", "₹150", "₹100"],
+      ["₹30,001 to ₹40,000", "₹150", "₹140"],
+      ["₹40,001 to ₹50,000", "₹200", "₹140"],
+      ["₹50,001 to ₹1,00,000", "₹200", "₹170"],
+      ["Above ₹1,00,000", "₹200", "₹208"]
+    ] } },
+    { p: "Two quick examples of the arithmetic. An employee on ₹45,000 a month paid ₹200 before and pays ₹140 now, ₹60 less each month. An employee on ₹1,50,000 pays ₹208 now, ₹8 more than before. These are our own calculations from the table above." },
+    { p: "Salary for September 2026 and earlier months stays on the old table." },
+    { h2: "Who pays a flat ₹2,500 a year?" },
+    { p: "Some categories pay ₹2,500 a year whatever their income or turnover. The new schedule lists 25 of them, and the list now names several consulting and digital professions along with older entries such as companies and directors. From the schedule, as we read it:" },
+    { ul: [
+      "Companies registered under the Companies Act, and their directors (other than government nominees).",
+      "Banks, factories, jute and rice mills, chit fund operators, licensed money lenders.",
+      "Hospitals, nursing homes, diagnostic centres and IVF centres.",
+      "Air-conditioned restaurants, hotels, gyms and beauty parlours.",
+      "Management, financial, strategy, IT, marketing, sales and HR consultants.",
+      "Independent professionals in areas like cloud computing, data science, cyber security, UI/UX design and product management.",
+      "Online educators, EdTech founders and digital marketing agency owners.",
+      "Production houses that make content for films, advertisements, OTT and television."
+    ] },
+    { p: "If a person falls under more than one entry, the higher rate applies. The entries are worded at length, so read the exact entry before you assume it does or does not cover you." },
+    { h2: "What changes for self-employed people and traders?" },
+    { p: "The income and turnover bands for self-employed professionals and traders start from the financial year beginning 1 April 2027, not from 1 October 2026. Anyone in the flat ₹2,500 list pays that amount instead of the band rate." },
+    { table: { caption: "Individuals in a profession, by annual gross income", head: ["Annual gross income", "Tax per year"], rows: [
+      ["Up to ₹2,50,000", "Nil"],
+      ["₹2,50,001 to ₹5,00,000", "₹1,000"],
+      ["₹5,00,001 to ₹10,00,000", "₹2,000"],
+      ["Above ₹10,00,000", "₹2,500"]
+    ] } },
+    { table: { caption: "Traders and service providers, by annual gross turnover", head: ["Annual gross turnover", "Tax per year"], rows: [
+      ["Up to ₹10,00,000", "Nil"],
+      ["₹10,00,001 to ₹20,00,000", "₹1,000"],
+      ["₹20,00,001 to ₹40,00,000", "₹1,500"],
+      ["Above ₹40,00,000", "₹2,500"]
+    ] } },
+    { p: "The bands use the previous year's income or turnover from West Bengal. For a firm or company, all its branches in the state are added together, and each branch pays at the same rate." },
+    { h2: "When is professional tax due, and what happens if you pay late?" },
+    { p: "A registered employer pays the tax by the 21st of the month after the salary is paid, through the state's GRIPS payment system. Late payment attracts simple interest of 1% for each month or part of a month." },
+    { table: { caption: "Who pays, and when", head: ["Who", "What to do", "When"], rows: [
+      ["Registered employer", "Deduct from salary, pay through GRIPS", "By the 21st of the following month"],
+      ["Registered employer", "File the annual return", "The department's FAQ says April, for the previous year. Check the portal for the current date."],
+      ["Enrolled person (self-employed, company)", "Pay the year's tax", "On or before 31 July of that year (Section 8(2) of the Act)"],
+      ["Anyone newly liable", "Apply for registration or enrolment", "Within 90 days of becoming liable (Section 5)"]
+    ] } },
+    { p: "So tax on October's salary is due tomorrow, 21 November, and November's is due on 21 December." },
+    { p: "The Act also allows a penalty of up to 50% of the tax if you do not pay after a demand notice (Section 10), and a late fee for returns. The department's FAQ mentions ₹200 for the first month and ₹100 for each month after. Amounts can change, so confirm on the portal before you pay." },
+    { h2: "What should an employer check this month?" },
+    { p: "Check that your payroll uses the new table, that nobody earning ₹20,000 or less is still being charged, and that your registration and enrolment are both in place." },
+    { ul: [
+      "Update the professional tax table in your payroll software. If it still shows the ₹110 to ₹200 slabs, October's deductions may be wrong.",
+      "Look at every employee near a band edge, such as ₹20,000, ₹30,000 and ₹50,000. A rupee over a limit moves the whole amount.",
+      "If October was deducted on the old table, check on the portal how to correct it before the next payment.",
+      "An employer who is also liable as a person needs a Certificate of Enrolment before the system will issue the Certificate of Registration. A company with staff in Kolkata usually needs both.",
+      "Keep every GRIPS challan with the month it belongs to."
+    ] },
+    { h2: "How we help at Income N Filing" },
+    { p: "We check whether your business needs registration, enrolment or both, set up the payments, and flag where your payroll table is out of date. One person prepares the work and another checks it before submission. We confirm the scope and fee in writing first, and government charges are separate. Our office is in Kasba, Kolkata." },
+    { h2: "How we checked this" },
+    { p: "Rates come from the West Bengal notifications: the draft schedule (No. 1407-F.T., 18 August 2026) and the final one (No. 1607-F.T., 16 September 2026). We could not find the final Gazette copy on the department websites on 20 November 2026. The rates we have match the official draft and the summaries published by several practitioners. Due dates, interest and registration rules come from the Act and the department's FAQ. This is general information, so confirm the current position on the portal before you act." },
+    { sources: [
+      { name: "West Bengal State Tax on Professions, Trades, Callings and Employments Act, 1979 (Finance Department)", url: "https://finance.wb.gov.in/writereaddata/PT_Act.pdf" },
+      { name: "Directorate of Commercial Taxes, Profession Tax FAQs", url: "https://egov.wbcomtax.gov.in/PT_Registration/uploads/FAQs-ptax.pdf" },
+      { name: "Profession Tax Rules, Directorate of Commercial Taxes", url: "https://comtax.wb.gov.in/Act_Rule_Schedule_Form/PT_Rule.pdf" },
+      { name: "Previous schedule, in force until 30 September 2026", url: "https://comtax.wb.gov.in/Ptax-Schedule-New_(w.e.f._1-4-2014).pdf" }
+    ] },
+    { faq: [
+      { q: "Do I pay professional tax if my salary is ₹18,000 a month?", a: "No, not from October 2026. Salary up to ₹20,000 a month is exempt. Earlier months were taxed at ₹130 on this salary." },
+      { q: "Is professional tax compulsory for freelancers in Kolkata?", a: "It depends on the work you do. Independent digital professionals, such as software, data science or UI/UX work, appear in the flat ₹2,500 list. Other individuals in a profession move to income bands from 1 April 2027. Read the exact entry for your work." },
+      { q: "Can professional tax be more than ₹2,500 a year?", a: "No. The constitutional ceiling is ₹2,500 a year. The top salary slab of ₹208 a month comes to ₹2,496." },
+      { q: "Does a company with no employees pay professional tax?", a: "Companies registered under the Companies Act appear in the flat ₹2,500 list, and the entry does not depend on income or turnover. Confirm enrolment and the payment date on the portal." },
+      { q: "How long do I have to register after becoming liable?", a: "Ninety days from the date you become liable, under Section 5 of the Act. Missing it can lead to a penalty." },
+      { q: "What about salary for September 2026 and earlier?", a: "Those months stay on the old slabs. Only salary from October 2026 onward uses the new table." }
+    ] }
+  ],
+},
+{
   slug: "gst-rule-14a-simplified-registration-explained",
   title: "GST Rule 14A: 3-Day Simplified Registration Explained",
     metaTitle: "GST Rule 14A: 3-Day Registration Explained | Income N Filing",
