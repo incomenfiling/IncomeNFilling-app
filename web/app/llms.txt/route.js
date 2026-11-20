@@ -37,6 +37,8 @@ ${posts || "- Coming soon"}
 - [Kolkata office and services](${SITE}/kolkata)
 - [Contact](${SITE}/contact)
 - [About Income N Filing](${SITE}/about)
+- [Partner program for accountants and tax professionals](${SITE}/partners)
+- [Careers](${SITE}/careers)
 - [Privacy Policy](${SITE}/privacy)
 - [Terms and Conditions](${SITE}/terms)
 - [Refund and Cancellation Policy](${SITE}/refund-policy)

@@ -26,6 +26,8 @@ export default function sitemap() {
     { url: `${SITE}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE}/about`, lastModified: new Date("2026-11-18"), changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE}/privacy`, lastModified: new Date("2026-11-20"), changeFrequency: "yearly", priority: 0.2 },
+    { url: `${SITE}/partners`, lastModified: new Date("2026-11-20"), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${SITE}/careers`, lastModified: new Date("2026-11-20"), changeFrequency: "monthly", priority: 0.4 },
     { url: `${SITE}/terms`, lastModified: new Date("2026-11-20"), changeFrequency: "yearly", priority: 0.2 },
     { url: `${SITE}/refund-policy`, lastModified: new Date("2026-11-20"), changeFrequency: "yearly", priority: 0.2 },
     { url: `${SITE}/disclaimer`, lastModified: new Date("2026-11-20"), changeFrequency: "yearly", priority: 0.2 },
