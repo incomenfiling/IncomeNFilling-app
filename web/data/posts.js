@@ -1,6 +1,8 @@
 // Blog posts. Add a new object at the TOP of the array to publish. The blog index and sitemap switch on automatically
 // once at least one post exists. `body` is an ordered list of blocks:
 //   { h2: "Heading" } | { p: "Paragraph" } | { ul: ["item", "item"] } | { faq: [{ q, a }] }
+//   { takeaways: ["4-5 short facts"] }  (put first)  |  { table: { caption, head: [..], rows: [[..],[..]] } }
+//   { sources: [{ name: "Income Tax Department", url: "https://..." }] }  (put before the FAQ; official sites only)
 // Keep facts general (no fixed prices/deadlines that change by year) and add `updated` when revising.
 export const POSTS = [
 {
