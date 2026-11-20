@@ -40,7 +40,7 @@ export default function HomePage() {
           </div>
           <Button variant="ghost" onClick={goServices}>View all 71 services</Button>
         </div>
-        <CategoryExplorer categories={HOME_CATEGORIES} onSelect={goServices} />
+        <CategoryExplorer categories={HOME_CATEGORIES} onSelect={(path) => router.push(path || "/services")} />
       </section>
 
       <section style={{ position: "relative", background: "var(--paper-alt)", padding: "90px 32px" }}>

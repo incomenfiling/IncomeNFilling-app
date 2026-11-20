@@ -3,6 +3,8 @@ import { useState } from "react";
 import { useBP } from "@/lib/useBP";
 import { ACCENTS, TINTS } from "@/data/theme";
 
+const PRICE_PAGE = { GST: "/pricing/gst", ITR: "/pricing/income-tax", INC: "/pricing/incorporation", ROC: "/pricing/roc", ACC: "/pricing/accounting" };
+
 export function CategoryExplorer({ categories, onSelect }) {
   const [active, setActive] = useState(0);
   const bp = useBP();
@@ -71,8 +73,8 @@ export function CategoryExplorer({ categories, onSelect }) {
             ))}
           </div>
           <div>
-            <button onClick={onSelect} style={{ fontFamily: "var(--font-body)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-sm)", padding: "12px 22px", borderRadius: "var(--radius-pill)", border: "none", background: accent, color: active === 0 || active % 4 === 2 ? "var(--navy-900)" : "var(--white)", cursor: "pointer" }}>
-              View all {c.title} services →
+            <button onClick={() => onSelect(PRICE_PAGE[c.icon])} style={{ fontFamily: "var(--font-body)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-sm)", padding: "12px 22px", borderRadius: "var(--radius-pill)", border: "none", background: accent, color: active === 0 || active % 4 === 2 ? "var(--navy-900)" : "var(--white)", cursor: "pointer" }}>
+              {PRICE_PAGE[c.icon] ? `See ${c.title} prices →` : `View all ${c.title} services →`}
             </button>
           </div>
         </div>
