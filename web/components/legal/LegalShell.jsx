@@ -3,7 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 
 export const CONSENT =
-  "We collect personal details like your name, email address, and phone number etc. By sharing your information, you authorize Income N Filing to contact you via SMS, RCS, WhatsApp, Email, and other communication channels. This consent overrides any NDNC/DND registration as per TRAI regulations.";
+  "When you share your name, phone number, email address or other details, you allow Income N Filing to contact you by phone, SMS, WhatsApp or email about your enquiry and the services you ask for. You can withdraw this consent at any time by writing to us.";
 
 export function H({ children }) {
   return <h2 style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-xl)", color: "var(--navy-900)", margin: "34px 0 12px" }}>{children}</h2>;
@@ -30,7 +30,7 @@ export function LegalShell({ title, children }) {
         <div style={{ maxWidth: 820, margin: "0 auto" }}>
           <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--gold-400)", letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 14 }}>Legal</div>
           <h1 style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-bold)", fontSize: "clamp(28px,5vw,44px)", color: "var(--white)", margin: 0 }}>{title}</h1>
-          <div style={{ marginTop: 12, fontFamily: "var(--font-body)", fontSize: "var(--text-sm)", color: "var(--navy-300)" }}>Last updated November 2026</div>
+          <div style={{ marginTop: 12, fontFamily: "var(--font-body)", fontSize: "var(--text-sm)", color: "var(--navy-300)" }}>Last updated 20 November 2026</div>
         </div>
       </section>
       <section style={{ padding: "clamp(32px,6vw,48px) 20px 96px", maxWidth: 820, margin: "0 auto" }}>{children}</section>

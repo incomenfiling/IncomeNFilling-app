@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { sendLeadToCRM } from "@/lib/crm";
 
 const clip = (v, n) => String(v ?? "").trim().slice(0, n);
+// Stop spreadsheet formula injection: a leading = + - @ would run as a formula in Sheets.
+const safe = (v) => (/^[=+\-@]/.test(v) ? "'" + v : v);
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 export async function POST(request) {
@@ -51,11 +53,14 @@ export async function POST(request) {
     return NextResponse.json({ ok: true });
   }
 
-  const name = clip(body?.name, 120);
+  const name = safe(clip(body?.name, 120));
   const phone = clip(body?.phone, 30);
   const email = clip(body?.email, 120);
-  const property = clip(body?.property, 300);
-  const notes = clip(body?.notes, 2000);
+  const property = safe(clip(body?.property, 600));
+  const notes0 = safe(clip(body?.notes, 1800));
+  const utm = body?.utm && typeof body.utm === "object" ? Object.entries(body.utm).slice(0, 8).map(([k, v]) => `${clip(k, 20)}=${clip(v, 60)}`).join(" ") : "";
+  const meta = `[page ${clip(body?.pageUrl, 120) || "-"} | ref ${clip(body?.referrer, 120) || "-"} | ${utm || "no utm"} | policy ${clip(body?.policyVersion, 12) || "-"} | consent yes | ${clip(body?.ua, 100)}]`;
+  const notes = (notes0 ? notes0 + " " : "") + meta;
   const source = clip(body?.source, 40) || "website";
 
   if (!name || (!phone && !email)) {
@@ -64,15 +69,24 @@ export async function POST(request) {
   if (email && !EMAIL_RE.test(email)) {
     return NextResponse.json({ error: "Invalid email" }, { status: 400 });
   }
-  if (phone && phone.replace(/\D/g, "").length < 7) {
-    return NextResponse.json({ error: "Invalid phone" }, { status: 400 });
+  if (phone) {
+    let d = phone.replace(/\D/g, "");
+    if (d.length === 12 && d.startsWith("91")) d = d.slice(2);
+    if (d.length === 11 && d.startsWith("0")) d = d.slice(1);
+    const intl = phone.trim().startsWith("+") && !phone.trim().startsWith("+91");
+    if (!intl && !/^[6-9]\d{9}$/.test(d)) {
+      return NextResponse.json({ error: "Please enter a valid 10-digit mobile number" }, { status: 400 });
+    }
   }
 
-  try {
-    await sendLeadToCRM({ name, phone, email, property, notes, source });
-    return NextResponse.json({ ok: true });
-  } catch (err) {
-    console.error("Lead submission failed:", err);
-    return NextResponse.json({ error: "Failed to submit lead" }, { status: 502 });
+  // One retry: a lead must not be lost to a single webhook hiccup.
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      await sendLeadToCRM({ name, phone, email, property, notes, source });
+      return NextResponse.json({ ok: true });
+    } catch (err) {
+      if (attempt === 1) console.error("Lead submission failed:", err?.message || "unknown");
+    }
   }
+  return NextResponse.json({ error: "We could not save your request. Please WhatsApp us on 078905 94600." }, { status: 502 });
 }

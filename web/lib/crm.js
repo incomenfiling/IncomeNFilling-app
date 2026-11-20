@@ -13,6 +13,7 @@ export async function sendLeadToCRM({ name, phone, email, property, notes, sourc
     method: "POST",
     headers: { "Content-Type": "application/json" },
     redirect: "follow",
+    signal: AbortSignal.timeout(8000),
     body: JSON.stringify({
       secret,
       name,

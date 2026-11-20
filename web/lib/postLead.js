@@ -47,11 +47,27 @@ async function getToken() {
   });
 }
 
+export const POLICY_VERSION = "2026-11";
+
+function pageMeta() {
+  if (typeof window === "undefined") return {};
+  let utm = {};
+  try {
+    const saved = sessionStorage.getItem("inf_utm");
+    if (saved) utm = JSON.parse(saved);
+    const q = new URLSearchParams(window.location.search);
+    const found = {};
+    ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "fbclid", "src"].forEach((k) => { if (q.get(k)) found[k] = q.get(k).slice(0, 60); });
+    if (Object.keys(found).length) { utm = found; sessionStorage.setItem("inf_utm", JSON.stringify(found)); }
+  } catch {}
+  return { pageUrl: window.location.pathname, referrer: (document.referrer || "").slice(0, 120), utm, ua: (navigator.userAgent || "").slice(0, 100) };
+}
+
 export async function postLead(payload) {
   const token = await getToken();
   return fetch("/api/leads", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ ...payload, turnstileToken: token, elapsed: Math.round(performance.now()) }),
+    body: JSON.stringify({ ...payload, ...pageMeta(), policyVersion: POLICY_VERSION, turnstileToken: token, elapsed: Math.round(performance.now()) }),
   });
 }

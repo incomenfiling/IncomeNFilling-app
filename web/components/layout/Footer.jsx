@@ -139,8 +139,8 @@ export function Footer() {
           <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--navy-300)" }}>
             © {new Date().getFullYear()} Income N Filing. All rights reserved.
           </div>
-          <div style={{ display: "flex", gap: 22 }}>
-            {[["Privacy Policy", "privacy"], ["Terms & Conditions", "terms"]].map(([label, hash]) => (
+          <div style={{ display: "flex", gap: "8px 22px", flexWrap: "wrap" }}>
+            {[["Privacy Policy", "privacy"], ["Terms & Conditions", "terms"], ["Refund Policy", "refund-policy"], ["Disclaimer", "disclaimer"], ["Cookies", "cookies"]].map(([label, hash]) => (
               <Link key={label} href={`/${hash}`} style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--navy-300)", textDecoration: "none" }}>
                 {label}
               </Link>
