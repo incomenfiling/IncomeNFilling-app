@@ -343,32 +343,134 @@ export const SERVICE_PAGES = [
     ],
   },
   {
-    slug: "msme-udyam-registration",
-    name: "MSME / Udyam Registration",
-    module: "Licenses & Registrations",
-    listed: "MSME / Udyam",
-    metaTitle: "MSME Udyam Registration | Income N Filing",
-    metaDescription:
-      "Udyam registration for micro, small and medium businesses, filed correctly with your PAN and business details by Income N Filing.",
-    intro:
-      "Udyam registration is the government’s online registration for micro, small and medium enterprises. It gives your business a recognised MSME identity, which is needed to access schemes meant for MSMEs. We prepare and file it with the right classification.",
-    whoNeeds: [
-      "Proprietors, partnerships, LLPs and companies that qualify as MSMEs",
-      "Businesses that want to apply for MSME schemes or priority lending",
-      "Suppliers asked for an Udyam certificate by larger buyers",
+    "slug": "msme-udyam-registration",
+    "name": "MSME / Udyam Registration",
+    "h1": "MSME Udyam Registration in Kolkata",
+    "module": "Licenses & Registrations",
+    "listed": "MSME / Udyam",
+    "metaTitle": "Udyam (MSME) Registration in Kolkata | Income N Filing",
+    "metaDescription": "Udyam registration in Kolkata for micro, small and medium businesses: category, activity codes and details checked, then filed on the official portal. One person prepares, another checks.",
+    "intro": "Udyam is the Government of India's online registration for micro, small and medium enterprises. It gives your business a permanent Udyam Registration Number and certificate that banks, buyers and government schemes recognise. The official registration carries no government fee. We prepare your details, choose the right category and activity codes, and have a second person check them before the form is filed.",
+    "whoNeeds": [
+      "Manufacturers, traders and service providers of any size up to the MSME limits",
+      "Proprietors, partnerships, LLPs and companies",
+      "Businesses that want bank loans, government schemes or tenders that ask for an Udyam number",
+      "Businesses that hold only an older registration and need to move to Udyam",
+      "Existing Udyam holders whose investment or turnover has changed"
     ],
-    included: [
-      "Check of your eligibility and classification",
-      "Preparation of the Udyam application with correct activity codes",
-      "Filing and follow-up until the certificate is issued",
-      "Guidance on updating details when turnover or activity changes",
-    ],
-    faqs: [
+    "sections": [
       {
-        q: "What do I need to apply?",
-        a: "Your Aadhaar and PAN details, business address and bank account, and your GST number if you have one. We confirm the list for your entity type.",
+        "h": "What we do",
+        "items": [
+          "Check whether your business qualifies and which category it falls in",
+          "Collect your PAN, Aadhaar and GST details and match them with each other",
+          "Choose the correct activity codes (NIC) for what you actually do",
+          "Fill in investment and turnover figures the way the portal expects them",
+          "File the registration on the official Udyam portal and download your certificate",
+          "Explain when and how to update your details later"
+        ]
       },
+      {
+        "h": "What you receive",
+        "items": [
+          "Your Udyam Registration Number and certificate",
+          "A note on your category and the figures we declared",
+          "Guidance on updating your registration when your business grows"
+        ]
+      },
+      {
+        "h": "MSME categories from 1 April 2025",
+        "items": [
+          "Micro: investment up to ₹2.5 crore and turnover up to ₹10 crore",
+          "Small: investment up to ₹25 crore and turnover up to ₹100 crore",
+          "Medium: investment up to ₹125 crore and turnover up to ₹500 crore"
+        ],
+        "note": "Both investment and turnover must be within the limits. The limits are set by the Government and can change, so we check the Udyam portal before filing."
+      },
+      {
+        "h": "Documents and details to keep ready",
+        "items": [
+          "Aadhaar of the proprietor, partner, director or authorised signatory",
+          "PAN of the business, and GST number if you have one",
+          "Bank account details",
+          "Business address and date you started",
+          "What your business does, so we can choose activity codes",
+          "Investment in plant, machinery or equipment, and turnover"
+        ]
+      },
+      {
+        "h": "How it works",
+        "ordered": true,
+        "items": [
+          "You share your details and documents on WhatsApp or through a shared folder.",
+          "We confirm the category and what we will file, in writing.",
+          "One person prepares the application with correct codes and figures.",
+          "A second person checks every field against your documents.",
+          "We file on the Udyam portal with your Aadhaar OTP, and send you the certificate."
+        ]
+      },
+      {
+        "h": "Timeline",
+        "text": "The portal generates the registration number once the application is submitted and validated. We give you the expected timing in writing when we take up your case."
+      },
+      {
+        "h": "What affects the fee",
+        "items": [
+          "Whether you are registering fresh or updating an existing registration",
+          "The number of activities and codes to be declared",
+          "Whether your details need to be matched across PAN, GST and Aadhaar first"
+        ],
+        "note": "The fee is fixed in writing before we start. Government fees, if any, are charged separately at actuals."
+      },
+      {
+        "h": "Common mistakes we help you avoid",
+        "items": [
+          "Using the old, lower limits to pick a category",
+          "Choosing activity codes that do not match your real work",
+          "Name or PAN details that do not match the other records",
+          "Paying a private website a government fee that the official portal does not charge",
+          "Not updating the registration after investment or turnover changes"
+        ]
+      }
     ],
+    "faqs": [
+      {
+        "q": "Is there a government fee for Udyam registration?",
+        "a": "No. The official registration on the Udyam portal carries no government fee, and the portal warns about fake sites. Our fee is for preparing and checking your details, and it is fixed in writing before we start."
+      },
+      {
+        "q": "What are the MSME limits now?",
+        "a": "From 1 April 2025: micro up to ₹2.5 crore investment and ₹10 crore turnover, small up to ₹25 crore and ₹100 crore, and medium up to ₹125 crore and ₹500 crore."
+      },
+      {
+        "q": "Is Udyam registration the same as GST registration?",
+        "a": "No. Udyam is a registration for MSME status. GST registration is a tax registration. A business can have one, the other or both."
+      },
+      {
+        "q": "Does the Udyam number expire?",
+        "a": "The Udyam Registration Number does not expire. Your investment and turnover figures are refreshed from government records, and you should update your details if your business changes."
+      },
+      {
+        "q": "Can a business without a PAN register?",
+        "a": "Informal micro enterprises without a PAN can use the Udyam Assist Platform. We tell you which route fits your case."
+      },
+      {
+        "q": "Will Udyam registration get me a bank loan?",
+        "a": "Not by itself. It is a recognised identity that many lenders and schemes ask for, but banks and departments follow their own rules."
+      },
+      {
+        "q": "I have an older MSME registration. Do I need Udyam?",
+        "a": "Udyam replaced the older registrations in 2020. If you hold only an older one, apply for Udyam so your business is recognised under the current system."
+      },
+      {
+        "q": "Do I need to update my registration when my business grows?",
+        "a": "Yes. If your investment or turnover moves you to a different category, update your details on the portal. We can do this for you."
+      },
+      {
+        "q": "What if you make a mistake in my Udyam registration?",
+        "a": "We tell you, fix it, and cover any penalty or late fee that arises from our error, provided you gave us accurate documents and details on time. Terms apply."
+      }
+    ]
   },
   {
     slug: "tds-return-filing",
@@ -492,164 +594,678 @@ export const SERVICE_PAGES = [
     ],
   },
   {
-    slug: "annual-roc-filing",
-    name: "Annual ROC Filing for Companies",
-    module: "Corporate Compliance",
-    listed: "Annual Return (MGT-7)",
-    metaTitle: "Annual ROC Filing, AOC-4 & MGT-7 | Income N Filing",
-    metaDescription:
-      "Annual ROC compliance for companies: financial statements (AOC-4), annual return (MGT-7) and board and AGM paperwork, filed on time.",
-    intro:
-      "Every company registered in India must file its financial statements and annual return with the Registrar of Companies each year, even if it did no business. We prepare the board and AGM paperwork and make the filings.",
-    whoNeeds: [
-      "Private and public limited companies",
-      "Newly incorporated companies approaching their first annual filing",
-      "Companies that have missed earlier years and need to catch up",
+    "slug": "annual-roc-filing",
+    "name": "Annual ROC Filing for Companies",
+    "h1": "Annual ROC Filing in Kolkata",
+    "module": "Corporate Compliance",
+    "listed": "Annual Return (MGT-7)",
+    "metaTitle": "Annual ROC Filing in Kolkata | Income N Filing",
+    "metaDescription": "Annual ROC filing in Kolkata for private limited companies and OPCs: AOC-4, MGT-7 or MGT-7A, AGM paperwork and director filings, with due dates tracked. One person prepares, another checks.",
+    "intro": "Every company registered in India must file its financial statements and annual return with the Registrar of Companies each year, even if it had no business. We handle the AGM paperwork, AOC-4 and MGT-7 or MGT-7A, and keep track of the dates that depend on your AGM. One person prepares and another checks each form before it is filed.",
+    "whoNeeds": [
+      "Private limited companies, including startups with no revenue yet",
+      "One Person Companies",
+      "Companies that missed earlier years and want to catch up",
+      "Founders who want one team to track all ROC dates",
+      "Companies that need books and filings handled together"
     ],
-    included: [
-      "Preparation of financial statement filing (AOC-4)",
-      "Preparation of the annual return (MGT-7)",
-      "Board meeting and AGM notices and minutes",
-      "Director KYC and auditor appointment filings where due",
-      "A compliance calendar for the year",
-    ],
-    faqs: [
+    "sections": [
       {
-        q: "Is ROC filing required if the company has no turnover?",
-        a: "Yes. A company must file annually whether or not it has operations. Delay attracts additional fees for each day.",
+        "h": "What we do",
+        "items": [
+          "Check which forms apply to your company and its size",
+          "Prepare the notice, minutes and resolutions for your AGM",
+          "Prepare and file AOC-4 with your financial statements",
+          "Prepare and file MGT-7, or MGT-7A where the company qualifies",
+          "File the filing for appointment of your company's auditor where it is due",
+          "Check your directors' KYC status and tell you what is pending"
+        ]
       },
+      {
+        "h": "What you receive",
+        "items": [
+          "Filed forms with the payment receipts",
+          "AGM notice and minutes prepared for signing",
+          "A list of due dates for your company for the year",
+          "A note on anything still pending, such as director KYC"
+        ]
+      },
+      {
+        "h": "Key dates for a company with a 31 March year-end",
+        "items": [
+          "AGM: within six months of year end, so by 30 September",
+          "AOC-4: within 30 days of the AGM",
+          "MGT-7 or MGT-7A: within 60 days of the AGM",
+          "Deposit return (DPT-3): by 30 June, where applicable",
+          "For an AGM held on 30 September 2026, AOC-4 falls on 30 October and MGT-7 on 29 November 2026"
+        ],
+        "note": "These dates move with your AGM date. One Person Companies do not hold an AGM and have separate dates. Late filing attracts an additional fee of ₹100 per day per form."
+      },
+      {
+        "h": "Documents to keep ready",
+        "items": [
+          "Signed financial statements for the year",
+          "Names and DIN of directors, and shareholding details",
+          "Board and shareholder resolutions passed during the year",
+          "Details of loans, deposits and related-party dealings",
+          "Registers and any changes in directors or share capital during the year"
+        ]
+      },
+      {
+        "h": "How it works",
+        "ordered": true,
+        "items": [
+          "You share your year-end books and company details.",
+          "We confirm which forms apply and the dates, in writing.",
+          "One person prepares the AGM papers and forms.",
+          "A second person checks the forms against your books and MCA records.",
+          "We file, send you the receipts, and note the next due dates."
+        ]
+      },
+      {
+        "h": "Timeline",
+        "text": "Because the due dates depend on your AGM, we plan backwards from it. We recommend sharing your books at least three weeks before the AGM so the filings are not rushed."
+      },
+      {
+        "h": "What affects the fee",
+        "items": [
+          "The number of years pending",
+          "Whether the company is a private limited company or an OPC",
+          "The authorised share capital, which sets the government filing fee",
+          "Whether director KYC or other pending filings also need work"
+        ],
+        "note": "The fee is fixed in writing before we start. Government fees, if any, are charged separately at actuals."
+      },
+      {
+        "h": "Common mistakes we help you avoid",
+        "items": [
+          "Assuming a company with no business has no filings",
+          "Filing MGT-7 before AOC-4 or with figures that do not match the books",
+          "Using last year's due dates when the AGM date has changed",
+          "Missing director KYC, which can deactivate the DIN",
+          "Waiting until the late fee has built up over many months"
+        ]
+      }
     ],
+    "faqs": [
+      {
+        "q": "Do I have to file if my company had no business?",
+        "a": "Yes. A company must file its financial statements and annual return every year, even with no turnover. A late fee applies if it is delayed."
+      },
+      {
+        "q": "What is the due date for AOC-4 and MGT-7?",
+        "a": "AOC-4 is due within 30 days of the AGM and MGT-7 within 60 days. For an AGM on 30 September 2026, that is 30 October and 29 November 2026."
+      },
+      {
+        "q": "What is the late fee?",
+        "a": "An additional fee of ₹100 per day per form applies on late filing of AOC-4 and MGT-7. Other consequences can apply for the company and its officers."
+      },
+      {
+        "q": "What is the difference between MGT-7 and MGT-7A?",
+        "a": "MGT-7A is the shorter annual return for One Person Companies and small companies. We check which one your company qualifies for."
+      },
+      {
+        "q": "Does a One Person Company have the same dates?",
+        "a": "No. An OPC does not hold an AGM and has its own dates. We check them for your company."
+      },
+      {
+        "q": "What about director KYC?",
+        "a": "The MCA has moved director KYC to a three-year cycle from FY 2025-26. We check each director's status on the MCA portal and tell you if anything is pending."
+      },
+      {
+        "q": "Can you file for years I missed?",
+        "a": "Yes. We prepare the pending years in order and explain the late fee for each before you pay."
+      },
+      {
+        "q": "Is ROC filing the same as an income tax return?",
+        "a": "No. ROC filings go to the Registrar of Companies. The company's income tax return is a separate filing with the Income Tax Department. We can handle both."
+      },
+      {
+        "q": "What if you make a mistake in my ROC filing?",
+        "a": "We tell you, fix it, and cover any penalty or late fee that arises from our error, provided you gave us accurate documents and details on time. Terms apply."
+      }
+    ]
   },
   {
-    slug: "import-export-code",
-    name: "Import Export Code (IEC)",
-    module: "Licenses & Registrations",
-    listed: "Import Export Code (IEC)",
-    metaTitle: "Import Export Code (IEC) Registration | Income N Filing",
-    metaDescription:
-      "Apply for your Import Export Code with Income N Filing. We prepare and file the DGFT application so you can start importing or exporting.",
-    intro:
-      "An Import Export Code is a ten-digit identification issued by the Directorate General of Foreign Trade. Businesses generally need it before they import or export goods or services. We prepare the application and track it to issue.",
-    whoNeeds: [
-      "Businesses starting to export products or services",
-      "Importers of goods for trade",
-      "Sellers on cross-border marketplaces",
+    "slug": "import-export-code",
+    "name": "Import Export Code (IEC)",
+    "h1": "Import Export Code (IEC) in Kolkata",
+    "module": "Licenses & Registrations",
+    "listed": "Import Export Code (IEC)",
+    "metaTitle": "Import Export Code (IEC) in Kolkata | Income N Filing",
+    "metaDescription": "Import Export Code (IEC) from DGFT in Kolkata: application prepared and checked, plus the yearly update that keeps your code active. One person prepares, another checks.",
+    "intro": "An Import Export Code is a ten-character business identification issued by the Directorate General of Foreign Trade (DGFT). It is needed to import or export goods, and it is based on your PAN. It is valid for life, but you must confirm your details on the DGFT portal every year or the code can be deactivated. We prepare your application, check it, and handle the yearly update.",
+    "whoNeeds": [
+      "Businesses that import or export goods",
+      "Traders who sell on international marketplaces",
+      "Manufacturers starting to export",
+      "Businesses whose code was deactivated for missing the yearly update",
+      "Existing IEC holders who need to change details such as address or bank"
     ],
-    included: [
-      "Check of the documents and details required",
-      "Preparation and filing of the DGFT application",
-      "Follow-up until the code is issued",
-      "Guidance on keeping the registration details up to date",
-    ],
-    faqs: [
+    "sections": [
       {
-        q: "Does the IEC need to be renewed?",
-        a: "It does not need renewal, but the DGFT expects the details to be kept up to date. We can guide you on this.",
+        "h": "What we do",
+        "items": [
+          "Check whether your business needs an IEC",
+          "Prepare the application on the DGFT portal using your PAN details",
+          "Match the name, address and bank details with your other records",
+          "File the application and pay the government application fee online",
+          "Track the application and download your certificate",
+          "Handle changes and the yearly update later"
+        ]
       },
+      {
+        "h": "What you receive",
+        "items": [
+          "Your IEC certificate",
+          "A note on the yearly update window and what happens if it is missed",
+          "A reminder before the update window opens each year"
+        ]
+      },
+      {
+        "h": "Key facts",
+        "items": [
+          "The IEC is based on the PAN and has lifetime validity",
+          "The government application fee for a new IEC is ₹500, paid to DGFT online",
+          "The yearly update must be done between 1 April and 30 June, and carries no government fee",
+          "A deactivated code can be restored by filing the pending update"
+        ],
+        "note": "Please check dgft.gov.in for the current position. Not every service exporter needs an IEC, and we tell you based on your case."
+      },
+      {
+        "h": "Documents to keep ready",
+        "items": [
+          "PAN of the business or proprietor",
+          "Aadhaar and contact details of the proprietor, partner or director",
+          "Business address proof",
+          "Cancelled cheque or bank certificate",
+          "Email address and mobile number linked to the business"
+        ]
+      },
+      {
+        "h": "How it works",
+        "ordered": true,
+        "items": [
+          "You share your PAN, address and bank details.",
+          "We confirm the scope and what the DGFT portal needs, in writing.",
+          "One person prepares the application.",
+          "A second person checks it against your documents.",
+          "We file it, track it, and send you the certificate."
+        ]
+      },
+      {
+        "h": "Timeline",
+        "text": "The certificate is issued online after DGFT processes the application. We tell you the expected timing in writing when we take up your case."
+      },
+      {
+        "h": "What affects the fee",
+        "items": [
+          "Whether this is a new IEC, a change of details or a reactivation",
+          "The type of business, such as proprietorship, firm or company",
+          "Whether the yearly update is included"
+        ],
+        "note": "The fee is fixed in writing before we start. Government fees, if any, are charged separately at actuals."
+      },
+      {
+        "h": "Common mistakes we help you avoid",
+        "items": [
+          "Missing the April to June update, which can deactivate the code",
+          "Name or address that differs from PAN and bank records",
+          "Applying through a private site that charges more than the official fee",
+          "Forgetting to update the IEC after a change of address or bank",
+          "Starting shipments before the code is issued"
+        ]
+      }
     ],
+    "faqs": [
+      {
+        "q": "Who needs an Import Export Code?",
+        "a": "Any business that imports or exports goods needs one. Whether a pure service exporter needs it depends on the case, and we advise you after looking at your work."
+      },
+      {
+        "q": "How long is an IEC valid?",
+        "a": "It has lifetime validity, but you must confirm or update your details on the DGFT portal every year to keep it active."
+      },
+      {
+        "q": "When is the yearly update due?",
+        "a": "Between 1 April and 30 June each year. The update carries no government fee."
+      },
+      {
+        "q": "What if I miss the update?",
+        "a": "The code can be deactivated. Filing the pending update on the portal restores it, with no separate DGFT penalty fee as per current guidance."
+      },
+      {
+        "q": "What is the government fee for a new IEC?",
+        "a": "The DGFT application fee is ₹500, paid online. Our fee for preparing and checking the application is separate and fixed in writing."
+      },
+      {
+        "q": "Can one PAN have more than one IEC?",
+        "a": "No. The IEC is based on the PAN, so there is one IEC per PAN."
+      },
+      {
+        "q": "Can I change my address or bank details later?",
+        "a": "Yes. Changes are made through the DGFT portal. We can file them for you."
+      },
+      {
+        "q": "Do I need GST registration to get an IEC?",
+        "a": "An IEC is a separate registration from GST. Many exporters need both, and we explain what applies to you."
+      },
+      {
+        "q": "What if you make a mistake in my IEC application?",
+        "a": "We tell you, fix it, and cover any penalty or late fee that arises from our error, provided you gave us accurate documents and details on time. Terms apply."
+      }
+    ]
   },
   {
-    slug: "fssai-license",
-    name: "FSSAI Food License & Registration",
-    module: "Licenses & Registrations",
-    listed: "FSSAI License",
-    metaTitle: "FSSAI License Registration | Income N Filing",
-    metaDescription:
-      "FSSAI registration or license for food businesses, with the right category chosen for your scale, filed by Income N Filing.",
-    intro:
-      "Any business that makes, stores, distributes or sells food needs FSSAI registration or a license. The category depends on the size and type of the business. We choose the right one and file the application.",
-    whoNeeds: [
-      "Restaurants, caterers, cloud kitchens and bakeries",
-      "Food manufacturers, packers and traders",
-      "Retailers and e-commerce sellers dealing in food products",
+    "slug": "fssai-license",
+    "name": "FSSAI Food License & Registration",
+    "h1": "FSSAI License and Registration in Kolkata",
+    "module": "Licenses & Registrations",
+    "listed": "FSSAI License",
+    "metaTitle": "FSSAI Registration & License in Kolkata | Income N Filing",
+    "metaDescription": "FSSAI registration, state licence or central licence in Kolkata, with the right category chosen under the limits in force from 1 April 2026. One person prepares, another checks.",
+    "intro": "Any business that makes, stores, distributes, sells or imports food needs an FSSAI registration or licence. From 1 April 2026 the turnover limits changed, so many businesses now fall in a different category than before. We check your category, prepare the application on the FSSAI portal, and have a second person check it before it is filed.",
+    "whoNeeds": [
+      "Restaurants, cafes, cloud kitchens and caterers",
+      "Food manufacturers, packers and processors",
+      "Shops, wholesalers and distributors of food",
+      "Online sellers and e-commerce food businesses",
+      "Existing FSSAI holders who want to check whether their category has changed"
     ],
-    included: [
-      "Decide between basic registration, state license or central license",
-      "Document preparation and application",
-      "Follow-up and query handling with the food safety authority",
-      "Reminders for renewal and annual filings",
-    ],
-    faqs: [
+    "sections": [
       {
-        q: "Which FSSAI category do I need?",
-        a: "It depends on your turnover, the kind of food business and where you operate. Share your details and we will confirm the right category.",
+        "h": "What we do",
+        "items": [
+          "Check which category applies: registration, state licence or central licence",
+          "Prepare the application and the list of food products you handle",
+          "Collect and check your premises and identity documents",
+          "File on the FSSAI portal and respond to queries from the department",
+          "Download your registration or licence once approved",
+          "Explain the annual fee and ongoing display and compliance rules"
+        ]
       },
+      {
+        "h": "What you receive",
+        "items": [
+          "Your FSSAI registration or licence",
+          "A note on your category and why it applies",
+          "A summary of the yearly fee and compliance points"
+        ]
+      },
+      {
+        "h": "Categories from 1 April 2026",
+        "items": [
+          "Registration (Form A): annual turnover up to ₹1.5 crore",
+          "State licence: turnover above ₹1.5 crore and up to ₹50 crore",
+          "Central licence: turnover above ₹50 crore",
+          "Importers, e-commerce operators and some other activities need a central licence at any turnover"
+        ],
+        "note": "These limits come from FSSAI's order dated 13 March 2026. New registrations and licences no longer expire, but an annual fee and compliance continue. If you already hold one, we check whether your category changes."
+      },
+      {
+        "h": "Documents to keep ready",
+        "items": [
+          "Photo ID and address proof of the proprietor, partner or director",
+          "Proof of the premises, such as ownership or a rent agreement",
+          "Business constitution documents, such as partnership deed or company papers",
+          "List of food products and activities",
+          "For licences, a layout of the premises and details of equipment",
+          "For manufacturing units, a water analysis report where it applies"
+        ]
+      },
+      {
+        "h": "How it works",
+        "ordered": true,
+        "items": [
+          "You share your business details and documents.",
+          "We confirm the category and what we will file, in writing.",
+          "One person prepares the application and product list.",
+          "A second person checks it against your documents and the current limits.",
+          "We file, answer any query, and send you the certificate once approved."
+        ]
+      },
+      {
+        "h": "Timeline",
+        "text": "Approval depends on the department, the category and whether the premises need inspection. We give you the expected timing in writing when we take up your case."
+      },
+      {
+        "h": "What affects the fee",
+        "items": [
+          "The category: registration, state licence or central licence",
+          "The number of premises",
+          "The kind of food activity and number of products",
+          "Whether an existing licence needs to be changed or moved to the new limits"
+        ],
+        "note": "The fee is fixed in writing before we start. Government fees, if any, are charged separately at actuals."
+      },
+      {
+        "h": "Common mistakes we help you avoid",
+        "items": [
+          "Applying for registration when the activity needs a licence",
+          "Using the old turnover limits of ₹12 lakh and ₹20 crore",
+          "Declaring turnover that does not match your GST returns",
+          "Missing the annual fee after the licence is issued",
+          "Not displaying the licence number at the premises"
+        ]
+      }
     ],
+    "faqs": [
+      {
+        "q": "Who needs FSSAI registration?",
+        "a": "Any business dealing in food: making, storing, selling, distributing or importing. The category depends on turnover and the kind of activity."
+      },
+      {
+        "q": "What are the FSSAI limits now?",
+        "a": "From 1 April 2026: registration up to ₹1.5 crore turnover, state licence above ₹1.5 crore and up to ₹50 crore, and central licence above ₹50 crore."
+      },
+      {
+        "q": "Who needs a central licence regardless of turnover?",
+        "a": "Importers, e-commerce operators and certain other activities need a central licence at any turnover. We check your activity against the FSSAI list."
+      },
+      {
+        "q": "Do FSSAI registrations and licences still expire?",
+        "a": "New registrations and licences issued from 1 April 2026 do not expire, but the annual fee and compliance continue."
+      },
+      {
+        "q": "I already have a licence. What should I do?",
+        "a": "Check whether your category has changed under the new limits. We can review your licence and tell you if anything needs to be updated."
+      },
+      {
+        "q": "Does a home kitchen need FSSAI?",
+        "a": "A food business run from home generally needs at least an FSSAI registration if it sells food. We tell you what applies after looking at your case."
+      },
+      {
+        "q": "Is turnover checked against GST?",
+        "a": "Authorities can compare your declared turnover with other records, so we recommend declaring figures that match your books and returns."
+      },
+      {
+        "q": "Can one licence cover many premises?",
+        "a": "Each premises generally needs its own registration or licence. We explain the position for your case."
+      },
+      {
+        "q": "What if you make a mistake in my FSSAI application?",
+        "a": "We tell you, fix it, and cover any penalty or late fee that arises from our error, provided you gave us accurate documents and details on time. Terms apply."
+      }
+    ]
   },
   {
-    slug: "belated-revised-itr-filing",
-    name: "Belated & Revised ITR Filing",
-    module: "Income Tax",
-    listed: "Belated ITR Filing",
-    metaTitle: "Belated & Revised ITR Filing Help | Income N Filing",
-    metaDescription:
-      "Missed the ITR due date or need to correct a filed return? Income N Filing prepares and files belated and revised income tax returns, checking AIS and Form 26AS first.",
-    intro:
-      "If the original due date has passed, or you spotted an error after filing, the Income Tax Act generally still allows a belated or revised return within the time limits that apply to that year. Late filing can bring interest, a late fee and loss of some benefits, so it is better to file sooner. We check your records, work out which return applies and file it correctly.",
-    whoNeeds: [
-      "Taxpayers who missed the ITR due date for a year",
-      "Anyone who filed and later found a wrong income, deduction or bank detail",
-      "People who received an intimation and need to correct the return",
-      "Individuals with several years of unfiled returns",
+    "slug": "belated-revised-itr-filing",
+    "name": "Belated & Revised ITR Filing",
+    "h1": "Belated and Revised ITR Filing in Kolkata",
+    "module": "Income Tax",
+    "listed": "Belated ITR Filing",
+    "metaTitle": "Belated & Revised ITR Filing in Kolkata | Income N Filing",
+    "metaDescription": "Missed the ITR due date or found an error after filing? We file belated and revised returns in Kolkata, checking AIS and Form 26AS first. One person prepares, another checks.",
+    "intro": "If the original due date has passed, you can still file a belated return. If you spotted an error after filing, you can file a revised return. Both have a last date, and a belated return carries a late fee and interest. We check your AIS and Form 26AS, prepare the return, and have a second person check it before it is filed.",
+    "whoNeeds": [
+      "Salaried people and professionals who missed the 31 July due date",
+      "Business owners who missed their due date",
+      "People who filed and then found a missing income or deduction",
+      "Taxpayers who filed the wrong ITR form",
+      "People who did not file for earlier years and want to catch up"
     ],
-    included: [
-      "Check which return applies and the time limit for that assessment year",
-      "Review of AIS, Form 26AS and your documents before filing",
-      "Preparation and e-filing of the belated or revised return, with e-verification support",
-      "Computation of any tax, interest or fee payable before you pay it",
-    ],
-    faqs: [
+    "sections": [
       {
-        q: "Can I still file my ITR after the due date?",
-        a: "Usually yes, as a belated return within the time limit for that assessment year. Interest and a late fee can apply, and some carry-forward benefits may be affected. We confirm the position for your year before filing.",
+        "h": "What we do",
+        "items": [
+          "Check your AIS, Form 26AS and TIS for income and tax already reported",
+          "Choose the correct ITR form for your income",
+          "Calculate tax, interest and the late fee before you pay",
+          "Prepare and file the belated or revised return",
+          "E-verify the return with you and keep the acknowledgement",
+          "Explain what happens next, including any refund"
+        ]
       },
       {
-        q: "What is a revised return?",
-        a: "It replaces a return you already filed when you find a mistake or omission. It is allowed within the prescribed time limit.",
+        "h": "What you receive",
+        "items": [
+          "Your filed return and acknowledgement",
+          "A clear statement of the tax, interest and late fee paid",
+          "A note on any limits, such as losses that cannot be carried forward"
+        ]
       },
       {
-        q: "What do you need from me to start?",
-        a: "Your PAN, income documents for the year and bank details. We pull AIS and Form 26AS to cross-check before filing.",
+        "h": "Key dates for AY 2026-27 (FY 2025-26)",
+        "items": [
+          "Original due date for most individuals: 31 July 2026",
+          "Belated return under Section 139(4): by 31 December 2026",
+          "Revised return under Section 139(5): usually by 31 December 2026",
+          "Updated return (ITR-U) under Section 139(8A): up to 31 March 2031, with additional tax"
+        ],
+        "note": "The Finance Act 2026 also added a fee under Section 234I for some revised returns filed after 31 December 2026. We confirm the current position on the income tax portal before we file."
       },
+      {
+        "h": "What a belated return costs",
+        "items": [
+          "Late fee under Section 234F: up to ₹5,000, or up to ₹1,000 if total income is ₹5 lakh or less",
+          "Interest under Section 234A on unpaid tax, at 1% per month",
+          "Some losses cannot be carried forward, and some deductions may be restricted"
+        ]
+      },
+      {
+        "h": "Documents to keep ready",
+        "items": [
+          "PAN, Aadhaar and bank account details",
+          "Form 16 or salary slips, if salaried",
+          "Interest certificates, capital gains statements and rent details",
+          "Proof of deductions you want to claim",
+          "Acknowledgement of the original return, for a revised return"
+        ]
+      },
+      {
+        "h": "How it works",
+        "ordered": true,
+        "items": [
+          "You share your documents and tell us whether you filed before.",
+          "We check AIS and Form 26AS and confirm the plan and the dates, in writing.",
+          "One person prepares the return.",
+          "A second person checks it against your records.",
+          "We file, you e-verify, and we send you the acknowledgement."
+        ]
+      },
+      {
+        "h": "Timeline",
+        "text": "The key factor is the last date. We start as soon as you share your documents and tell you straight away if a date is close."
+      },
+      {
+        "h": "What affects the fee",
+        "items": [
+          "The ITR form and the number of income sources",
+          "Whether you also have capital gains, business income or foreign assets",
+          "The number of years pending",
+          "Whether a notice or mismatch has to be sorted out first"
+        ],
+        "note": "The fee is fixed in writing before we start. Government fees, if any, are charged separately at actuals."
+      },
+      {
+        "h": "Common mistakes we help you avoid",
+        "items": [
+          "Waiting until the last week of December",
+          "Skipping AIS, which shows income you forgot",
+          "Choosing the wrong ITR form",
+          "Not e-verifying, which leaves the return incomplete",
+          "Assuming a belated return can claim every deduction"
+        ]
+      }
     ],
+    "faqs": [
+      {
+        "q": "What is the last date for a belated return for AY 2026-27?",
+        "a": "31 December 2026, or before assessment is completed, whichever is earlier."
+      },
+      {
+        "q": "What is the late fee for filing late?",
+        "a": "A fee under Section 234F of up to ₹5,000, or up to ₹1,000 if total income is ₹5 lakh or less. Interest under Section 234A also applies on any unpaid tax."
+      },
+      {
+        "q": "Can I file after 31 December 2026?",
+        "a": "After that date the belated route closes. An updated return (ITR-U) may be possible, with additional tax, up to 31 March 2031."
+      },
+      {
+        "q": "Can I revise a belated return?",
+        "a": "Yes. A belated return can be revised before the last date for revision."
+      },
+      {
+        "q": "What is the last date for a revised return?",
+        "a": "The usual last date is 31 December 2026. A fee under Section 234I may apply for some revised returns filed after that date, so we check the current position on the portal."
+      },
+      {
+        "q": "Can I still claim a refund with a belated return?",
+        "a": "Generally yes, if tax has been paid in excess. Some deductions and loss carry-forwards may be restricted, so we check your case."
+      },
+      {
+        "q": "I filed the wrong ITR form. What now?",
+        "a": "We check whether a revised return or a defective-return reply is the right route, and tell you before filing."
+      },
+      {
+        "q": "Do you check AIS before filing?",
+        "a": "Yes. We compare your AIS, Form 26AS and TIS with your records so that income already reported is not missed."
+      },
+      {
+        "q": "What if you make a mistake in my return?",
+        "a": "We tell you, fix it, and cover any penalty or late fee that arises from our error, provided you gave us accurate documents and details on time. Terms apply."
+      }
+    ]
   },
   {
-    slug: "late-gst-return-filing",
-    name: "Late GST Return Filing",
-    module: "GST Compliance",
-    listed: "Late GST Return Filing",
-    metaTitle: "Late GST Return Filing Help | Income N Filing",
-    metaDescription:
-      "GST returns pending or filed late? Income N Filing reconciles your data, files overdue GSTR-1 and GSTR-3B returns and explains late fee and interest before you pay.",
-    intro:
-      "When GST returns are not filed by the due date, late fees and interest accrue, and continued non-filing can lead to notices or cancellation of registration. We bring the filings up to date in the right order, reconcile your sales and input tax credit, and tell you what is payable before you pay it.",
-    whoNeeds: [
-      "Businesses with one or more months of GSTR-1 or GSTR-3B pending",
-      "Taxpayers who received a notice for non-filing of returns",
-      "Businesses whose GST registration is at risk of suspension for non-filing",
-      "Owners who want to start filing regularly again",
+    "slug": "late-gst-return-filing",
+    "name": "Late GST Return Filing",
+    "h1": "Late GST Return Filing in Kolkata",
+    "module": "GST Compliance",
+    "listed": "Late GST Return Filing",
+    "metaTitle": "Late GST Return Filing in Kolkata | Income N Filing",
+    "metaDescription": "GST returns pending or filed late? We reconcile your data, file overdue GSTR-1 and GSTR-3B in Kolkata, and explain late fee and interest before you pay. One person prepares, another checks.",
+    "intro": "When GST returns are not filed by the due date, late fees and interest build up, and continued non-filing can lead to blocked returns, blocked e-way bills and a notice to cancel your registration. We reconcile your sales and purchase data, file the overdue returns in the right order, and explain the late fee and interest before you pay. One person prepares and another checks.",
+    "whoNeeds": [
+      "Businesses with GSTR-1 or GSTR-3B pending for one or more months",
+      "Businesses that received a notice for non-filing",
+      "Businesses whose registration is suspended or at risk of cancellation",
+      "New registrants who forgot to start filing",
+      "Businesses with annual return (GSTR-9) pending"
     ],
-    included: [
-      "Status check of all pending returns and periods on the GST portal",
-      "Reconciliation of sales, purchases and input tax credit",
-      "Filing of overdue GSTR-1 and GSTR-3B in the correct sequence",
-      "Computation of late fee and interest before payment",
-      "Support with any related notice",
-    ],
-    faqs: [
+    "sections": [
       {
-        q: "What happens if I do not file GST returns on time?",
-        a: "A late fee and interest apply, and continued non-filing can lead to notices and, eventually, cancellation of the registration. The exact amounts depend on the return, the period and your turnover.",
+        "h": "What we do",
+        "items": [
+          "List every return that is pending and its due date",
+          "Rebuild your sales and purchase data for the missing months",
+          "Match purchases with the GST portal data before filing",
+          "File the overdue GSTR-1 and GSTR-3B in the right order",
+          "Calculate late fee and interest and show you the figures before you pay",
+          "Reply to any notice related to the non-filing"
+        ]
       },
       {
-        q: "Can I file several pending months together?",
-        a: "Returns generally have to be filed period by period. We clear them in the order the portal allows and tell you the total payable.",
+        "h": "What you receive",
+        "items": [
+          "Filed returns with acknowledgements",
+          "A statement of late fee and interest for each return",
+          "A calendar so the next due dates are not missed"
+        ]
       },
       {
-        q: "Will you tell me the late fee before I pay?",
-        a: "Yes. We share the computed late fee and interest first so there are no surprises.",
+        "h": "Late fee and interest",
+        "items": [
+          "Late fee: ₹50 per day (₹25 CGST and ₹25 SGST), or ₹20 per day for a nil return",
+          "Maximum late fee per return: ₹500 for a nil return, ₹2,000 for turnover up to ₹1.5 crore, ₹5,000 for ₹1.5 to ₹5 crore, and ₹10,000 above ₹5 crore",
+          "Interest: 18% per year on tax paid late",
+          "From the January 2026 return period, the portal calculates interest on late GSTR-3B with some relief for cash already in your ledger"
+        ],
+        "note": "Late fee applies to each return separately. Please check the GST portal for the current position."
       },
+      {
+        "h": "What can happen if you keep not filing",
+        "items": [
+          "GSTR-1 can be blocked if GSTR-3B is pending for two consecutive periods",
+          "E-way bill generation can be restricted",
+          "Your registration can be suspended and then cancelled after a notice (Form REG-17), with 30 days to reply",
+          "Your buyers can lose input tax credit on your invoices"
+        ]
+      },
+      {
+        "h": "Documents and data to keep ready",
+        "items": [
+          "Sales invoices and purchase bills for the missing months",
+          "Bank statements",
+          "Credit and debit notes",
+          "GST portal login access, or the details we need to request it",
+          "Any notice you have received"
+        ]
+      },
+      {
+        "h": "How it works",
+        "ordered": true,
+        "items": [
+          "You tell us which months are pending and share your records.",
+          "We confirm the list of returns, the order, and the plan in writing.",
+          "One person prepares the returns and the late fee and interest working.",
+          "A second person checks them against your data and the portal.",
+          "We file, you pay the tax, late fee and interest, and we send you the acknowledgements."
+        ]
+      },
+      {
+        "h": "Timeline",
+        "text": "If only a few months are pending, we can usually plan filing quickly once your data is ready. If many months are pending or a notice has come, we give a plan with dates in writing."
+      },
+      {
+        "h": "What affects the fee",
+        "items": [
+          "The number of returns pending",
+          "The volume of invoices for the missing months",
+          "Whether a notice or suspension is involved",
+          "Whether the annual return is also pending"
+        ],
+        "note": "The fee is fixed in writing before we start. Government fees, if any, are charged separately at actuals."
+      },
+      {
+        "h": "Common mistakes we help you avoid",
+        "items": [
+          "Filing GSTR-3B without GSTR-1 data being right",
+          "Assuming a nil return has no late fee",
+          "Paying tax late and ignoring the interest",
+          "Not replying to a suspension notice within the time given",
+          "Continuing to skip months in the hope of filing everything together"
+        ]
+      }
     ],
+    "faqs": [
+      {
+        "q": "What is the late fee for GSTR-3B?",
+        "a": "₹50 per day for a return with tax, or ₹20 per day for a nil return, subject to a maximum per return that depends on your turnover."
+      },
+      {
+        "q": "Is there interest as well?",
+        "a": "Yes. Interest at 18% per year applies on tax paid after the due date."
+      },
+      {
+        "q": "I had no sales. Do I still have to file?",
+        "a": "Yes. A nil return must be filed, and a late fee applies if it is late."
+      },
+      {
+        "q": "Can my GST registration be cancelled for not filing?",
+        "a": "Yes. Continued non-filing can lead to suspension and then cancellation after a notice, and you have time to reply to the notice."
+      },
+      {
+        "q": "What if I have several months pending?",
+        "a": "We file them in order, starting with the oldest. We show you the late fee and interest for each before you pay."
+      },
+      {
+        "q": "Can the late fee be waived?",
+        "a": "Waiver schemes are announced by the Government for specific periods and conditions. We check whether any applies to your returns, and do not assume one."
+      },
+      {
+        "q": "Will pending returns block my other work?",
+        "a": "They can. For example, GSTR-1 can be blocked and e-way bill generation restricted. Filing the pending returns restores normal use."
+      },
+      {
+        "q": "Do you also handle the annual return?",
+        "a": "Yes. We can file the annual return (GSTR-9) too, and we check whether a late fee applies."
+      },
+      {
+        "q": "What if you make a mistake in my GST returns?",
+        "a": "We tell you, fix it, and cover any penalty or late fee that arises from our error, provided you gave us accurate documents and details on time. Terms apply."
+      }
+    ]
   },
 ];
 

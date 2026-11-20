@@ -20,12 +20,14 @@ export function GET() {
 
 ## Services
 - [All services](${SITE}/services): full list of 94 services across GST, income tax, incorporation and compliance
+- [ITR Filing](${SITE}/services/itr-filing): income tax return filing for individuals, professionals and businesses
 ${services}
 
 ## Blog
 ${posts || "- Coming soon"}
 
 ## About and policies
+- [Kolkata office and services](${SITE}/kolkata)
 - [Contact](${SITE}/contact)
 - [About Income N Filing](${SITE}/about)
 - [Privacy Policy](${SITE}/privacy)

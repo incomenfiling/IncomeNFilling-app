@@ -39,8 +39,7 @@ function ClientFlipCard({ card, i }) {
     <div role="group" aria-label={`${card.front.name}, ${card.front.sector}; and ${card.back.name}, ${card.back.sector}`} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} style={{ width: "100%", maxWidth: bp.mobile ? "none" : 250, height: 92, perspective: 1000, cursor: "default" }}>
       <div
         style={{
-          position: "relative", width: "100%", height: "100%", transformStyle: "preserve-3d", animation: `flip-card 9s ${i * 0.7}s infinite`,
-          animationPlayState: hover ? "paused" : "running", transition: "transform .3s", filter: hover ? "drop-shadow(0 10px 20px rgba(15,42,66,.14))" : "none",
+          position: "relative", width: "100%", height: "100%", transformStyle: "preserve-3d", transform: hover ? "rotateY(180deg)" : "none", transition: "transform .6s", filter: hover ? "drop-shadow(0 10px 20px rgba(15,42,66,.14))" : "none",
         }}
       >
         <ClientFace c={card.front} i={i} />

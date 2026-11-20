@@ -17,6 +17,7 @@ const QUICK_LINKS = [
   ["About", "/about"],
   ["Services", "/services"],
   ["Blog", "/blog"],
+  ["Kolkata office", "/kolkata"],
   ["Ask Ira", "/chat"],
   ["Contact", "/contact"],
 ];

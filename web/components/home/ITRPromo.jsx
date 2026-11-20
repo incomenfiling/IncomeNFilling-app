@@ -17,7 +17,7 @@ export function ITRPromo() {
             <br />
             <span style={{ color: "var(--navy-600,#2b6cd6)" }}>once and checked twice</span>
           </h2>
-          <p style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-lg)", color: "var(--ink-500)", margin: 0 }}>Maximum Tax Refund, Legally Claimed.</p>
+          <p style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-lg)", color: "var(--ink-500)", margin: 0 }}>Every deduction you are entitled to, claimed the right way.</p>
           <div>
             <HeroCTAButton variant="primary" onClick={() => router.push("/contact")}>Start Filing Now</HeroCTAButton>
           </div>
