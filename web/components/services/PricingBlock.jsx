@@ -1,4 +1,5 @@
 "use client";
+import { ProblemsSolve } from "@/components/ui/ProblemsSolve";
 import { useBP } from "@/lib/useBP";
 
 const H2 = { fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-2xl)", color: "var(--navy-900)", margin: "40px 0 16px" };
@@ -24,15 +25,7 @@ export function PricingBlock({ p }) {
       </div>
       <p style={{ ...T, marginTop: 14 }}>{p.intro}</p>
 
-      <h3 style={H3}>Problems we solve</h3>
-      <div style={{ display: "grid", gridTemplateColumns: bp.mobile ? "1fr 1fr" : "repeat(4, 1fr)", gap: 10 }}>
-        {p.solve.map((s) => (
-          <div key={s.q} style={{ background: "var(--white)", border: "1px solid var(--ink-100)", borderRadius: "var(--radius-lg)", padding: 14 }}>
-            <div style={{ fontFamily: "var(--font-display)", fontWeight: 600, color: "var(--navy-900)", fontSize: 14 }}>{s.q}</div>
-            <div style={{ ...T, fontSize: 13, marginTop: 4 }}>{s.a}</div>
-          </div>
-        ))}
-      </div>
+      <ProblemsSolve items={p.solve} mobile={bp.mobile} />
 
       {p.groups.map((g) => (
         <div key={g.title}>

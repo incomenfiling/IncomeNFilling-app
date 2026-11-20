@@ -1,3 +1,4 @@
+import { ProblemsSolve } from "@/components/ui/ProblemsSolve";
 import { PRICE_DETAILS } from "@/data/pricingDetails";
 
 const T = { fontFamily: "var(--font-body)", fontSize: 14, lineHeight: 1.6, color: "var(--ink-500)", margin: 0 };
@@ -70,19 +71,7 @@ export function PriceDetails({ name }) {
         View inclusions, exclusions, what we need and terms
       </summary>
       <div style={{ padding: "4px 16px 18px", display: "grid", gap: 18 }}>
-        {d.solve && (
-          <div>
-            <h4 style={H}>Problems we solve</h4>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 10 }}>
-              {d.solve.map((s) => (
-                <div key={s.q} style={{ ...box, padding: 12 }}>
-                  <div style={{ fontWeight: 700, fontSize: 14, color: "var(--navy-900)" }}>{s.q}</div>
-                  <div style={{ ...T, fontSize: 13, marginTop: 4 }}>{s.a}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
+        {d.solve && <ProblemsSolve items={d.solve} />}
         {d.matrices && <div>{d.matrices.map((m, i) => <Matrix key={i} m={m} />)}</div>}
         {d.notes && d.notes.map((n) => <p key={n} style={{ ...T, fontSize: 13 }}>{n}</p>)}
         {d.includeGroups && (
