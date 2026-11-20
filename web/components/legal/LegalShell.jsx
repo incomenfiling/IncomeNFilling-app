@@ -30,7 +30,7 @@ export function LegalShell({ title, children }) {
         <div style={{ maxWidth: 820, margin: "0 auto" }}>
           <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--gold-400)", letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 14 }}>Legal</div>
           <h1 style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-bold)", fontSize: "clamp(28px,5vw,44px)", color: "var(--white)", margin: 0 }}>{title}</h1>
-          <div style={{ marginTop: 12, fontFamily: "var(--font-body)", fontSize: "var(--text-sm)", color: "var(--navy-300)" }}>Last updated 20 November 2026</div>
+          <div style={{ marginTop: 12, fontFamily: "var(--font-body)", fontSize: "var(--text-sm)", color: "var(--navy-300)" }}>Last updated November 2026</div>
         </div>
       </section>
       <section style={{ padding: "clamp(32px,6vw,48px) 20px 96px", maxWidth: 820, margin: "0 auto" }}>{children}</section>

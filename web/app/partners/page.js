@@ -41,7 +41,7 @@ export default function Page() {
       </Sec>
       <Sec h="What we do for you">
         <Tiles items={[
-          ["Digital signature certificates", "Class 3 certificates with a Hype USB token for your clients. Kolkata delivery by porter or courier, other cities by courier. Support for the life of the certificate in office hours."],
+          ["Digital signature certificates", "Class 3 certificates with a Hype USB token for your clients. Kolkata delivery by porter or courier, other cities by courier. Technical support during office hours."],
           ["Accounting and cash-flow desk", "Books in Tally from your clients' soft copies, bank reconciliation, GST and TDS working and filing, debtor and creditor ageing, monthly P&L and Balance Sheet. Plans by number of entries per month, per client."],
           ["Add-ons, quoted in writing", "Payroll, invoices and e-way bills, GSTR-9, refunds, notices and backlog work. Nothing is charged without your yes."],
         ]} />
@@ -58,7 +58,7 @@ export default function Page() {
       <Sec h="Questions">
         {faqs.map(([q, a]) => (
           <details key={q} style={{ background: "var(--white)", border: "1px solid var(--ink-100)", borderRadius: "var(--radius-md)", padding: "12px 16px", marginBottom: 8 }}>
-            <summary style={{ cursor: "pointer", fontFamily: "var(--font-body)", fontWeight: 700, color: "var(--navy-900)" }}>{q}</summary>
+            <summary style={{ cursor: "pointer", minHeight: 44, display: "flex", alignItems: "center", fontFamily: "var(--font-body)", fontWeight: 700, color: "var(--navy-900)" }}>{q}</summary>
             <p style={{ ...T, fontSize: 15, marginTop: 8 }}>{a}</p>
           </details>
         ))}

@@ -1,4 +1,4 @@
-import { LegalShell, H, P, ConsentBox } from "@/components/legal/LegalShell";
+import { LegalShell, H, P } from "@/components/legal/LegalShell";
 
 export const metadata = {
   title: 'Disclaimer',

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { postLead } from "@/lib/postLead";
+import { track } from "@/lib/track";
 import { ConsentNote } from "@/components/ui/ConsentNote";
 import { WHATSAPP_URL } from "@/data/content";
 
@@ -23,11 +24,12 @@ export function SimpleLeadForm({ title, source, fields, propertyField, button = 
     setState("sending");
     setErr("");
     try {
-      const res = await postLead({ name: get("name"), phone: get("phone"), email: get("email"), property: propertyField ? get(propertyField) : title, notes: extra, source, website: get("website") });
+      const res = await postLead({ name: get("name"), phone: get("phone"), email: get("email"), property: propertyField ? get(propertyField) : title, notes: extra, source, website: get("company_url_2") });
       if (!res.ok) {
         const j = await res.json().catch(() => ({}));
         throw new Error(j.error || "Could not send");
       }
+      track("generate_lead", { source });
       setState("done");
     } catch (x) {
       setErr(x.message || "Could not send. Please WhatsApp us.");
@@ -37,7 +39,7 @@ export function SimpleLeadForm({ title, source, fields, propertyField, button = 
 
   if (state === "done") {
     return (
-      <div role="status" style={{ background: "var(--gold-050)", border: "1px solid var(--gold-200)", borderRadius: "var(--radius-lg)", padding: 22, fontFamily: "var(--font-body)", color: "var(--navy-900)" }}>
+      <div role="status" aria-live="polite" style={{ background: "var(--gold-050)", border: "1px solid var(--gold-200)", borderRadius: "var(--radius-lg)", padding: 22, fontFamily: "var(--font-body)", color: "var(--navy-900)" }}>
         <strong>Thank you.</strong> {doneText || "We have your details and will get back to you during working hours (Monday to Saturday, 10:00 to 19:00 IST)."}
         <div style={{ marginTop: 10 }}><a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" style={{ color: "var(--navy-800)", fontWeight: 700 }}>Continue on WhatsApp</a></div>
       </div>
@@ -45,7 +47,7 @@ export function SimpleLeadForm({ title, source, fields, propertyField, button = 
   }
   return (
     <form onSubmit={submit} style={{ background: "var(--white)", border: "1px solid var(--ink-100)", borderRadius: "var(--radius-xl)", padding: 22, display: "grid", gap: 14 }}>
-      <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }} />
+      <input type="text" name="company_url_2" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }} />
       <h2 style={{ margin: 0, fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 20, color: "var(--navy-900)" }}>{title}</h2>
       {fields.map((f) => (
         <div key={f.name}>
@@ -58,7 +60,7 @@ export function SimpleLeadForm({ title, source, fields, propertyField, button = 
           ) : f.type === "textarea" ? (
             <textarea id={`f-${source}-${f.name}`} name={f.name} required={f.required} rows={3} maxLength={600} style={{ ...input, resize: "vertical" }} />
           ) : (
-            <input id={`f-${source}-${f.name}`} name={f.name} type={f.type || "text"} required={f.required} maxLength={f.type === "url" ? 300 : 120} inputMode={f.type === "tel" ? "numeric" : undefined} autoComplete={f.name === "name" ? "name" : f.name === "phone" ? "tel" : f.name === "email" ? "email" : "off"} style={input} />
+            <input id={`f-${source}-${f.name}`} name={f.name} type={f.type || "text"} required={f.required} maxLength={f.type === "url" ? 300 : 120} inputMode={f.type === "tel" ? "tel" : undefined} autoComplete={f.name === "name" ? "name" : f.name === "phone" ? "tel" : f.name === "email" ? "email" : "off"} style={input} />
           )}
         </div>
       ))}

@@ -3,7 +3,7 @@ import { sendLeadToCRM } from "@/lib/crm";
 
 const clip = (v, n) => String(v ?? "").trim().slice(0, n);
 // Stop spreadsheet formula injection: a leading = + - @ would run as a formula in Sheets.
-const safe = (v) => (/^[=+\-@]/.test(v) ? "'" + v : v);
+const safe = (v) => (/^[=+\-@\t\r]/.test(v) ? "'" + v : v);
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 export async function POST(request) {
@@ -49,17 +49,18 @@ export async function POST(request) {
   }
 
   // Link spam: real enquiries rarely contain more than one link.
-  if ((String(body?.notes ?? "").match(/https?:\/\//gi) || []).length > 1) {
+  if ((String(body?.notes ?? "").match(/https?:\/\//gi) || []).length > 2) {
     return NextResponse.json({ ok: true });
   }
 
   const name = safe(clip(body?.name, 120));
   const phone = clip(body?.phone, 30);
-  const email = clip(body?.email, 120);
+  const consentNote = body?.consent === true ? "consent ticked" : "consent notice shown";
+  const email = safe(clip(body?.email, 120));
   const property = safe(clip(body?.property, 600));
   const notes0 = safe(clip(body?.notes, 1800));
   const utm = body?.utm && typeof body.utm === "object" ? Object.entries(body.utm).slice(0, 8).map(([k, v]) => `${clip(k, 20)}=${clip(v, 60)}`).join(" ") : "";
-  const meta = `[page ${clip(body?.pageUrl, 120) || "-"} | ref ${clip(body?.referrer, 120) || "-"} | ${utm || "no utm"} | policy ${clip(body?.policyVersion, 12) || "-"} | consent yes | ${clip(body?.ua, 100)}]`;
+  const meta = `[page ${clip(body?.pageUrl, 120) || "-"} | ref ${clip(body?.referrer, 120) || "-"} | ${utm || "no utm"} | policy ${clip(body?.policyVersion, 12) || "-"} | ${consentNote} | ${clip(body?.ua, 100)}]`;
   const notes = (notes0 ? notes0 + " " : "") + meta;
   const source = clip(body?.source, 40) || "website";
 
@@ -74,7 +75,7 @@ export async function POST(request) {
     if (d.length === 12 && d.startsWith("91")) d = d.slice(2);
     if (d.length === 11 && d.startsWith("0")) d = d.slice(1);
     const intl = phone.trim().startsWith("+") && !phone.trim().startsWith("+91");
-    if (!intl && !/^[6-9]\d{9}$/.test(d)) {
+    if ((intl && (d.length < 8 || d.length > 15)) || (!intl && !/^[6-9]\d{9}$/.test(d))) {
       return NextResponse.json({ error: "Please enter a valid 10-digit mobile number" }, { status: 400 });
     }
   }

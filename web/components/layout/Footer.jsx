@@ -141,7 +141,7 @@ export function Footer() {
           </div>
           <div style={{ display: "flex", gap: "8px 22px", flexWrap: "wrap" }}>
             {[["Privacy Policy", "privacy"], ["Terms & Conditions", "terms"], ["Partners", "partners"], ["Careers", "careers"], ["Refund Policy", "refund-policy"], ["Disclaimer", "disclaimer"], ["Cookies", "cookies"]].map(([label, hash]) => (
-              <Link key={label} href={`/${hash}`} style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--navy-300)", textDecoration: "none" }}>
+              <Link key={label} href={`/${hash}`} style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--navy-300)", textDecoration: "none", padding: "10px 0", display: "inline-block" }}>
                 {label}
               </Link>
             ))}

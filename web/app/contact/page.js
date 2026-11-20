@@ -49,9 +49,9 @@ export default function ContactPage() {
     setError(false);
     setSubmitting(true);
     try {
-      const res = await postLead({ name: f.name, phone: f.phone, email: f.email, property: cat, notes: f.msg, source: "contact", website: e?.target?.elements?.website?.value || "" });
+      const res = await postLead({ name: f.name, phone: f.phone, email: f.email, property: cat, notes: f.msg, source: "contact", consent: rcs, website: e?.target?.elements?.company_url_2?.value || "" });
       if (!res.ok) throw new Error("failed");
-      track("generate_lead", { source: "contact", website: e?.target?.elements?.website?.value || "" });
+      track("generate_lead", { source: "contact" });
       setSent(true);
     } catch {
       setError(true);
@@ -156,7 +156,7 @@ export default function ContactPage() {
               </div>
             ) : (
               <form onSubmit={submit} style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-<input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }} />
+<input type="text" name="company_url_2" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }} />
                 <div>
                   <h2 style={{ margin: 0, fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-xl)", color: "var(--navy-900)" }}>Request a consultation</h2>
                   <div style={{ fontFamily: "var(--font-body)", fontSize: 13.5, color: "var(--ink-500)", marginTop: 4 }}>No obligation — we&apos;ll scope it on a quick call.</div>

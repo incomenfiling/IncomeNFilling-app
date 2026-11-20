@@ -1,4 +1,4 @@
-import { LegalShell, H, P, ConsentBox } from "@/components/legal/LegalShell";
+import { LegalShell, H, P } from "@/components/legal/LegalShell";
 
 export const metadata = {
   title: 'Refund and Cancellation Policy',
@@ -10,7 +10,7 @@ export const metadata = {
 export default function Page() {
   return (
     <LegalShell title='Refund and Cancellation Policy'>
-      <P>This policy explains cancellation and refunds for services bought from Income N Filing. If your written quotation says something different, the quotation applies.</P>
+      <P>This policy explains cancellation and refunds for services bought from Income N Filing. If your written quotation or plan says something different (for example monthly plans paid in advance), that applies.</P>
       <H>Before we start work</H>
       <P>If you cancel in writing before we begin work on your file, we refund the fee you paid, less any government or third-party charge already paid on your behalf.</P>
       <H>After work has started</H>
@@ -20,7 +20,7 @@ export default function Page() {
       <H>Our errors</H>
       <P>If we make a mistake in work we prepared, we correct it at no extra fee. If we cannot deliver a service we agreed to, we refund the fee for that part.</P>
       <H>How to cancel or ask for a refund</H>
-      <P>Write to us at support@incomenfiling.com or call 078905 94600 (Monday to Saturday, 10:00 to 19:00 IST). Our office is Suite 1A, Kaberi Apartment, 38 M/1 New Ballygunge Palace, Ground Floor, Kasba, Kolkata 700039. Give your name, the service and the payment details. We reply within 3 working days. Approved refunds go back to the account or method you paid from, usually within 7 to 10 working days.</P>
+      <P>Write to us at support@incomenfiling.com or call 078905 94600 (Monday to Saturday, 10:00 to 19:00 IST). Our office is Suite 1A, Kaberi Apartment, 38 M/1 New Ballygunge Palace, Ground Floor, Kasba, Kolkata 700039. Give your name, the service and the payment details. We reply as soon as we can. Approved refunds go back to the account or method you paid from.</P>
     </LegalShell>
   );
 }

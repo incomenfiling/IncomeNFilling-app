@@ -143,7 +143,7 @@ export default function ServicesApplyPage() {
       property: (serviceNames || []).join(", "),
       notes: f.notes,
       source: "apply",
-      website: e?.target?.elements?.website?.value || "",
+      website: e?.target?.elements?.company_url_2?.value || "",
     }).then((res) => {
       if (!res.ok) throw new Error("Lead submission failed");
     });
@@ -603,7 +603,7 @@ export default function ServicesApplyPage() {
                   <div style={{ background: "var(--white)", borderRadius: "var(--radius-xl)", boxShadow: "0 24px 55px rgba(11,31,58,.10)", border: "1px solid var(--ink-100)", padding: "34px 34px", position: "relative", overflow: "hidden" }}>
                     <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 5, background: "linear-gradient(90deg,var(--gold-400),var(--gold-600))" }} />
                     <form onSubmit={submit} style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-<input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }} />
+<input type="text" name="company_url_2" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }} />
                       <div>
                         <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-2xl)", color: "var(--navy-900)" }}>Where should we reach you?</div>
                         <div style={{ fontFamily: "var(--font-body)", fontSize: 13.5, color: "var(--ink-500)", marginTop: 4 }}>No obligation — an advisor calls to confirm scope, no payment needed to submit.</div>

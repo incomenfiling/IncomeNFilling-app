@@ -16,7 +16,7 @@ export default function Page() {
       <H>Scope of services</H>
       <P>We provide tax, compliance, registration, accounting and related services as a professional firm. The scope, documents needed and timeline for each job are set out in a written quotation or message before we start. Work outside that scope is quoted separately.</P>
       <H>Fees and payment</H>
-      <P>Our fee is fixed in writing before we start. Government fees, stamp duty, courier and similar third-party charges are separate and are paid at actual cost unless the quotation says otherwise. GST at 18% is added where it applies. Payment is made in advance unless we agree otherwise in writing. We do not start work until payment is received.</P>
+      <P>Our fee is fixed in writing before we start. Government fees, stamp duty, courier and similar third-party charges are separate and are paid at actual cost unless the quotation says otherwise. GST is added where it applies. Payment is made in advance unless we agree otherwise in writing. We do not start work until payment is received.</P>
       <H>What we need from you</H>
       <P>You must give complete, accurate and timely information and documents, and you are responsible for their correctness. Delays, penalties or interest caused by late, incomplete or wrong information are your responsibility. Where a plan has a data cut-off date, we cannot promise filing before the due date if data arrives after it.</P>
       <H>No guarantee of outcome</H>
@@ -26,7 +26,7 @@ export default function Page() {
       <H>Confidentiality</H>
       <P>We keep your information and documents confidential and use them only for your work, except where the law requires us to disclose them.</P>
       <H>Our liability</H>
-      <P>We are not liable for delays or outcomes caused by incomplete, inaccurate or late information from you, by changes in law, or by the action or delay of any government department, portal or third party. Our total liability for any claim is limited to the fee you paid us for the service concerned.</P>
+      <P>We are not liable for delays or outcomes caused by incomplete, inaccurate or late information from you, by changes in law, or by the action or delay of any government department, portal or third party. To the extent the law allows, our total liability for any claim is limited to the fee you paid us for the service concerned.</P>
       <H>Website use</H>
       <P>Information on this website is general and is not advice for your particular case. Please speak to us before you act on it. We may change the website or these terms at any time.</P>
       <H>Governing law</H>
