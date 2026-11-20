@@ -6,6 +6,7 @@ import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { Button } from "@/components/ui/Button";
+import { WHATSAPP_URL, BOOKING_URL } from "@/data/content";
 import { PricingBlock } from "@/components/services/PricingBlock";
 
 const H2 = { fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-2xl)", color: "var(--navy-900)", margin: "40px 0 16px" };
@@ -44,7 +45,7 @@ export function ServicePageView({ data }) {
             </span>
           ))}
         </nav>
-        <div style={{ display: "grid", gridTemplateColumns: bp.ltDesktop ? "1fr" : "1.5fr 1fr", gap: 40, alignItems: "start" }}>
+        <div style={{ display: "grid", gridTemplateColumns: bp.ltDesktop ? "1fr" : "1fr 280px", gap: 40, alignItems: "start" }}>
           <article>
             <h1 style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-4xl)", color: "var(--navy-900)", margin: "0 0 16px" }}>{data.h1 || data.name}</h1>
             <p style={{ ...P, maxWidth: 640 }}>{data.intro}</p>
@@ -118,15 +119,15 @@ export function ServicePageView({ data }) {
               </>
             )}
           </article>
-          <aside style={{ position: bp.ltDesktop ? "static" : "sticky", top: 24, background: "var(--navy-900)", borderRadius: "var(--radius-xl)", padding: bp.mobile ? 24 : 32, color: "var(--white)" }}>
-            <div style={{ fontFamily: "var(--font-mono)", fontSize: 12, letterSpacing: "var(--tracking-widest)", textTransform: "uppercase", color: "var(--gold-400)", marginBottom: 10 }}>Get started</div>
-            <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-xl)", marginBottom: 14 }}>Talk to an advisor about {data.name}</div>
-            <p style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-sm)", color: "var(--navy-300)", lineHeight: "var(--leading-sm)", marginBottom: 24 }}>First consultation. Tell us what you need and we will scope it with you.</p>
-            <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-              <Button variant="primary" fullWidth onClick={() => router.push("/contact")}>Request a Consultation</Button>
-              <Button variant="secondary" fullWidth onClick={() => router.push("/chat")}>Chat With an Advisor</Button>
-            </div>
-          </aside>
+          {!bp.mobile && (
+            <aside style={{ position: bp.ltDesktop ? "static" : "sticky", top: 24, background: "var(--navy-900)", borderRadius: "var(--radius-xl)", padding: 20, color: "var(--white)" }}>
+              <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-lg)", marginBottom: 12 }}>Talk to an advisor</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" style={{ background: "var(--gold-500)", color: "var(--navy-900)", fontWeight: 700, fontSize: 14, textAlign: "center", padding: "10px 16px", borderRadius: 999, textDecoration: "none" }}>Book a call</a>
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" style={{ border: "1px solid var(--navy-300)", color: "var(--white)", fontWeight: 600, fontSize: 14, textAlign: "center", padding: "10px 16px", borderRadius: 999, textDecoration: "none" }}>WhatsApp us</a>
+              </div>
+            </aside>
+          )}
         </div>
       </section>
       <Footer />
