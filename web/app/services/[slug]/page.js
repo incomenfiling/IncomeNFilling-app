@@ -7,6 +7,8 @@ import { SERVICE_PAGES, SERVICE_BY_SLUG } from "@/data/servicePages";
 import { ServicePageView } from "@/components/services/ServicePageView";
 import { SITE_URL, ORG_ID, jsonLd } from "@/lib/site";
 
+const clip = (t, n = 158) => (t.length <= n ? t : t.slice(0, n).replace(/\s+\S*$/, "").replace(/[,;:]$/, "") + ".");
+
 export const dynamicParams = false;
 
 const MODULES = HUB_CATEGORIES.map((m) => ({ ...m, slug: MODULE_SLUGS[m.title] }));
@@ -72,9 +74,9 @@ export async function generateMetadata({ params }) {
   if (!d) return {};
   return {
     title: { absolute: d.metaTitle },
-    description: d.metaDescription,
+    description: clip(d.metaDescription),
     alternates: { canonical: d.path },
-    openGraph: { url: d.path, title: d.metaTitle, description: d.metaDescription, images: [{ url: `/og/${slug}.png`, width: 1200, height: 630, alt: d.name }] },
+    openGraph: { url: d.path, title: d.metaTitle, description: clip(d.metaDescription), images: [{ url: `/og/${slug}.png`, width: 1200, height: 630, alt: d.name }] },
     twitter: { card: "summary_large_image", images: [`/og/${slug}.png`] },
   };
 }

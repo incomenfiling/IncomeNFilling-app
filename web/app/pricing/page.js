@@ -4,6 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { WHATSAPP_URL, BOOKING_URL } from "@/data/content";
 import { PRICE_LIST } from "@/data/pricing";
+import { PriceDetails } from "@/components/pricing/PriceDetails";
 
 export const metadata = {
   title: { absolute: "GST Service Prices in Kolkata | Income N Filing" },
@@ -63,8 +64,9 @@ export default function PricingPage() {
                 );
               })}
             </div>
+            <PriceDetails name={s.name} />
             {s.note && <p style={{ ...T, fontSize: 13, marginTop: 12 }}>{s.note}</p>}
-            {s.href && <p style={{ ...T, marginTop: 12 }}><Link href={s.href} style={{ color: "var(--navy-800)", fontWeight: 600 }}>See all inclusions and terms for {s.name} →</Link></p>}
+            {s.href && <p style={{ ...T, marginTop: 12 }}><Link href={s.href} style={{ color: "var(--navy-800)", fontWeight: 600 }}>Open the full {s.name} page →</Link></p>}
           </section>
         ))}
         <div style={{ background: "var(--gold-050)", border: "1px solid var(--gold-200)", borderRadius: "var(--radius-lg)", padding: 18 }}>

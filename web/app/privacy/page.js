@@ -2,7 +2,7 @@ import { LegalShell, H, P, ConsentBox } from "@/components/legal/LegalShell";
 
 export const metadata = {
   title: "Privacy Policy",
-  description: "How Income N Filing collects, uses and protects the information you share with us.",
+  description: "How Income N Filing collects, uses and protects the information you share with us through our website, forms, calls and WhatsApp, and how you can contact us.",
   alternates: { canonical: "/privacy" },
   openGraph: { images: [{ url: "/og/default.png", width: 1200, height: 630 }], url: "/privacy", title: "Privacy Policy", description: "How Income N Filing collects, uses and protects the information you share with us." },
 };

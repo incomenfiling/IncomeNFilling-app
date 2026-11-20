@@ -6,6 +6,7 @@ export const POSTS = [
 {
   slug: "gst-rule-14a-simplified-registration-explained",
   title: "GST Rule 14A: 3-Day Simplified Registration Explained",
+    metaTitle: "GST Rule 14A: 3-Day Registration Explained | Income N Filing",
   description: "Rule 14A lets small taxpayers get GST registration within three working days after Aadhaar authentication. Who qualifies, who should not opt in, and what to keep ready.",
   date: "2026-11-20",
   updated: "2026-11-20",
@@ -91,6 +92,7 @@ export const POSTS = [
 {
   slug: "missed-itr-deadline-belated-return-31-december-2026",
   title: "Missed the ITR Deadline? File a Belated Return by 31 Dec 2026",
+    metaTitle: "Missed ITR Deadline? File a Belated Return | Income N Filing",
   description: "Missed the due date for AY 2026-27? You can still file a belated return until 31 December 2026. What it costs, what you lose, and how to file in Kolkata.",
   date: "2026-11-18",
   updated: "2026-11-18",

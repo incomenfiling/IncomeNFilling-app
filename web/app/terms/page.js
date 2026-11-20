@@ -2,7 +2,7 @@ import { LegalShell, H, P, ConsentBox } from "@/components/legal/LegalShell";
 
 export const metadata = {
   title: "Terms & Conditions",
-  description: "Terms that govern use of the Income N Filing website and services.",
+  description: "Terms that govern use of the Income N Filing website and services: fees, documents you share, working hours, our responsibilities and yours.",
   alternates: { canonical: "/terms" },
   openGraph: { images: [{ url: "/og/default.png", width: 1200, height: 630 }], url: "/terms", title: "Terms & Conditions", description: "Terms that govern use of the Income N Filing website and services." },
 };
