@@ -68,6 +68,7 @@ export const PRICING = {
       "GST at 18% is added to every fee, and the totals on this page include it.",
       "Rule 10A bank updation must be completed after registration is granted, so the GSTIN is not cancelled.",
       "Timeline: we file your application within 24 to 48 working hours after we receive complete documents. The GST department then processes it; that time is outside our control.",
+      "Our working hours are 10:00 to 19:00 IST, Monday to Saturday.",
       "These are the rates on the day we send this quotation. If a rate changes before we start work, we will update you.",
     ],
   },
