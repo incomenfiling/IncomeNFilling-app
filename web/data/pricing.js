@@ -77,8 +77,8 @@ export const PRICING = {
 // Full price list shown on /pricing. Source: the 14 branded quotations. Fee is before 18% GST; total includes it.
 export const PRICE_LIST = [
   { name: "GST Registration", href: "/services/gst-registration", per: "one application", rows: [
-    ["Essential (individual / proprietor)", "₹999", "₹1,179"], ["Launchpad Complete (individual / proprietor)", "₹2,499", "₹2,949"],
-    ["Corporate Essential (partnership, LLP, Pvt Ltd)", "₹1,499", "₹1,769"], ["Corporate Launchpad Complete", "₹3,499", "₹4,129"] ] },
+    ["Essential (individual / proprietor)", "₹999", "₹1,179"], ["Launchpad Complete (individual / proprietor) (recommended)", "₹2,499", "₹2,949"],
+    ["Corporate Essential (partnership, LLP, Pvt Ltd)", "₹1,499", "₹1,769"], ["Corporate Launchpad Complete (recommended)", "₹3,499", "₹4,129"] ] },
   { name: "GST Monthly Filing", per: "per month, up to 300 documents", rows: [
     ["A · Ready Excel", "₹1,200", "₹1,416"], ["B · Reconciliation (recommended)", "₹5,000", "₹5,900"], ["C · Tally and Control", "₹9,999", "₹11,799"] ] },
   { name: "GST NIL Return Filing", per: "pay in advance for the lowest rate", rows: [
@@ -119,20 +119,40 @@ export const PRICE_LIST = [
     ["A · Starter (up to 120 entries, 1 bank account)", "₹7,999", "₹9,439"], ["B · Business (up to 300 entries, 3 bank accounts)", "₹13,999", "₹16,519"],
     ["C · Growth (up to 600 entries, 5 bank accounts, recommended)", "₹24,999", "₹29,499"], ["D · Large (up to 1,000 entries, 8 bank accounts)", "₹37,999", "₹44,839"] ],
     note: "One-time setup fee (before GST): A ₹5,000, B ₹10,000, C ₹18,000, D ₹25,000. Above 1,000 entries: custom plan after a short call." },
-  { group: "Company", name: "Private Limited Company Registration", href: "/services/private-limited-company-registration", per: "one incorporation, our fee before digital signatures and government charges", rows: [
+  { group: "Incorporation", name: "Private Limited Company Registration", href: "/services/private-limited-company-registration", per: "one incorporation, our fee before digital signatures and government charges", rows: [
     ["Our professional fee (2 directors)", "₹9,000", "₹10,620"], ["Digital signatures for 2 directors and 1 witness (optional, 2 years)", "₹4,800", "Final price"] ],
     note: "Government charges (stamp duty, MCA and name fees) are paid at actuals, with receipt. Total with our fee and digital signatures: ₹15,420, before government charges." },
-  { group: "Company", name: "Private Limited ROC Annual Compliance", per: "per year, ROC filings only", rows: [
+  { group: "ROC", name: "Private Limited ROC Annual Compliance", per: "per year, ROC filings only", rows: [
     ["Annual plan: every regular ROC filing", "₹11,999", "₹14,159"] ],
     note: "Same fee every year. Event filings (director change, share allotment and more) are priced separately. Government fees at actuals." },
-  { group: "Company", name: "LLP Registration", href: "/services/llp-registration", per: "one incorporation, our fee before digital signatures and government charges", rows: [
+  { group: "Incorporation", name: "LLP Registration", href: "/services/llp-registration", per: "one incorporation, our fee before digital signatures and government charges", rows: [
     ["Our professional fee (2 designated partners)", "₹7,999", "₹9,439"], ["Digital signatures for 2 designated partners (optional, 2 years)", "₹3,200", "Final price"] ],
     note: "Government charges are paid at actuals, with receipt. Total with our fee and digital signatures: ₹12,639, before government charges." },
-  { group: "Company", name: "LLP ROC Annual Compliance", per: "per year, ROC filings only", rows: [
+  { group: "ROC", name: "LLP ROC Annual Compliance", per: "per year, ROC filings only", rows: [
     ["Annual plan: Form 11, Form 8 and DIR-3 KYC", "₹5,999", "₹7,079"] ],
     note: "Same fee every year. Event filings are priced separately. Government fees at actuals." },
-  { group: "Company", name: "Partnership Firm Services", per: "per service, deed and filing", rows: [
+  { group: "Incorporation", name: "Partnership Firm Services", per: "per service, deed and filing", rows: [
     ["Partnership firm registration", "₹5,999", "₹7,079"], ["Adding a partner", "₹2,500", "₹2,950"],
     ["Partner leaving (retirement or removal)", "₹2,500", "₹2,950"], ["Dissolution of the firm", "₹5,999", "₹7,079"] ],
     note: "Stamp paper, notary or registration of the deed and the Registrar of Firms fee are extra, at actuals, with receipt." },
+  { group: "Income Tax", name: "ITR-1 Salaried", per: "one return", rows: [
+    ["Starter Salary", "₹799", "₹943", "AIS, TIS and 26AS cross-check, Form 16 check, filing and e-verification. For one Form 16, pension, 1 house property, bank interest (income up to ₹50 lakh)"],
+    ["Tax Optimization Pack (recommended)", "₹1,199", "₹1,415", "Starter, plus Old vs New Regime analysis and deductions review. For many deductions or high tax"],
+    ["Bank Summary Pack", "₹1,499", "₹1,769", "Tax Optimization, plus review of up to 3 bank accounts. For several bank accounts or high-value items"] ] },
+  { group: "Income Tax", name: "ITR-2 Capital Gains and Investors", per: "one return", rows: [
+    ["Standard Capital Gains", "₹1,499", "₹1,769", "Capital gains schedule, dividend matching, 1 broker report. For more than 1 house property, mutual funds, delivery trades (under 25)"],
+    ["Active Investor and Crypto (VDA)", "₹2,499", "₹2,949", "Up to 2 brokers (150 trades), crypto tax at 30%, Schedule FA. For active investors, ESOP holders, crypto, unlisted directors"],
+    ["Heavy Portfolio", "₹3,499", "₹4,129", "3 or more broker reports, set-off and carry-forward check. For high net worth, many asset types"] ] },
+  { group: "Income Tax", name: "ITR-3 Business and Traders", per: "one return", rows: [
+    ["Business: Ready Books", "₹2,499", "₹2,949", "Filing from finalised P&L and balance sheet, depreciation schedule. For professionals and proprietors with finalised books"],
+    ["Derivative Trader (F&O, intraday)", "₹3,499", "₹4,129", "Turnover calculation, speculative mapping, loss register. For F&O and intraday traders"],
+    ["Full Book Rebuild and Filing Pack", "₹4,999", "₹5,899", "Rebuild from bank statement (300 lines), P&L, balance sheet, ITR-3. For no books, only bank statements"] ] },
+  { group: "Income Tax", name: "ITR-4 Presumptive Income", per: "one return", rows: [
+    ["Standard Sugam", "₹999", "₹1,179", "Presumptive income declaration, 4 financial indicators. For Section 44AD business or 44ADA professionals"],
+    ["Sugam + Bank Rebuild", "₹1,999", "₹2,359", "12-month bank turnover check (300 lines), personal and business split. For unsure of digital vs cash turnover"] ],
+    note: "ITR-4 is for turnover up to ₹2 crore, or ₹3 crore if cash receipts are 5% or less. Declaring a lower profit may need ITR-3 and a tax audit." },
+  { group: "Income Tax", name: "ITR-5 Firms and LLPs", per: "one return", rows: [
+    ["Standard Firm Filing", "₹4,999", "₹5,899", "Filing from ready statements, partner salary check (Section 40(b)). For partnership firms and LLPs with ready books"],
+    ["Full Firm Rebuild and Filing Pack", "₹7,499", "₹8,849", "Balance sheet rebuild, partner capital reconciliation. For firms and LLPs with no accounts"] ],
+    note: "Add-on: financial statements made from your raw bank statements, for tax filing, a bank loan or a visa: ₹2,500 + GST = ₹2,950." },
 ];

@@ -935,4 +935,47 @@ export const PRICE_DETAILS = {
       "A partnership firm has no limited liability. Every partner is personally liable for the firm. An LLP or a private limited company gives limited liability: ask us about those.",
     ],
   },
+
+  "Income Tax Return Filing": {
+    solve: solve(
+      ["Not sure which ITR form or package is yours?", "Pick by your income. If your income needs a different form, we move you to the matching package."],
+      ["Worried a missed income will bring a notice?", "Every package starts with a cross-check of your AIS, TIS and 26AS, so income the department already sees is not left out."],
+      ["Old or new tax regime: which saves more?", "The Tax Optimization Pack compares both regimes and reviews your deductions before we file."],
+      ["Capital gains, F&O, crypto or no books at all?", "Investor and trader packages cover the schedules. The rebuild packs make your accounts from bank statements."],
+    ),
+    extras: [
+      { h: "Which package is yours?", table: { head: ["If this is you", "Start with", "You pay (incl. GST)"], rows: [
+        ["Salary or pension, one Form 16, up to ₹50 lakh income", "ITR-1 Starter Salary", "₹943"],
+        ["Salary plus shares, mutual funds or a second house", "ITR-2 Standard Capital Gains", "₹1,769"],
+        ["Own business or profession, books are ready", "ITR-3 Business: Ready Books", "₹2,949"],
+        ["Small business or professional on presumptive income", "ITR-4 Standard Sugam", "₹1,179"],
+        ["Partnership firm or LLP, accounts are ready", "ITR-5 Standard Firm Filing", "₹5,899"],
+      ] }, p: ["Not sure? Send your last year's return and Form 16. We tell you the package before you pay."] },
+      { h: "How it works", items: [
+        "You send: the documents below, on WhatsApp or email.",
+        "We prepare: we cross-check AIS, TIS and 26AS and send you a short summary with your tax or refund figure.",
+        "You approve: we file only after you say yes to the figures.",
+        "We file and e-verify, and send you the acknowledgement and the filed return.",
+      ] },
+    ],
+    exclude: [
+      "Tax audit under section 44AB and other audit work.",
+      "Replies to income tax notices, appeals and assessments (see Income Tax Notice Handling).",
+      "Writing your books beyond the lines in the rebuild packs (300 bank lines).",
+      "GST returns, TDS returns and payroll.",
+      "Tax, interest and late fees. You pay these to the government.",
+    ],
+    need: [
+      "PAN, Aadhaar, mobile number linked to Aadhaar, and your income tax portal login.",
+      "Form 16, salary slips or pension certificate, if you have a salary.",
+      "Bank statements for the full year, and interest certificates.",
+      "Broker, mutual fund and crypto statements for investors and traders.",
+      "Books, or bank statements for the rebuild packs. Rent receipts, loan and insurance proofs for deductions.",
+    ],
+    terms: [
+      ...COMMON_TERMS,
+      "If your income needs a different form from the one you chose, we move you to the matching package.",
+      "You must give us complete income and bank details before the due date. Late fees and interest from late data are yours to pay.",
+    ],
+  },
 };

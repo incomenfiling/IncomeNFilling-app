@@ -13,10 +13,12 @@ export const metadata = {
 };
 
 const CARDS = [
-  { key: "GST", href: "/pricing/gst", from: "From ₹499", note: "+ 18% GST", text: "Registration, monthly filing, NIL returns, LUT, refund, amendment, cancellation and more." },
-  { key: "DSC", href: "/pricing/dsc", from: "From ₹1,590", note: "final price", text: "Class 3 certificate with a Hype USB token. Assisted and Basic service." },
-  { key: "Company", href: "/pricing/company", from: "From ₹2,500", note: "+ 18% GST", text: "Private limited, LLP and partnership firm: registration and yearly ROC compliance." },
-  { key: "Accounting", href: "/pricing/accounting", from: "From ₹7,999", note: "a month + 18% GST", text: "Books in Tally, GST and TDS filing, and cash-flow reports." },
+  { slug: "gst", key: "GST", from: "From ₹499", note: "+ 18% GST", text: "Registration, monthly filing, NIL returns, LUT, refund, amendment, cancellation and more." },
+  { slug: "income-tax", key: "Income Tax", from: "From ₹799", note: "+ 18% GST", text: "ITR-1 to ITR-5 packages for salaried people, investors, traders, professionals and firms." },
+  { slug: "dsc", key: "DSC", from: "From ₹1,590", note: "final price", text: "Class 3 certificate with a Hype USB token. Assisted and Basic service." },
+  { slug: "incorporation", key: "Incorporation", from: "From ₹2,500", note: "+ 18% GST", text: "Private limited company, LLP and partnership firm: registration and changes." },
+  { slug: "roc", key: "ROC", from: "From ₹5,999", note: "a year + 18% GST", text: "Yearly ROC compliance for private limited companies and LLPs." },
+  { slug: "accounting", key: "Accounting", from: "From ₹7,999", note: "a month + 18% GST", text: "Books in Tally, GST and TDS filing, and cash-flow reports." },
 ];
 const T = { fontFamily: "var(--font-body)", fontSize: "var(--text-sm)", lineHeight: 1.6, color: "var(--ink-500)", margin: 0 };
 
@@ -37,14 +39,19 @@ export default function PricingPage() {
         </div>
       </section>
       <main style={{ maxWidth: 1000, margin: "0 auto", padding: "32px 20px 96px" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 16 }}>
           {CARDS.map((c) => (
-            <Link key={c.key} href={c.href} style={{ display: "flex", flexDirection: "column", gap: 8, background: "var(--white)", border: "1px solid var(--ink-100)", borderTop: "4px solid var(--gold-500)", borderRadius: "var(--radius-xl)", padding: 22, textDecoration: "none" }}>
-              <h2 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 22, color: "var(--navy-900)", margin: 0 }}>{c.key === "Company" ? "Company and LLP" : c.key} prices</h2>
-              <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 28, color: "var(--navy-900)" }}>{c.from} <span style={{ ...T, fontSize: 13 }}>{c.note}</span></div>
-              <p style={T}>{c.text}</p>
-              <span style={{ ...T, fontSize: 13 }}>{count(c.key)} service{count(c.key) > 1 ? "s" : ""} with full inclusions</span>
-              <span style={{ marginTop: "auto", color: "var(--navy-800)", fontWeight: 700, fontSize: 14 }}>See {c.key} prices →</span>
+            <Link key={c.slug} href={`/pricing/${c.slug}`} style={{ display: "flex", flexDirection: "column", background: "var(--white)", border: "1px solid var(--ink-100)", borderRadius: "var(--radius-xl)", overflow: "hidden", textDecoration: "none" }}>
+              <div style={{ background: "var(--navy-900)", padding: "14px 20px" }}>
+                <h2 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 20, color: "var(--white)", margin: 0 }}>{c.key}</h2>
+              </div>
+              <div style={{ padding: 20, display: "flex", flexDirection: "column", gap: 8, flex: 1 }}>
+                <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 28, color: "var(--navy-900)", lineHeight: 1.2 }}>{c.from}</div>
+                <div style={{ ...T, fontSize: 13, fontWeight: 600 }}>{c.note}</div>
+                <p style={T}>{c.text}</p>
+                <span style={{ ...T, fontSize: 13 }}>{count(c.key)} service{count(c.key) > 1 ? "s" : ""} with full inclusions</span>
+                <span style={{ marginTop: "auto", alignSelf: "flex-start", background: "var(--gold-500)", color: "var(--navy-900)", fontWeight: 700, fontSize: 14, padding: "9px 18px", borderRadius: 999 }}>See {c.key} prices</span>
+              </div>
             </Link>
           ))}
         </div>

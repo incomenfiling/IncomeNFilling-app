@@ -15,6 +15,7 @@ const nextConfig = {
   async redirects() {
     return [
       { source: "/legal", destination: "/privacy", permanent: true },
+      { source: "/pricing/company", destination: "/pricing/incorporation", permanent: true },
       {
         source: "/:path*",
         has: [{ type: "host", value: "www.incomenfiling.com" }],
