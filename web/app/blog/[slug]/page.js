@@ -74,6 +74,16 @@ export default async function PostPage({ params }) {
             <Link href={`/services/${svc.slug}`} style={{ fontFamily: "var(--font-body)", color: "var(--gold-600)" }}>See how we handle {svc.name} →</Link>
           </div>
         )}
+        {POSTS.some((o) => o.slug !== p.slug) && (
+          <nav aria-label="More guides" style={{ marginTop: 32 }}>
+            <div style={{ fontFamily: "var(--font-display)", fontWeight: 600, color: "var(--navy-900)", marginBottom: 8 }}>More guides</div>
+            <ul style={{ margin: 0, paddingLeft: 22 }}>
+              {POSTS.filter((o) => o.slug !== p.slug).slice(0, 3).map((o) => (
+                <li key={o.slug} style={{ marginBottom: 6 }}><Link href={`/blog/${o.slug}`} style={{ fontFamily: "var(--font-body)", color: "var(--navy-800)" }}>{o.title}</Link></li>
+              ))}
+            </ul>
+          </nav>
+        )}
         <p style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--ink-400)", marginTop: 32 }}>General information, not legal or tax advice for your specific case. Rules and due dates change; confirm current details before acting.</p>
       </article>
       <Footer />

@@ -2,6 +2,7 @@ import { Space_Grotesk, IBM_Plex_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { siteGraph, jsonLd } from "@/lib/site";
 import Analytics from "@/components/shared/Analytics";
+import { MobileActionBar } from "@/components/layout/MobileActionBar";
 
 const display = Space_Grotesk({
   variable: "--font-display-face",
@@ -39,14 +40,14 @@ export const metadata = {
     url: "/",
     title: "ITR and GST Filing in Kolkata | Income N Filing",
     description:
-      "ITR and GST filing in Kolkata. Every file made by one, checked by another. If our mistake costs you a penalty, we pay it.",
+      "ITR and GST filing in Kolkata. Every file made by one, checked by another, with the fee fixed in writing.",
     images: [{ url: "/og/default.png", width: 1200, height: 630, alt: "Income N Filing: ITR and GST filing in Kolkata" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Income N Filing — GST, Income Tax & Compliance",
     description:
-      "ITR and GST filing in Kolkata. Every file made by one, checked by another. If our mistake costs you a penalty, we pay it.",
+      "ITR and GST filing in Kolkata. Every file made by one, checked by another, with the fee fixed in writing.",
     images: ["/og/default.png"],
   },
 };
@@ -57,6 +58,7 @@ export default function RootLayout({ children }) {
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(siteGraph()) }} />
         <main>{children}</main>
+        <MobileActionBar />
         <Analytics />
       </body>
     </html>

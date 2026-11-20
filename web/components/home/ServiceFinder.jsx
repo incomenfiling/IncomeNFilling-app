@@ -83,7 +83,7 @@ export function ServiceFinder({ onSelect }) {
         <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "var(--ink-500)", textAlign: "center", padding: "18px 0" }}>No matches — try a different term.</div>
       )}
       <div onClick={onSelect} style={{ textAlign: "center", fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--ink-300)", cursor: "pointer" }}>
-        or explore all 94 services →
+        or explore all 71 services →
       </div>
     </div>
   );

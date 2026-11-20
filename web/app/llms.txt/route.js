@@ -19,7 +19,7 @@ export function GET() {
 - Hours: Monday to Saturday, 10:00 to 19:00 IST
 
 ## Services
-- [All services](${SITE}/services): full list of 94 services across GST, income tax, incorporation and compliance
+- [All services](${SITE}/services): full list of 71 services across GST, income tax, incorporation and compliance
 - [ITR Filing](${SITE}/services/itr-filing): income tax return filing for individuals, professionals and businesses
 ${services}
 

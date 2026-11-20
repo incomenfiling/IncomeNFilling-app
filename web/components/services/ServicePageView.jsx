@@ -93,6 +93,17 @@ export function ServicePageView({ data }) {
               </>
             )}
 
+            {data.guides && data.guides.length > 0 && (
+              <>
+                <h2 style={H2}>Guides from our blog</h2>
+                <ul style={{ margin: 0, paddingLeft: 22 }}>
+                  {data.guides.map((g) => (
+                    <li key={g.href} style={LI}><Link href={g.href} style={{ color: "var(--navy-800)", fontWeight: 600 }}>{g.name}</Link></li>
+                  ))}
+                </ul>
+              </>
+            )}
+
             {data.related && data.related.length > 0 && (
               <>
                 <h2 style={H2}>Related services</h2>

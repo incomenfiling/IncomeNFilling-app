@@ -53,7 +53,7 @@ export function Hero() {
             </div>
             <div>
               <div style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-3xl)", color: "var(--navy-900)" }}>
-                <CountUp to={94} />
+                <CountUp to={71} />
               </div>
               <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--ink-500)" }}>Services live</div>
             </div>
@@ -65,14 +65,14 @@ export function Hero() {
               <div style={{ position: "absolute", left: "50%", top: "50%", transform: "translate(-50%,-50%)", width: "92%", aspectRatio: "1", borderRadius: "50%", border: "2px dashed var(--gold-300,#f5cf82)", animation: "spin-slow 46s linear infinite", opacity: 0.65 }} />
               <div style={{ position: "absolute", left: "50%", top: "50%", transform: "translate(-50%,-50%)", width: "66%", aspectRatio: "1", borderRadius: "50%", border: "1.5px solid rgba(43,108,214,.2)", animation: "spin-slow 32s linear infinite reverse" }} />
               <div style={{ position: "absolute", left: "-8%", bottom: 0, width: "56%", height: "96%", zIndex: 2 }}>
-                <Image src="/images/hero-advisor.webp" alt="Illustration of an Income N Filing tax advisor" fill sizes="60vw" style={{ objectFit: "contain", objectPosition: "bottom center" }} />
+                <Image src="/images/hero-advisor.webp" alt="Illustration of an Income N Filing tax advisor" fill priority fetchPriority="high" sizes="60vw" style={{ objectFit: "contain", objectPosition: "bottom center" }} />
               </div>
               <div style={{ position: "absolute", right: 0, top: "7%", zIndex: 4, width: "74%", minWidth: 248 }}>
                 <ServiceFinder onSelect={() => go("services")} />
               </div>
               <div style={{ position: "absolute", top: "1%", right: "5%", zIndex: 5, display: "inline-flex", alignItems: "center", gap: 6, background: "var(--white)", borderRadius: "var(--radius-pill)", padding: "5px 12px", boxShadow: "var(--shadow-md)" }}>
                 <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--status-positive)", animation: "pulse-dot 2s infinite" }} />
-                <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--navy-800)" }}>94 services live</span>
+                <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--navy-800)" }}>71 services live</span>
               </div>
               {[
                 { icon: "GST", left: "30%", top: "-2%" },
@@ -100,14 +100,14 @@ export function Hero() {
               <div style={{ position: "absolute", right: "-4%", top: "50%", transform: "translateY(-50%)", width: 500, height: 500, borderRadius: "50%", border: "2px dashed var(--gold-300,#f5cf82)", animation: "spin-slow 46s linear infinite", opacity: 0.7 }} />
               <div style={{ position: "absolute", right: "6%", top: "50%", transform: "translateY(-50%)", width: 360, height: 360, borderRadius: "50%", border: "1.5px solid rgba(43,108,214,.2)", animation: "spin-slow 32s linear infinite reverse" }} />
               <div style={{ position: "absolute", left: "-4%", bottom: 0, width: "52%", height: "98%", zIndex: 2 }}>
-                <Image src="/images/hero-advisor.webp" alt="Illustration of an Income N Filing tax advisor" fill sizes="400px" style={{ objectFit: "contain", objectPosition: "bottom center" }} />
+                <Image src="/images/hero-advisor.webp" alt="Illustration of an Income N Filing tax advisor" fill priority fetchPriority="high" sizes="400px" style={{ objectFit: "contain", objectPosition: "bottom center" }} />
               </div>
               <div style={{ position: "absolute", right: 0, top: "8%", zIndex: 4, width: "64%", minWidth: 290 }}>
                 <ServiceFinder onSelect={() => go("services")} />
               </div>
               <div style={{ position: "absolute", top: "2%", right: "6%", zIndex: 5, display: "inline-flex", alignItems: "center", gap: 6, background: "var(--white)", borderRadius: "var(--radius-pill)", padding: "6px 14px", boxShadow: "var(--shadow-md)" }}>
                 <span style={{ width: 7, height: 7, borderRadius: "50%", background: "var(--status-positive)", animation: "pulse-dot 2s infinite" }} />
-                <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--navy-800)" }}>94 services live</span>
+                <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--navy-800)" }}>71 services live</span>
               </div>
               {[
                 { icon: "GST", left: "34%", top: "-1%" },

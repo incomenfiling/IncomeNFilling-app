@@ -16,6 +16,7 @@ export default function Analytics() {
       if (!a) return;
       const href = a.getAttribute("href") || "";
       if (href.startsWith("tel:")) track("call_click", { link_url: href, page_path: location.pathname });
+      else if (href.includes("calendly.com/")) track("booking_click", { link_url: href, page_path: location.pathname });
       else if (href.includes("wa.me/") || href.includes("api.whatsapp.com"))
         track("whatsapp_click", { link_url: href, page_path: location.pathname });
     };
@@ -44,7 +45,7 @@ export default function Analytics() {
         var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
         Tawk_API.customStyle = { visibility: {
           desktop: { position: "bl", xOffset: 20, yOffset: 20 },
-          mobile: { position: "bl", xOffset: 8, yOffset: 8 }
+          mobile: { position: "bl", xOffset: 8, yOffset: 72 }
         } };
         (function(){
           var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];

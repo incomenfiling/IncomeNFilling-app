@@ -6,6 +6,7 @@ import { WHATSAPP_URL } from "@/data/content";
 // Floating WhatsApp shortcut used on every page except Home.
 export function WhatsAppButton({ bottom }) {
   const bp = useBP();
+  if (bp.mobile) return null; // phones use the sticky action bar
   return (
     <a
       href={WHATSAPP_URL}

@@ -38,7 +38,7 @@ export default function HomePage() {
             <Eyebrow>Modules</Eyebrow>
             <h2 style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-3xl)", color: "var(--navy-900)", margin: "16px 0 0" }}>Service Categories</h2>
           </div>
-          <Button variant="ghost" onClick={goServices}>View all 94 services</Button>
+          <Button variant="ghost" onClick={goServices}>View all 71 services</Button>
         </div>
         <CategoryExplorer categories={HOME_CATEGORIES} onSelect={goServices} />
       </section>

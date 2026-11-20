@@ -76,7 +76,7 @@ export default function ServicesPage() {
                 onChange={(e) => setQ(e.target.value)}
                 onFocus={() => setFocus(true)}
                 onBlur={() => setFocus(false)}
-                placeholder="Search 94 services — try “GST refund” or “company registration”"
+                placeholder="Search 71 services — try “GST refund” or “company registration”"
                 style={{ flex: 1, minWidth: 0, border: "none", outline: "none", background: "none", fontFamily: "var(--font-body)", fontSize: "var(--text-base)", color: "var(--navy-900)" }}
               />
               {q && (
