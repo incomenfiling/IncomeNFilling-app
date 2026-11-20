@@ -111,4 +111,12 @@ export const PRICE_LIST = [
     ["A · Small (up to 50 challan entries)", "₹1,499", "₹1,769"], ["B · Regular (51 to 200 entries)", "₹2,999", "₹3,539"], ["C · High volume (201 to 500 entries)", "₹5,999", "₹7,079"] ] },
   { name: "GST Composition Scheme", per: "per year (four CMP-08 filings and one GSTR-4)", rows: [
     ["Composition Summary (you give a ready Excel)", "₹6,000", "₹7,080 (or ₹1,770 per quarter)"], ["Composition Bank-Led (you give bank statements)", "₹10,000", "₹11,800 (or ₹2,950 per quarter)"] ] },
+  { group: "DSC", name: "Digital Signature Certificate (DSC)", per: "final price: certificate, Hype USB token, key ring (new DSC) and our fee", final: true, rows: [
+    ["Assisted service (recommended): we handle the steps with you, from", "₹1,890", "Final price"],
+    ["Basic service: you complete the steps yourself, from", "₹1,590", "Final price"] ],
+    note: "Prices by certificate type and validity are in the details below. Already hold a Hype token? Deduct ₹390 from any Assisted price." },
+  { group: "Accounting", name: "Accounting and Cash-Flow Desk", href: "/services/monthly-bookkeeping", per: "per month in Tally, plus a one-time setup fee", rows: [
+    ["A · Starter (up to 120 entries, 1 bank account)", "₹7,999", "₹9,439"], ["B · Business (up to 300 entries, 3 bank accounts)", "₹13,999", "₹16,519"],
+    ["C · Growth (up to 600 entries, 5 bank accounts, recommended)", "₹24,999", "₹29,499"], ["D · Large (up to 1,000 entries, 8 bank accounts)", "₹37,999", "₹44,839"] ],
+    note: "One-time setup fee (before GST): A ₹5,000, B ₹10,000, C ₹18,000, D ₹25,000. Above 1,000 entries: custom plan after a short call." },
 ];

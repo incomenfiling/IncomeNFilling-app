@@ -108,13 +108,14 @@ export function PriceDetails({ name }) {
               </div>
             )}
             {e.p && e.p.map((p) => <p key={p} style={{ ...T, marginBottom: 6 }}>{p}</p>)}
+            {e.items && <ul style={{ margin: 0, paddingLeft: 18, display: "grid", gap: 6 }}>{e.items.map((t) => <li key={t} style={T}>{t}</li>)}</ul>}
           </div>
         ))}
         {d.need && <List title="What we need from you" items={d.need} mark="•" color="var(--navy-800)" />}
         <div style={{ background: "var(--gold-050)", border: "1px solid var(--gold-200)", borderRadius: "var(--radius-lg)", padding: 16 }}>
           <h4 style={H}>Terms</h4>
           <ul style={{ margin: 0, paddingLeft: 18, display: "grid", gap: 6 }}>
-            {[...d.terms, "Our working hours are 10:00 to 19:00 IST, Monday to Saturday.", "These are the rates on the day you read this page. If a rate changes before we start work, we will update you."].map((t) => <li key={t} style={T}>{t}</li>)}
+            {[...d.terms, "Our working hours are 10:00 to 19:00 IST, Monday to Saturday.", d.ratesLine || "These are the rates on the day you read this page. If a rate changes before we start work, we will update you."].map((t) => <li key={t} style={T}>{t}</li>)}
           </ul>
         </div>
       </div>

@@ -576,4 +576,124 @@ export const PRICE_DETAILS = {
       "If your bank statements are very large, we will tell you before we start work.",
     ],
   },
+
+  "Digital Signature Certificate (DSC)": {
+    solve: solve(
+      ["Token not detected?", "Fixed, free."],
+      ["Video KYC stuck?", "We guide you."],
+      ["Need it fast?", "About 30 minutes once documents are verified, in working hours."],
+      ["PDF signing trouble?", "We show you."],
+    ),
+    matrices: [{ plans: ["Assisted service", "Basic service"], recommended: 0, groups: [{ h: "", rows: [
+      ["Pentasign Class 3 certificate, Hype USB token and key ring (new DSC)", Y, Y],
+      ["Document check by us", Y, N],
+      ["Video KYC", "With our help", "You complete it"],
+      ["Installation", "With our help", "Self-installation"],
+      ["Delivery", "Kolkata same day*", "Courier from Kolkata, actual cost"],
+      ["Ready in", "About 30 minutes*", "24 to 48 hours"],
+      ["DSC support, full certificate life", "Free", "Free"],
+      ["Support response", "Same day", "1 to 2 days"],
+      ["PDF signing help", "Free", "Free"],
+      ["Late-night DSC service", "Extra", "Not available"],
+    ] }] }],
+    notes: ["* Same day if your documents are verified by 3 PM and our delivery partner is available. About 30 minutes counts once documents are verified and the certifying authority responds, within working hours."],
+    extras: [
+      { h: "Assisted service prices (final)", table: { head: ["Certificate type", "1 year", "2 years", "3 years"], rows: [
+        ["Signature (individual or organisation)", "₹1,890", "₹2,070", "₹2,660"],
+        ["Combo: signature and encryption (individual or organisation)", "₹2,900", "₹3,250", "₹4,430"],
+        ["DGFT signature", "₹3,130", "₹3,490", "₹4,670"],
+        ["Foreign individual, signature", "₹5,900", "₹7,030", "₹9,680"],
+        ["Foreign individual, combo", "₹10,090", "₹12,340", "₹17,650"],
+      ] }, p: ["Already hold a Hype token (for example, renewing)? Deduct ₹390 from any Assisted price. We do not sell tokens separately; a token comes only with a new certificate."] },
+      { h: "Basic service prices (final)", table: { head: ["Certificate type", "1 year", "2 years", "3 years"], rows: [
+        ["Signature (individual or organisation)", "₹1,590", "₹1,790", "₹2,390"],
+        ["Combo: signature and encryption", "₹2,590", "₹2,990", "₹4,190"],
+        ["DGFT signature", "₹2,890", "₹3,190", "₹4,390"],
+      ] }, p: ["Foreign individual certificates are available in the Assisted service only."] },
+      { h: "Optional services", table: { head: ["Service", "Price"], rows: [
+        ["Late-night DSC issuance (9 PM to 8 AM), Kolkata only", "₹1,000 extra"],
+        ["DSC technical support: driver, token, signing a PDF, portal problems", "Free for the full life of the certificate"],
+        ["Late-night technical support until 2 AM (MCA, GST, Income Tax, EPFO), per incident", "₹1,000"],
+      ] }, p: ["Technical support is by phone or screen share. Response is within 1 to 2 working days in Basic and the same working day in Assisted. Late-night services depend on our team's availability: confirm with us before your deadline, because we start only after we confirm. Problems unrelated to the DSC, such as your computer or internet, are ₹500 per issue."] },
+      { h: "Delivery", p: ["Kolkata: porter or courier, the same day if documents are verified by 3 PM and our delivery partner is available, otherwise the next working day. Other cities: courier from Kolkata. Or collect from our Kolkata office. Courier and porter charges are at actual cost. DSC work is done at our Kolkata office."] },
+      { h: "Documents to keep ready: Proprietorship", items: [
+        "With GST registration: applicant photo, PAN card and Aadhaar card; GST registration certificate.",
+        "Without GST registration: applicant photo, PAN card and Aadhaar card; MSME certificate or any proprietorship business proof; bank statement (latest, within 3 months)." ] },
+      { h: "Documents to keep ready: Partnership firm", items: [
+        "With GST registration: applicant photo, PAN card and Aadhaar card; GST registration certificate; partnership deed.",
+        "Without GST registration: applicant photo, PAN card and Aadhaar card; partnership deed; firm PAN card; firm bank statement (latest, within 3 months).",
+        "If the applicant is not a partner: an authority letter signed by any one partner named in the deed." ] },
+      { h: "Documents to keep ready: Company", items: [
+        "With GST registration: applicant photo, PAN card and Aadhaar card; GST registration certificate.",
+        "Without GST registration: applicant photo, PAN card and Aadhaar card; company PAN card; company bank statement (latest, within 3 months); incorporation certificate.",
+        "If the applicant is not a director: an authority letter signed by a director or the company secretary on the MCA site, with that person's PAN card." ] },
+      { h: "Documents to keep ready: AOP / BOI", items: [
+        "With GST registration: applicant photo, PAN card and Aadhaar card; GST registration certificate; memorandum copy with member list.",
+        "Without GST registration: applicant photo, PAN card and Aadhaar card; association PAN card; registration certificate; association bank statement (latest, within 3 months); memorandum copy with member list.",
+        "If the applicant is not a member: an authority letter signed by a member, with that member's PAN card." ] },
+      { h: "Documents to keep ready: NGO / Trust / Society", items: [
+        "With GST registration: applicant photo, PAN card and Aadhaar card; GST registration certificate; society bye-laws, trust deed or memorandum copy with member list.",
+        "Without GST registration: applicant photo, PAN card and Aadhaar card; trust or society PAN card; registration certificate; trust or society bank statement (latest, within 3 months); bye-laws, trust deed or memorandum copy with member list.",
+        "If the applicant is not a member or trustee: an authority letter signed by a member or trustee, with that person's PAN card." ] },
+      { h: "Documents to keep ready: other cases", items: [
+        "Government DSC (authorised signatory): applicant photo, PAN card, government ID card, department PAN card copy. Video: speak the script shown and show the original PAN and ID card.",
+        "Government DSC (employee account): applicant photo, PAN card and government ID card; the authorising person's photo, PAN card and government ID card; department PAN card copy; an authority letter in the applicant's name, signed and stamped by the authorising person; the same video.",
+        "Company DSC where neither the applicant nor the authorising person is a director: Board Resolution or Power of Attorney in the authorising person's name, signed and stamped by a director or CS, with that director's or CS's PAN card.",
+        "Organisation DSC video: speak the script shown, show your original PAN card and any proof of the organisation.",
+        "Foreign company: applicant photo, passport and address proof; MOA and registration certificate; company bank statement (latest, within 3 months); list of directors on letterhead with stamp and signature; authority letter signed by a director if the applicant is not one. Video with original passport, address proof and any proof of the organisation.",
+        "Foreign individual: video with original passport and address proof (water, telephone or electricity bill, or OCI card; latest, within 3 months).",
+        "Individual DSC with PAN KYC: video with original PAN card and address proof (Aadhaar card, voter ID, driving licence or electricity bill).",
+        "DGFT DSC: upload the IEC certificate with your documents and show it in the video. Other documents are the same as for your organisation type." ] },
+      { h: "Good to know", items: ["Documents must be clear, complete and the latest.", "Where a video is needed, speak the script exactly as shown and keep your original documents in hand.", "We check your documents before we apply, so the application is not rejected for a missing paper."] },
+    ],
+    need: ["PAN, Aadhaar, photo, email and mobile number of the applicant, plus the documents for your organisation type above."],
+    terms: [
+      "Final price. Government fees, if any, are not included.",
+      "Payment is made in advance for every order.",
+      "The certificate is issued on your own documents, after video KYC by the certificate holder. The time taken depends on the provider and on complete documents.",
+      "A lost token or a forgotten password needs a new DSC. That is a new application.",
+      "Times such as \"within 30 minutes\" count within working hours.",
+      "Orders cancelled after the KYC link is sent are not refunded.",
+    ],
+    ratesLine: "These are the rates on the day you read this page. If a rate changes before you pay, including a change by our certificate provider, we will update you first. An order that is already paid keeps the rate it was paid at.",
+  },
+
+  "Accounting and Cash-Flow Desk": {
+    solve: solve(
+      ["Cash stuck with customers?", "Every month you see who owes you, and for how many days."],
+      ["Party ledgers not agreeing?", "We match your books with your bank and GSTR-2B, so differences show up early."],
+      ["Unknown bank entries?", "One query sheet by the 10th. Once you answer, the books are locked."],
+      ["Returns and TDS taking your time?", "We prepare GSTR-1, GSTR-3B and TDS from your books and file them once you approve."],
+    ),
+    matrices: [{ plans: ["A · Starter", "B · Business", "C · Growth", "D · Large"], recommended: 2, groups: [["Plan size", [["Entries per month", "Up to 120", "Up to 300", "Up to 600", "Up to 1,000"], ["Bank accounts included", "1", "3", "5", "8"], ["One-time setup fee (before GST)", "₹5,000", "₹10,000", "₹18,000", "₹25,000"]]], ["Your books", [["Books in Tally from your soft copies", "✓", "✓", "✓", "✓"], ["Bank reconciliation", "✓", "✓", "✓", "✓"], ["Query sheet for unknown entries by the 10th", "✓", "✓", "✓", "✓"], ["Senior accountant check, books locked by the 15th", "✓", "✓", "✓", "✓"]]], ["GST", [["GSTR-1 and GSTR-3B working and filing", "✓", "✓", "✓", "✓"], ["GSTR-2B matching", "✓", "✓", "✓", "✓"], ["Extra GSTIN", "Add-on", "Add-on", "Add-on", "Add-on"], ["GSTR-9 annual return", "Add-on", "Add-on", "Add-on", "Add-on"], ["GST refund, notices and replies", "Add-on", "Add-on", "Add-on", "Add-on"]]], ["TDS and advance tax", [["TDS working and quarterly return filing (26Q)", "✓", "✓", "✓", "✓"], ["TDS certificates (Form 16A) for your parties", "✓", "✓", "✓", "✓"], ["TDS credit matched with Form 26AS", "✓", "✓", "✓", "✓"], ["Correction of our own mistakes in your TDS return", "✓", "✓", "✓", "✓"], ["Advance tax calculation every quarter", "✓", "✓", "✓", "✓"], ["Salary TDS return (24Q) and Form 16", "✓", "✓", "✓", "✓"], ["Replies to TDS notices on returns we filed", "✓", "✓", "✓", "✓"], ["TDS notices for periods before we started, income tax return", "Add-on", "Add-on", "Add-on", "Add-on"]]], ["Reports you receive", [["Debtor and creditor ageing", "✓", "✓", "✓", "✓"], ["Sales and expense breakup", "✓", "✓", "✓", "✓"], ["Cash-flow and money-stuck report", "✓", "✓", "✓", "✓"], ["Monthly P&L and Balance Sheet", "✓", "✓", "✓", "✓"], ["Detailed MIS: branch, product or party wise", "✗", "✗", "✓", "✓"]]], ["Add-on services", [["Payroll: salary, payslips, PF and ESIC returns", "Add-on", "Add-on", "Add-on", "Add-on"], ["Invoices, e-invoices and e-way bills prepared by us", "Add-on", "Add-on", "Add-on", "Add-on"], ["Extra bank accounts, payment gateways, handwritten books, bill typing", "Add-on", "Add-on", "Add-on", "Add-on"], ["ROC filings, registrations, old books (backlog)", "Add-on", "Add-on", "Add-on", "Add-on"]]]].map(([h, rows]) => ({ h, rows })) }],
+    notes: ["Add-on means it is not in the plan fee. We tell you the fee in writing before we start, and nothing is charged without your yes. Filing means we file once you approve the draft and the tax is paid. Starter filing covers 1 GSTIN. Above 1,000 entries: custom plan, quoted after a short call."],
+    extras: [
+      { h: "How we work", items: [
+        "Our team works in the background. We keep your books in Tally, on our own secure server. We do not need to visit you.",
+        "You send soft copies of bills, bank statements and sales and purchase files by email, WhatsApp or Google Drive, by the 7th of each month.",
+        "We confirm in writing what we received, so nothing gets lost on WhatsApp.",
+        "By the 10th we send one query sheet for unknown entries. By the 15th, once you answer, we lock the books and send your reports.",
+        "A senior accountant checks your books before they are locked.",
+        "Your data stays yours and confidential. On request, we hand back your Tally data." ] },
+      { h: "Which plan fits, and what counts as an entry", p: [
+        "Typical fit: freelancers and small service firms 60 to 120 entries, shops 200 to 300, traders 450 to 600, wholesalers and manufacturers 800 to 1,000. Before we start, we count your last 3 months and tell you the plan.",
+        "One entry is one bill, one bank line, one payment or receipt, or one adjustment. Items inside a normal bill do not count, so a bill with 20 items is one entry. For UPI, card and gateway money, each settlement is one entry, not each customer payment." ] },
+      { h: "If your business also has", table: { head: ["Your business", "What we do", "Fee + GST"], rows: [
+        ["You sell on Amazon, Flipkart, Meesho, Shopify or similar", "Match every payout to your orders, check commission, shipping and TCS, list returns and short payments", "₹3,000 a month for each platform, up to 500 orders"],
+        ["Restaurant, cloud kitchen or several outlets", "Daily sales, delivery-app settlements, outlet-wise profit", "Quoted after a short call"],
+        ["Exporter, payment gateway, extra GSTIN or extra bank accounts", "Set up and booked as part of your plan", "Quoted after we see your data"],
+      ] }, p: ["Large business, PO work, bills with many item lines, TDS-heavy files, handwritten books, or more than 1,000 entries? Send us a sample of your data. We study it and send a written quote within 2 working days. Larger businesses can also have a named team of a senior and a junior accountant with backup. Nothing is charged without your written yes.", "Example: an online seller on 2 platforms with about 120 other entries. Starter ₹7,999 + 2 platforms ₹6,000 = ₹13,999 + GST ₹2,520 = ₹16,519 a month, with setup ₹5,000 + GST once."] },
+    ],
+    exclude: ["Collecting payments from your parties, calls or visits to them, cash handling and bank visits.", "Stock valuation, budgeting and forecasting."],
+    need: ["Soft copies of bills, bank statements and sales and purchase files, by the 7th of each month.", "For salary TDS: the salary sheet and your employees' investment declarations (Form 12BB) before each quarter ends."],
+    terms: [
+      "Fees are professional fees, before 18% GST. Government fees, tax, interest and late fees are not included.",
+      "There is no minimum period. The monthly fee is paid in advance, before the month starts, and we start work after payment. The one-time setup fee is paid before we start and is not refunded.",
+      "To stop, tell us in writing before the 25th. We stop from the next month. A month already paid is not refunded.",
+      "If your data reaches us after the 7th, we cannot promise your filing before the due date. Any late fee is yours.",
+      "Your plan is set by your busiest month in the last 3 months. Above your plan, each extra entry is ₹30 + GST, never more than the next plan, and we tell you before the month ends.",
+      "Wrong declarations for salary TDS are the employee's and your responsibility.",
+      "Re-work because of wrong or late data, and changes after the books are locked, are ₹750 per hour.",
+    ],
+  },
 };
