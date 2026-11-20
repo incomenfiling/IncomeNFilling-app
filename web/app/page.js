@@ -8,7 +8,7 @@ import { About } from "@/components/home/About";
 import { CategoryExplorer } from "@/components/home/CategoryExplorer";
 import { Stepper } from "@/components/home/Stepper";
 import { WhyChooseUs } from "@/components/home/WhyChooseUs";
-import { ClientFlipGrid } from "@/components/home/ClientFlipGrid";
+import { ClientLogoGrid } from "@/components/home/ClientLogoGrid";
 import { ReviewsSection } from "@/components/home/ReviewsSection";
 import { ITRPromo } from "@/components/home/ITRPromo";
 import { ContactCTA } from "@/components/home/ContactCTA";
@@ -55,7 +55,7 @@ export default function HomePage() {
       <section style={{ padding: "80px 32px 90px" }}>
         <div style={{ maxWidth: "var(--container-max)", margin: "0 auto" }}>
           <SectionHead eyebrow="And Many More" title="Our Clients" sub="As a client, it matters who handles your compliance. Here is who trusts us." />
-          <ClientFlipGrid />
+          <ClientLogoGrid />
         </div>
       </section>
 
