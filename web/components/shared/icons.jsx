@@ -91,6 +91,7 @@ const WHY_ICON_PATHS = {
   VER: <g><path d="M12 3l7 3v5c0 4.6-3.1 7.8-7 9-3.9-1.2-7-4.4-7-9V6z" /><path d="M9 12l2.2 2.2L15 10.4" /></g>,
   SEC: <g><rect x="5" y="11" width="14" height="9" rx="2" /><path d="M8 11V8a4 4 0 018 0v3" /><path d="M12 15v2" /></g>,
   CMP: <g><path d="M7 3h7l4 4v13.5a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5V3.5A.5.5 0 017 3z" /><path d="M14 3v4h4" /><path d="M8.5 14l2 2 4-4" /></g>,
+  LNG: <g><path d="M4 5h11a1 1 0 011 1v7a1 1 0 01-1 1H9l-3.5 3V14H4a1 1 0 01-1-1V6a1 1 0 011-1z" /><path d="M19 9h1a1 1 0 011 1v6a1 1 0 01-1 1h-1v2.5L16 17h-4" /></g>,
   YRS: <g><circle cx="12" cy="9" r="5" /><path d="M9.2 13.4L8 21l4-2.4L16 21l-1.2-7.6" /></g>,
   PAN: <g><rect x="6" y="4" width="12" height="17" rx="1" /><path d="M6 21h12" /><path d="M9.5 8h1M13.5 8h1M9.5 12h1M13.5 12h1" /><path d="M10.5 21v-3h3v3" /></g>,
   500: <g><circle cx="9" cy="9" r="3" /><path d="M4 20c0-3 2.2-5 5-5s5 2 5 5" /><path d="M15.5 7.5a3 3 0 010 5.5" /><path d="M16 15c2.4.3 4 2.3 4 5" /></g>,

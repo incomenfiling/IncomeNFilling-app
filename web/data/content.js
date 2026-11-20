@@ -8,7 +8,7 @@ export const WHY_CHOOSE_US = [
   { icon: "VER", title: "Made by one, checked by another", description: "Every file has a maker and a separate checker, reviewed before and after filing. The owner spot-checks files at random." },
   { icon: "CMP", title: "Always in the loop", description: "Your documents in one place, progress you can see, and proof sent once your work is filed." },
   { icon: "SEC", title: "Our mistake, our cost", description: "If a penalty arises from our error, we bear it. Applies when accurate documents and details are shared on time." },
-  { icon: "YRS", title: "9+ Years of Excellence", description: "A proven track record of serving businesses since 2017." },
+  { icon: "LNG", title: "No language gap", description: "Explain your requirement in the language you are most comfortable with, and we will walk you through the process in plain words." },
   { icon: "PAN", title: "Pan-India Reach", description: "Serving clients across every state with consistent quality." },
   { icon: "500", title: "500+ Clients", description: "Trusted by individuals, startups, SMEs, and established businesses." },
 ];
@@ -53,5 +53,6 @@ export const SOCIAL_LINKS = {
   Facebook: "https://www.facebook.com/INCOMENFILING",
   Instagram: "https://www.instagram.com/incomenfiling/",
   LinkedIn: "https://www.linkedin.com/company/incomenfiling/",
+  X: "https://x.com/incomenfiling",
   YouTube: "https://www.youtube.com/channel/UCEOCg1sR6gl1nGg5XkytcPg",
 };
