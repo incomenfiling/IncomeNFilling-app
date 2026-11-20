@@ -11,6 +11,8 @@ export const PRICE_GROUPS = {
     title: "GST Service Prices in Kolkata | Income N Filing", description: "Prices for GST registration, monthly filing, NIL returns, LUT, refund, amendment, cancellation and more from Income N Filing, Kolkata. Fixed in writing." },
   dsc: { key: "DSC", h1: "Digital Signature Certificate (DSC) prices", sub: "Digital Signature Certificate", lead: "Final price: certificate, Hype USB token, key ring (new DSC) and our fee. Courier and porter at actual cost.",
     title: "DSC Price in Kolkata, Class 3 Certificate | Income N Filing", description: "Class 3 digital signature certificate prices with a Hype USB token, by certificate type and validity. Assisted and Basic service, Income N Filing, Kolkata." },
+  company: { key: "Company", h1: "Company, LLP and partnership prices", sub: "Registration and yearly ROC compliance", lead: "Our fee + 18% GST. Digital signatures and government charges are shown on separate lines, in writing before you pay.",
+    title: "Company, LLP Registration Prices in Kolkata | Income N Filing", description: "Private limited company, LLP and partnership firm registration and yearly ROC compliance prices, with fees, digital signatures and government charges listed. Income N Filing, Kolkata." },
   accounting: { key: "Accounting", h1: "Accounting and cash-flow desk prices", sub: "Monthly books, GST and TDS filing, cash-flow reports", lead: "Monthly fee + 18% GST, plus a one-time setup fee. All work is done in Tally by our backend team.",
     title: "Monthly Accounting Prices in Kolkata | Income N Filing", description: "Monthly accounting plans in Tally with GST and TDS filing and cash-flow reports, by number of entries. Income N Filing, Kolkata. Fixed in writing." },
 };
@@ -37,7 +39,7 @@ export function PriceGroupPage({ groupKey }) {
         </div>
       </section>
       <main style={{ maxWidth: 1000, margin: "0 auto", padding: "28px 20px 96px" }}>
-        <p style={{ ...T, marginBottom: 12 }}><Link href="/pricing" style={{ color: "var(--navy-800)", fontWeight: 600 }}>← All prices</Link> · <Link href="/pricing/gst" style={{ color: "var(--navy-800)" }}>GST</Link> · <Link href="/pricing/dsc" style={{ color: "var(--navy-800)" }}>DSC</Link> · <Link href="/pricing/accounting" style={{ color: "var(--navy-800)" }}>Accounting</Link></p>
+        <p style={{ ...T, marginBottom: 12 }}><Link href="/pricing" style={{ color: "var(--navy-800)", fontWeight: 600 }}>← All prices</Link> · <Link href="/pricing/gst" style={{ color: "var(--navy-800)" }}>GST</Link> · <Link href="/pricing/dsc" style={{ color: "var(--navy-800)" }}>DSC</Link> · <Link href="/pricing/accounting" style={{ color: "var(--navy-800)" }}>Accounting</Link> · <Link href="/pricing/company" style={{ color: "var(--navy-800)" }}>Company</Link></p>
         {[g].map((g) => (
           <div key={g.key}>
             <div style={{ display: "flex", alignItems: "baseline", gap: 12, flexWrap: "wrap", margin: "8px 0 6px" }}>
@@ -67,7 +69,7 @@ export function PriceGroupPage({ groupKey }) {
                     {rec && <span style={{ alignSelf: "flex-start", background: "var(--gold-050)", border: "1px solid var(--gold-500)", color: "var(--navy-900)", fontSize: 11, fontWeight: 600, padding: "1px 8px", borderRadius: 6 }}>Recommended</span>}
                     <div style={{ fontFamily: "var(--font-body)", fontSize: 14, lineHeight: 1.4, color: "var(--ink-700)" }}>{label}</div>
                     <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 24, color: "var(--navy-900)", marginTop: "auto" }}>{r[1]}</div>
-                    <div style={{ ...T, fontSize: 12 }}>{s.final ? "Final price" : `+ 18% GST · total ${r[2]}`}</div>
+                    <div style={{ ...T, fontSize: 12 }}>{s.final || r[2] === "Final price" ? "Final price" : `+ 18% GST · total ${r[2]}`}</div>
                   </div>
                 );
               })}

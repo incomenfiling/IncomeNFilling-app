@@ -31,6 +31,7 @@ ${posts || "- Coming soon"}
 - [GST service prices](${SITE}/pricing/gst)
 - [DSC prices](${SITE}/pricing/dsc)
 - [Accounting prices](${SITE}/pricing/accounting)
+- [Company, LLP and partnership prices](${SITE}/pricing/company)
 - [Kolkata office and services](${SITE}/kolkata)
 - [Contact](${SITE}/contact)
 - [About Income N Filing](${SITE}/about)

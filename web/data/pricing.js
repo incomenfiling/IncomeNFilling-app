@@ -119,4 +119,20 @@ export const PRICE_LIST = [
     ["A · Starter (up to 120 entries, 1 bank account)", "₹7,999", "₹9,439"], ["B · Business (up to 300 entries, 3 bank accounts)", "₹13,999", "₹16,519"],
     ["C · Growth (up to 600 entries, 5 bank accounts, recommended)", "₹24,999", "₹29,499"], ["D · Large (up to 1,000 entries, 8 bank accounts)", "₹37,999", "₹44,839"] ],
     note: "One-time setup fee (before GST): A ₹5,000, B ₹10,000, C ₹18,000, D ₹25,000. Above 1,000 entries: custom plan after a short call." },
+  { group: "Company", name: "Private Limited Company Registration", href: "/services/private-limited-company-registration", per: "one incorporation, our fee before digital signatures and government charges", rows: [
+    ["Our professional fee (2 directors)", "₹9,000", "₹10,620"], ["Digital signatures for 2 directors and 1 witness (optional, 2 years)", "₹4,800", "Final price"] ],
+    note: "Government charges (stamp duty, MCA and name fees) are paid at actuals, with receipt. Total with our fee and digital signatures: ₹15,420, before government charges." },
+  { group: "Company", name: "Private Limited ROC Annual Compliance", per: "per year, ROC filings only", rows: [
+    ["Annual plan: every regular ROC filing", "₹11,999", "₹14,159"] ],
+    note: "Same fee every year. Event filings (director change, share allotment and more) are priced separately. Government fees at actuals." },
+  { group: "Company", name: "LLP Registration", href: "/services/llp-registration", per: "one incorporation, our fee before digital signatures and government charges", rows: [
+    ["Our professional fee (2 designated partners)", "₹7,999", "₹9,439"], ["Digital signatures for 2 designated partners (optional, 2 years)", "₹3,200", "Final price"] ],
+    note: "Government charges are paid at actuals, with receipt. Total with our fee and digital signatures: ₹12,639, before government charges." },
+  { group: "Company", name: "LLP ROC Annual Compliance", per: "per year, ROC filings only", rows: [
+    ["Annual plan: Form 11, Form 8 and DIR-3 KYC", "₹5,999", "₹7,079"] ],
+    note: "Same fee every year. Event filings are priced separately. Government fees at actuals." },
+  { group: "Company", name: "Partnership Firm Services", per: "per service, deed and filing", rows: [
+    ["Partnership firm registration", "₹5,999", "₹7,079"], ["Adding a partner", "₹2,500", "₹2,950"],
+    ["Partner leaving (retirement or removal)", "₹2,500", "₹2,950"], ["Dissolution of the firm", "₹5,999", "₹7,079"] ],
+    note: "Stamp paper, notary or registration of the deed and the Registrar of Firms fee are extra, at actuals, with receipt." },
 ];

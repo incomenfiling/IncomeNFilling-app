@@ -15,6 +15,7 @@ export const metadata = {
 const CARDS = [
   { key: "GST", href: "/pricing/gst", from: "From ₹499", note: "+ 18% GST", text: "Registration, monthly filing, NIL returns, LUT, refund, amendment, cancellation and more." },
   { key: "DSC", href: "/pricing/dsc", from: "From ₹1,590", note: "final price", text: "Class 3 certificate with a Hype USB token. Assisted and Basic service." },
+  { key: "Company", href: "/pricing/company", from: "From ₹2,500", note: "+ 18% GST", text: "Private limited, LLP and partnership firm: registration and yearly ROC compliance." },
   { key: "Accounting", href: "/pricing/accounting", from: "From ₹7,999", note: "a month + 18% GST", text: "Books in Tally, GST and TDS filing, and cash-flow reports." },
 ];
 const T = { fontFamily: "var(--font-body)", fontSize: "var(--text-sm)", lineHeight: 1.6, color: "var(--ink-500)", margin: 0 };
@@ -39,7 +40,7 @@ export default function PricingPage() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
           {CARDS.map((c) => (
             <Link key={c.key} href={c.href} style={{ display: "flex", flexDirection: "column", gap: 8, background: "var(--white)", border: "1px solid var(--ink-100)", borderTop: "4px solid var(--gold-500)", borderRadius: "var(--radius-xl)", padding: 22, textDecoration: "none" }}>
-              <h2 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 22, color: "var(--navy-900)", margin: 0 }}>{c.key} prices</h2>
+              <h2 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 22, color: "var(--navy-900)", margin: 0 }}>{c.key === "Company" ? "Company and LLP" : c.key} prices</h2>
               <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 28, color: "var(--navy-900)" }}>{c.from} <span style={{ ...T, fontSize: 13 }}>{c.note}</span></div>
               <p style={T}>{c.text}</p>
               <span style={{ ...T, fontSize: 13 }}>{count(c.key)} service{count(c.key) > 1 ? "s" : ""} with full inclusions</span>
