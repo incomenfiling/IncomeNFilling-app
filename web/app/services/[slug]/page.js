@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { HUB_CATEGORIES } from "@/data/categories";
 import { MODULE_SLUGS } from "@/data/serviceSlugs";
 import { POSTS } from "@/data/posts";
+import { PRICING } from "@/data/pricing";
 import { SERVICE_PAGES, SERVICE_BY_SLUG } from "@/data/servicePages";
 import { ServicePageView } from "@/components/services/ServicePageView";
 import { SITE_URL, ORG_ID, jsonLd } from "@/lib/site";
@@ -59,6 +60,7 @@ function build(slug) {
     included: svc.included,
     faqs: svc.faqs.map((f) => ({ q: f.q, a: f.a })),
     parent: { name: parent.title, href: `/services/${parent.slug}` },
+    pricing: PRICING[slug] || null,
     guides: POSTS.filter((b) => b.service === slug).map((b) => ({ name: b.title, href: `/blog/${b.slug}` })),
     related: [{ name: `All ${parent.title} services`, href: `/services/${parent.slug}` }, ...related],
   };

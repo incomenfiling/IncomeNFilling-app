@@ -1,5 +1,5 @@
-// Detail pages for the highest-intent services. Copy is general and factual: no prices,
-// guarantees or fixed deadlines (those change by year and by case).
+// Detail pages for the highest-intent services. Copy is general and factual: no guarantees or fixed deadlines
+// (those change by year and by case). Published prices live in data/pricing.js.
 // `module` must match a title in HUB_CATEGORIES (data/categories.js); `listed` is the matching
 // entry in that module's services list, used to link from the module page.
 export const SERVICE_PAGES = [

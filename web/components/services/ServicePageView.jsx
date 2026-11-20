@@ -6,6 +6,7 @@ import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { Button } from "@/components/ui/Button";
+import { PricingBlock } from "@/components/services/PricingBlock";
 
 const H2 = { fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-2xl)", color: "var(--navy-900)", margin: "40px 0 16px" };
 const P = { fontFamily: "var(--font-body)", color: "var(--ink-500)", fontSize: "var(--text-base)", lineHeight: "var(--leading-base)", margin: 0 };
@@ -47,6 +48,8 @@ export function ServicePageView({ data }) {
           <article>
             <h1 style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-4xl)", color: "var(--navy-900)", margin: "0 0 16px" }}>{data.h1 || data.name}</h1>
             <p style={{ ...P, maxWidth: 640 }}>{data.intro}</p>
+
+            {data.pricing && <PricingBlock p={data.pricing} />}
 
             {data.whoNeeds && (<><h2 style={H2}>Who needs this</h2><List items={data.whoNeeds} /></>)}
             {data.included && (<><h2 style={H2}>What we do</h2><List items={data.included} /></>)}
