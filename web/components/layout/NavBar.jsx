@@ -8,6 +8,7 @@ const ITEMS = [
   { k: "home", label: "Home", href: "/" },
   { k: "about", label: "About", href: "/about" },
   { k: "services", label: "Services", href: "/services" },
+  { k: "pricing", label: "Pricing", href: "/pricing" },
   { k: "testimonials", label: "Testimonials", href: "/#testimonials" },
   { k: "blog", label: "Blog", href: "/blog" },
   { k: "chat", label: "Ask Ira", href: "/chat" },

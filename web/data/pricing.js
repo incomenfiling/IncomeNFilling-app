@@ -73,3 +73,42 @@ export const PRICING = {
     ],
   },
 };
+
+// Full price list shown on /pricing. Source: the 14 branded quotations. Fee is before 18% GST; total includes it.
+export const PRICE_LIST = [
+  { name: "GST Registration", href: "/services/gst-registration", per: "one application", rows: [
+    ["Essential (individual / proprietor)", "₹999", "₹1,179"], ["Launchpad Complete (individual / proprietor)", "₹2,499", "₹2,949"],
+    ["Corporate Essential (partnership, LLP, Pvt Ltd)", "₹1,499", "₹1,769"], ["Corporate Launchpad Complete", "₹3,499", "₹4,129"] ] },
+  { name: "GST Monthly Filing", per: "per month, up to 300 documents", rows: [
+    ["A · Ready Excel", "₹1,200", "₹1,416"], ["B · Reconciliation (recommended)", "₹5,000", "₹5,900"], ["C · Tally and Control", "₹9,999", "₹11,799"] ] },
+  { name: "GST NIL Return Filing", per: "pay in advance for the lowest rate", rows: [
+    ["Monthly NIL return, annual", "₹3,600 / year", "₹4,248 (₹300 / month)"], ["Monthly NIL return, quarterly", "₹1,200 / quarter", "₹1,416"],
+    ["Monthly NIL return, month to month", "₹500 / month", "₹590"], ["Quarterly (QRMP) NIL return, annual", "₹2,000 / year", "₹2,360"],
+    ["Quarterly (QRMP) NIL return, quarter by quarter", "₹600 / quarter", "₹708"] ] },
+  { name: "GST Reconciliation only", per: "per month, without filing", rows: [
+    ["Reconciliation-only", "₹3,500", "₹4,130"], ["Extra documents", "₹800", "₹944"] ] },
+  { name: "E-commerce GST Filing", per: "per month, for marketplace sellers", rows: [
+    ["Marketplace Standard (3 platforms, 500 orders)", "₹799", "₹943"], ["Marketplace Pro (8 platforms, 1,000 orders)", "₹999", "₹1,179"],
+    ["Marketplace + B2C Sales (3 platforms, 1,000 orders)", "₹1,199", "₹1,415"], ["Marketplace Pro + B2C Sales (8 platforms, 2,000 orders)", "₹1,399", "₹1,651"],
+    ["Growth (5 platforms + 1 website, 4,000 orders)", "₹3,499", "₹4,129"], ["Enterprise (more than 5 platforms or 4,000 orders)", "From ₹4,999", "Custom quote"] ] },
+  { name: "GST Export Compliance", per: "per month, up to 300 documents", rows: [
+    ["A · Export GST Core", "₹3,500", "₹4,130"], ["B · Export GST Pro and Recon (recommended)", "₹5,000", "₹5,900"] ] },
+  { name: "GST LUT Filing", per: "once a year", rows: [
+    ["1 · LUT Filing", "₹1,499", "₹1,769"], ["2 · LUT + Export Invoice Pack (recommended)", "₹2,999", "₹3,539"] ] },
+  { name: "E-invoice and E-way Bill Desk", per: "per plan", rows: [
+    ["A · Micro Wallet (12 documents, 6 months)", "₹999", "₹1,179"], ["B · Standard Wallet (30 documents, 6 months)", "₹1,499", "₹1,769"],
+    ["C · Monthly Desk (100 documents every month, recommended)", "₹2,999", "₹3,539"] ] },
+  { name: "GST Amendment and Profile Update", per: "one amendment application", rows: [
+    ["A · Basic", "₹499", "₹589"], ["B · Filing", "₹1,499", "₹1,769"], ["C · Filing + Drafting (recommended)", "₹2,500", "₹2,950"] ] },
+  { name: "GST Cancellation", per: "one case", rows: [
+    ["A · Clean Closure", "₹1,999", "₹2,359"], ["B · With Stock", "₹3,999", "₹4,719"], ["C · Bigger case", "Quoted separately", "We tell you before we start"] ] },
+  { name: "GST Revocation", per: "one case", rows: [
+    ["A · Revocation", "₹3,999", "₹4,719"], ["B · Bigger case", "Quoted separately", "We tell you before we start"] ] },
+  { name: "GST Refund", per: "per refund application", rows: [
+    ["A · Cash ledger", "₹2,999", "₹3,539"], ["B · Export or inverted duty (plus 2% + GST success fee)", "₹4,999", "₹5,899"],
+    ["C · Notice reply (plus 2% + GST success fee)", "₹7,999", "₹9,439"] ], note: "The success fee applies only when the refund reaches your bank. No result is promised." },
+  { name: "GST Job Work ITC-04", per: "per ITC-04 filed", rows: [
+    ["A · Small (up to 50 challan entries)", "₹1,499", "₹1,769"], ["B · Regular (51 to 200 entries)", "₹2,999", "₹3,539"], ["C · High volume (201 to 500 entries)", "₹5,999", "₹7,079"] ] },
+  { name: "GST Composition Scheme", per: "per year (four CMP-08 filings and one GSTR-4)", rows: [
+    ["Composition Summary (you give a ready Excel)", "₹6,000", "₹7,080 (or ₹1,770 per quarter)"], ["Composition Bank-Led (you give bank statements)", "₹10,000", "₹11,800 (or ₹2,950 per quarter)"] ] },
+];
