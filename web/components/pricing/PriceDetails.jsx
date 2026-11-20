@@ -66,7 +66,7 @@ export function PriceDetails({ name }) {
   const d = PRICE_DETAILS[name];
   if (!d) return null;
   return (
-    <details className="price-details" style={{ marginTop: 16, border: "1px solid var(--ink-100)", borderRadius: "var(--radius-lg)", background: "var(--paper)" }}>
+    <details className="price-details" style={{ minWidth: 0, maxWidth: "100%", marginTop: 16, border: "1px solid var(--ink-100)", borderRadius: "var(--radius-lg)", background: "var(--paper)" }}>
       <summary style={{ cursor: "pointer", padding: "14px 16px", fontFamily: "var(--font-body)", fontWeight: 700, fontSize: 15, color: "var(--navy-900)", listStyle: "revert" }}>
         View inclusions, exclusions, what we need and terms
       </summary>

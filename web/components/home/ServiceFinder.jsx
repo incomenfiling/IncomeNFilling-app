@@ -3,6 +3,8 @@ import { useState } from "react";
 import { HOME_CATEGORIES } from "@/data/categories";
 import { ACCENTS, TINTS } from "@/data/theme";
 
+const PRICE_PAGE = { GST: "/pricing/gst", ITR: "/pricing/income-tax", INC: "/pricing/incorporation", ROC: "/pricing/roc", ACC: "/pricing/accounting" };
+
 export function ServiceFinder({ onSelect }) {
   const [q, setQ] = useState("");
   const [active, setActive] = useState(0);
@@ -73,8 +75,8 @@ export function ServiceFinder({ onSelect }) {
             <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--ink-500)", lineHeight: 1.5 }}>{c.description}</div>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
               <span style={{ fontFamily: "var(--font-mono)", fontSize: 12, color: accent, fontWeight: "var(--weight-semibold)" }}>{c.count} services</span>
-              <span onClick={onSelect} style={{ fontFamily: "var(--font-body)", fontSize: 12, fontWeight: "var(--weight-semibold)", color: accent, cursor: "pointer" }}>
-                View →
+              <span role="link" tabIndex={0} onClick={() => onSelect(PRICE_PAGE[c.icon])} onKeyDown={(e) => e.key === "Enter" && onSelect(PRICE_PAGE[c.icon])} style={{ fontFamily: "var(--font-body)", fontSize: 12, fontWeight: "var(--weight-semibold)", color: accent, cursor: "pointer" }}>
+                View prices →
               </span>
             </div>
           </div>
@@ -82,7 +84,7 @@ export function ServiceFinder({ onSelect }) {
       ) : (
         <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "var(--ink-500)", textAlign: "center", padding: "18px 0" }}>No matches — try a different term.</div>
       )}
-      <div onClick={onSelect} style={{ textAlign: "center", fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--ink-300)", cursor: "pointer" }}>
+      <div role="link" tabIndex={0} onClick={() => onSelect("/services")} onKeyDown={(e) => e.key === "Enter" && onSelect("/services")} style={{ textAlign: "center", fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--ink-300)", cursor: "pointer" }}>
         or explore all 71 services →
       </div>
     </div>

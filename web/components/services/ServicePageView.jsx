@@ -46,7 +46,7 @@ export function ServicePageView({ data }) {
           ))}
         </nav>
         <div style={{ display: "grid", gridTemplateColumns: bp.ltDesktop ? "1fr" : "1fr 280px", gap: 40, alignItems: "start" }}>
-          <article>
+          <article style={{ minWidth: 0 }}>
             <h1 style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-semibold)", fontSize: "var(--text-4xl)", color: "var(--navy-900)", margin: "0 0 16px" }}>{data.h1 || data.name}</h1>
             <p style={{ ...P, maxWidth: 640 }}>{data.intro}</p>
 
