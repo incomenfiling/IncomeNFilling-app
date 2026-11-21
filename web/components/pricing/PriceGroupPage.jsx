@@ -4,6 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { WHATSAPP_URL, BOOKING_URL } from "@/data/content";
 import { PRICE_LIST } from "@/data/pricing";
+import { ldScript, webPage, priceCatalog } from "@/lib/schema";
 import { PriceDetails } from "@/components/pricing/PriceDetails";
 
 // One entry per price page. group = the PRICE_LIST group name. Add a new group here, in app/pricing/page.js, sitemap and llms.txt.
@@ -36,6 +37,7 @@ export function PriceGroupPage({ groupKey }) {
     <div style={{ background: "var(--paper)", minHeight: "100vh" }}>
       <WhatsAppButton />
       <NavBar active="pricing" />
+      <script type="application/ld+json" dangerouslySetInnerHTML={ldScript([webPage(`/pricing/${groupKey}`, g.h1, g.description), priceCatalog(`/pricing/${groupKey}`, g.tab, items)])} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://incomenfiling.com/" }, { "@type": "ListItem", position: 2, name: "Pricing", item: "https://incomenfiling.com/pricing" }, { "@type": "ListItem", position: 3, name: g.tab, item: `https://incomenfiling.com/pricing/${groupKey}` }] }) }} />
       <section style={{ background: "var(--navy-900)", padding: "clamp(36px,6vw,64px) 20px" }}>
         <div style={{ maxWidth: 1000, margin: "0 auto" }}>

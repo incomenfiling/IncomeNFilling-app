@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ldScript, webPage, itemList } from "@/lib/schema";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
@@ -30,6 +31,7 @@ export default function PricingPage() {
     <div style={{ background: "var(--paper)", minHeight: "100vh" }}>
       <WhatsAppButton />
       <NavBar active="pricing" />
+      <script type="application/ld+json" dangerouslySetInnerHTML={ldScript([webPage("/pricing", "Income N Filing prices", "Fixed, written prices for tax, GST, DSC, company and compliance services from Income N Filing, Kolkata.", "CollectionPage"), itemList("Price lists", CARDS.map((c) => ({ name: `${c.key} prices`, url: `/pricing/${c.slug}` })))])} />
       <section style={{ background: "var(--navy-900)", padding: "clamp(40px,7vw,72px) 20px" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <h1 style={{ fontFamily: "var(--font-display)", fontWeight: "var(--weight-bold)", fontSize: "clamp(28px,5vw,44px)", color: "var(--white)", margin: "0 0 12px" }}>Service prices</h1>

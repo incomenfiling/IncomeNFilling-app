@@ -2,6 +2,7 @@ import Link from "next/link";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { POSTS } from "@/data/posts";
+import { ldScript, webPage, itemList } from "@/lib/schema";
 
 export const metadata = {
   title: "Tax & Compliance Blog",
@@ -14,6 +15,7 @@ export default function BlogIndex() {
   return (
     <div style={{ background: "var(--paper)", minHeight: "100vh" }}>
       <NavBar />
+      <script type="application/ld+json" dangerouslySetInnerHTML={ldScript([webPage("/blog", "Tax & Compliance Blog", metadata.description, "CollectionPage"), itemList("Blog posts", POSTS.map((p) => ({ name: p.title, url: `/blog/${p.slug}` })))])} />
       <section style={{ padding: "48px 20px 80px", maxWidth: 820, margin: "0 auto" }}>
         <h1 style={{ fontFamily: "var(--font-display)", fontSize: "var(--text-3xl)", color: "var(--navy-900)", margin: "0 0 12px" }}>Tax & Compliance Blog</h1>
         <p style={{ fontFamily: "var(--font-body)", color: "var(--ink-500)", margin: "0 0 32px" }}>Plain-language guides on income tax, GST and company compliance, by Anish Jhunjhunwala and the Income N Filing team in Kolkata.</p>

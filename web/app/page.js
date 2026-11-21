@@ -1,4 +1,5 @@
 "use client";
+import { ldScript, webPage } from "@/lib/schema";
 import { useRouter } from "next/navigation";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
@@ -64,6 +65,7 @@ export default function HomePage() {
         <OfficeMap />
       </section>
 
+      <script type="application/ld+json" dangerouslySetInnerHTML={ldScript([webPage("/", "Income N Filing: tax and compliance consultants in Kolkata", "ITR, GST, TDS, company registration and accounting from Income N Filing, Kasba, Kolkata.")])} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: FAQ.map((f) => ({ "@type": "Question", name: f.question, acceptedAnswer: { "@type": "Answer", text: f.answer } })) }) }} />
       <section id="faq" style={{ background: "var(--white)", padding: "90px 32px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
