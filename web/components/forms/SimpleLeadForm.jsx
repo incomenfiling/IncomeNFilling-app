@@ -11,7 +11,7 @@ import { WHATSAPP_URL } from "@/data/content";
 const input = { width: "100%", boxSizing: "border-box", fontFamily: "var(--font-body)", fontSize: 15, padding: "12px 14px", borderRadius: "var(--radius-md)", border: "1px solid var(--ink-100)", background: "var(--white)", color: "var(--navy-900)", minHeight: 44 };
 const lab = { fontFamily: "var(--font-body)", fontSize: 13, fontWeight: 600, color: "var(--navy-800)", marginBottom: 5, display: "block" };
 
-export function SimpleLeadForm({ title, source, fields, propertyField, button = "Send", doneText }) {
+export function SimpleLeadForm({ title, source, fields, propertyField, propertyValue, extraNotes, button = "Send", doneText }) {
   const [state, setState] = useState("idle");
   const [err, setErr] = useState("");
 
@@ -24,7 +24,7 @@ export function SimpleLeadForm({ title, source, fields, propertyField, button = 
     setState("sending");
     setErr("");
     try {
-      const res = await postLead({ name: get("name"), phone: get("phone"), email: get("email"), property: propertyField ? get(propertyField) : title, notes: extra, source, website: get("company_url_2") });
+      const res = await postLead({ name: get("name"), phone: get("phone"), email: get("email"), property: propertyValue || (propertyField ? get(propertyField) : title), notes: (extraNotes ? extraNotes + " | " : "") + extra, source, website: get("company_url_2") });
       if (!res.ok) {
         const j = await res.json().catch(() => ({}));
         throw new Error(j.error || "Could not send");

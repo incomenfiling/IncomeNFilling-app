@@ -2,10 +2,12 @@ import { HUB_CATEGORIES } from "@/data/categories";
 import { MODULE_SLUGS } from "@/data/serviceSlugs";
 import { SERVICE_PAGES } from "@/data/servicePages";
 import { POSTS } from "@/data/posts";
+import { getOpenings } from "@/lib/careers";
 
 const SITE = "https://incomenfiling.com";
 
-export default function sitemap() {
+export default async function sitemap() {
+  const jobs = (await getOpenings()).map((o) => ({ url: `${SITE}/careers/${o.slug}`, lastModified: new Date("2026-11-21"), changeFrequency: "weekly", priority: 0.5 }));
   // Real last-edit date for static pages. Update this when page content changes; do not use the build time.
   const now = new Date("2026-11-20");
   const modules = HUB_CATEGORIES.map((m) => ({ url: `${SITE}/services/${MODULE_SLUGS[m.title]}`, lastModified: now, changeFrequency: "monthly", priority: 0.8 }));
