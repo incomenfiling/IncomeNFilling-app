@@ -1,3 +1,4 @@
+import { PreferredSource } from "@/components/shared/PreferredSource";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { NavBar } from "@/components/layout/NavBar";
@@ -85,6 +86,7 @@ export default async function PostPage({ params }) {
           </nav>
         )}
         <p style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--ink-400)", marginTop: 32 }}>General information, not legal or tax advice for your specific case. Rules and due dates change; confirm current details before acting.</p>
+        <div style={{ marginTop: 24 }}><PreferredSource source="blog" /></div>
       </article>
       <Footer />
     </div>

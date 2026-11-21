@@ -4,6 +4,7 @@ import { postLead } from "@/lib/postLead";
 import Link from "next/link";
 import Image from "next/image";
 import { useBP } from "@/lib/useBP";
+import { PreferredSource } from "@/components/shared/PreferredSource";
 import { SocialIcon } from "@/components/shared/SocialIcon";
 import { SOCIALS } from "@/components/shared/icons";
 import { HUB_CATEGORIES } from "@/data/categories";
@@ -135,6 +136,7 @@ export function Footer() {
             <p style={{ margin: "6px 0 0", fontFamily: "var(--font-mono)", fontSize: 12, color: "var(--navy-300)", maxWidth: 260 }}>Mon–Sat, 10:00–19:00 IST</p>
           </div>
         </div>
+        <div style={{ paddingTop: 22 }}><PreferredSource source="footer" dark /></div>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, flexWrap: "wrap", paddingTop: 22 }}>
           <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--navy-300)" }}>
             © {new Date().getFullYear()} Income N Filing. All rights reserved.
