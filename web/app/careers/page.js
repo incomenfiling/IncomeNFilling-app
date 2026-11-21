@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { InfoPage, Sec, Tiles, T } from "@/components/layout/InfoPage";
+import { InfoPage, Sec, Tiles, T, Chip } from "@/components/layout/InfoPage";
 import { SimpleLeadForm } from "@/components/forms/SimpleLeadForm";
 import { getOpenings, modeLabel } from "@/lib/careers";
 
@@ -11,10 +11,6 @@ export const metadata = {
   alternates: { canonical: "/careers" },
   openGraph: { images: [{ url: "/og/default.png", width: 1200, height: 630 }], url: "/careers", title: "Careers | Income N Filing", description: "Sales, HR and Accountant roles in Kolkata, Bengaluru and work from home." },
 };
-
-export const Chip = ({ children, gold }) => (
-  <span style={{ background: gold ? "var(--gold-050)" : "var(--paper)", border: "1px solid " + (gold ? "var(--gold-200)" : "var(--ink-100)"), color: "var(--navy-800)", fontFamily: "var(--font-body)", fontSize: 12.5, fontWeight: 600, padding: "3px 10px", borderRadius: 999 }}>{children}</span>
-);
 
 export default async function Page() {
   const openings = await getOpenings();

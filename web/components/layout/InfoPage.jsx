@@ -41,3 +41,12 @@ export function InfoPage({ eyebrow, h1, lead, ctas, children }) {
     </div>
   );
 }
+
+export const Chip = ({ children, gold }) => (
+  <span style={{ background: gold ? "var(--gold-050)" : "var(--paper)", border: "1px solid " + (gold ? "var(--gold-200)" : "var(--ink-100)"), color: "var(--navy-800)", fontFamily: "var(--font-body)", fontSize: 12.5, fontWeight: 600, padding: "3px 10px", borderRadius: 999 }}>{children}</span>
+);
+
+
+export function Bullets({ items }) {
+  return <ul style={{ ...T, paddingLeft: 20, display: "grid", gap: 6 }}>{items.map((x) => <li key={x}>{x}</li>)}</ul>;
+}

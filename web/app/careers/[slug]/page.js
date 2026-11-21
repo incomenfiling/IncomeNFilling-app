@@ -1,9 +1,8 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { InfoPage, Sec, T } from "@/components/layout/InfoPage";
+import { InfoPage, Sec, T, Chip, Bullets } from "@/components/layout/InfoPage";
 import { SimpleLeadForm } from "@/components/forms/SimpleLeadForm";
 import { getOpenings, modeLabel } from "@/lib/careers";
-import { Chip } from "../page";
 
 export const dynamic = "force-dynamic";
 
@@ -29,13 +28,12 @@ export default async function Page({ params }) {
       ? { jobLocationType: "TELECOMMUTE", applicantLocationRequirements: { "@type": "Country", name: "India" } }
       : { jobLocation: { "@type": "Place", address: { "@type": "PostalAddress", addressLocality: o.city, addressCountry: "IN" } } }),
   };
-  const List = ({ items }) => <ul style={{ ...T, paddingLeft: 20, display: "grid", gap: 6 }}>{items.map((x) => <li key={x}>{x}</li>)}</ul>;
   return (
     <InfoPage eyebrow={`${o.department} · ${o.city}`} h1={`${o.role}, ${wfh ? "work from home" : o.city}`} lead={o.summary}
       ctas={<div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginTop: 18 }}><Chip>{o.city}</Chip><Chip gold={wfh}>{modeLabel(o.mode)}</Chip><Chip>{o.type}</Chip>{o.experience && <Chip>{o.experience}</Chip>}</div>}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
-      {o.responsibilities.length > 0 && <Sec h="What you will do"><List items={o.responsibilities} /></Sec>}
-      {o.requirements.length > 0 && <Sec h="What we look for"><List items={o.requirements} /></Sec>}
+      {o.responsibilities.length > 0 && <Sec h="What you will do"><Bullets items={o.responsibilities} /></Sec>}
+      {o.requirements.length > 0 && <Sec h="What we look for"><Bullets items={o.requirements} /></Sec>}
       <Sec h="How to apply">
         <p style={T}>Fill in the form below, or email your resume to <a href={`mailto:${o.email}?subject=${encodeURIComponent(o.role + " - " + o.city)}`} style={{ color: "var(--navy-800)", fontWeight: 700 }}>{o.email}</a> with the role in the subject. We call shortlisted candidates during working hours, Monday to Saturday, 10:00 to 19:00 IST. We never ask a candidate for money.</p>
       </Sec>
