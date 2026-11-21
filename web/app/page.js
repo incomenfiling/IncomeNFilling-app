@@ -64,6 +64,7 @@ export default function HomePage() {
         <OfficeMap />
       </section>
 
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: FAQ.map((f) => ({ "@type": "Question", name: f.question, acceptedAnswer: { "@type": "Answer", text: f.answer } })) }) }} />
       <section id="faq" style={{ background: "var(--white)", padding: "90px 32px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <SectionHead eyebrow="Quick Answers" title="Frequently Asked Questions" />

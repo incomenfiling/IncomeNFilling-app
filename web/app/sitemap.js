@@ -9,7 +9,7 @@ const SITE = "https://incomenfiling.com";
 export default async function sitemap() {
   const jobs = (await getOpenings()).map((o) => ({ url: `${SITE}/careers/${o.slug}`, lastModified: new Date("2026-11-21"), changeFrequency: "weekly", priority: 0.5 }));
   // Real last-edit date for static pages. Update this when page content changes; do not use the build time.
-  const now = new Date("2026-11-20");
+  const now = new Date("2026-11-21");
   const modules = HUB_CATEGORIES.map((m) => ({ url: `${SITE}/services/${MODULE_SLUGS[m.title]}`, lastModified: now, changeFrequency: "monthly", priority: 0.8 }));
   const services = SERVICE_PAGES.map((s) => ({ url: `${SITE}/services/${s.slug}`, lastModified: now, changeFrequency: "monthly", priority: 0.7 }));
   const blog = POSTS.length ? [{ url: `${SITE}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.7 }, ...POSTS.map((p) => ({ url: `${SITE}/blog/${p.slug}`, lastModified: new Date(p.updated || p.date), changeFrequency: "monthly", priority: 0.6 }))] : [];

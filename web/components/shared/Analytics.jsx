@@ -2,6 +2,8 @@
 import Script from "next/script";
 import { useEffect } from "react";
 import { track } from "@/lib/track";
+import { useConsent } from "@/lib/consent";
+import { ConsentBanner } from "@/components/shared/ConsentBanner";
 
 const GA_ID = "G-ME6GXBHFZ4";
 const TAWK_PROPERTY = "670fe2bd2480f5b4f58e7744";
@@ -9,6 +11,10 @@ const TAWK_WIDGET = "1iab0rdcg";
 const CLARITY_ID = "zf44688vd9";
 
 export default function Analytics() {
+  const consent = useConsent();
+  useEffect(() => {
+    if (consent === "all" && typeof window.gtag === "function") window.gtag("consent", "update", { analytics_storage: "granted" });
+  }, [consent]);
   useEffect(() => {
     // Delegated click tracking for phone and WhatsApp links.
     const onClick = (e) => {
@@ -31,9 +37,14 @@ export default function Analytics() {
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         window.gtag = gtag;
+        var _c = null; try { _c = localStorage.getItem('inf_consent'); } catch (e) {}
+        gtag('consent', 'default', { analytics_storage: _c === 'all' ? 'granted' : 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
         gtag('js', new Date());
         gtag('config', '${GA_ID}');
       `}</Script>
+      <ConsentBanner />
+      {consent === "all" && (
+        <>
       <Script id="clarity-init" strategy="lazyOnload">{`
         (function(c,l,a,r,i,t,y){
           c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -54,6 +65,8 @@ export default function Analytics() {
           s0.parentNode.insertBefore(s1, s0);
         })();
       `}</Script>
+        </>
+      )}
     </>
   );
 }
