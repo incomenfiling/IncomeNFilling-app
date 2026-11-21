@@ -69,7 +69,7 @@ export function PriceGroupPage({ groupKey }) {
                 <h2 style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: "var(--text-xl)", color: "var(--white)", margin: 0 }}>{s.name}</h2>
                 <p style={{ ...T, fontSize: 13, color: "var(--navy-300)", marginTop: 2 }}>{s.per}</p>
               </div>
-              <a href={`${WHATSAPP_URL}?text=${encodeURIComponent("Hi, I want a quote for " + s.name)}`} target="_blank" rel="noopener noreferrer" style={{ background: "var(--gold-500)", color: "var(--navy-900)", fontWeight: 700, fontSize: 14, padding: "10px 18px", borderRadius: 999, textDecoration: "none" }}>Get this quote</a>
+              <Link href={`/contact?group=${groupKey}&service=${encodeURIComponent(s.name)}`} style={{ background: "var(--gold-500)", color: "var(--navy-900)", fontWeight: 700, fontSize: 14, padding: "10px 18px", borderRadius: 999, textDecoration: "none" }}>Get this quote</Link>
             </div>
             <div style={{ padding: 20 }}>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: 12 }}>
@@ -84,6 +84,7 @@ export function PriceGroupPage({ groupKey }) {
                       {r[3] && <div style={{ ...T, fontSize: 12.5 }}>{r[3]}</div>}
                       <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 26, color: "var(--navy-900)", marginTop: "auto", paddingTop: 4 }}>{r[1]}</div>
                       <div style={{ ...T, fontSize: 12 }}>{final ? "Final price" : `+ 18% GST · total ${r[2]}`}</div>
+                      <Link href={`/contact?group=${groupKey}&service=${encodeURIComponent(s.name)}&plan=${encodeURIComponent(label)}`} style={{ fontSize: 13, fontWeight: 700, color: "var(--navy-800)", textDecoration: "underline", padding: "6px 0" }}>Choose this plan →</Link>
                     </div>
                   );
                 })}

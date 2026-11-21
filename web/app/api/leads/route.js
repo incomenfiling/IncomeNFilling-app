@@ -61,7 +61,9 @@ export async function POST(request) {
   const notes0 = safe(clip(body?.notes, 1800));
   const utm = body?.utm && typeof body.utm === "object" ? Object.entries(body.utm).slice(0, 8).map(([k, v]) => `${clip(k, 20)}=${clip(v, 60)}`).join(" ") : "";
   const meta = `[page ${clip(body?.pageUrl, 120) || "-"} | ref ${clip(body?.referrer, 120) || "-"} | ${utm || "no utm"} | policy ${clip(body?.policyVersion, 12) || "-"} | ${consentNote} | ${clip(body?.ua, 100)}]`;
-  const notes = (notes0 ? notes0 + " " : "") + meta;
+  // Same id on the retry, so a duplicate row can be spotted and removed in the Sheet.
+  const leadId = Math.random().toString(36).slice(2, 8);
+  const notes = (notes0 ? notes0 + " " : "") + meta.slice(0, -1) + ` | id ${leadId}]`;
   const source = clip(body?.source, 40) || "website";
 
   if (!name || (!phone && !email)) {

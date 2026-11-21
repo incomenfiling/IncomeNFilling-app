@@ -1,5 +1,5 @@
 "use client";
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { postLead } from "@/lib/postLead";
 import { useBP } from "@/lib/useBP";
 import { NavBar } from "@/components/layout/NavBar";
@@ -31,6 +31,17 @@ export default function ContactPage() {
   const [rcs, setRcs] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState(false);
+  useEffect(() => {
+    const id = requestAnimationFrame(() => {
+      const q = new URLSearchParams(window.location.search);
+      const svc = (q.get("service") || "").slice(0, 80);
+      const plan = (q.get("plan") || "").slice(0, 80);
+      const g = { gst: "GST", "income-tax": "Income Tax", incorporation: "Incorporation", roc: "Corporate Compliance", accounting: "Accounting", dsc: "Licenses" }[q.get("group")];
+      if (g) setCat(g);
+      if (svc) setF((o) => ({ ...o, msg: o.msg || `I want a quote for ${svc}${plan ? " (" + plan + ")" : ""}.` }));
+    });
+    return () => cancelAnimationFrame(id);
+  }, []);
   const set = (k, v) => setF((o) => ({ ...o, [k]: v }));
   const iStyle = { width: "100%", boxSizing: "border-box", fontFamily: "var(--font-body)", fontSize: 14.5, padding: "13px 16px", borderRadius: "var(--radius-md)", border: "1.5px solid var(--ink-100)", background: "var(--navy-050)", color: "var(--navy-900)", outline: "none", transition: "border-color .15s,box-shadow .15s" };
   const foc = (e) => {

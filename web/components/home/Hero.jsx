@@ -6,12 +6,13 @@ import { CountUp } from "@/components/ui/CountUp";
 import { HeroCTAButton } from "@/components/ui/HeroCTAButton";
 import { ServiceFinder } from "@/components/home/ServiceFinder";
 import { ACCENTS } from "@/data/theme";
-import { WHATSAPP_URL } from "@/data/content";
+import { WHATSAPP_URL, BOOKING_URL } from "@/data/content";
 import { track } from "@/lib/track";
 
 export function Hero() {
   const router = useRouter();
   const wa = () => { track("whatsapp_click", { source: "hero" }); window.open(WHATSAPP_URL, "_blank", "noopener"); };
+  const book = () => { track("booking_click", { source: "hero" }); window.open(BOOKING_URL, "_blank", "noopener"); };
   const go = (path) => router.push(path === "contact" ? "/contact" : "/services");
 
   return (
@@ -36,7 +37,7 @@ export function Hero() {
           <p style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--ink-500)", margin: "0 0 24px" }}>Terms apply, see <a href="#faq" style={{ color: "var(--navy-700)" }}>FAQ</a>.</p>
           <div className="hero-cta" style={{ display: "flex", gap: 14, marginBottom: 40, flexWrap: "wrap" }}>
             <HeroCTAButton variant="primary" onClick={wa}>Talk on WhatsApp</HeroCTAButton>
-            <HeroCTAButton variant="ghost" onClick={() => go("contact")}>Book a 20-min call</HeroCTAButton>
+            <HeroCTAButton variant="ghost" onClick={book}>Book a 20-min call</HeroCTAButton>
           </div>
           <div className="hero-stats" style={{ display: "flex" }}>
             <div>

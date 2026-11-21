@@ -134,7 +134,7 @@ export default function ServicesApplyPage() {
     setSentSummary({ names: serviceNames || [], name: f.name });
     setSubmitPhase(0);
     setSubmitting(true);
-    [700, 1450, 2200].forEach((ms, i) => setTimeout(() => setSubmitPhase(i + 1), ms));
+    setTimeout(() => setSubmitPhase(1), 500);
 
     const leadRequest = postLead({
       name: f.name,
@@ -148,9 +148,11 @@ export default function ServicesApplyPage() {
       if (!res.ok) throw new Error("Lead submission failed");
     });
 
-    setTimeout(async () => {
+    (async () => {
       try {
         await leadRequest;
+        setSubmitPhase(3);
+        await new Promise((r) => setTimeout(r, 450));
         track("generate_lead", { source: "apply" });
         clearSelection();
         setSent(true);
@@ -160,7 +162,7 @@ export default function ServicesApplyPage() {
         setSubmitting(false);
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
-    }, 3050);
+    })();
   };
 
   const set = (k, v) => setF((o) => ({ ...o, [k]: v }));
