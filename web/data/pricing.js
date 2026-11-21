@@ -167,4 +167,11 @@ export const PRICE_LIST = [
   { group: "Professional Tax", name: "Professional Tax Other Services", per: "per service", rows: [
     ["Old months or old Form III pending, per year cleared", "₹1,999", "₹2,359"], ["Cancellation of PTRC or PTEC", "₹1,999", "₹2,359"],
     ["Reply to a professional tax notice", "Quoted", "Quoted"] ] },
+  { group: "Udyam (MSME)", name: "Udyam (MSME) Registration", href: "/services/msme-udyam-registration", per: "per application", rows: [
+    ["New Udyam registration: application, NIC activity code, Udyam number and certificate", "₹999", "₹1,179"],
+    ["Update of your Udyam: address, activity, partners, bank, investment or turnover, up to 3 changes in one application", "₹799", "₹943"],
+    ["Lost number or reprint: recover your Udyam number and reprint the certificate", "₹399", "₹471"],
+    ["Closing or cancelling an Udyam", "₹799", "₹943"],
+    ["Help with schemes after registration (NSIC, CGTMSE, MSME loan): we first tell you if you qualify", "Quoted", "Quoted"] ],
+    note: "Government fee for Udyam: ₹0. The Udyam portal does not charge for registration or update. Our fee is only for our work." },
 ];

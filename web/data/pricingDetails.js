@@ -979,6 +979,51 @@ export const PRICE_DETAILS = {
     ],
   },
 
+  "Udyam (MSME) Registration": {
+    solve: solve(
+      ["Not sure if you need Udyam?", "We tell you in plain words if Udyam helps your business, and which category you fall under. If it does not help, we say so."],
+      ["Paying for a site that is not official?", "Udyam registration on the government portal costs nothing. You pay us only for our work, and the quote shows the government fee as ₹0."],
+      ["Wrong activity code or category?", "We choose your NIC activity code and check your investment and turnover against the current limits, so the certificate fits your business."],
+      ["Lost your Udyam number or certificate?", "We recover your number, reprint your certificate, and fix wrong details on it."],
+    ),
+    include: [
+      "A check of whether Udyam helps you, and your category.",
+      "The right NIC activity code for your business.",
+      "The application filed from your Aadhaar and PAN details, with your OTP.",
+      "Udyam registration number and the Udyam certificate, sent to you as a PDF.",
+      "A short note on what Udyam helps with: priority sector loans, collateral-free loan schemes, and delayed-payment protection from buyers.",
+      "One WhatsApp contact and a status message at every stage.",
+    ],
+    extras: [
+      { h: "Who is micro, small or medium", table: { head: ["Category", "Investment up to", "Turnover up to"], rows: [
+        ["Micro", "₹2.5 crore", "₹10 crore"], ["Small", "₹25 crore", "₹100 crore"], ["Medium", "₹125 crore", "₹500 crore"],
+      ] }, p: ["Limits in force from 1 April 2025. Both limits must be met. Investment and turnover are checked from your PAN, ITR and GST records."] },
+      { h: "Government fee", items: [
+        "Government fee for Udyam: ₹0. The Udyam portal does not charge for registration or update. Our fee is only for our work.",
+        "If you take a company registration from us, Udyam registration is included.",
+      ] },
+    ],
+    exclude: [
+      "Loans, subsidies and scheme approvals. Udyam is a registration. It does not give you a loan by itself.",
+      "GST registration and returns, ROC filings and income tax returns.",
+      "ISO, bar code and other certificates. These have their own fees.",
+      "Third-party fees, if any, for scheme applications.",
+    ],
+    need: [
+      "Aadhaar and PAN of the owner, partner, director or authorised signatory.",
+      "Mobile number linked to Aadhaar, for the OTP, and your email.",
+      "GSTIN, if you have one.",
+      "Business name, address, date business started, number of employees and bank account details.",
+      "Your type of business and what you do, in plain words. We choose the activity code.",
+    ],
+    terms: [
+      "Our fee is for professional work. The government charges nothing for Udyam registration or update.",
+      "Fees are paid in full, in advance, before we start. They are not refunded once the application is filed.",
+      "Your details must match your Aadhaar and PAN. If they do not, the application can be rejected, and we tell you how to fix it first.",
+      "Udyam is registered in the name of the PAN holder. It cannot be moved to another person.",
+      "Udyam registration does not need renewal. Details should be updated when they change.",
+    ],
+  },
   "Professional Tax in Kolkata": {
     solve: solve(
       ["Not sure: PTRC or PTEC?", "PTRC is for an employer who deducts tax from staff salary. PTEC is for the company, firm or professional paying in its own name. We tell you which you need."],
