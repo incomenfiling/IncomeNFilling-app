@@ -18,6 +18,8 @@ export const PRICE_GROUPS = {
     title: "Company, LLP Registration Prices in Kolkata | Income N Filing", description: "Private limited company, LLP and partnership firm registration prices, with our fee, digital signatures and government charges listed. Income N Filing, Kolkata." },
   roc: { tab: "ROC", group: "ROC", h1: "ROC annual compliance prices", lead: "One yearly fee for every regular ROC filing. Our fee + 18% GST. Government fees at actuals.",
     title: "ROC Annual Compliance Prices, Company and LLP | Income N Filing", description: "Yearly ROC compliance plans for private limited companies and LLPs: AOC-4, MGT-7A, Form 11, Form 8, DIR-3 KYC and event filings. Income N Filing, Kolkata." },
+  "professional-tax": { tab: "Professional Tax", group: "Professional Tax", h1: "Professional tax prices in Kolkata (West Bengal)", lead: "Registration, monthly payment and annual return. Our fee + 18% GST. Government tax is separate and paid at actuals.", detailsName: "Professional Tax in Kolkata",
+    title: "Professional Tax Registration and Return, Kolkata | Income N Filing", description: "PTRC and PTEC registration, monthly payment and annual Form III for West Bengal employers and professionals, with new salary slabs from October 2026. Income N Filing, Kolkata." },
   accounting: { tab: "Accounting", group: "Accounting", h1: "Accounting and cash-flow desk prices", lead: "Monthly fee + 18% GST, plus a one-time setup fee. All work is done in Tally by our backend team.",
     title: "Monthly Accounting Prices in Kolkata | Income N Filing", description: "Monthly accounting plans in Tally with GST and TDS filing and cash-flow reports, by number of entries. Income N Filing, Kolkata. Fixed in writing." },
 };
@@ -83,7 +85,7 @@ export function PriceGroupPage({ groupKey }) {
                       <div style={{ fontFamily: "var(--font-display)", fontWeight: 600, fontSize: 15, lineHeight: 1.35, color: "var(--navy-900)" }}>{label}</div>
                       {r[3] && <div style={{ ...T, fontSize: 12.5 }}>{r[3]}</div>}
                       <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 26, color: "var(--navy-900)", marginTop: "auto", paddingTop: 4 }}>{r[1]}</div>
-                      <div style={{ ...T, fontSize: 12 }}>{final ? "Final price" : `+ 18% GST · total ${r[2]}`}</div>
+                      <div style={{ ...T, fontSize: 12 }}>{final ? "Final price" : /^(quoted|custom)/i.test(r[2]) ? "Quoted in writing" : `+ 18% GST · total ${r[2]}`}</div>
                       <Link href={`/contact?group=${groupKey}&service=${encodeURIComponent(s.name)}&plan=${encodeURIComponent(label)}`} style={{ fontSize: 13, fontWeight: 700, color: "var(--navy-800)", textDecoration: "underline", padding: "6px 0" }}>Choose this plan →</Link>
                     </div>
                   );

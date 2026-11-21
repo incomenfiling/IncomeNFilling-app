@@ -18,6 +18,7 @@ const CARDS = [
   { slug: "dsc", key: "DSC", from: "From ₹1,590", note: "final price", text: "Class 3 certificate with a Hype USB token. Assisted and Basic service." },
   { slug: "incorporation", key: "Incorporation", from: "From ₹2,500", note: "+ 18% GST", text: "Private limited company, LLP and partnership firm: registration and changes." },
   { slug: "roc", key: "ROC", from: "From ₹5,999", note: "a year + 18% GST", text: "Yearly ROC compliance for private limited companies and LLPs." },
+  { slug: "professional-tax", key: "Professional Tax", from: "From ₹499", note: "+ 18% GST", text: "West Bengal PTRC and PTEC registration, monthly payment and annual Form III." },
   { slug: "accounting", key: "Accounting", from: "From ₹7,999", note: "a month + 18% GST", text: "Books in Tally, GST and TDS filing, and cash-flow reports." },
 ];
 const T = { fontFamily: "var(--font-body)", fontSize: "var(--text-sm)", lineHeight: 1.6, color: "var(--ink-500)", margin: 0 };

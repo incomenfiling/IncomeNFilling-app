@@ -54,6 +54,7 @@ Full tables with what each plan includes: ${SITE}/pricing
 - [Accounting prices](${SITE}/pricing/accounting)
 - [Income tax return prices](${SITE}/pricing/income-tax)
 - [Incorporation prices](${SITE}/pricing/incorporation)
+- [Professional tax prices, West Bengal](${SITE}/pricing/professional-tax)
 - [ROC annual compliance prices](${SITE}/pricing/roc)
 - [Kolkata office and services](${SITE}/kolkata)
 - [Contact](${SITE}/contact)

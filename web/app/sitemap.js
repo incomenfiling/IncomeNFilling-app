@@ -23,6 +23,7 @@ export default async function sitemap() {
     { url: `${SITE}/pricing/accounting`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE}/pricing/income-tax`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE}/pricing/incorporation`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE}/pricing/professional-tax`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE}/pricing/roc`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE}/kolkata`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },

@@ -978,4 +978,53 @@ export const PRICE_DETAILS = {
       "You must give us complete income and bank details before the due date. Late fees and interest from late data are yours to pay.",
     ],
   },
+
+  "Professional Tax in Kolkata": {
+    solve: solve(
+      ["Not sure: PTRC or PTEC?", "PTRC is for an employer who deducts tax from staff salary. PTEC is for the company, firm or professional paying in its own name. We tell you which you need."],
+      ["Salary slabs changed in October 2026?", "West Bengal changed the slabs from 1 October 2026. We map every employee to the right slab, so the deduction is not too low or too high."],
+      ["Afraid of the 21st of every month?", "Late payment carries interest of 1% of the tax for each month. We prepare the challan and remind you before the date."],
+      ["Old returns or year-end Form III pending?", "We file the annual Form III once the year's tax is paid, and clear old months before filing."],
+    ),
+    include: [
+      "Registration: the portal application, documents, follow-up until the certificate, and a note on which slab applies to you.",
+      "PTRC yearly plan: a deduction chart for every employee each month, the challan with GRN for all 12 months paid on the portal by the 21st, reminders before each date, and the annual Form III filed after the year's tax is paid.",
+      "PTEC yearly payment: the payment on the portal, due by 31 July, with challan and GRN.",
+      "Backlog: old months or old Form III cleared, per year, before the return is filed.",
+    ],
+    extras: [
+      { h: "Salary slabs from 1 October 2026", table: { head: ["Monthly gross salary", "Tax per month"], rows: [
+        ["Up to ₹20,000", "Nil"], ["₹20,001 to ₹30,000", "₹100"], ["₹30,001 to ₹50,000", "₹140"], ["₹50,001 to ₹1,00,000", "₹170"], ["Above ₹1,00,000", "₹208"],
+      ] }, p: ["Notification No. 1607-F.T. dated 16 September 2026. For salary months up to September 2026, the old slabs apply. This tax is paid to the government by the employer, from the employee's salary. It is not our fee."] },
+      { h: "Government tax, paid by you", items: [
+        "Employee salary tax: the slabs above, deducted from salary and paid by the employer by the 21st of the next month.",
+        "PTEC yearly tax: ₹2,500 for a company. For a firm, LLP, trader or professional, it depends on turnover or income, up to ₹2,500 a year. We tell you the exact amount for your case before you pay.",
+        "Interest: 1% of the tax for each month of delay. Penalties apply for late application or late return.",
+        "These are government amounts. We pay them through the state portal on your behalf only when you send us the money first.",
+      ] },
+      { h: "Dates to remember", items: [
+        "Employee tax deposit (PTRC): by the 21st of the next month.",
+        "PTEC yearly payment: by 31 July.",
+        "Annual Form III return (PTRC): by 30 April, once the year's tax is paid. The state sometimes extends this date, and we tell you.",
+      ] },
+    ],
+    exclude: [
+      "Payroll making, PF and ESIC.",
+      "Professional tax of other states. This price list is for West Bengal.",
+      "Government tax, interest and penalties. You pay these at actuals.",
+      "Replies to department notices and appeals, unless quoted separately.",
+      "GST, TDS and income tax returns.",
+    ],
+    need: [
+      "PAN, address proof, and the business registration paper (certificate of incorporation, partnership deed or shop licence).",
+      "For PTRC: a list of employees with names and monthly gross salary. Each month, the salary figure by the 15th.",
+      "Your mobile number and email, for the portal OTP.",
+    ],
+    terms: [
+      "Our fee is for professional work. Tax, interest and penalties go to the government at actuals.",
+      "Registration is paid in advance. The monthly and yearly plans are paid in advance for the period, and not refunded once the period starts.",
+      "You send salary details by the 15th of each month. If they come late, we cannot promise the deposit by the 21st. The interest is yours.",
+      "If your employee count crosses your plan, we move you to the next plan from the next month, and tell you first.",
+    ],
+  },
 };

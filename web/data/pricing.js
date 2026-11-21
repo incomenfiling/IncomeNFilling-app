@@ -155,4 +155,16 @@ export const PRICE_LIST = [
     ["Standard Firm Filing", "₹4,999", "₹5,899", "Filing from ready statements, partner salary check (Section 40(b)). For partnership firms and LLPs with ready books"],
     ["Full Firm Rebuild and Filing Pack", "₹7,499", "₹8,849", "Balance sheet rebuild, partner capital reconciliation. For firms and LLPs with no accounts"] ],
     note: "Add-on: financial statements made from your raw bank statements, for tax filing, a bank loan or a visa: ₹2,500 + GST = ₹2,950." },
+  { group: "Professional Tax", name: "Professional Tax Registration (PTRC / PTEC)", href: "/services/professional-tax", per: "one time, West Bengal", rows: [
+    ["Registration, any type of person (PTRC or PTEC)", "₹1,499", "₹1,769", "Company, firm, LLP, proprietor, professional or employer"] ],
+    note: "Government charges, if any, are at actuals." },
+  { group: "Professional Tax", name: "PTRC Yearly Plan: Monthly Payment and Form III", per: "per year, by number of employees", rows: [
+    ["Up to 10 employees", "₹6,999", "₹8,259"], ["11 to 25 employees (recommended)", "₹9,999", "₹11,799"], ["26 to 50 employees", "₹14,999", "₹17,699"],
+    ["51 to 100 employees", "₹23,999", "₹28,319"], ["More than 100 employees", "Quoted", "Quoted"] ],
+    note: "Only some months? Month by month: up to 10 employees ₹499, 11 to 25 ₹799, 26 to 50 ₹1,199, 51 to 100 ₹1,999, each + 18% GST per month. The annual Form III alone is ₹1,499 + GST." },
+  { group: "Professional Tax", name: "PTEC Yearly Payment", per: "per year, due by 31 July", rows: [
+    ["Yearly PTEC payment on the portal, with challan and GRN", "₹499", "₹589"] ] },
+  { group: "Professional Tax", name: "Professional Tax Other Services", per: "per service", rows: [
+    ["Old months or old Form III pending, per year cleared", "₹1,999", "₹2,359"], ["Cancellation of PTRC or PTEC", "₹1,999", "₹2,359"],
+    ["Reply to a professional tax notice", "Quoted", "Quoted"] ] },
 ];

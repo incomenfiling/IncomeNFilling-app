@@ -1267,6 +1267,72 @@ export const SERVICE_PAGES = [
       }
     ]
   },
+  {
+    slug: "professional-tax",
+    name: "Professional Tax West Bengal",
+    h1: "Professional Tax Registration and Return in Kolkata",
+    module: "Licenses & Registrations",
+    listed: "Professional Tax",
+    metaTitle: "Professional Tax in Kolkata: PTRC, PTEC, Form III | Income N Filing",
+    metaDescription:
+      "West Bengal professional tax in Kolkata: PTRC and PTEC registration, monthly payment by the 21st and annual Form III, with the new salary slabs from 1 October 2026. Fee fixed in writing.",
+    intro:
+      "We register you for professional tax in West Bengal, pay it on the state portal every month and file the annual return. One person prepares the working and another checks it before anything is paid. The fee is fixed in writing, and the tax itself goes to the government at actuals.",
+    whoNeeds: [
+      "Employers who deduct professional tax from staff salary (PTRC)",
+      "Companies, firms, LLPs, traders and professionals who pay in their own name (PTEC)",
+      "New businesses that employ staff in West Bengal",
+      "Businesses with old months or an old annual return still pending",
+    ],
+    sections: [
+      { h: "PTRC or PTEC: which one do you need?", items: [
+        "PTRC is for an employer who deducts tax from employees' salary and deposits it with the state.",
+        "PTEC is for the company, firm or professional paying tax in its own name, once a year.",
+        "Many businesses need both. We tell you which applies, and you do not pay for one you do not need.",
+      ] },
+      { h: "Salary slabs from 1 October 2026", items: [
+        "Up to ₹20,000 a month: nil",
+        "₹20,001 to ₹30,000: ₹100 a month",
+        "₹30,001 to ₹50,000: ₹140 a month",
+        "₹50,001 to ₹1,00,000: ₹170 a month",
+        "Above ₹1,00,000: ₹208 a month",
+      ], note: "Notification No. 1607-F.T. dated 16 September 2026. For salary months up to September 2026, the old slabs apply." },
+      { h: "Dates to remember", items: [
+        "Employee tax deposit (PTRC): by the 21st of the next month.",
+        "PTEC yearly payment: by 31 July.",
+        "Annual Form III (PTRC): by 30 April, once the year's tax is paid. The state sometimes extends this date.",
+        "Interest on late payment is 1% of the tax for each month of delay.",
+      ] },
+      { h: "What we need from you", items: [
+        "PAN, address proof, and the business registration paper (certificate of incorporation, partnership deed or shop licence)",
+        "For PTRC: a list of employees with names and monthly gross salary, and each month's salary figure by the 15th",
+        "A mobile number and email you control, because the portal sends OTPs there",
+      ] },
+      { h: "How it works", ordered: true, items: [
+        "You share your documents and the employee list on WhatsApp or the form.",
+        "We confirm the scope and the plan in writing.",
+        "We register you, then prepare the monthly deduction chart and the challan.",
+        "You send the tax amount, and we pay it on the portal by the 21st and send you the GRN.",
+        "After the year's tax is paid, we file the annual Form III.",
+      ] },
+      { h: "What is not covered", items: [
+        "Payroll making, PF and ESIC",
+        "Professional tax of other states",
+        "Replies to department notices and appeals, unless quoted separately",
+        "The tax, interest and penalties themselves, which you pay at actuals",
+      ] },
+    ],
+    faqs: [
+      { q: "What is the difference between PTRC and PTEC?", a: "PTRC is the employer's registration for deducting professional tax from salary. PTEC is the enrolment for a company, firm or professional paying in their own name." },
+      { q: "What are the professional tax slabs in West Bengal now?", a: "From 1 October 2026, salary up to ₹20,000 a month pays nothing. Above that the tax is ₹100, ₹140, ₹170 and ₹208 a month for the next four slabs, ending above ₹1,00,000." },
+      { q: "When is professional tax due?", a: "The employee tax is due by the 21st of the next month. The yearly PTEC payment is due by 31 July. The annual Form III is due by 30 April once the year's tax is paid." },
+      { q: "What happens if I pay late?", a: "Interest of 1% of the tax applies for each month of delay, and penalties apply for a late application or late return." },
+      { q: "Is the professional tax part of your fee?", a: "No. Our fee is for the professional work. The tax goes to the government at actuals, and we pay it on the portal only after you send us the money." },
+      { q: "Can you clear old months and returns?", a: "Yes. We clear the pending months before filing the annual return, and quote the price per year in writing." },
+      { q: "Do you cover professional tax in other states?", a: "No. This service is for West Bengal." },
+      { q: "How much does it cost?", a: "Prices are on our professional tax price page, with plans by number of employees. The fee is fixed in writing before we start." },
+    ],
+  },
 ];
 
 export const SERVICE_BY_SLUG = Object.fromEntries(SERVICE_PAGES.map((s) => [s.slug, s]));
