@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { track } from "@/lib/track";
+import { GOOGLE_REVIEWS } from "@/data/reviews";
 import { WHATSAPP_URL, BOOKING_URL, MAPS_URL, EMAIL } from "@/data/content";
 
 // Verbatim Google reviews (wording and spelling unchanged). No review schema on purpose.
@@ -22,7 +23,7 @@ export function ReviewsSection() {
     <section id="testimonials" style={{ background: "var(--navy-050)", padding: "64px 0" }}>
       <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "0 24px" }}>
         <div style={{ textAlign: "center", marginBottom: 28 }}>
-          <div style={{ fontFamily: "var(--font-display)", fontWeight: 600, fontSize: 32, color: "var(--navy-900)" }}>4.9★ · 162 Google reviews</div>
+          <div style={{ fontFamily: "var(--font-display)", fontWeight: 600, fontSize: 32, color: "var(--navy-900)" }}>{GOOGLE_REVIEWS.rating}★ · {GOOGLE_REVIEWS.count} Google reviews</div>
           <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "var(--ink-500)", marginTop: 6 }}>Selected Google reviews, shown as written</div>
         </div>
         <div style={{ display: "flex", gap: 16, overflowX: "auto", scrollSnapType: "x mandatory", paddingBottom: 12, flexWrap: "nowrap" }}>
@@ -45,7 +46,7 @@ export function ReviewsSection() {
           ))}
         </div>
         <div style={{ textAlign: "center", marginTop: 20 }}>
-          <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-body)", fontSize: 14, color: "var(--link)" }}>Read all 162 reviews on Google</a>
+          <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-body)", fontSize: 14, color: "var(--link)" }}>Read all {GOOGLE_REVIEWS.count} reviews on Google</a>
           <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--ink-300)", marginTop: 8 }}>
             Want your review removed from this page? Write to <a href={`mailto:${EMAIL}`} style={{ color: "inherit" }}>{EMAIL}</a>.
           </div>

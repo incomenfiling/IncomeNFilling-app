@@ -1,5 +1,6 @@
 import { SERVICE_PAGES } from "@/data/servicePages";
 import { POSTS } from "@/data/posts";
+import { GOOGLE_REVIEWS } from "@/data/reviews";
 import { PRICE_LIST } from "@/data/pricing";
 
 export const dynamic = "force-static";
@@ -12,7 +13,7 @@ export function GET() {
   const prices = PRICE_LIST.map((p) => `- ${p.name} (${p.per}): ` + p.rows.slice(0, 6).map((r) => `${clean(r[0])} ${r[1]}${r[2] === "Final price" ? " (final price)" : ""}`).join("; ")).join("\n");
   const body = `# Income N Filing
 
-> Income N Filing is a tax and compliance firm in Kasba, Kolkata, West Bengal, India, serving individuals and businesses across India. Founded by Anish Jhunjhunwala. Services: income tax return (ITR) filing, income tax notice reply support, GST registration and filing, TDS, company/LLP registration, ROC filing, bookkeeping and related compliance. Rated 4.9 from 162 Google reviews.
+> Income N Filing is a tax and compliance firm in Kasba, Kolkata, West Bengal, India, serving individuals and businesses across India. Founded by Anish Jhunjhunwala. Services: income tax return (ITR) filing, income tax notice reply support, GST registration and filing, TDS, company/LLP registration, ROC filing, bookkeeping and related compliance. Rated ${GOOGLE_REVIEWS.rating} from ${GOOGLE_REVIEWS.count} Google reviews.
 
 ## Contact
 - Website: ${SITE}
