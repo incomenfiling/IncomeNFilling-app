@@ -12,6 +12,7 @@ const ITEMS = [
   { k: "testimonials", label: "Testimonials", href: "/#testimonials" },
   { k: "blog", label: "Blog", href: "/blog" },
   { k: "chat", label: "Ask Ira", href: "/chat" },
+  { k: "careers", label: "Careers", href: "/careers" },
   { k: "contact", label: "Contact", href: "/contact" },
 ];
 
