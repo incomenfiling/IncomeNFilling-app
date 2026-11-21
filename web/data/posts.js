@@ -73,7 +73,7 @@ export const POSTS = [
       ["Enrolled person (self-employed, company)", "Pay the year's tax", "On or before 31 July of that year (Section 8(2) of the Act)"],
       ["Anyone newly liable", "Apply for registration or enrolment", "Within 90 days of becoming liable (Section 5)"]
     ] } },
-    { p: "So tax on October's salary is due tomorrow, 21 November, and November's is due on 21 December." },
+    { p: "So tax on October's salary is due on 21 November, and November's is due on 21 December." },
     { p: "The Act also allows a penalty of up to 50% of the tax if you do not pay after a demand notice (Section 10), and a late fee for returns. The department's FAQ mentions ₹200 for the first month and ₹100 for each month after. Amounts can change, so confirm on the portal before you pay." },
     { h2: "What should an employer check this month?" },
     { p: "Check that your payroll uses the new table, that nobody earning ₹20,000 or less is still being charged, and that your registration and enrolment are both in place." },
