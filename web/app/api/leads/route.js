@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { sendLeadToCRM } from "@/lib/crm";
+import { sendMetaLead } from "@/lib/capi";
 
 const clip = (v, n) => String(v ?? "").trim().slice(0, n);
 // Stop spreadsheet formula injection: a leading = + - @ would run as a formula in Sheets.
@@ -86,6 +87,15 @@ export async function POST(request) {
   for (let attempt = 0; attempt < 2; attempt++) {
     try {
       await sendLeadToCRM({ name, phone, email, property, notes, source });
+      // Server-side Meta Conversions API lead (only when the visitor allowed analytics and the secret is set). Never blocks the lead.
+      if (body?.adsConsent === true) {
+        await sendMetaLead({
+          eventId: clip(body?.eventId, 60), phone, email, name, source,
+          url: "https://incomenfiling.com" + (clip(body?.pageUrl, 120) || "/"),
+          fbp: clip(body?.fbp, 100), fbc: clip(body?.fbc, 200),
+          ip: request.headers.get("CF-Connecting-IP") || "", ua: request.headers.get("user-agent") || "",
+        }).catch(() => {});
+      }
       return NextResponse.json({ ok: true });
     } catch (err) {
       if (attempt === 1) console.error("Lead submission failed:", err?.message || "unknown");

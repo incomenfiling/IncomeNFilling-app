@@ -27,6 +27,8 @@ export default async function sitemap() {
     { url: `${SITE}/pricing/udyam`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE}/pricing/roc`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE}/kolkata`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE}/income-tax-return-filing-kolkata`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE}/tax-consultant-kolkata`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${SITE}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE}/about`, lastModified: new Date("2026-11-18"), changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE}/privacy`, lastModified: new Date("2026-11-20"), changeFrequency: "yearly", priority: 0.2 },

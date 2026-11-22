@@ -58,6 +58,8 @@ Full tables with what each plan includes: ${SITE}/pricing
 - [Udyam (MSME) registration prices](${SITE}/pricing/udyam)
 - [ROC annual compliance prices](${SITE}/pricing/roc)
 - [Kolkata office and services](${SITE}/kolkata)
+- [Income tax return filing in Kolkata](${SITE}/income-tax-return-filing-kolkata)
+- [Tax consultant in Kolkata](${SITE}/tax-consultant-kolkata)
 - [Contact](${SITE}/contact)
 - [About Income N Filing](${SITE}/about)
 - [Partner program for accountants and tax professionals](${SITE}/partners)

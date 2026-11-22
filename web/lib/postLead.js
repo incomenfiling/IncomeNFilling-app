@@ -65,9 +65,14 @@ function pageMeta() {
 
 export async function postLead(payload) {
   const token = await getToken();
+  const eventId = "lead_" + Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+  window.__infLeadId = eventId;
+  let adsConsent = false;
+  try { adsConsent = localStorage.getItem("inf_consent") === "all"; } catch {}
+  const cookie = (n) => { const m = document.cookie.match(new RegExp("(?:^|; )" + n + "=([^;]*)")); return m ? decodeURIComponent(m[1]) : ""; };
   return fetch("/api/leads", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ ...payload, ...pageMeta(), policyVersion: POLICY_VERSION, turnstileToken: token, elapsed: Math.round(performance.now()) }),
+    body: JSON.stringify({ ...payload, ...pageMeta(), eventId, adsConsent, fbp: cookie("_fbp"), fbc: cookie("_fbc"), policyVersion: POLICY_VERSION, turnstileToken: token, elapsed: Math.round(performance.now()) }),
   });
 }

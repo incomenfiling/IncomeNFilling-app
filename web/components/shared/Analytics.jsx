@@ -9,6 +9,7 @@ const GA_ID = "G-ME6GXBHFZ4";
 const TAWK_PROPERTY = "670fe2bd2480f5b4f58e7744";
 const TAWK_WIDGET = "1iab0rdcg";
 const CLARITY_ID = "zf44688vd9";
+const META_PIXEL_ID = "1343663231215768";
 
 export default function Analytics() {
   const consent = useConsent();
@@ -51,6 +52,11 @@ export default function Analytics() {
           t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
           y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window,document,"clarity","script","${CLARITY_ID}");
+      `}</Script>
+      <Script id="meta-pixel" strategy="afterInteractive">{`
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '${META_PIXEL_ID}');
+        fbq('track', 'PageView');
       `}</Script>
       <Script id="tawk-init" strategy="lazyOnload">{`
         var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();

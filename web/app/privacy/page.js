@@ -17,7 +17,7 @@ export default function Page() {
             <ConsentBox />
       <P>We use your details to reply to your enquiry, prepare quotations, deliver the services you ask for, send you status updates, meet legal duties, and improve our website. We do not sell your personal data.</P>
       <H>Who we share it with</H>
-      <P>Only with those who help us deliver the service: Google (Sheets, Drive, Gmail and Analytics) to store records and measure usage, Microsoft (Clarity) to understand how visitors use the site, Cloudflare to host the website, WhatsApp for messaging, and government portals (for example the GST, Income Tax and MCA portals) when we file on your behalf. Online payment providers will be added here when we start taking online payments. We may share data when the law requires it.</P>
+      <P>Only with those who help us deliver the service: Google (Sheets, Drive, Gmail and Analytics) to store records and measure usage, Microsoft (Clarity) to understand how visitors use the site, Meta (pixel and Conversions API, only if you allow analytics) to measure our ads and enquiries, Cloudflare to host the website, WhatsApp for messaging, and government portals (for example the GST, Income Tax and MCA portals) when we file on your behalf. Online payment providers will be added here when we start taking online payments. We may share data when the law requires it.</P>
       <H>How long we keep it</H>
       <P>Enquiry details are kept only for as long as we need them to follow up and answer you. Client records and documents are kept for as long as the law requires for the service we did, and for the period we need them to answer notices or queries about that work. After that we delete them or make them anonymous.</P>
       <H>How we protect it</H>

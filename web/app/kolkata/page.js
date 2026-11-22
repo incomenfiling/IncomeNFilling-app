@@ -42,6 +42,7 @@ export default function KolkataPage() {
             <li key={s.slug}><Link href={`/services/${s.slug}`} style={{ color: "var(--link)" }}>{s.name}</Link></li>
           ))}
         </ul>
+        <p style={p}>Popular in Kolkata: <Link href="/income-tax-return-filing-kolkata" style={{ color: "var(--link)" }}>income tax return filing</Link> and <Link href="/tax-consultant-kolkata" style={{ color: "var(--link)" }}>tax consultant in Kolkata</Link>.</p>
         <p style={p}>See the <Link href="/services" style={{ color: "var(--link)" }}>full list of services</Link>.</p>
 
         <h2 style={h2}>Visit our Kolkata office</h2>
