@@ -59,6 +59,7 @@ Full tables with what each plan includes: ${SITE}/pricing
 - [ROC annual compliance prices](${SITE}/pricing/roc)
 - [Kolkata office and services](${SITE}/kolkata)
 - [Income tax return filing in Kolkata](${SITE}/income-tax-return-filing-kolkata)
+- [GST registration in Kolkata](${SITE}/gst-registration-kolkata)
 - [Tax consultant in Kolkata](${SITE}/tax-consultant-kolkata)
 - [Contact](${SITE}/contact)
 - [About Income N Filing](${SITE}/about)

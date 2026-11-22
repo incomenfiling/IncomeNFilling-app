@@ -20,6 +20,8 @@ const QUICK_LINKS = [
   ["Pricing", "/pricing"],
   ["Blog", "/blog"],
   ["Kolkata office", "/kolkata"],
+  ["GST registration in Kolkata", "/gst-registration-kolkata"],
+  ["Tax consultant in Kolkata", "/tax-consultant-kolkata"],
   ["Ask Ira", "/chat"],
   ["Contact", "/contact"],
 ];
@@ -139,7 +141,7 @@ export function Footer() {
         <div style={{ paddingTop: 22 }}><PreferredSource source="footer" dark /></div>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, flexWrap: "wrap", paddingTop: 22 }}>
           <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--navy-300)" }}>
-            © {new Date().getFullYear()} Income N Filing. All rights reserved.
+            © {new Date().getFullYear()} Income N Filing. All rights reserved. GSTIN 19ASWPJ9651J1ZQ.
           </div>
           <div style={{ display: "flex", gap: "8px 22px", flexWrap: "wrap" }}>
             {[["Privacy Policy", "privacy"], ["Terms & Conditions", "terms"], ["Tools", "tools"], ["Online sellers", "ecommerce-sellers"], ["Partners", "partners"], ["Careers", "careers"], ["Refund Policy", "refund-policy"], ["Disclaimer", "disclaimer"], ["Cookies", "cookies"]].map(([label, hash]) => (

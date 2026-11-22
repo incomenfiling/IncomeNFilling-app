@@ -118,6 +118,16 @@ export function ServicePageView({ data }) {
                 </ul>
               </>
             )}
+            <h2 style={H2}>In Kolkata</h2>
+            <ul style={{ margin: 0, paddingLeft: 22 }}>
+              {[
+                ["GST registration in Kolkata", "/gst-registration-kolkata"],
+                ["Income tax return filing in Kolkata", "/income-tax-return-filing-kolkata"],
+                ["Tax consultant in Kolkata", "/tax-consultant-kolkata"],
+              ].map(([name, href]) => (
+                <li key={href} style={LI}><Link href={href} style={{ color: "var(--navy-800)", fontWeight: 600 }}>{name}</Link></li>
+              ))}
+            </ul>
           </article>
           {!bp.mobile && (
             <aside style={{ position: bp.ltDesktop ? "static" : "sticky", top: 24, background: "var(--navy-900)", borderRadius: "var(--radius-xl)", padding: 20, color: "var(--white)" }}>

@@ -33,6 +33,7 @@ export function siteGraph() {
         telephone: PHONE_E164,
         email: EMAIL_ADDR,
         foundingDate: "2017",
+        taxID: "19ASWPJ9651J1ZQ",
         founder: {
           "@type": "Person",
           name: "Anish Jhunjhunwala",
