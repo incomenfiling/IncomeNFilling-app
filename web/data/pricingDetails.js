@@ -707,7 +707,7 @@ export const PRICE_DETAILS = {
     includeNote: "Our fee covers the work below. The numbers for PAN, TAN, EPFO and ESIC are issued by the departments.",
     include: [
       "Director Identification Number (DIN) for 2 directors.",
-      "Class 3 Digital Signature Certificates with USB token for the 2 directors and the witness, if you take them from us.",
+      "Class 3 Digital Signature Certificates (certificate only, no USB token) for the 2 directors and the witness, if you take them from us.",
       "Name check before you pay, and name approval with MCA.",
       "MOA and AOA, drafted for your business objects.",
       "SPICe+ and all linked forms prepared by our team and certified by a practising professional.",
@@ -806,7 +806,7 @@ export const PRICE_DETAILS = {
     includeNote: "Our fee covers the work below. LLP PAN and TAN are issued by the departments.",
     include: [
       "Designated Partner Identification Number (DIN) for 2 designated partners.",
-      "Class 3 Digital Signature Certificates with USB token for the 2 designated partners, if you take them from us.",
+      "Class 3 Digital Signature Certificates (certificate only, no USB token) for the 2 designated partners, if you take them from us.",
       "Name check before you pay, and name approval with MCA.",
       "LLP agreement drafted for your business, signed and filed with MCA (Form 3) within 30 days.",
       "FiLLiP and all linked forms prepared by our team and certified by a practising professional.",

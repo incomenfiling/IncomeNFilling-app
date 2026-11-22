@@ -2,12 +2,12 @@ import Link from "next/link";
 import { InfoPage, Sec, Tiles, T } from "@/components/layout/InfoPage";
 import { ProblemsSolve } from "@/components/ui/ProblemsSolve";
 import { SimpleLeadForm } from "@/components/forms/SimpleLeadForm";
-import { WHATSAPP_URL, BOOKING_URL } from "@/data/content";
+import { WHATSAPP_URL, BOOKING_URL, PAY_URL } from "@/data/content";
 import { ldScript, webPage } from "@/lib/schema";
 import { SITE_URL } from "@/lib/site";
 
 // One compact landing layout for Kolkata search pages. Content comes from the page file.
-export function CityLanding({ path, name, description, eyebrow, h1, lead, problems, tilesTitle, tiles, steps, priceNote, faqs, formTitle, source, serviceOptions }) {
+export function CityLanding({ path, name, description, eyebrow, h1, lead, problems, tilesTitle, tiles, steps, priceNote, faqs, formTitle, source, serviceOptions, pricingHref = "/pricing/income-tax", pricingLabel = "See all income tax prices" }) {
   const graph = [
     webPage(path, name, description),
     { "@type": "BreadcrumbList", itemListElement: [
@@ -38,7 +38,8 @@ export function CityLanding({ path, name, description, eyebrow, h1, lead, proble
         <ol style={{ ...T, paddingLeft: 22, display: "grid", gap: 6 }}>{steps.map((s) => <li key={s}>{s}</li>)}</ol>
       </Sec>
       <Sec h="Fees">
-        <p style={T}>{priceNote} <Link href="/pricing/income-tax" style={{ color: "var(--navy-800)", fontWeight: 700 }}>See all income tax prices</Link>. The fee is fixed in writing before we start; government charges are separate.</p>
+        <p style={T}>{priceNote} <Link href={pricingHref} style={{ color: "var(--navy-800)", fontWeight: 700 }}>{pricingLabel}</Link>. The fee is fixed in writing before we start; government charges are separate.</p>
+        <p style={{ ...T, fontSize: 15 }}>Already have our written quote? <a href={PAY_URL} target="_blank" rel="noopener noreferrer" style={{ color: "var(--navy-800)", fontWeight: 700 }}>Pay it securely online</a> and enter the amount from the quote. After paying, send us your name and phone on WhatsApp.</p>
       </Sec>
       <Sec h="Questions">
         {faqs.map(([q, a]) => (

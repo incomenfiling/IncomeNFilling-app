@@ -120,13 +120,13 @@ export const PRICE_LIST = [
     ["C · Growth (up to 600 entries, 5 bank accounts, recommended)", "₹24,999", "₹29,499"], ["D · Large (up to 1,000 entries, 8 bank accounts)", "₹37,999", "₹44,839"] ],
     note: "One-time setup fee (before GST): A ₹5,000, B ₹10,000, C ₹18,000, D ₹25,000. Above 1,000 entries: custom plan after a short call." },
   { group: "Incorporation", name: "Private Limited Company Registration", href: "/services/private-limited-company-registration", per: "one incorporation, our fee before digital signatures and government charges", rows: [
-    ["Our professional fee (2 directors)", "₹9,000", "₹10,620"], ["Digital signatures for 2 directors and 1 witness (optional, 2 years)", "₹4,800", "Final price"] ],
+    ["Our professional fee (2 directors)", "₹9,000", "₹10,620"], ["Digital signature certificates for 2 directors and 1 witness (certificate only, no token; optional, 2 years)", "₹4,800", "Final price"] ],
     note: "Government charges (stamp duty, MCA and name fees) are paid at actuals, with receipt. Total with our fee and digital signatures: ₹15,420, before government charges." },
   { group: "ROC", name: "Private Limited ROC Annual Compliance", per: "per year, ROC filings only", rows: [
     ["Annual plan: every regular ROC filing", "₹11,999", "₹14,159"] ],
     note: "Same fee every year. Event filings (director change, share allotment and more) are priced separately. Government fees at actuals." },
   { group: "Incorporation", name: "LLP Registration", href: "/services/llp-registration", per: "one incorporation, our fee before digital signatures and government charges", rows: [
-    ["Our professional fee (2 designated partners)", "₹7,999", "₹9,439"], ["Digital signatures for 2 designated partners (optional, 2 years)", "₹3,200", "Final price"] ],
+    ["Our professional fee (2 designated partners)", "₹7,999", "₹9,439"], ["Digital signature certificates for 2 designated partners (certificate only, no token; optional, 2 years)", "₹3,200", "Final price"] ],
     note: "Government charges are paid at actuals, with receipt. Total with our fee and digital signatures: ₹12,639, before government charges." },
   { group: "ROC", name: "LLP ROC Annual Compliance", per: "per year, ROC filings only", rows: [
     ["Annual plan: Form 11, Form 8 and DIR-3 KYC", "₹5,999", "₹7,079"] ],

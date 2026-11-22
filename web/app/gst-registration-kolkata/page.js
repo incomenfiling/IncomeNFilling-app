@@ -53,6 +53,8 @@ export default function Page() {
       faqs={faqs}
       formTitle="Get your GST registration quote"
       source="gst-registration-kolkata"
+      pricingHref="/pricing/gst"
+      pricingLabel="See all GST prices"
       serviceOptions={["GST registration, proprietor", "GST registration, firm or LLP", "GST registration, company", "Online seller GST", "GST notice or query", "Not sure"]}
     />
   );

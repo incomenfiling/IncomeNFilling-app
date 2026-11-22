@@ -44,6 +44,8 @@ export const METROS = [
 export const WHATSAPP_NUMBER = "917890594600";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 export const PHONE_DISPLAY = "+91 7890594600";
+// Razorpay Payment Page "Make Payment to Income N Filing" (customer enters the amount in our written quote).
+export const PAY_URL = "https://rzp.io/rzp/7K45UHY";
 export const BOOKING_URL = "https://calendly.com/incomenfiling_/20min";
 export const PHONE_HREF = "tel:+917890594600";
 export const EMAIL = "support@incomenfiling.com";
