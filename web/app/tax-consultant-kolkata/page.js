@@ -12,6 +12,7 @@ export const metadata = {
 };
 
 const faqs = [
+  ["Is there a tax consultant near Kasba, Ruby and Jadavpur?", "Yes. Our office is in Kasba, at 38 M/1 New Ballygunge Palace, Kolkata 700039. Clients from Kasba, Ruby, Jadavpur, Tollygunge, Ballygunge and nearby areas can walk in, Monday to Saturday, 10:00 to 19:00 IST. Most work is done by phone and WhatsApp, so a visit is optional."],
   ["Where is your office?", "Our head office is in Kasba, Kolkata: Suite 1A, Kaberi Apartment, 38 M/1 New Ballygunge Palace, Ground Floor, Kolkata, West Bengal 700039. We are open Monday to Saturday, 10:00 to 19:00 IST."],
   ["What does a tax consultant do for me?", "We prepare and file your income tax return, GST registration and returns, TDS returns and company or LLP filings, and we reply to notices. We also tell you what is due and when."],
   ["How do you charge?", "The fee is fixed in writing before we start. Government charges are separate. Prices for standard services are on our pricing pages."],

@@ -6,6 +6,183 @@
 // Keep facts general (no fixed prices/deadlines that change by year) and add `updated` when revising.
 export const POSTS = [
 {
+  slug: "gst-late-fee-and-interest-gstr-3b-gstr-1-explained",
+  title: "GST Late Fee and Interest for GSTR-3B and GSTR-1: How Much, and How to Limit It",
+  metaTitle: "GST Late Fee Calculator Rules: GSTR-3B, GSTR-1 | Income N Filing",
+  description: "GST late fee is ₹50 a day (₹20 for nil returns), with a cap by turnover, plus 18% interest on late tax. See the table, an example and how to limit it.",
+  date: "2026-11-23",
+  updated: "2026-11-23",
+  service: "late-gst-return-filing",
+  body: [
+    { takeaways: [
+      "A late GSTR-3B or GSTR-1 costs ₹50 a day (₹25 CGST plus ₹25 SGST). A nil return costs ₹20 a day (₹10 plus ₹10).",
+      "Each return has a maximum: ₹500 for a nil return, then ₹2,000, ₹5,000 or ₹10,000 by turnover.",
+      "Interest is separate. It is 18% a year on tax paid late in GSTR-3B. GSTR-1 has a late fee but no interest.",
+      "The late fee applies even when you owe no tax, so file a nil return on time.",
+      "A waiver exists only when the government notifies one for a period."
+    ] },
+    { p: "If you missed a GST return, two charges can build up: a late fee that runs every day, and interest on any tax you paid late. They are separate, and both are payable. This guide shows the rates, an example, and what to do first." },
+    { h2: "What is the late fee for GSTR-3B and GSTR-1?" },
+    { p: "The late fee is ₹50 a day when the return has tax or sales, split as ₹25 CGST and ₹25 SGST. For a nil return it is ₹20 a day, split as ₹10 and ₹10. The fee stops when you file, up to the maximum for that return." },
+    { table: { caption: "Late fee per return", head: ["Case", "Per day", "Maximum per return"], rows: [
+      ["Nil return", "₹20 (₹10 + ₹10)", "₹500"],
+      ["Turnover up to ₹1.5 crore", "₹50 (₹25 + ₹25)", "₹2,000"],
+      ["₹1.5 crore to ₹5 crore", "₹50 (₹25 + ₹25)", "₹5,000"],
+      ["Above ₹5 crore", "₹50 (₹25 + ₹25)", "₹10,000"]
+    ] } },
+    { p: "Example from our own arithmetic: a business with turnover under ₹1.5 crore files a GSTR-3B with tax 12 days late. The late fee is 12 × ₹50 = ₹600, below the ₹2,000 maximum. Interest is charged on top." },
+    { h2: "How is GST interest calculated?" },
+    { p: "Interest is 18% a year on the tax paid late in GSTR-3B, counted for the number of days the tax was late. It applies only to the unpaid tax, not to the late fee. GSTR-1 reports sales and carries no tax payment, so it has a late fee and no interest." },
+    { h2: "Do I pay a late fee if I owe no tax?" },
+    { p: "Yes. A nil GSTR-3B filed after the due date still attracts the nil-return late fee of ₹20 a day, up to ₹500. This surprises many small businesses, so file the nil return on time." },
+    { h2: "Can the GST late fee be waived?" },
+    { p: "Only when the government notifies a waiver or amnesty scheme for a period. Check the GST portal notifications before you assume one applies to your returns." },
+    { h2: "What should you do if several returns are pending?" },
+    { ul: [
+      "List every pending period and its due date before you file anything.",
+      "File the older periods first, in order, and pay the tax early to keep the interest down.",
+      "Check whether the pending return is a nil return, since the fee is lower.",
+      "Keep the acknowledgement for each return.",
+      "If a notice has arrived, read it before you reply and check the dates it names."
+    ] },
+    { h2: "How we help at Income N Filing" },
+    { p: "We list your pending returns, tell you the late fee and interest for each, and file them in order. One person prepares the work and another checks it. The fee is fixed in writing before we start, and government charges are separate. You can also use our GST late fee calculator for an estimate." },
+    { h2: "How we checked this" },
+    { p: "Rates and caps match the figures on our GST late fee calculator, last checked in November 2026. Confirm the current position on the GST portal before you pay. This is general information and not advice for your case." },
+    { sources: [
+      { name: "GST Portal", url: "https://www.gst.gov.in" },
+      { name: "CBIC", url: "https://www.cbic.gov.in" }
+    ] },
+    { faq: [
+      { q: "What is the late fee for a nil GSTR-3B?", a: "₹20 a day, split as ₹10 CGST and ₹10 SGST, up to a maximum of ₹500." },
+      { q: "What is the maximum late fee for a regular return?", a: "₹2,000 up to ₹1.5 crore turnover, ₹5,000 from ₹1.5 crore to ₹5 crore, and ₹10,000 above ₹5 crore." },
+      { q: "Is interest charged on GSTR-1?", a: "No. GSTR-1 carries a late fee but no interest, because the tax is paid through GSTR-3B." },
+      { q: "Is the interest rate 18% for every case?", a: "18% a year is the general rate on tax paid late in GSTR-3B. Some cases have their own rule, so confirm yours." },
+      { q: "Do late fee and interest both apply?", a: "Yes. They are separate and both are payable." },
+      { q: "Can I use a calculator for this?", a: "Yes. Our GST late fee calculator gives an estimate from your due date and filing date." }
+    ] }
+  ],
+},
+{
+  slug: "tds-rate-chart-fy-2026-27-income-tax-act-2025",
+  title: "TDS Rate Chart FY 2026-27: Sections, Rates and Limits Under the Income-tax Act, 2025",
+  metaTitle: "TDS Rate Chart FY 2026-27 | Sections 392, 393 | Income N Filing",
+  description: "TDS rates and limits for FY 2026-27 with the old and new section numbers: contractors, rent, professional fees, commission, interest and more.",
+  date: "2026-11-23",
+  updated: "2026-11-23",
+  service: "tds-return-filing",
+  body: [
+    { takeaways: [
+      "From 1 April 2026, the Income-tax Act, 2025 applies. Section 392 covers TDS on salary, section 393 covers TDS on other payments, and section 394 covers TCS.",
+      "Common rates are 10% on professional fees and rent of land or building, 2% on contractors (other than individuals and HUF) and commission, and 1% on contractors who are individuals or HUF.",
+      "Limits apply per payee and per year, so track each person separately.",
+      "TDS is deposited by the 7th of the next month. For March, the date is 30 April.",
+      "A higher rate generally applies when the PAN is missing or invalid."
+    ] },
+    { p: "TDS rules moved to new section numbers from 1 April 2026. Your books, your TDS software and your return forms may still show the old sections, so this guide puts both side by side for the payments most businesses make." },
+    { h2: "Which TDS rates apply in FY 2026-27?" },
+    { table: { caption: "Common TDS rates and limits, FY 2026-27", head: ["Payment", "Old section", "New section", "Rate", "Limit"], rows: [
+      ["Salary", "192", "392", "Slab rates", "Basic exemption limit"],
+      ["Interest from a bank or post office", "194A", "393(1)", "10%", "₹50,000 a year (₹1,00,000 for senior citizens)"],
+      ["Interest from others", "194A", "393(1)", "10%", "₹10,000 a year"],
+      ["Contractors: individual or HUF", "194C", "393(1)", "1%", "₹30,000 single, ₹1,00,000 a year"],
+      ["Contractors: others", "194C", "393(1)", "2%", "₹30,000 single, ₹1,00,000 a year"],
+      ["Commission or brokerage", "194H", "393(1)", "2%", "₹20,000 a year"],
+      ["Rent: plant and machinery", "194I", "393(1)", "2%", "₹6,00,000 a year"],
+      ["Rent: land, building, furniture", "194I", "393(1)", "10%", "₹6,00,000 a year"],
+      ["Professional fees", "194J", "393(1)", "10%", "₹50,000 a year"],
+      ["Technical services, call centre", "194J", "393(1)", "2%", "₹50,000 a year"],
+      ["Purchase of immovable property", "194IA", "393(1)", "1%", "₹50 lakh and above"],
+      ["Rent paid by individual or HUF not covered above", "194IB", "393(1)", "2%", "Rent above ₹50,000 a month"],
+      ["Purchase of goods", "194Q", "393(1)", "0.1%", "Above ₹50 lakh a year with the same seller"],
+      ["Payment to partner (salary, interest, bonus)", "194T", "393(3)", "10%", "₹20,000 a year"]
+    ] } },
+    { p: "This table covers the payments most businesses meet. It is not every case, so check your payment before you deduct." },
+    { h2: "What changed with the Income-tax Act, 2025?" },
+    { p: "The Act mainly renumbers and regroups the sections into tables. Payments before 1 April 2026 follow the 1961 Act. The rates and limits above are the ones in force for FY 2026-27." },
+    { h2: "When is TDS deposited and which returns report it?" },
+    { ul: [
+      "Deposit: by the 7th of the next month. For March, by 30 April.",
+      "TDS on salary is reported in Form 138, each quarter.",
+      "TDS on other payments is reported in Form 140, each quarter."
+    ] },
+    { h2: "What mistakes do businesses make with TDS?" },
+    { ul: [
+      "Deducting at the wrong rate because the payee type, such as individual or company, was not checked.",
+      "Missing the deposit date of the 7th.",
+      "Filing the quarterly return with a wrong PAN, so the payee does not see the credit.",
+      "Not deducting once the yearly limit is crossed in the middle of the year."
+    ] },
+    { h2: "How we help at Income N Filing" },
+    { p: "We check the section and rate for each payment, prepare the challans and the quarterly TDS returns, and match them with your books. One person prepares the work and another checks it. The fee is fixed in writing, and government charges are separate. Our TDS rate chart tool carries the same table." },
+    { h2: "How we checked this" },
+    { p: "The table matches our TDS rate chart tool, last checked in November 2026 against the Income Tax Department's published rates. Confirm a specific case before you deduct. This is general information." },
+    { sources: [ { name: "Income Tax Department", url: "https://incometaxindia.gov.in" } ] },
+    { faq: [
+      { q: "Which law applies to TDS from 1 April 2026?", a: "The Income-tax Act, 2025. Section 392 covers salary, section 393 covers other payments and section 394 covers TCS." },
+      { q: "What is the TDS rate on professional fees?", a: "10%, once payments to one person cross ₹50,000 in a year. Technical services and call centre fees are at 2%." },
+      { q: "What is the TDS rate on rent?", a: "10% on land, building and furniture, and 2% on plant and machinery, once rent crosses ₹6,00,000 a year." },
+      { q: "What if the payee has no PAN?", a: "A higher rate generally applies. Collect the PAN before you pay." },
+      { q: "When is TDS deposited?", a: "By the 7th of the next month, and by 30 April for March." },
+      { q: "Which forms report TDS now?", a: "Form 138 for salary and Form 140 for other payments, each quarter." }
+    ] }
+  ],
+},
+{
+  slug: "digital-signature-certificate-dsc-kolkata-class-3-guide",
+  title: "Digital Signature Certificate (DSC) in Kolkata: Which One, What You Need, How Long",
+  metaTitle: "DSC in Kolkata: Class 3 Guide, Documents | Income N Filing",
+  description: "Which DSC do you need? Why Class 3 is the one issued today, signing vs encryption, individual vs organisation, documents to apply, and DGFT.",
+  date: "2026-11-23",
+  updated: "2026-11-23",
+  body: [
+    { takeaways: [
+      "Class 3 is the digital signature class issued today. Class 2 certificates were discontinued from 1 January 2021.",
+      "A signing certificate is enough for GST, income tax and MCA filings. E-tenders usually need signing plus encryption, called a combo.",
+      "An organisation certificate carries the company's name as well as yours. Use it when a portal asks you to sign on its behalf.",
+      "Validity is commonly one, two or three years, chosen when you apply.",
+      "A lost token or a forgotten password means a new certificate has to be applied for."
+    ] },
+    { p: "A digital signature certificate, or DSC, is the electronic signature you use to file on the GST, MCA and income tax portals, and to bid on e-tenders. This guide explains which one to pick and what to keep ready before you apply." },
+    { h2: "Which DSC class do I need?" },
+    { p: "Class 3. Class 1 is not used for filings, and Class 2 ended on 1 January 2021. Class 3 is accepted on the MCA, GST, income tax, DGFT and e-tender portals." },
+    { table: { caption: "DSC classes", head: ["Class", "Status", "Where it works"], rows: [
+      ["Class 1", "Not used for filings", "Basic identity, such as email"],
+      ["Class 2", "Discontinued from 1 January 2021", "Replaced by Class 3"],
+      ["Class 3", "Issued today", "MCA, GST, income tax, DGFT, ICEGATE, e-tenders"]
+    ] } },
+    { h2: "Signing, or signing plus encryption?" },
+    { p: "Signing is enough for MCA, GST and income tax filings. Government e-tenders usually ask for signing plus encryption, which is sold as a combo. Check what the tender or portal asks for before you apply." },
+    { h2: "Individual or organisation certificate?" },
+    { p: "An individual certificate carries only your name. An organisation certificate also carries the organisation's name, and is used when the portal asks you to sign on behalf of a company or LLP. Each director or partner who signs needs a certificate in their own name." },
+    { h2: "What documents do I need?" },
+    { ul: [
+      "PAN and Aadhaar of the signer, with the mobile number linked to Aadhaar.",
+      "A recent photograph and a working email address.",
+      "For an organisation certificate: the organisation's PAN and proof of the signer's link to it.",
+      "For DGFT: the IEC and the documents the certifying authority lists."
+    ] },
+    { p: "The exact list depends on the certificate type, so confirm it before you start." },
+    { h2: "How long does a DSC take, and how is it verified?" },
+    { p: "Verification is usually done by video call after you upload your documents. The time depends on that verification step. Some certificate types, such as the DGFT type, need extra steps." },
+    { h2: "What happens if I lose the token or forget the password?" },
+    { p: "A lost token or a forgotten password means a new certificate has to be applied for. Keep the password safe and do not share the token." },
+    { h2: "How we help at Income N Filing" },
+    { p: "We apply, guide you through the video verification, set up the token on your computer and show you how to sign a PDF. Our DSC price is a final price, with the certificate, a Hype USB token and our fee included, and it is on our pricing page. Our office is in Kasba, Kolkata." },
+    { h2: "How we checked this" },
+    { p: "The class status and certificate types match our DSC class guide, last checked in November 2026 and based on the Controller of Certifying Authorities. Confirm the current rules before you apply. This is general information." },
+    { sources: [ { name: "Controller of Certifying Authorities", url: "https://cca.gov.in" } ] },
+    { faq: [
+      { q: "Is Class 2 DSC still available?", a: "No. Class 2 certificates were discontinued from 1 January 2021. Class 3 is the class issued today." },
+      { q: "Do I need signing or signing plus encryption?", a: "Signing is enough for MCA, GST and income tax. E-tenders usually need signing plus encryption." },
+      { q: "How long is a DSC valid?", a: "Commonly one, two or three years, depending on what you choose when you apply." },
+      { q: "Can a company director use a personal DSC?", a: "Each director needs a certificate in their own name. Use an organisation certificate where the portal asks you to sign for the company." },
+      { q: "Can I get a DSC without visiting an office?", a: "Verification is usually done by video call after you upload your documents. Some types need extra steps." },
+      { q: "What if I lose my token?", a: "A new certificate has to be applied for." }
+    ] }
+  ],
+},
+{
   slug: "freelancer-in-kolkata-which-taxes-apply-2026-27",
   title: "Freelancer in Kolkata: Which Taxes Apply in 2026-27?",
   metaTitle: "Freelancer Tax in Kolkata 2026-27 | Income N Filing",
