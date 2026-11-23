@@ -13,7 +13,7 @@ export default async function sitemap() {
   const modules = HUB_CATEGORIES.map((m) => ({ url: `${SITE}/services/${MODULE_SLUGS[m.title]}`, lastModified: now, changeFrequency: "monthly", priority: 0.8 }));
   const services = SERVICE_PAGES.map((s) => ({ url: `${SITE}/services/${s.slug}`, lastModified: now, changeFrequency: "monthly", priority: 0.7 }));
   const blog = POSTS.length ? [{ url: `${SITE}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.7 }, ...POSTS.map((p) => ({ url: `${SITE}/blog/${p.slug}`, lastModified: new Date(p.updated || p.date), changeFrequency: "monthly", priority: 0.6 }))] : [];
-  return [
+  const all = [
     { url: `${SITE}/`, lastModified: now, changeFrequency: "weekly", priority: 1 },
     { url: `${SITE}/services`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${SITE}/services/itr-filing`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
@@ -45,8 +45,13 @@ export default async function sitemap() {
     { url: `${SITE}/refund-policy`, lastModified: new Date("2026-11-20"), changeFrequency: "yearly", priority: 0.2 },
     { url: `${SITE}/disclaimer`, lastModified: new Date("2026-11-20"), changeFrequency: "yearly", priority: 0.2 },
     { url: `${SITE}/cookies`, lastModified: new Date("2026-11-20"), changeFrequency: "yearly", priority: 0.2 },
+    { url: `${SITE}/professional-tax-kolkata`, lastModified: new Date("2026-11-23"), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${SITE}/dsc-kolkata`, lastModified: new Date("2026-11-23"), changeFrequency: "monthly", priority: 0.8 },
     ...modules,
     ...services,
     ...blog,
   ];
+  // One entry per URL (module and service pages can share a slug).
+  const seen = new Set();
+  return all.filter((e) => (seen.has(e.url) ? false : (seen.add(e.url), true)));
 }
