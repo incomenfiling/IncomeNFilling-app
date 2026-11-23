@@ -2,7 +2,7 @@ import { ToolShell, tableWrap, th, td } from "@/components/tools/ToolShell";
 import { Sec, T } from "@/components/layout/InfoPage";
 
 export const metadata = {
-  title: { absolute: "Tax and Compliance Due Dates: GST, TDS, Advance Tax, ROC | Income N Filing" },
+  title: { absolute: "Tax Due Dates: GST, TDS, Advance Tax, ROC | Income N Filing" },
   description: "Recurring GST, TDS, PF, ESI, advance tax, income tax and ROC due dates in one list, with the usual filing form for each. By Income N Filing, Kolkata.",
   alternates: { canonical: "/tools/due-date-calendar" },
   openGraph: { images: [{ url: "/og/default.png", width: 1200, height: 630 }], url: "/tools/due-date-calendar", title: "Tax and compliance due dates | Income N Filing", description: "GST, TDS, advance tax, income tax and ROC due dates at a glance." },

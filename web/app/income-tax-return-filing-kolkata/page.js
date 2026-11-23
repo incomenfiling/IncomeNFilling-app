@@ -1,7 +1,7 @@
 import { CityLanding } from "@/components/landing/CityLanding";
 
 const path = "/income-tax-return-filing-kolkata";
-const title = "Income Tax Return Filing in Kolkata | ITR from ₹799 + GST | Income N Filing";
+const title = "ITR Filing in Kolkata from ₹799 + GST | Income N Filing";
 const description = "ITR filing in Kolkata for salaried people, investors, traders and small businesses. Fixed fee in writing, made by one and checked by another. Office in Kasba.";
 
 export const metadata = {

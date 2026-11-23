@@ -1,7 +1,7 @@
 import { CityLanding } from "@/components/landing/CityLanding";
 
 const path = "/tax-consultant-kolkata";
-const title = "Tax Consultant in Kolkata | Tax & GST Filing Near You | Income N Filing";
+const title = "Tax Consultant in Kolkata: Tax and GST Filing | Income N Filing";
 const description = "Tax consultant in Kolkata for income tax, GST, TDS, company and LLP filings. Office in Kasba, fixed fee in writing, made by one and checked by another. Since 2017.";
 
 export const metadata = {
