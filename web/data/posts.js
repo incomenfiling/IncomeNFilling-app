@@ -6,6 +6,92 @@
 // Keep facts general (no fixed prices/deadlines that change by year) and add `updated` when revising.
 export const POSTS = [
 {
+  slug: "freelancer-in-kolkata-which-taxes-apply-2026-27",
+  title: "Freelancer in Kolkata: Which Taxes Apply in 2026-27?",
+  metaTitle: "Freelancer Tax in Kolkata 2026-27 | Income N Filing",
+  description: "Freelancing from Kolkata? See which taxes apply: income tax, advance tax, GST at ₹20 lakh, TDS, professional tax and the new export form.",
+  date: "2026-11-23",
+  updated: "2026-11-23",
+  body: [
+    { takeaways: [
+      "There is no separate freelancer tax. Your fees are taxed as business or professional income, and the rules depend on the work you do.",
+      "Some professions can declare 50% of receipts as income and skip books, up to ₹50 lakh of receipts (₹75 lakh if cash receipts are 5% or less). The list is closed, and many creative freelancers are not on it.",
+      "On that 50% route, advance tax is one payment by 15 March. Everyone else pays in four instalments: 15 June, 15 September, 15 December and 15 March.",
+      "GST registration is compulsory only above ₹20 lakh of total turnover in a year, and export receipts count towards that total.",
+      "From 1 October 2026, anyone exporting services must declare the exports to their bank on the new Export Declaration Form. The old SOFTEX form is gone."
+    ] },
+    { p: "Many Kolkata freelancers ask one question first: do I even have to pay tax separately? You do, but it is a short list. This guide goes through each tax, what triggers it, and what to do about it for the 2026-27 financial year." },
+    { p: "Law references here use the Income-tax Act, 2025, which applies from 1 April 2026. Most pages you will find online still quote the old section numbers." },
+    { h2: "Which taxes can apply to a freelancer?" },
+    { p: "Income tax always applies. Advance tax, TDS, GST, the export declaration and professional tax apply only in certain situations, listed below." },
+    { table: { caption: "Taxes and filings a freelancer may face", head: ["Tax or filing", "Applies when", "What you do"], rows: [
+      ["Income tax", "Always, on net income above the exemption limit", "File ITR-3 or ITR-4 after the year ends"],
+      ["Advance tax", "Tax after TDS is ₹10,000 or more for the year", "Pay in instalments, or once by 15 March on the 50% route"],
+      ["TDS deducted by clients", "A company or firm pays you professional fees above ₹50,000 in a year", "Check it shows in Form 26AS and AIS, and claim the credit"],
+      ["GST", "Total turnover above ₹20 lakh in a year", "Register, charge 18%, file returns"],
+      ["Export declaration", "You bill clients outside India (from 1 October 2026)", "Declare to your bank, monthly"],
+      ["Professional tax (West Bengal)", "Depends on your work", "See our professional tax guide"]
+    ] } },
+    { h2: "Can I use the 50% scheme as a freelancer?" },
+    { p: "Only if your profession is on the specified list. Under Section 62(4) of the Income-tax Act, 2025, that list is legal, medical, engineering, architectural, accountancy, technical consultancy, interior decoration, information technology and company secretary, plus any profession the Board notifies. Presumptive income is 50% of gross receipts, for receipts up to ₹50 lakh, or ₹75 lakh where cash receipts are 5% or less. Section 58 of the 2025 Act replaces the old Section 44ADA." },
+    { p: "An illustration, using our own arithmetic: a software developer in Kolkata bills ₹18,00,000 in a year, all through the bank. Presumptive income is ₹9,00,000. No books of account are needed, and tax is then worked out on that figure at the applicable slab." },
+    { p: "If you declare less than 50% and your income is above the basic exemption limit, books and a tax audit come into play. If your work is not on the list, for example some writers, designers and content creators, the 50% relief may not apply to you. The tax department has not settled this for content creation, so check before you choose a route." },
+    { h2: "When do I pay advance tax?" },
+    { p: "On the 50% route, you pay the whole advance tax once, by 15 March. Under the normal books route you pay in four instalments." },
+    { table: { caption: "Advance tax due dates for a freelancer", head: ["Route", "Due dates"], rows: [
+      ["50% presumptive route", "100% by 15 March (payment made by 31 March is also treated as advance tax)"],
+      ["Normal books route", "15% by 15 June, 45% by 15 September, 75% by 15 December, 100% by 15 March"]
+    ] } },
+    { p: "If you are on the normal route, the 15 December instalment is close. Missing an instalment leads to interest. Salaried people with freelance income often forget this and pay only when they file." },
+    { h2: "Do I need GST registration?" },
+    { p: "Not unless your total turnover for the year crosses ₹20 lakh. Notification 10/2017-Integrated Tax exempts service providers below that limit, even when they work for clients in other states. The total counts all clients together and includes export receipts. West Bengal uses the ₹20 lakh limit." },
+    { p: "Above ₹20 lakh, you register, charge 18% GST to Indian clients and file returns. Services to clients outside India are exports and zero-rated, and you usually file a Letter of Undertaking (LUT) to export without paying IGST. Some freelancers below the limit register on their own to claim input tax credit. That is a choice, not a rule." },
+    { h2: "What about TDS deducted by my clients?" },
+    { p: "Companies and firms usually deduct 10% on professional fees (2% on some technical services) once payments to you cross ₹50,000 in the year. Under the 2025 Act this sits in Section 393 instead of the old Section 194J. Individual clients often do not deduct." },
+    { p: "Check Form 26AS and AIS every quarter. If a client deducted tax but it does not show there, the credit is at risk when you file." },
+    { h2: "New from 1 October 2026: the export declaration" },
+    { p: "RBI's new export rules require service exporters to furnish an Export Declaration Form to their bank. One monthly declaration can cover all invoices raised in that month. SOFTEX for software exports is replaced by the same form. Ask your bank how it wants this submitted, since practice differs between banks." },
+    { h2: "Professional tax in West Bengal" },
+    { p: "Some independent digital professions, such as software, data science and UI/UX, appear in the flat ₹2,500-a-year list. Other individuals in a profession move to income bands from 1 April 2027. Read the exact entry for your work in our West Bengal professional tax guide." },
+    { h2: "Mistakes worth avoiding" },
+    { ul: [
+      "Treating freelancer as a tax category and picking ITR-4 without checking whether your work is on the list.",
+      "Counting only Indian clients when checking the ₹20 lakh GST limit.",
+      "Ignoring advance tax because TDS is already cut.",
+      "Not matching Form 26AS and AIS with your invoices before filing.",
+      "Receiving foreign payments without a record of the invoice, the purpose and the bank declaration."
+    ] },
+    { h2: "Documents to keep ready" },
+    { ul: [
+      "PAN and Aadhaar.",
+      "Invoices and bank statements.",
+      "Form 26AS and AIS.",
+      "Foreign remittance advice, such as a FIRC or bank credit advice.",
+      "Expense bills, if you are on the books route.",
+      "GST login, if you are registered."
+    ] },
+    { h2: "How we help at Income N Filing" },
+    { p: "We check which route fits your work, estimate advance tax, file ITR-3 or ITR-4, and register you for GST when you cross the limit. One person prepares the work and another checks it before submission. We confirm the scope and fee in writing first, and government charges are separate. Our office is in Kasba, Kolkata." },
+    { h2: "How we checked this" },
+    { p: "Specified professions come from Section 62(4) of the Income-tax Act, 2025. Advance tax dates come from Section 408 and the department's advance tax FAQ. TDS thresholds come from Section 393 as summarised by several practitioners. The GST threshold relies on Notification 10/2017-Integrated Tax. The export declaration comes from RBI's FEMA (Export and Import of Goods and Services) Regulations, 2026. We could not open the official Section 58 page on the department site on 21 November 2026, so the presumptive limits rest on the department's ITR-4 FAQ and published analysis. This is general information, so confirm on the portal before you act." },
+    { sources: [
+      { name: "Income-tax Act, 2025, Section 62(4): specified professions (text of the Act)", url: "https://future.indiankanoon.org/doc/153095482" },
+      { name: "Income Tax Department: FAQ on Advance Tax", url: "https://www.incometaxindia.gov.in/documents/d/guest/faq-on-advance-tax" },
+      { name: "Income Tax Department: ITR-4 eligibility (AY 2026-27)", url: "https://www.incometax.gov.in/iec/foportal/help/all-topics/e-filing-services/itr-4" },
+      { name: "CBIC: Integrated Tax notifications (10/2017)", url: "https://cbic-gst.gov.in/hindi/integrated-tax.html" },
+      { name: "RBI: Foreign Exchange Management (Export and Import of Goods and Services) Regulations, 2026", url: "https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=13277" }
+    ] },
+    { faq: [
+      { q: "Do I pay tax if my freelance income is below ₹20 lakh?", a: "Income tax depends on your net income and the exemption limit, not on ₹20 lakh. The ₹20 lakh figure is only the GST registration limit." },
+      { q: "Is GST compulsory if I have foreign clients?", a: "Not by itself. Below ₹20 lakh of total turnover, registration is not compulsory, even for exports. Above it, you register and file an LUT." },
+      { q: "Which ITR form does a freelancer file?", a: "ITR-4 if you are eligible for the presumptive route, otherwise ITR-3. The right form depends on your work and income, not on the word freelancer." },
+      { q: "When is the return for FY 2026-27 due?", a: "For non-audit business or professional income, the date is 31 August 2027, as we read the Finance Act 2026. Confirm on the portal closer to the date." },
+      { q: "Do I need to pay advance tax on the 50% route?", a: "Yes, if your tax after TDS is ₹10,000 or more, but in one payment by 15 March." },
+      { q: "Can a salaried person with freelance income use the 50% scheme?", a: "The scheme applies to the professional income if the profession is on the list. Salary is taxed separately." }
+    ] }
+  ],
+},
+{
   slug: "west-bengal-professional-tax-new-slabs-october-2026",
   title: "West Bengal Professional Tax: New Slabs From 1 October 2026",
   metaTitle: "West Bengal Professional Tax New Slabs 2026 | Income N Filing",
