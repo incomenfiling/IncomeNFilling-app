@@ -5,7 +5,7 @@ import { SimpleLeadForm } from "@/components/forms/SimpleLeadForm";
 import { WHATSAPP_URL, BOOKING_URL } from "@/data/content";
 
 export const metadata = {
-  title: { absolute: "GST and Tax Filing for Online Sellers in Kolkata | Amazon, Flipkart, Meesho | Income N Filing" },
+  title: { absolute: "GST for Online Sellers in Kolkata | Income N Filing" },
   description: "GST registration, monthly returns, marketplace reconciliation and income tax for online sellers on Amazon, Flipkart, Meesho and your own website. Kolkata team, fees fixed in writing.",
   alternates: { canonical: "/ecommerce-sellers" },
   openGraph: { images: [{ url: "/og/default.png", width: 1200, height: 630 }], url: "/ecommerce-sellers", title: "GST and tax for online sellers | Income N Filing", description: "GST, reconciliation and income tax for marketplace and website sellers." },

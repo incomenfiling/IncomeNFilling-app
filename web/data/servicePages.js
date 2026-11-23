@@ -2,7 +2,7 @@
 // (those change by year and by case). Published prices live in data/pricing.js.
 // `module` must match a title in HUB_CATEGORIES (data/categories.js); `listed` is the matching
 // entry in that module's services list, used to link from the module page.
-export const SERVICE_PAGES = [
+const ALL_SERVICE_PAGES = [
   {
     slug: "gst-registration",
     name: "GST Registration",
@@ -1273,7 +1273,7 @@ export const SERVICE_PAGES = [
     h1: "Professional Tax Registration and Return in Kolkata",
     module: "Licenses & Registrations",
     listed: "Professional Tax",
-    metaTitle: "Professional Tax in Kolkata: PTRC, PTEC, Form III | Income N Filing",
+    metaTitle: "Professional Tax in Kolkata: PTRC, PTEC | Income N Filing",
     metaDescription:
       "West Bengal professional tax in Kolkata: PTRC and PTEC registration, monthly payment by the 21st and annual Form III, with the new salary slabs from 1 October 2026. Fee fixed in writing.",
     intro:
@@ -1411,7 +1411,7 @@ export const SERVICE_PAGES = [
     h1: "Annual ROC Filing in Kolkata for Companies and LLPs",
     module: "Corporate Compliance",
     listed: "Annual Return (MGT-7)",
-    metaTitle: "Annual ROC Filing in Kolkata: AOC-4, MGT-7, LLP Form 8 | Income N Filing",
+    metaTitle: "Annual ROC Filing in Kolkata: AOC-4, MGT-7 | Income N Filing",
     metaDescription:
       "Annual ROC filing in Kolkata for private limited companies and LLPs: AOC-4, MGT-7 or MGT-7A, LLP Form 11 and Form 8, and DIR-3 KYC. One person prepares, another checks, and we file before the date.",
     intro:
@@ -1737,5 +1737,9 @@ export const SERVICE_PAGES = [
     ],
   },
 ];
+
+// Some slugs were defined twice (an old and a rewritten entry). Keep the last one, as the slug lookup always did,
+// so sitemap, llms.txt, the Kolkata page and static params never list a page twice.
+export const SERVICE_PAGES = ALL_SERVICE_PAGES.filter((s, i, a) => a.findLastIndex((t) => t.slug === s.slug) === i);
 
 export const SERVICE_BY_SLUG = Object.fromEntries(SERVICE_PAGES.map((s) => [s.slug, s]));

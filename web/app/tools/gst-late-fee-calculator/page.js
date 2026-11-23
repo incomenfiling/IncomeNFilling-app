@@ -3,7 +3,7 @@ import { GstLateFeeCalc } from "@/components/tools/GstLateFeeCalc";
 import { Sec, T } from "@/components/layout/InfoPage";
 
 export const metadata = {
-  title: { absolute: "GST Late Fee and Interest Calculator (GSTR-3B, GSTR-1) | Income N Filing" },
+  title: { absolute: "GST Late Fee and Interest Calculator | Income N Filing" },
   description: "Estimate the late fee and interest for a delayed GSTR-3B or GSTR-1: per-day rate, nil return rate, turnover-based maximum and 18% interest. By Income N Filing, Kolkata.",
   alternates: { canonical: "/tools/gst-late-fee-calculator" },
   openGraph: { images: [{ url: "/og/default.png", width: 1200, height: 630 }], url: "/tools/gst-late-fee-calculator", title: "GST Late Fee Calculator | Income N Filing", description: "Estimate the late fee and interest on a delayed GSTR-3B or GSTR-1." },

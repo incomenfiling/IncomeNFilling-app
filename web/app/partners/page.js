@@ -3,7 +3,7 @@ import { SimpleLeadForm } from "@/components/forms/SimpleLeadForm";
 import { WHATSAPP_URL } from "@/data/content";
 
 export const metadata = {
-  title: { absolute: "Partner Program for Accountants and Tax Professionals | Income N Filing" },
+  title: { absolute: "Partner Program for Tax Professionals | Income N Filing" },
   description: "White-label digital signatures and accounting back-office for accountants, tax professionals and consulting firms. You own the client. Request our partner rate card. Kolkata.",
   alternates: { canonical: "/partners" },
   openGraph: { images: [{ url: "/og/default.png", width: 1200, height: 630 }], url: "/partners", title: "Partner Program | Income N Filing", description: "White-label digital signatures and accounting back-office for professionals. You own the client." },

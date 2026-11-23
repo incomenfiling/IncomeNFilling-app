@@ -2,7 +2,7 @@ import Link from "next/link";
 import { InfoPage, T } from "@/components/layout/InfoPage";
 
 export const metadata = {
-  title: { absolute: "Tax and Compliance Tools: GST Late Fee, TDS Chart, DSC Guide | Income N Filing" },
+  title: { absolute: "Tax Tools: GST Late Fee, TDS Chart, DSC Guide | Income N Filing" },
   description: "Calculators and quick guides from Income N Filing, Kolkata: GST late fee calculator, TDS rate chart, DSC class guide and tax due dates.",
   alternates: { canonical: "/tools" },
   openGraph: { images: [{ url: "/og/default.png", width: 1200, height: 630 }], url: "/tools", title: "Tools | Income N Filing", description: "GST late fee calculator, TDS rate chart, DSC guide and due dates." },

@@ -47,6 +47,7 @@ export default async function sitemap() {
     { url: `${SITE}/cookies`, lastModified: new Date("2026-11-20"), changeFrequency: "yearly", priority: 0.2 },
     ...modules,
     ...services,
+    ...jobs,
     ...blog,
   ];
 }

@@ -3,7 +3,7 @@ import { ToolShell, tableWrap, th, td } from "@/components/tools/ToolShell";
 import { Sec, Tiles, T } from "@/components/layout/InfoPage";
 
 export const metadata = {
-  title: { absolute: "Which DSC Do I Need? Class 3, Signing, Encryption, DGFT | Income N Filing" },
+  title: { absolute: "Which DSC Do I Need? Class 3 Guide | Income N Filing" },
   description: "A plain guide to digital signature certificates in India: why Class 3 is the one issued today, signing vs encryption, individual vs organisation, DGFT, validity and the documents needed. Kolkata.",
   alternates: { canonical: "/tools/dsc-class-guide" },
   openGraph: { images: [{ url: "/og/default.png", width: 1200, height: 630 }], url: "/tools/dsc-class-guide", title: "Which DSC do I need? | Income N Filing", description: "Class 3, signing, encryption, individual or organisation: pick the right digital signature." },

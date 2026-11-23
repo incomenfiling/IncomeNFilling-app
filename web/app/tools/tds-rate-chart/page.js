@@ -2,7 +2,7 @@ import { ToolShell, tableWrap, th, td } from "@/components/tools/ToolShell";
 import { Sec, T } from "@/components/layout/InfoPage";
 
 export const metadata = {
-  title: { absolute: "TDS Rate Chart FY 2026-27: Sections, Rates, Thresholds | Income N Filing" },
+  title: { absolute: "TDS Rate Chart FY 2026-27: Sections and Rates | Income N Filing" },
   description: "TDS rates and limits for FY 2026-27 under the Income-tax Act, 2025: salary, interest, contractors, commission, rent, professional fees, property and more, with the old section for each.",
   alternates: { canonical: "/tools/tds-rate-chart" },
   openGraph: { images: [{ url: "/og/default.png", width: 1200, height: 630 }], url: "/tools/tds-rate-chart", title: "TDS Rate Chart FY 2026-27 | Income N Filing", description: "Common TDS rates and limits with the old section for each." },
