@@ -7,7 +7,19 @@ const clip = (v, n) => String(v ?? "").trim().slice(0, n);
 const safe = (v) => (/^[=+\-@\t\r]/.test(v) ? "'" + v : v);
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
+// Browsers always send Origin on cross-site POSTs; reject any that is not our own site.
+const ALLOWED_ORIGINS = new Set(["https://incomenfiling.com", "https://www.incomenfiling.com"]);
+const MAX_BODY_BYTES = 10_000;
+
 export async function POST(request) {
+  const origin = request.headers.get("origin");
+  if (origin && !ALLOWED_ORIGINS.has(origin) && process.env.NODE_ENV === "production") {
+    return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+  }
+  if (Number(request.headers.get("content-length")) > MAX_BODY_BYTES) {
+    return NextResponse.json({ error: "Payload too large" }, { status: 413 });
+  }
+
   let body;
   try {
     body = await request.json();
@@ -65,7 +77,7 @@ export async function POST(request) {
   // Same id on the retry, so a duplicate row can be spotted and removed in the Sheet.
   const leadId = Math.random().toString(36).slice(2, 8);
   const notes = (notes0 ? notes0 + " " : "") + meta.slice(0, -1) + ` | id ${leadId}]`;
-  const source = clip(body?.source, 40) || "website";
+  const source = safe(clip(body?.source, 40)) || "website";
 
   if (!name || (!phone && !email)) {
     return NextResponse.json({ error: "name and (phone or email) are required" }, { status: 400 });
