@@ -61,6 +61,8 @@ Full tables with what each plan includes: ${SITE}/pricing
 - [Income tax return filing in Kolkata](${SITE}/income-tax-return-filing-kolkata)
 - [GST registration in Kolkata](${SITE}/gst-registration-kolkata)
 - [Tax consultant in Kolkata](${SITE}/tax-consultant-kolkata)
+- [Professional tax registration in Kolkata](${SITE}/professional-tax-kolkata)
+- [Digital signature certificate in Kolkata](${SITE}/dsc-kolkata)
 - [Contact](${SITE}/contact)
 - [About Income N Filing](${SITE}/about)
 - [Partner program for accountants and tax professionals](${SITE}/partners)

@@ -22,6 +22,8 @@ const QUICK_LINKS = [
   ["Kolkata office", "/kolkata"],
   ["GST registration in Kolkata", "/gst-registration-kolkata"],
   ["Tax consultant in Kolkata", "/tax-consultant-kolkata"],
+  ["Professional tax in Kolkata", "/professional-tax-kolkata"],
+  ["DSC in Kolkata", "/dsc-kolkata"],
   ["Ask Ira", "/chat"],
   ["Contact", "/contact"],
 ];
