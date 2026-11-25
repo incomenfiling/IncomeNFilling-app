@@ -6,6 +6,7 @@ import { WHATSAPP_URL, BOOKING_URL } from "@/data/content";
 import { PRICE_LIST } from "@/data/pricing";
 import { ldScript, webPage, priceCatalog } from "@/lib/schema";
 import { PriceDetails } from "@/components/pricing/PriceDetails";
+import { planLabel, planHref } from "@/lib/plans";
 
 // One entry per price page. group = the PRICE_LIST group name. Add a new group here, in app/pricing/page.js, sitemap and llms.txt.
 export const PRICE_GROUPS = {
@@ -81,7 +82,7 @@ export function PriceGroupPage({ groupKey }) {
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: 12 }}>
                 {s.rows.map((r) => {
                   const rec = /recommended/i.test(r[0]);
-                  const label = r[0].replace(/,?\s*\(?recommended\)?/i, "").replace(/\(\s*$/, "").replace(/\s+$/, "");
+                  const label = planLabel(r[0]);
                   const final = s.final || r[2] === "Final price";
                   return (
                     <div key={r[0]} style={{ border: rec ? "2px solid var(--gold-500)" : "1px solid var(--ink-100)", borderRadius: "var(--radius-lg)", padding: 14, display: "flex", flexDirection: "column", gap: 6, background: rec ? "var(--gold-050)" : "var(--paper)" }}>
@@ -90,7 +91,7 @@ export function PriceGroupPage({ groupKey }) {
                       {r[3] && <div style={{ ...T, fontSize: 12.5 }}>{r[3]}</div>}
                       <div style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 26, color: "var(--navy-900)", marginTop: "auto", paddingTop: 4 }}>{r[1]}</div>
                       <div style={{ ...T, fontSize: 12 }}>{final ? "Final price" : /^(quoted|custom)/i.test(r[2]) ? "Quoted in writing" : `+ 18% GST · total ${r[2]}`}</div>
-                      <Link href={`/contact?group=${groupKey}&service=${encodeURIComponent(s.name)}&plan=${encodeURIComponent(label)}`} style={{ fontSize: 13, fontWeight: 700, color: "var(--navy-800)", textDecoration: "underline", padding: "6px 0" }}>Choose this plan →</Link>
+                      <Link href={planHref(groupKey, s.name, label)} style={{ fontSize: 13, fontWeight: 700, color: "var(--navy-800)", textDecoration: "underline", padding: "6px 0" }}>Choose this plan →</Link>
                     </div>
                   );
                 })}
