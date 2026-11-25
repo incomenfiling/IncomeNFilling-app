@@ -3,7 +3,7 @@ import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { WHATSAPP_URL } from "@/data/content";
 
-export const metadata = { title: "Payment status | Income N Filing", robots: { index: false, follow: false } };
+export const metadata = { title: { absolute: "Payment status | Income N Filing" }, robots: { index: false, follow: false } };
 
 // Razorpay sends the customer here after a payment link. The signature is checked with the key secret,
 // so a typed URL cannot show "payment received".

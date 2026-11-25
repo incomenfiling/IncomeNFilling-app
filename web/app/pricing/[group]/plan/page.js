@@ -10,7 +10,7 @@ import { BOOKING_URL, WHATSAPP_URL } from "@/data/content";
 import { findPlan, planLabel, planHref } from "@/lib/plans";
 
 // Plan page: "Choose this plan" lands here. Shows the chosen plan, its inclusions and terms, then pay online or talk first.
-export const metadata = { title: "Your plan | Income N Filing", robots: { index: false, follow: true } };
+export const metadata = { title: { absolute: "Your plan | Income N Filing" }, robots: { index: false, follow: true } };
 
 const T = { fontFamily: "var(--font-body)", fontSize: 14, lineHeight: 1.6, color: "var(--ink-500)", margin: 0 };
 const inr = (n) => "₹" + n.toLocaleString("en-IN");
